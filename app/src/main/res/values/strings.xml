@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">AllEasy</string>
+    <string name="title_activity_main">MAIN_ACTIVITY</string>
+    <string name="n">n</string>
+    <string name="math">Matemática</string>
+    <string name="arrj">Arranjos</string>
+    <string name="fat">Fatorial</string>
+    <string name="comb">Combinação</string>
+    <string name="c">C</string>
+    <string name="p">p</string>
+    <string name="a">A</string>
+    <string name="fatp">!</string>
+</resources>

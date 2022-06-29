@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:content="com.GabrielMJr.Twaire.AllEasy.Math.Fatorial"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <EditText
+        android:id="@+id/n"
+        android:layout_width="60dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginLeft="100dp"
+        android:textSize="40sp"
+        android:background="@color/white"
+        android:textColor="@color/black"
+        android:inputType="number"
+        android:hint="@string/n"
+        android:text=""/>
+        
+    <TextView
+        android:id="@+id/fat"
+        android:layout_width="60dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginLeft="10dp"
+        android:textSize="60sp"
+        android:background="@color/white"
+        android:textColor="@color/black"
+        android:text="@string/fatp"/>
+        
+    <HorizontalScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        
+  	   <TextView
+			android:id="@+id/result"
+			android:layout_height="wrap_content"
+			android:layout_width="wrap_content"
+		    android:textSize="25sp"
+	  	  android:layout_marginLeft="10dp"
+			android:layout_marginTop="75dp "
+			android:focusable="true"
+			android:typeface="normal"
+			android:textColorHighlight="#000000"
+			android:textIsSelectable="true"/>
+		
+	</HorizontalScrollView>
+  
+</LinearLayout>

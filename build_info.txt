@@ -1,0 +1,17 @@
+============Info==========================
+v1.0.0
+min sdk=14
+target=24
+package=com.GAbrielMJr.Twaire....
+
+
+========Functions========
+-Arranjos
+-combinação
+-Função do segundo grau
+
+-
+
+-
+
+released:22/06/2022
