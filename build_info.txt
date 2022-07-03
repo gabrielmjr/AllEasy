@@ -1,8 +1,10 @@
 ============Info==========================
 v1.1.0
 min sdk=14
-target=24
-package=com.GAbrielMJr.Twaire....
+target=29
+package=com.GAbrielMJr.Twaire.AllEasy
+Min OS Requerido=4.0(Ice Cream Sandwich)
+Released 3/07/2022
 
 
 ========Features========
