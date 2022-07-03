@@ -2,10 +2,10 @@
 v1.1.0
 min sdk=14
 target=29
-package=com.GAbrielMJr.Twaire.AllEasy
+package=com.GabrielMJr.Twaire.AllEasy
 Min OS Requerido=4.0(Ice Cream Sandwich)
+Código de versão=110
 Released 3/07/2022
-
 
 ========Features========
 - Cálculo de Fatorial 
