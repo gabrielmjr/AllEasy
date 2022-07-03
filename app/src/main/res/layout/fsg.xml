@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:tools="http://schemas.com.android.com/tools"
+	tools:content="com.GabrielMJr.Twaire.AllEasy.MainActivity"
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent"
+	android:orientation="vertical"
+	android:background="@color/white">
+
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:orientation="vertical"
+		style="@style/AppTheme">
+
+		<LinearLayout
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:orientation="horizontal"
+			style="@style/AppTheme">
+
+			<TextView
+				android:layout_width="wrap_content"
+				android:layout_height="40dp"
+				android:background="@color/white"
+				android:textSize="20sp"
+				android:layout_marginRight="20dp"
+				android:layout_marginTop="100dp"
+				android:text="@string/y"
+				style="@style/AppTheme"/>
+
+			<EditText
+				android:id="@+id/a"
+				android:layout_width="wrap_content"
+				android:layout_height="40dp"
+				android:background="@color/white"
+				android:hint="@string/ha"
+				android:textSize="20sp"
+				android:imeOptions="actionNext"
+				android:inputType="phone"
+				android:layout_marginTop="100dp"
+				android:text=""
+				style="@style/AppTheme"
+				android:ems="2"/>
+
+			<TextView
+				android:layout_width="30dp"
+				android:layout_height="40dp"
+				android:background="@color/white"
+				android:textSize="20sp"
+				android:layout_marginTop="100dp"
+				android:text="@string/ax"
+				style="@style/AppTheme"/>
+
+			<EditText
+				android:id="@+id/b"
+				android:layout_width="wrap_content"
+				android:layout_height="40dp"
+				android:background="@color/white"
+				android:hint="@string/hb"
+				android:imeOptions="actionNext"
+				android:textSize="20sp"
+				android:inputType="phone"
+				android:layout_marginTop="100dp"
+				android:text=""
+				style="@style/AppTheme"
+				android:ems="2"/>
+
+			<TextView
+				android:layout_width="30dp"
+				android:layout_height="40dp"
+				android:background="@color/white"
+				android:textSize="20sp"
+				android:layout_marginTop="100dp"
+				android:text="@string/bx"
+				style="@style/AppTheme"/>
+
+			<EditText
+				android:id="@+id/c"
+				android:layout_width="wrap_content"
+				android:layout_height="40dp"
+				android:background="@color/white"
+				android:textSize="20sp"
+				android:imeOptions="actionDone"
+				android:hint="@string/hc"
+				android:inputType="phone"
+				android:layout_marginTop="100dp"
+				android:text=""
+				style="@style/AppTheme"/>
+
+		</LinearLayout>
+
+		<Button
+			android:id="@+id/calculate"
+			android:layout_width="120dp"
+			android:layout_height="50dp"
+			android:layout_marginTop="10dp"
+			android:layout_marginRight="20dp"
+			android:textSize="18sp"
+			android:background="@color/white"
+			android:text="@string/det"
+			style="@style/AppTheme"/>
+
+		<TextView
+			android:id="@+id/result"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_marginTop="20dp"
+			android:layout_marginRight="20dp"
+			android:background="@color/white"
+			android:textSize="18sp"
+			android:textIsSelectable="true"
+			android:text=""
+			style="@style/AppTheme"/>
+
+	</LinearLayout>
+
+</ScrollView>
+

@@ -4,23 +4,23 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:content="com.GabrielMJr.Twaire.AllEasy.Math.Combination"
     android:layout_width="match_parent"
-    android:background="#FFFFFFFF"
+    android:background="@color/white"
     android:layout_height="match_parent">
-    
+
     <EditText
-       android:id="@+id/n"
-       android:layout_width="40dp"
-       android:layout_height="30dp"
-       android:textSize="17sp"
-       android:imeOptions="actionNext"
-	   android:inputType="number"
-	   android:layout_marginTop="100dp"
-	   android:layout_marginLeft="50dp"
-	   android:background="@color/white"
-	   android:hint="@string/n"
-	   android:textColor="@color/black"
-	   android:text=""/>
-	   
+				android:id="@+id/n"
+				android:layout_width="40dp"
+				android:layout_height="30dp"
+				android:textSize="17sp"
+				android:imeOptions="actionNext"
+				android:inputType="number"
+				android:layout_marginTop="100dp"
+				android:layout_marginLeft="50dp"
+				android:background="@color/white"
+				android:hint="@string/n"
+				android:textColor="@color/black"
+				android:text=""/>
+
     <TextView
         android:id="@+id/c"
         android:layout_width="60dp"
@@ -31,7 +31,7 @@
         android:background="@color/white"
         android:textColor="@color/black"
         android:text="@string/c"/>
-            
+
 
     <EditText
         android:id="@+id/p"
@@ -48,16 +48,16 @@
         android:text=""/>
 
     <TextView
-	    android:id="@+id/result"
-	    android:layout_height="wrap_content"
-	    android:layout_width="wrap_content"
-	    android:textSize="25sp"
-		android:layout_marginLeft="10dp"
-		android:layout_marginTop="170dp "
-		android:focusable="true"
-		android:typeface="normal"
-		android:textColorHighlight="#000000"
-		android:textIsSelectable="true"/>
-    
-    
+				android:id="@+id/result"
+				android:layout_height="wrap_content"
+				android:layout_width="wrap_content"
+				android:textSize="25sp"
+				android:layout_marginLeft="10dp"
+				android:layout_marginTop="170dp "
+				android:focusable="true"
+				android:typeface="normal"
+				android:textColorHighlight="@color/white"
+				android:textIsSelectable="true"/>
+
+
 </LinearLayout>

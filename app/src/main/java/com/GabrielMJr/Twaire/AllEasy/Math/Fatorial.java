@@ -2,24 +2,21 @@ package com.GabrielMJr.Twaire.AllEasy.Math;
 
 import android.os.Bundle;
 import android.app.Activity;
-
-// Importando funcionalidades
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 import android.view.View;
 import android.view.View.OnClickListener;
-
-import com.GabrielMJr.Twaire.AllEasy.Math.OpEngeneer.ArrJ;
+import com.GabrielMJr.Twaire.AllEasy.Math.OpEngeneer.MathE;
 import com.GabrielMJr.Twaire.AllEasy.R;
 
 public class Fatorial extends Activity {
 
   // Atributes
-  private EditText n;
-  private TextView fat;
-  private TextView result;
-  private ArrJ ArrJ;
+  private static EditText n;
+  private static TextView fat;
+  private static TextView result;
+  private static MathE MathE;
 
   @Override
   protected void onCreate(Bundle savedInstanceState) {
@@ -29,19 +26,26 @@ public class Fatorial extends Activity {
     this.n = (EditText) findViewById(R.id.n);
     this.fat = (TextView) findViewById(R.id.fat);
     this.result = (TextView) findViewById(R.id.result);
-    this.ArrJ = new ArrJ();
+    this.MathE = new MathE();
 
     this.fat.setOnClickListener(
         new OnClickListener() {
           public void onClick(View view) {
 
             try {
+							// Verifica se o limite de n do .xml é maior que 20 ou não
+							//Se for maior, não vai calcular, pois o resultado estará incorrecto
               if (Integer.valueOf(n.getText().toString()) > 20) {
                 Toast.makeText(Fatorial.this, "Número muito elevado!", Toast.LENGTH_SHORT).show();
               } else {
-                ArrJ.setNP(
+								
+								// Senão, calcule normalmente
+								// Mandar n e p para OpEngeneer.Math
+                MathE.setNP(
                     Long.valueOf(n.getText().toString()), Long.valueOf(n.getText().toString()));
-                result.setText((CharSequence) "=" + String.valueOf(ArrJ.getResult()));
+										
+								// Pegar a String[] result
+                result.setText((CharSequence) "=" + String.valueOf(MathE.getArrResult()[0]));
               }
 
             } catch (Exception e) {

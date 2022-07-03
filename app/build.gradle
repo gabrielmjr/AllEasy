@@ -1,16 +1,16 @@
-
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 27
-    buildToolsVersion "27.0.3"
-  defaultConfig {
-        minSdkVersion 14
-        targetSdkVersion 24
-        versionCode 100
-        versionName "1.0.0"
-    }
+    compileSdkVersion 21
+    buildToolsVersion "21.1.0"
 
+    defaultConfig {
+        applicationId "com.GabrielMJr.Twaire.AllEasy"
+        minSdkVersion 14
+        targetSdkVersion 29
+        versionCode 100
+        versionName "1.1.0"
+    }
     buildTypes {
         release {
             minifyEnabled false
@@ -18,12 +18,6 @@ android {
         }
     }
 }
-
-repositories {
-    mavenCentral()
-}
-
-
 
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
