@@ -1,18 +1,28 @@
 ============Info==========================
-v1.1.0
+v1.2.0
 min sdk=14
 target=29
 package=com.GabrielMJr.Twaire.AllEasy
 Min OS Requerido=4.0(Ice Cream Sandwich)
 Código de versão=110
-Released 3/07/2022
+Released 13/07/2022
 
 ========Features========
 - Cálculo de Fatorial 
 - Cálculo de Arranjos
 - Cálculo de Combinação
+- Cálculo de Função quadrática e estudo do seu gráfico
+- Cálculo de Função exponencial
 
 ========What's news========
-- Cálculo e estudo de Função de Segundo grau
-- Gerador de tabela de valores em Função exponencial
-- Resolução de alguns bugs e forma que resultados eram gerados
+- Novo ícone
+- Nova interface
+- Novo tema:
+   *Vazão Volúmica
+   Subtemas:
+     - Cálculo de vazão volúmica
+     - Cálculo do tempo
+     - Cálculo do volume
+     - Cálculo da velocidade
+     - Cálculo da área
+     - Cálcalculo do raio
