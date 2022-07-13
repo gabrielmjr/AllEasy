@@ -4,46 +4,40 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:content="com.GabrielMJr.Twaire.AllEasy.Math.Combination"
     android:layout_width="match_parent"
-    android:background="@color/white"
+    android:orientation="horizontal"
     android:layout_height="match_parent">
 
     <EditText
 				android:id="@+id/n"
 				android:layout_width="40dp"
-				android:layout_height="30dp"
+				android:layout_height="40dp"
 				android:textSize="17sp"
 				android:imeOptions="actionNext"
 				android:inputType="number"
 				android:layout_marginTop="100dp"
 				android:layout_marginLeft="50dp"
-				android:background="@color/white"
 				android:hint="@string/n"
-				android:textColor="@color/black"
 				android:text=""/>
 
     <TextView
         android:id="@+id/c"
         android:layout_width="60dp"
         android:layout_height="80dp"
-        android:layout_marginTop="170dp"
+        android:layout_marginTop="150dp"
         android:layout_marginLeft="10dp"
         android:textSize="70sp"
-        android:background="@color/white"
-        android:textColor="@color/black"
         android:text="@string/c"/>
 
 
     <EditText
         android:id="@+id/p"
         android:layout_width="40dp"
-        android:layout_height="30dp"
+        android:layout_height="40dp"
         android:layout_marginTop="190dp"
         android:layout_marginLeft="10dp"
         android:textSize="17sp"
         android:imeOptions="actionNext"
         android:inputType="number"
-        android:background="@color/white"
-        android:textColor="@color/black"
         android:hint="@string/p"
         android:text=""/>
 
@@ -56,7 +50,6 @@
 				android:layout_marginTop="170dp "
 				android:focusable="true"
 				android:typeface="normal"
-				android:textColorHighlight="@color/white"
 				android:textIsSelectable="true"/>
 
 

@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:tools="http://schemas.android.com/tools"
+	tools:content="com.GabrielMJr.Twaire.AllEasy.Physic.Vaz.Raio1"
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent"
+	android:orientation="vertical">
+ 
+	<LinearLayout
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:orientation="vertical">
+
+		<RadioGroup
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content">
+
+			<TextView
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:textSize="18sp"
+				android:layout_marginTop="25dp"
+				android:text="@string/vazo"/>
+
+			<RadioButton
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:id="@+id/v1"
+				android:text="@string/v1"
+				android:textSize="15sp"
+				android:layout_marginTop="10dp"
+				android:layout_marginRight="10dp"/>
+ 
+			<RadioButton
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:id="@+id/v2"
+				android:text="@string/v2"
+				android:layout_marginRight="10dp"
+				android:layout_marginTop="10dp"
+				android:textSize="15sp"/>
+
+			<RadioButton
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:id="@+id/v3"
+				android:text="@string/v3"
+				android:textSize="15sp"
+				android:layout_marginTop="10dp"
+				android:layout_marginRight="10dp"/>
+
+			<View
+				android:background="?android:attr/dividerVertical"
+				android:layout_width="match_parent"
+				android:layout_height="1dp"/>
+
+			<TextView
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:textSize="18sp"
+				android:layout_marginTop="25dp"
+				android:text="@string/time"/>
+
+			<RadioButton
+				android:id="@+id/t1"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_marginTop="10dp"
+				android:textSize="15sp"
+				android:text="@string/t1"/>
+
+			<View
+				android:background="?android:attr/dividerVertical"
+				android:layout_width="match_parent"
+				android:layout_height="1dp"/>
+
+			<TextView
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:textSize="18sp"
+				android:layout_marginTop="25dp"
+				android:text="@string/volume"/>
+
+			<RadioButton
+				android:id="@+id/V1"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_marginTop="10dp"
+				android:textSize="15sp"
+				android:text="@string/V1"/>
+
+			<View
+				android:background="?android:attr/dividerVertical"
+				android:layout_width="match_parent"
+				android:layout_height="1dp"/>
+
+			<TextView
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:textSize="18sp"
+				android:layout_marginTop="25dp"
+				android:text="@string/velocity"/>
+
+			<RadioButton
+				android:id="@+id/vel1"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_marginTop="10dp"
+				android:textSize="15sp"
+				android:text="@string/vel1"/>
+
+			<View
+				android:background="?android:attr/dividerVertical"
+				android:layout_width="match_parent"
+				android:layout_height="1dp"/>
+
+			<TextView
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:textSize="18sp"
+				android:layout_marginTop="25dp"
+				android:text="@string/area"/>
+
+			<RadioButton
+				android:id="@+id/area"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_marginTop="10dp"
+				android:textSize="15sp"
+				android:text="@string/area1"/>
+
+			<View
+				android:background="?android:attr/dividerVertical"
+				android:layout_width="match_parent"
+				android:layout_height="1dp"/>
+
+			<TextView
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:textSize="18sp"
+				android:layout_marginTop="25dp"
+				android:text="@string/raio"/>
+
+			<RadioButton
+				android:id="@+id/raio1"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_marginTop="10dp"
+				android:textSize="15sp"
+				android:text="@string/raio1"/>
+
+		</RadioGroup>
+
+		<Button
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="@string/cont"
+			android:id="@+id/pross"
+			android:typeface="normal"
+			android:layout_marginTop="10dp"/>
+
+		<View
+			android:background="?android:attr/dividerVertical"
+			android:layout_width="match_parent"
+			android:layout_height="1dp"/>
+
+		<TextView
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="@string/nvQ"
+			android:layout_marginRight="15dp"
+			android:textSize="15sp"/>
+
+		<TextView
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="@string/nvV"
+			android:layout_marginRight="15dp"
+			android:textSize="15sp"/>
+
+		<TextView
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="@string/nvt"
+			android:layout_marginRight="15dp"
+			android:textSize="15sp"/>
+
+		<TextView
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="@string/nvA"
+			android:layout_marginRight="15dp"
+			android:textSize="15sp"/>
+
+		<TextView
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="@string/nvv"
+			android:layout_marginRight="15dp"
+			android:textSize="15sp"/>
+
+		<TextView
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="@string/nvp"
+			android:layout_marginRight="15dp"
+			android:textSize="15sp"/>
+
+		<TextView
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="@string/nvr"
+			android:layout_marginRight="15dp"
+			android:textSize="15sp"/>
+
+	</LinearLayout>
+
+</ScrollView>
+

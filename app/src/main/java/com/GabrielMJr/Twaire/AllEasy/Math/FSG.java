@@ -9,7 +9,8 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Toast;
 import com.GabrielMJr.Twaire.AllEasy.R;
-import com.GabrielMJr.Twaire.AllEasy.Math.OpEngeneer.MathE;
+import com.GabrielMJr.Twaire.AllEasy.Math.OpEngeneer.MOpEngeneer;
+import com.GabrielMJr.Twaire.AllEasy.tools.Tools;
 
 public class FSG extends Activity
 	{
@@ -22,10 +23,11 @@ public class FSG extends Activity
 		private static String bx;
 		private static String cx;
 		private static TextView result;
-		private static MathE MathE;
+		private static MOpEngeneer MOpEngeneer;
 		private static int av;
 		private static int bv;
 		private static int cv;
+		private static Tools Tools;
 		@Override
 		protected void onCreate(Bundle savedInstanceState)
 			{
@@ -36,7 +38,8 @@ public class FSG extends Activity
 				this.c = (EditText) findViewById(R.id.c);
 				this.calculate = (Button) findViewById(R.id.calculate);
 				this.result = (TextView)  findViewById(R.id.result);
-				this.MathE = new MathE();
+				this.MOpEngeneer = new MOpEngeneer();
+				this.Tools = new Tools();
 
 				// Onclick do botão "determinar"
 				this.calculate.setOnClickListener(
@@ -50,7 +53,7 @@ public class FSG extends Activity
 									FSG.cx = c.getText().toString();
 
 									// Verificar se valor de <a> é nulo ou não
-									if (MathE.isNull(FSG.ax))
+									if (Tools.isNull(FSG.ax))
 										{
 											Toast.makeText(FSG.this, "Não é possível com <a> nulo! Insira o valor de <a> correctamente.", Toast.LENGTH_SHORT).show();
 											FSG.av = 0;
@@ -69,9 +72,9 @@ public class FSG extends Activity
 										}
 
 									// Verificar se valor de <b> é ou não nulo
-									if (MathE.isNull(FSG.bx))
+									if (Tools.isNull(FSG.bx))
 										{
-											Toast.makeText(FSG.this, "Não é possível com <b> nulo! Insira o valor de <a> correctamente.", Toast.LENGTH_SHORT).show();
+											Toast.makeText(FSG.this, "Não é possível com <b> nulo! Insira o valor de <b> correctamente.", Toast.LENGTH_SHORT).show();
 											FSG.bv = 0;
 										}
 									else
@@ -87,7 +90,7 @@ public class FSG extends Activity
 										}
 
 									// Verificar se valor de <c> é ou não nulo
-									if (MathE.isNull(FSG.cx))
+									if (Tools.isNull(FSG.cx))
 										{
 											Toast.makeText(FSG.this, "Não é possível com <c> nulo! Insira o valor de <c> correctamente.", Toast.LENGTH_SHORT).show();
 											FSG.cv = 0;
@@ -109,27 +112,27 @@ public class FSG extends Activity
 									if ((FSG.av == 1) && (FSG.bv == 1) && (FSG.cv == 1))
 										{
 
-											MathE.setABC(Double.valueOf(FSG.ax), Long.valueOf(FSG.bx), Long.valueOf(FSG.cx));
+											MOpEngeneer.setABC(Double.valueOf(FSG.ax), Long.valueOf(FSG.bx), Long.valueOf(FSG.cx));
 											result.setText((CharSequence) "∆ = "
-																		 + MathE.getFSGInfo()[ 3 ]
+																		 + MOpEngeneer.getFSGInfo()[ 3 ]
 																		 + "\nx1 = "
-																		 + MathE.getFSGInfo()[ 4 ]
+																		 + MOpEngeneer.getFSGInfo()[ 4 ]
 																		 + "     x2 = " 
-																		 + MathE.getFSGInfo()[ 5 ]
+																		 + MOpEngeneer.getFSGInfo()[ 5 ]
 																		 + "\nDf = "
-																		 + MathE.getFSGInfo()[ 6 ]
+																		 + MOpEngeneer.getFSGInfo()[ 6 ]
 																		 + "     D'f = "
-																		 + MathE.getFSGInfo()[ 7 ]
+																		 + MOpEngeneer.getFSGInfo()[ 7 ]
 																		 + "\nXv = "
-																		 + MathE.getFSGInfo()[ 8 ]
+																		 + MOpEngeneer.getFSGInfo()[ 8 ]
 																		 + "     Yv = "
-																		 + MathE.getFSGInfo()[ 9 ]
+																		 + MOpEngeneer.getFSGInfo()[ 9 ]
 																		 + "\nOrdenada na origem = "
-																		 + MathE.getFSGInfo()[ 10 ]
+																		 + MOpEngeneer.getFSGInfo()[ 10 ]
 																		 + "\nEquação do eixo de simetria = "
-																		 + MathE.getFSGInfo()[ 11 ]
+																		 + MOpEngeneer.getFSGInfo()[ 11 ]
 																		 + "\nConcavidade virada para"
-																		 + MathE.getFSGInfo()[ 12 ]);
+																		 + MOpEngeneer.getFSGInfo()[ 12 ]);
 
 											// Senão, retorna um vazio
 										}

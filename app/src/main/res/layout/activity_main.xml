@@ -1,58 +1,58 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
-    android:background="@color/white"
-    android:orientation="vertical">
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent"
+	android:orientation="vertical">
 
-    <Button
-        android:id="@+id/fat"
-        android:layout_width="match_parent"
-        android:layout_height="40dp"
-        android:layout_marginTop="0dp"
-        android:textColor="@color/black"
-        android:background="@color/white"
-        android:textSize="20sp"
-        android:text="@string/fat" />
+	<TextView
+		android:id="@+id/fat"
+		android:layout_width="match_parent"
+		android:layout_height="40dp"
+		android:layout_marginTop="0dp"
+		android:textSize="18sp"
+		android:text="@string/fat"/>
 
-    <Button
-        android:id="@+id/arrj"
-        android:layout_width="match_parent"
-        android:layout_height="40dp"
-        android:layout_marginTop="0dp"
-        android:textColor="@color/black"
-        android:background="@color/white"
-        android:textSize="20sp"
-        android:text="@string/arrj" />
-        
-    <Button
-        android:id="@+id/comb"
-        android:layout_width="match_parent"
-        android:layout_height="40dp"
-        android:layout_marginTop="0dp"
-        android:textColor="@color/black"
-        android:background="@color/white"
-        android:textSize="20sp"
-        android:text="@string/comb" />
-		
-		<Button
-        android:id="@+id/fsg"
-        android:layout_width="match_parent"
-        android:layout_height="40dp"
-        android:layout_marginTop="0dp"
-        android:textColor="@color/black"
-        android:background="@color/white"
-        android:textSize="20sp"
-        android:text="@string/fsg" />
-		
-		<Button
-        android:id="@+id/fexp"
-        android:layout_width="match_parent"
-        android:layout_height="40dp"
-        android:layout_marginTop="0dp"
-        android:textColor="@color/black"
-        android:background="@color/white"
-        android:textSize="20sp"
-        android:text="@string/fexp" />
+	<TextView
+		android:id="@+id/arrj"
+		android:layout_width="match_parent"
+		android:layout_height="40dp"
+		android:layout_marginTop="0dp"
+		android:textSize="18sp"
+		android:text="@string/arrj"/>
+
+	<TextView
+		android:id="@+id/comb"
+		android:layout_width="match_parent"
+		android:layout_height="40dp"
+		android:layout_marginTop="0dp"
+		android:textSize="18sp"
+		android:text="@string/comb"/>
+
+	<TextView
+		android:id="@+id/fsg"
+		android:layout_width="match_parent"
+		android:layout_height="40dp"
+		android:layout_marginTop="0dp"
+		android:textSize="18sp"
+		android:text="@string/fsg"/>
+
+	<TextView
+		android:id="@+id/fexp"
+		android:layout_width="match_parent"
+		android:layout_height="40dp"
+		android:layout_marginTop="0dp"
+		android:textSize="18sp"
+		android:text="@string/fexp"/>
+
+	<TextView
+		android:id="@+id/vaz"
+		android:layout_width="match_parent"
+		android:layout_height="40dp"
+		android:layout_marginTop="0dp"
+		android:textSize="18sp"
+		android:text="@string/vaz"/>
+
 </LinearLayout>
+

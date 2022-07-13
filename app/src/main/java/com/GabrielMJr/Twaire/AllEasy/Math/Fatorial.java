@@ -7,7 +7,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 import android.view.View;
 import android.view.View.OnClickListener;
-import com.GabrielMJr.Twaire.AllEasy.Math.OpEngeneer.MathE;
+import com.GabrielMJr.Twaire.AllEasy.Math.OpEngeneer.MOpEngeneer;
 import com.GabrielMJr.Twaire.AllEasy.R;
 
 public class Fatorial extends Activity {
@@ -16,7 +16,7 @@ public class Fatorial extends Activity {
   private static EditText n;
   private static TextView fat;
   private static TextView result;
-  private static MathE MathE;
+  private static MOpEngeneer MOpEngeneer;
 
   @Override
   protected void onCreate(Bundle savedInstanceState) {
@@ -26,7 +26,7 @@ public class Fatorial extends Activity {
     this.n = (EditText) findViewById(R.id.n);
     this.fat = (TextView) findViewById(R.id.fat);
     this.result = (TextView) findViewById(R.id.result);
-    this.MathE = new MathE();
+    this.MOpEngeneer = new MOpEngeneer();
 
     this.fat.setOnClickListener(
         new OnClickListener() {
@@ -41,11 +41,11 @@ public class Fatorial extends Activity {
 								
 								// Senão, calcule normalmente
 								// Mandar n e p para OpEngeneer.Math
-                MathE.setNP(
+                MOpEngeneer.setNP(
                     Long.valueOf(n.getText().toString()), Long.valueOf(n.getText().toString()));
 										
 								// Pegar a String[] result
-                result.setText((CharSequence) "=" + String.valueOf(MathE.getArrResult()[0]));
+                result.setText((CharSequence) "=" + String.valueOf(MOpEngeneer.getArrResult()[0]));
               }
 
             } catch (Exception e) {

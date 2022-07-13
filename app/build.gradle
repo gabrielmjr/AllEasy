@@ -8,8 +8,8 @@ android {
         applicationId "com.GabrielMJr.Twaire.AllEasy"
         minSdkVersion 14
         targetSdkVersion 29
-        versionCode 100
-        versionName "1.1.0"
+        versionCode 102
+        versionName "1.2.0"
     }
     buildTypes {
         release {

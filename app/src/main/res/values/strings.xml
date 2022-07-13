@@ -21,4 +21,60 @@
 		<string name="f1">Função do tipo: y = a ^ (x)</string>
 		<string name="fexp">Função exponencial</string>
 		<string name="cont">Prosseguir</string>
+		<string name="vaz">Vazão Volúmica</string>
+		<string name="vazo">Vazão</string>
+		<string name="nvQ">Onde: Q → vazão</string>
+		<string name="nvV">V → volume (m3)</string>
+	  <string name="nvt">∆t → variação do tempo (s)</string>
+		<string name="nvA">A → área (m²)</string>
+	  <string name="nvv">v → velocidade (m/s)</string>
+		<string name="nvp">π → pi = 3,14</string>
+		<string name="nvr">r → raio (m)</string>
+		<string name="v1">Calcular usando Q=V/∆t</string>
+	  <string name="v2">Calcular usando Q=A × v</string>
+		<string name="v3">Calcular usando Q=π × r² × v</string>
+		<string name="t1">Calcular usando ∆t = V/Q</string>
+		<string name="V1">Calcular usando V = ∆t × Q</string>
+		<string name="vel1">Calcular usando v = Q/A</string>
+		<string name="area1">Calcular usando A = Q/v</string>
+		<string name="raio1">Calcular usando r = √[Q / (π × v)]</string>
+		<string name="v1q">Q = </string>
+		<string name="v1t">T</string>
+		<string name="v1vlo">V</string>
+    <string name="v1l">L</string>
+		<string name="clpm">Converter para m³</string>
+		<string name="dd">Dados</string>
+		<string name="fm">Fórmula</string>
+		<string name="res">Resolução</string>
+		<string name="v1vl">V = </string>
+		<string name="dt">∆t = </string>
+		<string name="dto">∆t </string>
+		<string name="sg">s</string>
+		<string name="vz">Q</string>
+		<string name="wht"> = ? </string>
+		<string name="fvz1">Q = V/∆t </string>
+		<string name="fvz2">Q = A × v </string>
+		<string name="fvz3">Q = π × r² × v</string>
+		<string name="fvt1">∆t = V/Q</string>
+		<string name="fvv1">V = ∆t × Q</string>
+		<string name="fvvel1">v = Q/A</string>
+		<string name="fvA1">A = Q/v</string>
+		<string name="fvra1">r = √[Q ÷ (π × v)]</string>
+		<string name="v1A">A </string>
+		<string name="fv">v </string>
+		<string name="dmc">m³ </string>
+		<string name="dmq">m² </string>
+		<string name="dm">m </string>
+		<string name="mps">m/s </string>
+		<string name="gr">r </string>
+		<string name="pip">π = </string>
+		<string name="vpi">3.14 </string>
+		<string name="Ap">A = </string>
+		<string name="vp">v = </string>
+		<string name="time">Tempo</string>
+		<string name="volume">Volume</string>
+		<string name="velocity">Velocidade</string>
+		<string name="area">Área</string>
+		<string name="raio">Raio</string>
+		<string name="mcps">m³/s</string>
 </resources>

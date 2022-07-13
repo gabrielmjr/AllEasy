@@ -7,7 +7,7 @@ import android.widget.TextView;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Toast;
-import com.GabrielMJr.Twaire.AllEasy.Math.OpEngeneer.MathE;
+import com.GabrielMJr.Twaire.AllEasy.Math.OpEngeneer.MOpEngeneer;
 import com.GabrielMJr.Twaire.AllEasy.R;
 
 public class Combination extends Activity
@@ -19,7 +19,7 @@ public class Combination extends Activity
 		private static TextView c;
 		private static String[] res = new String[4];
 		private static TextView result;
-		private static MathE MathE;
+		private static MOpEngeneer MOpEngeneer;
 
 
 
@@ -34,7 +34,7 @@ public class Combination extends Activity
 				this.p = (EditText) findViewById(R.id.p);
 				this.c = (TextView) findViewById(R.id.c);
 				this.result = (TextView) findViewById(R.id.result);
-				this.MathE = new MathE();
+				this.MOpEngeneer = new MOpEngeneer();
 
 				this.c.setOnClickListener(
 					new OnClickListener() {
@@ -55,16 +55,16 @@ public class Combination extends Activity
 												{
 
 													// Mandar n para OpEngeneer.Math e pegar a String result
-													MathE.setNP(nn, nn);
-													String nfat = String.valueOf(MathE.getArrResult()[ 0 ]);
+													MOpEngeneer.setNP(nn, nn);
+													String nfat = String.valueOf(MOpEngeneer.getArrResult()[ 0 ]);
 
 													// Mandar n-p para OpEngeneer.Math e pegar a String result
-													MathE.setNP((nn - pp), (nn - pp));
-													String nmpfat = String.valueOf(MathE.getArrResult()[ 0 ]);
+													MOpEngeneer.setNP((nn - pp), (nn - pp));
+													String nmpfat = String.valueOf(MOpEngeneer.getArrResult()[ 0 ]);
 
 													// Mandar p para OpEngeneer.Math e pegar a String result
-													MathE.setNP(pp, pp);
-													String pfat = String.valueOf(MathE.getArrResult()[ 0 ]);
+													MOpEngeneer.setNP(pp, pp);
+													String pfat = String.valueOf(MOpEngeneer.getArrResult()[ 0 ]);
 
 													// Resultado final de Combinação
 													String resfat = String.valueOf(Double.valueOf(nfat) / (Double.valueOf(nmpfat) * Double.valueOf(pfat)));

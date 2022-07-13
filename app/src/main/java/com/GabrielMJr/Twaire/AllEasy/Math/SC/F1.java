@@ -8,7 +8,7 @@ import android.widget.TextView;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Toast;
-import com.GabrielMJr.Twaire.AllEasy.Math.OpEngeneer.MathE;
+import com.GabrielMJr.Twaire.AllEasy.Math.OpEngeneer.MOpEngeneer;
 import com.GabrielMJr.Twaire.AllEasy.R;
 
 public class F1 extends Activity
@@ -17,7 +17,7 @@ public class F1 extends Activity
 		private static EditText a;
 		private static Button det;
 		private static TextView result;
-		private static MathE MathE;
+		private static MOpEngeneer MOpEngeneer;
 
 		@Override
 		protected void onCreate(Bundle savedInstanceState)
@@ -27,7 +27,7 @@ public class F1 extends Activity
 				this.a = findViewById(R.id.a);
 				this.det = findViewById(R.id.det);
 				this.result = findViewById(R.id.result);
-				this.MathE = new MathE();
+				this.MOpEngeneer = new MOpEngeneer();
 
 				det.setOnClickListener(
 					new OnClickListener() {
@@ -46,27 +46,27 @@ public class F1 extends Activity
 												}
 											else if (ax > 1)
 												{									
-													MathE.setA(Double.valueOf(a.getText().toString()));
+													MOpEngeneer.setA(Double.valueOf(a.getText().toString()));
 													result.setText((CharSequence)
 																				 "x      y"
 																				 + "\n-8     "
-																				 + MathE.getEXPResult()[ 0 ]
+																				 + MOpEngeneer.getEXPResult()[ 0 ]
 																				 + "\n-4     "
-																				 + MathE.getEXPResult()[ 1 ]
+																				 + MOpEngeneer.getEXPResult()[ 1 ]
 																				 + "\n-2     "
-																				 + MathE.getEXPResult()[ 2 ]
+																				 + MOpEngeneer.getEXPResult()[ 2 ]
 																				 + "\n-1     "
-																				 + MathE.getEXPResult()[ 3 ]
+																				 + MOpEngeneer.getEXPResult()[ 3 ]
 																				 + "\n0      "
-																				 + MathE.getEXPResult()[ 4 ]
+																				 + MOpEngeneer.getEXPResult()[ 4 ]
 																				 + "\n1      "
-																				 + MathE.getEXPResult()[ 5 ]
+																				 + MOpEngeneer.getEXPResult()[ 5 ]
 																				 + "\n2      "
-																				 + MathE.getEXPResult()[ 6 ]
+																				 + MOpEngeneer.getEXPResult()[ 6 ]
 																				 + "\n4      "
-																				 + MathE.getEXPResult()[ 7 ]
+																				 + MOpEngeneer.getEXPResult()[ 7 ]
 																				 + "\n8      "
-																				 + MathE.getEXPResult()[ 8 ]);
+																				 + MOpEngeneer.getEXPResult()[ 8 ]);
 												}
 										}
 									catch (Exception e)
