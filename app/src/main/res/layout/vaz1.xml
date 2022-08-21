@@ -1,168 +1,179 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView
+<RelativeLayout
 	xmlns:android="http://schemas.android.com/apk/res/android"
 	xmlns:tools="http://schemas.android.com/tools"
 	tools:content="com.GabrielMJr.Twaire.AllEasy.Physic.Vaz.Vaz1"
 	android:layout_width="match_parent"
-	android:layout_height="match_parent"
-	android:orientation="vertical">
+	android:layout_height="250dp"
+	android:orientation="vertical"
+	android:layout_gravity="top">
 
-	<LinearLayout
-		android:orientation="vertical"
-		android:layout_width="wrap_content"
-		android:layout_height="wrap_content">
+	<RelativeLayout
+		android:layout_width="match_parent"
+		android:layout_height="250dp"
+		android:background="@drawable/background_1"
+		android:orientation="horizontal"
+		android:gravity="top"
+		android:layout_marginTop="-40dp">
 
 		<LinearLayout
+			android:id="@+id/dados"
 			android:orientation="vertical"
 			android:layout_width="wrap_content"
-			android:layout_height="wrap_content">
+			android:layout_height="wrap_content"
+			android:layout_alignParentLeft="true"
+			android:layout_marginTop="40dp"
+			android:layout_gravity="left">
+
+			<TextView
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="@string/dd"
+				android:textSize="20sp"
+				android:layout_gravity="center"/>
+
+			<LinearLayout
+				android:orientation="horizontal"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content">
+
+				<TextView
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:text="@string/v1vl"
+					android:textSize="19sp"/>
+
+				<EditText
+					android:layout_width="wrap_content"
+					android:inputType="numberDecimal"
+					android:layout_height="wrap_content"
+					android:ems="3"
+					android:id="@+id/vol"/>
+
+				<TextView
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:text="@string/dmc"
+					android:textSize="18sp"/>
+
+			</LinearLayout>
 
 			<LinearLayout
 				android:orientation="horizontal"
 				android:layout_width="wrap_content"
 				android:layout_height="wrap_content"
-				android:layout_marginTop="30dp">
+				android:layout_marginTop="10dp">
 
-				<LinearLayout
-					android:orientation="vertical"
+				<TextView
 					android:layout_width="wrap_content"
-					android:layout_height="wrap_content">
+					android:layout_height="wrap_content"
+					android:text="@string/dt"
+					android:textSize="19sp"/>
 
-					<TextView
-						android:layout_width="wrap_content"
-						android:layout_height="wrap_content"
-						android:text="@string/dd"
-						android:textSize="18sp"
-						android:ems="7"/>
-
-					<LinearLayout
-						android:orientation="horizontal"
-						android:layout_width="wrap_content"
-						android:layout_height="wrap_content">
-
-						<TextView
-							android:layout_width="wrap_content"
-							android:layout_height="wrap_content"
-							android:text="@string/v1vl"
-							android:textSize="18sp"/>
-
-						<EditText
-							android:layout_width="wrap_content"
-							android:inputType="numberDecimal"
-							android:layout_height="wrap_content"
-							android:ems="3"
-							android:id="@+id/vol"/>
-
-						<TextView
-							android:layout_width="wrap_content"
-							android:layout_height="wrap_content"
-							android:text="@string/dmc"
-							android:textSize="18sp"/>
-
-					</LinearLayout>
-
-					<LinearLayout
-						android:orientation="horizontal"
-						android:layout_width="wrap_content"
-						android:layout_height="wrap_content"
-						android:layout_marginTop="10dp">
-
-						<TextView
-							android:layout_width="wrap_content"
-							android:layout_height="wrap_content"
-							android:text="@string/dt"
-							android:textSize="18sp"/>
-
-						<EditText
-							android:layout_width="wrap_content"
-							android:inputType="numberDecimal"
-							android:layout_height="wrap_content"
-							android:ems="3"
-							android:id="@+id/dt"/>
-
-						<TextView
-							android:layout_width="wrap_content"
-							android:layout_height="wrap_content"
-							android:text="@string/sg"
-							android:textSize="18sp"/>
-
-					</LinearLayout>
-
-					<LinearLayout
-						android:orientation="horizontal"
-						android:layout_width="wrap_content"
-						android:layout_height="wrap_content"
-						android:layout_marginTop="10dp">
-
-						<TextView
-							android:layout_width="wrap_content"
-							android:layout_height="wrap_content"
-							android:text="@string/vz"
-							android:textSize="18sp"/>
-
-						<TextView
-							android:layout_width="wrap_content"
-							android:layout_height="wrap_content"
-							android:text="@string/wht"
-							android:textSize="18sp"/>
-
-					</LinearLayout>
-
-				</LinearLayout>
-
-				<LinearLayout
-					android:orientation="vertical"
+				<EditText
 					android:layout_width="wrap_content"
-					android:layout_height="wrap_content">
+					android:inputType="numberDecimal"
+					android:layout_height="wrap_content"
+					android:ems="3"
+					android:id="@+id/dt"/>
 
-					<TextView
-						android:layout_width="wrap_content"
-						android:layout_height="wrap_content"
-						android:text="@string/fm"
-						android:textSize="18sp"
-						android:ems="6"/>
-
-					<TextView
-						android:layout_width="wrap_content"
-						android:layout_height="wrap_content"
-						android:text="@string/fvz1"
-						android:textSize="15sp"
-						android:id="@+id/vaz"/>
-
-				</LinearLayout>
-
-				<LinearLayout
-					android:orientation="vertical"
+				<TextView
 					android:layout_width="wrap_content"
-					android:layout_height="wrap_content">
+					android:layout_height="wrap_content"
+					android:text="@string/sg"
+					android:textSize="18sp"/>
 
-					<TextView
-						android:layout_width="wrap_content"
-						android:layout_height="wrap_content"
-						android:text="@string/res"
-						android:textSize="18sp"/>
+			</LinearLayout>
 
-					<HorizontalScrollView
-						android:layout_width="wrap_content"
-						android:layout_height="wrap_content"
-						android:orientation="horizontal">
+			<LinearLayout
+				android:orientation="horizontal"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_marginTop="10dp">
 
-						<TextView
-							android:id="@+id/res"
-							android:layout_width="wrap_content"
-							android:layout_height="wrap_content"
-							android:textSize="18sp"
-							android:text=""/>
+				<TextView
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:text="@string/vz"
+					android:textSize="19sp"/>
 
-					</HorizontalScrollView>
-
-				</LinearLayout>
+				<TextView
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:text="@string/wht"
+					android:textSize="18sp"/>
 
 			</LinearLayout>
 
 		</LinearLayout>
 
+		<LinearLayout
+			android:id="@+id/formula"
+			android:orientation="vertical"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_marginTop="40dp"
+			android:layout_alignParentEnd="true"
+			android:layout_gravity="right"
+			android:layout_marginEnd="20dp">
+
+			<TextView
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="@string/fm"
+				android:textSize="20sp"
+				android:layout_gravity="center"/>
+
+			<TextView
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="@string/fvz1"
+				android:textSize="19sp"
+				android:id="@+id/vaz"
+				android:layout_gravity="center_vertical|center_horizontal"
+				android:background="@drawable/edge_btn_1"
+				android:ems="5"
+				android:paddingStart="10dp"/>
+
+		</LinearLayout>
+
+	</RelativeLayout>
+
+	<LinearLayout
+		android:id="@+id/resulucao"
+		android:orientation="vertical"
+		android:layout_width="wrap_content"
+		android:layout_height="75dp"
+		android:layout_alignParentBottom="true"
+		android:layout_centerHorizontal="true"
+		android:layout_centerVertical="true"
+		android:background="@drawable/background_1"
+		android:paddingLeft="10dp"
+		android:paddingRight="10dp">
+
+		<TextView
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="@string/res"
+			android:textSize="20sp"
+			android:layout_gravity="center"/>
+
+		<HorizontalScrollView
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:orientation="horizontal"
+			android:layout_marginStart="5dp">
+
+			<TextView
+				android:id="@+id/res"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:textSize="19sp"
+				android:text=""/>
+
+		</HorizontalScrollView>
+
 	</LinearLayout>
 
-</ScrollView>
+</RelativeLayout>
 

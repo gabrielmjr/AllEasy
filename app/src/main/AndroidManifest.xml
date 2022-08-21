@@ -1,13 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.GabrielMJr.Twaire.AllEasy"
-    android:versionCode="102"
-
-		android:versionName="1.2.0">
-
-    <uses-sdk
-        android:minSdkVersion="14"
-        android:targetSdkVersion="29" />
+    package="com.GabrielMJr.Twaire.AllEasy">
 
     <application
         android:allowBackup="true"
@@ -22,8 +15,8 @@
             </intent-filter>
         </activity>
 
-				<!--Activitys da classe Math-->
-				<activity android:name="com.GabrielMJr.Twaire.AllEasy.Math.Fatorial">
+        <!--Activitys da classe Math-->
+        <activity android:name="com.GabrielMJr.Twaire.AllEasy.Math.Fatorial">
             <intent-filter>
                 <action android:name="android.intent.action.PARENT" />
                 <category android:name="android.intent.category.LAUNCHER" />
@@ -31,7 +24,7 @@
         </activity>
 
 
-				<activity android:name="com.GabrielMJr.Twaire.AllEasy.Math.Arranjos">
+        <activity android:name="com.GabrielMJr.Twaire.AllEasy.Math.Arranjos">
             <intent-filter>
                 <action android:name="android.intent.action.PARENT" />
                 <category android:name="android.intent.category.LAUNCHER" />
@@ -52,85 +45,78 @@
             </intent-filter>
         </activity>
 
-				<activity android:name="com.GabrielMJr.Twaire.AllEasy.Math.FExp">
+
+        <!--Activitys da classe Fisica-->
+        <activity android:name="com.GabrielMJr.Twaire.AllEasy.Physic.Vaz.Vaz">
             <intent-filter>
                 <action android:name="android.intent.action.PARENT" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
 
-				<activity android:name="com.GabrielMJr.Twaire.AllEasy.Math.SC.F1">
-						<intent-filter>
-								<action android:name="android.intent.action.PARENT" />
-								<category android:name="android.intent.category.LAUNCHER" />
-						</intent-filter>
-				</activity>
+        <activity android:name="com.GabrielMJr.Twaire.AllEasy.Physic.Vaz.Vaz1"
+            android:label="@string/vazo">
+            <intent-filter>
+                <action android:name="android.intent.action.PARENT" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
 
-				<activity android:name="com.GabrielMJr.Twaire.AllEasy.Physic.Vaz.Vaz">
-						<intent-filter>
-								<action android:name="android.intent.action.PARENT" />
-								<category android:name="android.intent.category.LAUNCHER" />
-						</intent-filter>
-				</activity>
+        <activity android:name="com.GabrielMJr.Twaire.AllEasy.Physic.Vaz.Vaz2"
+            android:label="@string/vazo">
+            <intent-filter>
+                <action android:name="android.intent.action.PARENT" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
 
+        <activity android:name="com.GabrielMJr.Twaire.AllEasy.Physic.Vaz.Vaz3"
+            android:label="@string/vazo">
+            <intent-filter>
+                <action android:name="android.intent.action.PARENT" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
 
+        <activity android:name="com.GabrielMJr.Twaire.AllEasy.Physic.Vaz.T1"
+            android:label="@string/time">
+            <intent-filter>
+                <action android:name="android.intent.action.PARENT"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
 
-				<!--Activitys da classe Fisica-->
-				<activity android:name="com.GabrielMJr.Twaire.AllEasy.Physic.Vaz.Vaz1">
-						<intent-filter>
-								<action android:name="android.intent.action.PARENT" />
-								<category android:name="android.intent.category.LAUNCHER" />
-						</intent-filter>
-				</activity>
+        <activity android:name="com.GabrielMJr.Twaire.AllEasy.Physic.Vaz.Volume1"
+            android:label="@string/volume">
+            <intent-filter>
+                <action android:name="android.intenr.action.PARENT"/>
+                <category android:name="android.intent.category.LAUNCHERr"/>
+            </intent-filter>
+        </activity>
 
-				<activity android:name="com.GabrielMJr.Twaire.AllEasy.Physic.Vaz.Vaz2">
-						<intent-filter>
-								<action android:name="android.intent.action.PARENT" />
-								<category android:name="android.intent.category.LAUNCHER" />
-						</intent-filter>
-				</activity>
+        <activity android:name="com.GabrielMJr.Twaire.AllEasy.Physic.Vaz.Velocidade1"
+            android:label="@string/velocity">
+            <intent-filter>
+                <action android:name="android.intent.action.PARENT"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
 
-				<activity android:name="com.GabrielMJr.Twaire.AllEasy.Physic.Vaz.Vaz3">
-						<intent-filter>
-								<action android:name="android.intent.action.PARENT" />
-								<category android:name="android.intent.category.LAUNCHER" />
-						</intent-filter>
-				</activity>
+        <activity android:name="com.GabrielMJr.Twaire.AllEasy.Physic.Vaz.Area1"
+            android:label="@string/area">
+            <intent-filter>
+                <action android:name="android.intent.action.PARENT"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
 
-				<activity android:name="com.GabrielMJr.Twaire.AllEasy.Physic.Vaz.T1">
-						<intent-filter>
-								<action android:name="android.intent.action.PARENT"/>
-								<category android:name="android.intent.category.LAUNCHER"/>
-						</intent-filter>
-				</activity>
-
-				<activity android:name="com.GabrielMJr.Twaire.AllEasy.Physic.Vaz.Volume1">
-						<intent-filter>
-								<action android:name="android.intenr.action.PARENT"/>
-								<category android:name="android.intent.category.LAUNCHERr"/>
-						</intent-filter>
-				</activity>
-
-				<activity android:name="com.GabrielMJr.Twaire.AllEasy.Physic.Vaz.Velocidade1">
-						<intent-filter>
-								<action android:name="android.intent.action.PARENT"/>
-								<category android:name="android.intent.category.LAUNCHER"/>
-						</intent-filter>
-				</activity>
-				
-				<activity android:name="com.GabrielMJr.Twaire.AllEasy.Physic.Vaz.Area1">
-						<intent-filter>
-								<action android:name="android.intent.action.PARENT"/>
-								<category android:name="android.intent.category.LAUNCHER"/>
-						</intent-filter>
-				</activity>
-
-				<activity android:name="com.GabrielMJr.Twaire.AllEasy.Physic.Vaz.Raio1">
-						<intent-filter>
-								<action android:name="android.intent.action.PARENT"/>
-								<category android:name="android.intent.category.LAUNCHER"/>
-						</intent-filter>
-			  </activity>
+        <activity android:name="com.GabrielMJr.Twaire.AllEasy.Physic.Vaz.Raio1"
+            android:label="@string/raio">
+            <intent-filter>
+                <action android:name="android.intent.action.PARENT"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
 
     </application>
 

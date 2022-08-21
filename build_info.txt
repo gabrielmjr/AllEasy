@@ -1,28 +1,20 @@
 ============Info==========================
-v1.2.0
+v1.2.1
 min sdk=14
 target=29
 package=com.GabrielMJr.Twaire.AllEasy
 Min OS Requerido=4.0(Ice Cream Sandwich)
-Código de versão=110
-Released 13/07/2022
+Código de versão=103
+Released 21/08/2022
 
 ========Features========
-- Cálculo de Fatorial 
+Cálculo de Fatorial 
 - Cálculo de Arranjos
 - Cálculo de Combinação
 - Cálculo de Função quadrática e estudo do seu gráfico
-- Cálculo de Função exponencial
+- Introdução à Vazão Volumétrica 
 
 ========What's news========
-- Novo ícone
 - Nova interface
-- Novo tema:
-   *Vazão Volúmica
-   Subtemas:
-     - Cálculo de vazão volúmica
-     - Cálculo do tempo
-     - Cálculo do volume
-     - Cálculo da velocidade
-     - Cálculo da área
-     - Cálcalculo do raio
+- Demostração de passos de Delta ao calcular FSG
+- Valores exponenciais simplificados

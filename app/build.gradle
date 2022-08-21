@@ -1,15 +1,15 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 21
-    buildToolsVersion "21.1.0"
+    compileSdkVersion 29
+    buildToolsVersion "29.0.3"
 
     defaultConfig {
         applicationId "com.GabrielMJr.Twaire.AllEasy"
         minSdkVersion 14
         targetSdkVersion 29
-        versionCode 102
-        versionName "1.2.0"
+        versionCode 103
+        versionName "1.2.1"
     }
     buildTypes {
         release {
@@ -20,5 +20,5 @@ android {
 }
 
 dependencies {
-    compile fileTree(dir: 'libs', include: ['*.jar'])
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
 }

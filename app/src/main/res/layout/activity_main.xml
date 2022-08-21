@@ -2,57 +2,54 @@
 <LinearLayout
 	xmlns:android="http://schemas.android.com/apk/res/android"
 	xmlns:tools="http://schemas.android.com/tools"
-	android:layout_width="fill_parent"
-	android:layout_height="fill_parent"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
 	android:orientation="vertical">
 
 	<TextView
 		android:id="@+id/fat"
-		android:layout_width="match_parent"
+		android:layout_width="wrap_content"
 		android:layout_height="40dp"
 		android:layout_marginTop="0dp"
 		android:textSize="18sp"
-		android:text="@string/fat"/>
+		android:text="@string/fat"
+		android:layout_gravity="center_vertical|center_horizontal"/>
 
 	<TextView
 		android:id="@+id/arrj"
-		android:layout_width="match_parent"
+		android:layout_width="wrap_content"
 		android:layout_height="40dp"
 		android:layout_marginTop="0dp"
 		android:textSize="18sp"
-		android:text="@string/arrj"/>
+		android:text="@string/arrj"
+		android:layout_gravity="center_vertical|center_horizontal"/>
 
 	<TextView
 		android:id="@+id/comb"
-		android:layout_width="match_parent"
+		android:layout_width="wrap_content"
 		android:layout_height="40dp"
 		android:layout_marginTop="0dp"
 		android:textSize="18sp"
-		android:text="@string/comb"/>
+		android:text="@string/comb"
+		android:layout_gravity="center_vertical|center_horizontal"/>
 
 	<TextView
 		android:id="@+id/fsg"
-		android:layout_width="match_parent"
+		android:layout_width="wrap_content"
 		android:layout_height="40dp"
 		android:layout_marginTop="0dp"
 		android:textSize="18sp"
-		android:text="@string/fsg"/>
-
-	<TextView
-		android:id="@+id/fexp"
-		android:layout_width="match_parent"
-		android:layout_height="40dp"
-		android:layout_marginTop="0dp"
-		android:textSize="18sp"
-		android:text="@string/fexp"/>
+		android:text="@string/fsg"
+		android:layout_gravity="center_vertical|center_horizontal"/>
 
 	<TextView
 		android:id="@+id/vaz"
-		android:layout_width="match_parent"
+		android:layout_width="wrap_content"
 		android:layout_height="40dp"
 		android:layout_marginTop="0dp"
 		android:textSize="18sp"
-		android:text="@string/vaz"/>
+		android:text="@string/vaz"
+		android:layout_gravity="center_vertical|center_horizontal"/>
 
 </LinearLayout>
 

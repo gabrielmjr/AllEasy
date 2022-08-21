@@ -8,86 +8,84 @@ import android.widget.EditText;
 import android.widget.Toast;
 import android.view.View;
 import android.view.View.OnClickListener;
-import com.GabrielMJr.Twaire.AllEasy.tools.Tools;
-import com.GabrielMJr.Twaire.AllEasy.Physic.OpEngeneer.FOpEngeneer;
+import com.GabrielMJr.Twaire.tools.StringAnalyst;
+import com.GabrielMJr.Twaire.Physic.FluidFlow;
 
-public class T1 extends Activity
-	{
+public class T1 extends Activity {
 
-		// Atrubutos
-		private static EditText vol;
-		private static EditText vaz;
-		private static TextView tempo;
-		private static TextView res;
-		private static int verifyVol;
-		private static int verifyVaz;
-		private static Double volume;
-		private static Double vazao;
-		private static FOpEngeneer FP;
-		private static Tools Tools;
+    // Atrubutos
+    private static EditText vol;
+    private static EditText vaz;
+    private static TextView tempo;
+    private static TextView res;
+    private static int verifyVol;
+    private static int verifyVaz;
+    private static Double volume;
+    private static Double vazao;
+    private static FluidFlow FF;
+    private static StringAnalyst StringAnalyst;
 
-		@Override
-		protected void onCreate(Bundle savedInstanceState)
-			{
-				super.onCreate(savedInstanceState);
-				setContentView(R.layout.t1);
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.t1);
 
-				this.vol = findViewById(R.id.vol);
-				this.vaz = findViewById(R.id.vaz);
-				this.tempo = findViewById(R.id.tempo);
-				this.res = findViewById(R.id.res);
-				this.Tools = new Tools();
-				this.FP = new FOpEngeneer();
+        this.vol = findViewById(R.id.vol);
+        this.vaz = findViewById(R.id.vaz);
+        this.tempo = findViewById(R.id.tempo);
+        this.res = findViewById(R.id.res);
+        this.StringAnalyst = new StringAnalyst();
+        this.FF = new FluidFlow();
 
-				this.tempo.setOnClickListener(
-					new OnClickListener() {
-							public void onClick(View view)
-								{
-									if (T1.Tools.isNull(vol.getText().toString()))
-										{
-											Toast.makeText(T1.this, "Não é possível calcular com <Volume> nulo!", Toast.LENGTH_SHORT).show();
-											T1.verifyVol = 0;
-										}
-									else
-										{
-											T1.volume = Double.valueOf(vol.getText().toString());
-											T1.verifyVol = 1;
-										}
+        this.tempo.setOnClickListener(
+            new OnClickListener() {
+                public void onClick(View view) {
 
-									if (T1.Tools.isNull(T1.vaz.getText().toString()))
-										{
-											Toast.makeText(T1.this, "Não é possível calcular com <Vazão> nulo!", Toast.LENGTH_SHORT).show();
-											T1.verifyVaz = 0;
-										}
-									else
-										{
-											T1.vazao = Double.valueOf(T1.vaz.getText().toString());
-											T1.verifyVaz = 1;
-										}
+                    try {
+                        if (StringAnalyst.isNull(vol.getText().toString())) {
+                            Toast.makeText(T1.this, R.string.vol_null, Toast.LENGTH_SHORT).show();
+                            verifyVol = 0;
+                        } else {
+                            volume = Double.valueOf(vol.getText().toString());
+                            verifyVol = 1;
+                        }
 
-									if (T1.verifyVaz == 1 && T1.verifyVol == 1)
-										{
-											FP.setVQ(volume, vazao);
-											T1.res.setText((CharSequence) "∆t = "
-																		 + String.valueOf(volume)
-																		 + "m³ / ("
-																		 + vazao
-																		 + "m³/s)");
+                    } catch (Exception error) {
+                        Toast.makeText(T1.this, R.string.insert_volume_well, Toast.LENGTH_SHORT).show();
+                        verifyVol = 0;
+                    }
 
-											T1.res.setText((CharSequence) T1.res.getText().toString()
-																		 + "\n"
-																		 + "∆t = "
-																		 + FP.getTempoRes()
-																		 + "s");
+                    try {
+                        if (StringAnalyst.isNull(vaz.getText().toString())) {
+                            Toast.makeText(T1.this, R.string.vaz_null, Toast.LENGTH_SHORT).show();
+                            verifyVaz = 0;
+                        } else {
+                            vazao = Double.valueOf(vaz.getText().toString());
+                            verifyVaz = 1;
+                        }
 
-										}
-									else
-										{
-											return;
-										}
-								}
-						});
+                    } catch (Exception error) {
+                        Toast.makeText(T1.this, R.string.insert_vaz_well, Toast.LENGTH_SHORT).show();
+                        verifyVaz = 0;
 
-			}
-	}
+                        if (verifyVaz == 1 && verifyVol == 1) {
+                            res.setText((CharSequence) "∆t = "
+                                        + String.valueOf(volume)
+                                        + "m³ / ("
+                                        + vazao
+                                        + "m³/s)");
+
+                            res.setText((CharSequence) res.getText().toString()
+                                        + "\n∆t ="
+                                        + FF.tempo(volume, vazao)
+                                        + "s");
+                        } else { 
+                            return;
+                        }
+                    }
+                }
+            });
+
+    }
+}
 

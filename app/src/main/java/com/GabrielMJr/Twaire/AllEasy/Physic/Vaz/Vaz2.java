@@ -8,79 +8,87 @@ import android.widget.TextView;
 import android.widget.Toast;
 import android.view.View;
 import android.view.View.OnClickListener;
-import com.GabrielMJr.Twaire.AllEasy.tools.Tools;
-import com.GabrielMJr.Twaire.AllEasy.Physic.OpEngeneer.FOpEngeneer;
+import com.GabrielMJr.Twaire.tools.StringAnalyst;
+import com.GabrielMJr.Twaire.Physic.FluidFlow;
 
 
-public class Vaz2 extends Activity
-{
-	
+public class Vaz2 extends Activity {
+
 	// Atributos
 	private static EditText vel;
 	private static TextView vaz;
 	private static EditText ar;
 	private static TextView res;
-	private static Tools Tools;
+	private static StringAnalyst StringAnalyst;
 	private static int verifyVelocity;
 	private static int verifyArea;
 	private static Double velocidade;
 	private static Double area;
-	private static FOpEngeneer FP;
-	
+	private static FluidFlow FF;
+
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.vaz2);
-		
+
 		this.vel = findViewById(R.id.vel);
 		this.vaz = findViewById(R.id.vaz);
 		this.ar = findViewById(R.id.ar);
 		this.res = findViewById(R.id.res);
-		this.Tools = new Tools();
-		this.FP = new FOpEngeneer();
-		
-		
+		this.StringAnalyst = new StringAnalyst();
+		this.FF = new FluidFlow();
+
+
 		this.vaz.setOnClickListener(
-		  new OnClickListener() {
+            new OnClickListener() {
 				public void onClick(View view) {
-					
-					if (Tools.isNull(Vaz2.vel.getText().toString())) {
-						Toast.makeText(Vaz2.this, "Não é possível calcular com <Velocidade> nula!", Toast.LENGTH_SHORT).show();
-						Vaz2.verifyVelocity = 0;
-					} else {
-						Vaz2.velocidade = Double.valueOf(Vaz2.vel.getText().toString());
-						Vaz2.verifyVelocity = 1;
-					}
-					
-					if (Tools.isNull(Vaz2.ar.getText().toString())) {
-						Toast.makeText(Vaz2.this, "Não é possível calcular com <Área> nula!", Toast.LENGTH_SHORT).show();
-						Vaz2.verifyArea = 0;
-					} else {
-						Vaz2.area = Double.valueOf(Vaz2.ar.getText().toString());
-						Vaz2.verifyArea = 1;
-					}
-					
-					if (Vaz2.verifyVelocity == 1 && Vaz2.verifyArea == 1) {
-						
-						FP.setAV(Vaz2.area, Vaz2.velocidade);
-						
-						Vaz2.res.setText((CharSequence) "Q = "
-						             + Vaz2.ar.getText().toString()
-												 + "m²"
-												 + " × "
-												 + Vaz2.vel.getText().toString()
-												 + "m/s");
-												 
-					 Vaz2.res.setText((CharSequence) Vaz2.res.getText().toString()
-					                   + "\n"
-														 + "Q = "
-														 + FP.getVres()
-														 + "m³/s");
-						
-					} else {
-						return;
-					}
-				}
+
+                    try {
+                        if (StringAnalyst.isNull(ar.getText().toString())) {
+                            Toast.makeText(Vaz2.this, R.string.area_null, Toast.LENGTH_SHORT).show();
+                            verifyArea = 0;
+                        } else {
+                            area = Double.valueOf(ar.getText().toString());
+                            verifyArea = 1;
+                        }
+
+                    } catch (Exception error) {
+                        Toast.makeText(Vaz2.this, R.string.insert_area_well, Toast.LENGTH_SHORT).show();
+                        verifyArea = 0;
+                    }
+
+
+                    try {
+                        if (StringAnalyst.isNull(vel.getText().toString())) {
+                            Toast.makeText(Vaz2.this, R.string.vel_null, Toast.LENGTH_SHORT).show();
+                            verifyVelocity = 0;
+                        } else {
+                            velocidade = Double.valueOf(vel.getText().toString());
+                            verifyVelocity = 1;
+                        }
+
+                    } catch (Exception error) {
+                        Toast.makeText(Vaz2.this, R.string.insert_velocity_well, Toast.LENGTH_SHORT).show();
+                        verifyVelocity = 0;
+                    }
+
+                    if (verifyVelocity == 1 && verifyArea == 1) {
+                        res.setText((CharSequence) "Q = "
+                                         + ar.getText().toString()
+                                         + "m²"
+                                         + " × "
+                                         + vel.getText().toString()
+                                         + "m/s");
+
+                        res.setText((CharSequence) res.getText().toString()
+                                         + "\nQ = "
+                                         + FF.sfluidFlow(area, velocidade)
+                                         + "m³/s");
+
+                    } else {
+                        return;
+                    }
+                }
 			});
 	}
 }
