@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <resources>
+        <!--Mensagem de atualização-->
+        <string name="update_title">O que tem de novo?</string>
+        <string name="update_message">Introdução à cinemàtica</string>
+    </resources>
+    

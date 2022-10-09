@@ -1,88 +1,162 @@
 package com.GabrielMJr.Twaire.AllEasy;
 
 import android.os.Bundle;
-import android.app.Activity;
+import android.support.v7.app.AppCompatActivity;
 import android.widget.TextView;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.content.Intent;
 import com.GabrielMJr.Twaire.AllEasy.R;
-import com.GabrielMJr.Twaire.AllEasy.Math.Arranjos;
-import com.GabrielMJr.Twaire.AllEasy.Math.Combination;
-import com.GabrielMJr.Twaire.AllEasy.Math.Fatorial;
-import com.GabrielMJr.Twaire.AllEasy.Math.FSG;
-import com.GabrielMJr.Twaire.AllEasy.Physic.Vaz.Vaz;
+import com.GabrielMJr.Twaire.AllEasy.math.Arranjos;
+import com.GabrielMJr.Twaire.AllEasy.math.Combination;
+import com.GabrielMJr.Twaire.AllEasy.math.Fatorial;
+import com.GabrielMJr.Twaire.AllEasy.math.FSG;
+import com.GabrielMJr.Twaire.AllEasy.physic.vaz.FluidFlow_ActivityMain;
+import com.GabrielMJr.Twaire.AllEasy.physic.kinematic.Kinematic_ActivityMain;
+import com.GabrielMJr.Twaire.AllEasy.databaseManager.DataManager;
+import com.GabrielMJr.Twaire.AllEasy.tools.DialogAlertData;
+import android.content.pm.PackageInfo;
+import android.content.pm.PackageManager.NameNotFoundException;
+import android.content.pm.PackageManager;
+import android.graphics.drawable.Drawable;
+import android.os.Handler;
+import android.content.Context;
+import android.support.v7.widget.Toolbar;
 
-public class MainActivity extends Activity {
+
+public class MainActivity extends AppCompatActivity {
 
     // Atributes
-	private static TextView Arrj;
-	private static TextView Comb;
-    private static TextView Fat;
-	private static TextView Fsg;
-	private static TextView Vz;
+	private static TextView arranjos;
+	private static TextView comb;
+    private static TextView fat;
+	private static TextView fsg;
+	private static TextView vaz;
+	private static TextView kinematic;
+    private static TextView welcome;
+    private static Toolbar toolbar;
 
-	private static Intent ArranjosC;
-	private static Intent CombinationC;
-    private static Intent FatorialC;
-	private static Intent FSGC;
-	private static Intent VazC;
+	private static DataManager DM;
+    private static DialogAlertData dialogAlertData;
+	private static final String DB_NAME = "app_info";
+	private static final String TB_NAME = "version_info";
+    private static String title;
+    private static String message;
+    private static Drawable icon;
+	private static int versionCode;
+    private static PackageInfo packageInfo;
+    private static Handler handler;
+    private static int updaterStatus;
+    private final Context context = this;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setTheme(R.style.BlackField);
+        setContentView(R.layout.splash_screen);
+        
+       handler = new Handler();
+        handler.postDelayed(new Runnable() {
+                @Override
+                public void run() {
+                    setContentView(R.layout.splash_screen);
+                    
+                    try {
+                        packageInfo = getApplicationContext().getPackageManager().getPackageInfo(getApplicationContext().getPackageName(), 0);
+                        versionCode = packageInfo.versionCode;
+                    } catch (PackageManager.NameNotFoundException e) {}
+                    
+                    DM = new DataManager(getApplicationContext(), DB_NAME, TB_NAME);
+                    updaterStatus = DM.initialize(versionCode);
+                    
+                    if (updaterStatus == 2) {
+                        welcome = findViewById(R.id.welcome);
+                        welcome.setText(R.string.welcome);
+                    }
+                    
+                    dialogAlertData = new DialogAlertData(context);
+                }
+            }, 1);
 
-		this.Arrj = findViewById(R.id.arrj);
-		this.Comb = findViewById(R.id.comb);
-		this.Fat = findViewById(R.id.fat);
-		this.Fsg = findViewById(R.id.fsg);
-		this.Vz = findViewById(R.id.vaz);
+        handler.postDelayed(new Runnable() {
+                @Override
+                public void run() {
+                    setTheme(R.style.AppTheme);
+                    setContentView(R.layout.activity_main);
+                    toolbar = findViewById(R.id.toolbar);
+                    setSupportActionBar(toolbar);
+      
+                    arranjos = findViewById(R.id.arrj);
+                    comb = findViewById(R.id.comb);
+                    fat = findViewById(R.id.fat);
+                    fsg = findViewById(R.id.fsg);
+                    vaz = findViewById(R.id.vaz);
+                    kinematic = findViewById(R.id.kinematic);
+                    
+                    if (updaterStatus == -1) {
 
-		this.ArranjosC = new Intent(MainActivity.this, Arranjos.class);
-		this.CombinationC = new Intent(MainActivity.this, Combination.class);
-		this.FatorialC = new Intent(MainActivity.this, Fatorial.class);
-		this.FSGC = new Intent(MainActivity.this, FSG.class);
-		this.VazC = new Intent(MainActivity.this, Vaz.class);
+                    } else if (updaterStatus == 0) {
 
-		// Abrir aba de "Arranjos" caso o botão Arrj for clicado
-        this.Arrj.setOnClickListener(
-			new OnClickListener() {
-				public void onClick(View view) {
-					startActivity(ArranjosC);
-				}
-			});
+                    } else if (updaterStatus == 1) {
+                        title = (String)getText(R.string.update_title);
+                        message = (String)getText(R.string.update_message);
+                        icon = getDrawable(R.mipmap.ic_launcher);
+                        dialogAlertData.alertDialog(title, message, icon).show();
+                    }
 
-		// Abrir aba de "Combinação" caso o botão Comb for clicado
-        this.Comb.setOnClickListener(
-			new OnClickListener() {
-				public void onClick(View view) {
-					startActivity(CombinationC);
-				}
-			});
+                    // Abrir aba de "Arranjos" caso o botão arranjos for clicado
+                    arranjos.setOnClickListener(
+                        new OnClickListener() {
+                            public void onClick(View view) {
+                                startActivity(new Intent(getApplicationContext(), Arranjos.class));
+                            }
+                        });
 
-		// Abrir aba de "Fatorial" caso o botão Fat for clicado
-        this.Fat.setOnClickListener(
-			new OnClickListener() {
-				public void onClick(View view) {
-					startActivity(FatorialC);
-				}
-			});
+                    // Abrir aba de "combinação" caso o botão comb for clicado
+                    comb.setOnClickListener(
+                        new OnClickListener() {
+                            public void onClick(View view) {
+                                startActivity(new Intent(getApplicationContext(), Combination.class));
+                            }
+                        });
 
-		// Abrir aba de "Função de segundo grau" caso o botão Fsg for clicado
-        this.Fsg.setOnClickListener(
-			new OnClickListener() {
-				public void onClick(View view) {
-					startActivity(FSGC);
-				}
-			});
+                    // Abrir aba de "fatorial" caso o botão fat for clicado
+                    fat.setOnClickListener(
+                        new OnClickListener() {
+                            public void onClick(View view) {
+                                startActivity(new Intent(getApplicationContext(), Fatorial.class));
+                            }
+                        });
 
-		// Abrir aba de "Vazão" caso  botão VZ for clicado;
-		this.Vz.setOnClickListener(
-            new OnClickListener(){
-				public void onClick(View view) {
-					startActivity(VazC);
-				}
-			});
+                    // Abrir aba de "Função de segundo grau" caso o botão fsg for clicado
+                    fsg.setOnClickListener(
+                        new OnClickListener() {
+                            public void onClick(View view) {
+                                startActivity(new Intent(getApplicationContext(), FSG.class));
+                            }
+                        });
+
+                    // Abrir aba de "Vazão" caso  botão vaz for clicado;
+                    vaz.setOnClickListener(
+                        new OnClickListener(){
+                            public void onClick(View view) {
+                                startActivity(new Intent(getApplicationContext(), FluidFlow_ActivityMain.class));
+                            }
+                        });
+
+                    // Abrir aba de "Cinemática" caso o botão kinematic for clicado
+                    kinematic.setOnClickListener( 
+                        new OnClickListener() {
+                            @Override
+                            public void onClick(View view) {
+                                startActivity(new Intent(getApplicationContext(), Kinematic_ActivityMain.class));
+                            }
+                        });
+
+                }
+            }, 2500);
+
+
 	}
+
 }

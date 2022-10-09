@@ -8,17 +8,30 @@ android {
         applicationId "com.GabrielMJr.Twaire.AllEasy"
         minSdkVersion 14
         targetSdkVersion 29
-        versionCode 103
-        versionName "1.2.1"
+        
+        versionCode 104
+        versionName "1.2.2"
     }
     buildTypes {
         release {
-            minifyEnabled false
+            minifyEnabled true
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
 }
 
+dexOptions {
+        javaMaxHeapSize "2048M"
+    }
+    
+multiDexEnabled true
+
 dependencies {
+	api 'androidx.constraintlayout:constraintlayout:2.0.0'
+	api 'androidx.constraintlayout:constraintlayout-solver:2.0.0'
+	api 'com.android.support.constraint:constraint-layout-solver:2.0.0'
+	api 'com.android.support.constraint:constraint-layout:2.0.0'
+    implementation 'com.android.support:appcompat-v7:27.1.1' 
+	implementation 'com.android.support:design:27.1.1'
     implementation fileTree(dir: 'libs', include: ['*.jar'])
 }

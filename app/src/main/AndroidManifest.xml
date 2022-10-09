@@ -1,122 +1,443 @@
-<?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+<?xml version='1.0' encoding='utf-8'?>
+<manifest
+    xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.GabrielMJr.Twaire.AllEasy">
+
+    <!--prevent phone from sleeping-->
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
 
     <application
         android:allowBackup="true"
-        android:icon="@drawable/ic_launcher"
+        android:icon="@mipmap/ic_launcher"
+        android:roundIcon="@mipmap/ic_launcher_round"
         android:label="@string/app_name"
-        android:theme="@style/AppTheme">
+        android:theme="@style/AppTheme"
+        android:resizeableActivity="true">
 
-        <activity android:name="com.GabrielMJr.Twaire.AllEasy.MainActivity">
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/app_name">
+
             <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
+
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+
             </intent-filter>
+
         </activity>
 
-        <!--Activitys da classe Math-->
-        <activity android:name="com.GabrielMJr.Twaire.AllEasy.Math.Fatorial">
+        <activity
+            android:name=".math.Fatorial"
+            android:label="@string/fat">
+
             <intent-filter>
-                <action android:name="android.intent.action.PARENT" />
-                <category android:name="android.intent.category.LAUNCHER" />
+
+                <action android:name="android.intent.action.PARENT"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+
             </intent-filter>
+
+        </activity>
+
+        <activity
+            android:name=".math.Arranjos"
+            android:label="@string/arrj">
+
+            <intent-filter>
+
+                <action android:name="android.intent.action.PARENT"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+
+            </intent-filter>
+
+        </activity>
+
+        <activity
+            android:name=".math.Combination"
+            android:label="@string/comb">
+
+            <intent-filter>
+
+                <action android:name="android.intent.action.PARENT"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+
+            </intent-filter>
+
+        </activity>
+
+        <activity
+            android:name=".math.FSG"
+            android:label="@string/fsg">
+
+            <intent-filter>
+
+                <action android:name="android.intent.action.PARENT"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+
+            </intent-filter>
+
         </activity>
 
 
-        <activity android:name="com.GabrielMJr.Twaire.AllEasy.Math.Arranjos">
+
+        <!--Fisica-->
+        <!--Fluido volumétrico-->
+        <activity
+            android:name=".physic.vaz.FluidFlow_ActivityMain"
+            android:label="@string/vaz">
+
             <intent-filter>
-                <action android:name="android.intent.action.PARENT" />
-                <category android:name="android.intent.category.LAUNCHER" />
+
+                <action android:name="android.intent.action.PARENT"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+
             </intent-filter>
+
         </activity>
 
-        <activity android:name="com.GabrielMJr.Twaire.AllEasy.Math.Combination">
-            <intent-filter>
-                <action android:name="android.intent.action.PARENT" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
-
-        <activity android:name="com.GabrielMJr.Twaire.AllEasy.Math.FSG">
-            <intent-filter>
-                <action android:name="android.intent.action.PARENT" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
-
-
-        <!--Activitys da classe Fisica-->
-        <activity android:name="com.GabrielMJr.Twaire.AllEasy.Physic.Vaz.Vaz">
-            <intent-filter>
-                <action android:name="android.intent.action.PARENT" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
-
-        <activity android:name="com.GabrielMJr.Twaire.AllEasy.Physic.Vaz.Vaz1"
+        <activity
+            android:name=".physic.vaz.FlowRate1"
             android:label="@string/vazo">
+
             <intent-filter>
-                <action android:name="android.intent.action.PARENT" />
-                <category android:name="android.intent.category.LAUNCHER" />
+
+                <action android:name="android.intent.action.PARENT"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+
             </intent-filter>
+
         </activity>
 
-        <activity android:name="com.GabrielMJr.Twaire.AllEasy.Physic.Vaz.Vaz2"
+        <activity
+            android:name=".physic.vaz.FlowRate2"
             android:label="@string/vazo">
+
             <intent-filter>
-                <action android:name="android.intent.action.PARENT" />
-                <category android:name="android.intent.category.LAUNCHER" />
+
+                <action android:name="android.intent.action.PARENT"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+
             </intent-filter>
+
         </activity>
 
-        <activity android:name="com.GabrielMJr.Twaire.AllEasy.Physic.Vaz.Vaz3"
+        <activity
+            android:name=".physic.vaz.FlowRate3"
             android:label="@string/vazo">
+
             <intent-filter>
-                <action android:name="android.intent.action.PARENT" />
-                <category android:name="android.intent.category.LAUNCHER" />
+
+                <action android:name="android.intent.action.PARENT"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+
             </intent-filter>
+
         </activity>
 
-        <activity android:name="com.GabrielMJr.Twaire.AllEasy.Physic.Vaz.T1"
+        <activity
+            android:name=".physic.vaz.Time1"
             android:label="@string/time">
+
             <intent-filter>
+
                 <action android:name="android.intent.action.PARENT"/>
+
                 <category android:name="android.intent.category.LAUNCHER"/>
+
             </intent-filter>
+
         </activity>
 
-        <activity android:name="com.GabrielMJr.Twaire.AllEasy.Physic.Vaz.Volume1"
+        <activity
+            android:name=".physic.vaz.Volume1"
             android:label="@string/volume">
+
             <intent-filter>
-                <action android:name="android.intenr.action.PARENT"/>
+
+                <action android:name="android.intent.action.PARENT"/>
+
                 <category android:name="android.intent.category.LAUNCHERr"/>
+
             </intent-filter>
+
         </activity>
 
-        <activity android:name="com.GabrielMJr.Twaire.AllEasy.Physic.Vaz.Velocidade1"
+        <activity
+            android:name=".physic.vaz.Speed1"
             android:label="@string/velocity">
+
             <intent-filter>
+
                 <action android:name="android.intent.action.PARENT"/>
+
                 <category android:name="android.intent.category.LAUNCHER"/>
+
             </intent-filter>
+
         </activity>
 
-        <activity android:name="com.GabrielMJr.Twaire.AllEasy.Physic.Vaz.Area1"
+        <activity
+            android:name=".physic.vaz.Speed2"
+            android:label="@string/velocity">
+
+            <intent-filter>
+
+                <action android:name="android.intent.action.PARENT"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+
+            </intent-filter>
+
+        </activity>
+
+        <activity
+            android:name=".physic.vaz.Area1"
             android:label="@string/area">
+
             <intent-filter>
+
                 <action android:name="android.intent.action.PARENT"/>
+
                 <category android:name="android.intent.category.LAUNCHER"/>
+
             </intent-filter>
+
         </activity>
 
-        <activity android:name="com.GabrielMJr.Twaire.AllEasy.Physic.Vaz.Raio1"
+        <activity
+            android:name=".physic.vaz.Ray1"
             android:label="@string/raio">
+
             <intent-filter>
+
                 <action android:name="android.intent.action.PARENT"/>
+
                 <category android:name="android.intent.category.LAUNCHER"/>
+
             </intent-filter>
+
         </activity>
+
+
+
+        <!--Cinemática-MRU-->
+        <activity
+            android:name=".physic.kinematic.Kinematic_ActivityMain"
+            android:label="@string/kinematic">
+
+            <intent-filter>
+
+                <action android:name="android.intent.action.PARENT"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+
+            </intent-filter>
+
+        </activity>
+
+        <!--Displacement-->
+        <activity
+            android:name=".physic.kinematic.MRU_Displacement1"
+            android:label="@string/displacement">
+
+            <intent-filter>
+
+                <action android:name="android.intent.action.PARENT"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+
+            </intent-filter>
+
+        </activity>
+
+        <activity
+            android:name=".physic.kinematic.MRU_Displacement2"
+            android:label="@string/displacement">
+
+            <intent-filter>
+
+                <action android:name="android.intent.action.PARENT"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+
+            </intent-filter>
+
+        </activity>
+
+        <activity
+            android:name=".physic.kinematic.MRU_Displacement3"
+            android:label="@string/displacement">
+
+            <intent-filter>
+
+                <action android:name="android.intent.action.PARENT"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+
+            </intent-filter>
+
+        </activity>
+
+        <activity
+            android:name=".physic.kinematic.MRU_Initial_Displacement"
+            android:label="@string/displacement">
+
+            <intent-filter>
+
+                <action android:name="android.intent.action.PARENT"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+
+            </intent-filter>
+
+        </activity>
+
+        <activity
+            android:name=".physic.kinematic.MRU_Final_Displacement"
+            android:label="@string/displacement">
+
+            <intent-filter>
+
+                <action android:name="android.intent.action.PARENT"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+
+            </intent-filter>
+
+        </activity>
+
+        <activity
+            android:name=".physic.kinematic.MRU_Displacement_Law"
+            android:label="@string/displacement">
+
+            <intent-filter>
+
+                <action android:name="android.intent.action.PARENT"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+
+            </intent-filter>
+
+        </activity>
+        
+        
+        <!--Speed-->
+        <activity
+            android:name=".physic.kinematic.MRU_Speed1"
+            android:label="@string/velocity">
+
+            <intent-filter>
+
+                <action android:name="android.intent.action.PARENT"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+
+            </intent-filter>
+
+        </activity>
+
+        <activity
+            android:name=".physic.kinematic.MRU_Speed2"
+            android:label="@string/velocity">
+
+            <intent-filter>
+
+                <action android:name="android.intent.action.PARENT"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+
+            </intent-filter>
+
+        </activity>
+        
+        
+        <!--Time-->
+        
+        <activity
+            android:name=".physic.kinematic.MRU_Time1"
+            android:label="@string/time">
+
+            <intent-filter>
+
+                <action android:name="android.intent.action.PARENT"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+
+            </intent-filter>
+
+        </activity>
+        
+        <activity
+            android:name=".physic.kinematic.MRU_Time2"
+            android:label="@string/time">
+
+            <intent-filter>
+
+                <action android:name="android.intent.action.PARENT"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+
+            </intent-filter>
+
+        </activity>
+        
+        <activity
+            android:name=".physic.kinematic.MRU_Time3"
+            android:label="@string/time">
+
+            <intent-filter>
+
+                <action android:name="android.intent.action.PARENT"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+
+            </intent-filter>
+
+        </activity>
+        
+        <activity
+            android:name=".physic.kinematic.MRU_Initial_Time"
+            android:label="@string/time">
+
+            <intent-filter>
+
+                <action android:name="android.intent.action.PARENT"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+
+            </intent-filter>
+
+        </activity>
+        
+        <activity
+            android:name=".physic.kinematic.MRU_Final_Time"
+            android:label="@string/time">
+
+            <intent-filter>
+
+                <action android:name="android.intent.action.PARENT"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+
+            </intent-filter>
+
+        </activity>
+        
+        
+
+        <meta-data
+            android:name="android.max_aspect"
+            android:value="4.0"/>
 
     </application>
 

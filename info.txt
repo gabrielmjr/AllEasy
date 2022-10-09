@@ -1,0 +1,9 @@
+versão atual: 1.2.2
+
+Features:
+- Mais uma fórmula de velocidade em vazão volumétrica
+- Splash screen
+- Introdução à cinemática
+
+
+versão do Github: 1.2.1

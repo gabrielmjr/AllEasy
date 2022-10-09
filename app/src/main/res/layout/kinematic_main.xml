@@ -1,0 +1,332 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/auto-res"
+	xmlns:tools="http://schemas.android.com/tools"
+	tools:context=".physic.kinematic.Kinematic_ActivityMain"
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent"
+	android:orientation="vertical">
+
+	<include
+		layout="@layout/action_bar"/>
+
+	<ScrollView
+		android:layout_width="fill_parent"
+		android:layout_height="fill_parent">
+
+		<RelativeLayout
+			android:layout_width="fill_parent"
+			android:layout_height="fill_parent"
+			android:orientation="vertical">
+
+			<TextView
+				android:id="@+id/kinematic_main_tv1"
+				android:layout_height="wrap_content"
+				android:layout_width="wrap_content"
+				android:text="@string/uniform_rectilinear_movement"
+				android:textSize="18sp"
+				android:layout_alignParentTop="true"
+				android:textColor="@color/black"/>
+
+			<TextView
+				android:id="@+id/tv1"
+				android:layout_height="wrap_content"
+				android:layout_width="wrap_content"
+				android:text="@string/displacement"
+				android:layout_below="@id/kinematic_main_tv1"
+				app:autoSizeTextType="uniform"
+				android:layout_marginTop="10dp"
+				android:textSize="17sp"
+				android:layout_alignParentStart="true"/>
+
+			<LinearLayout
+				android:id="@+id/fVDisplacement"
+				android:layout_height="wrap_content"
+				android:layout_width="match_parent"
+				android:orientation="vertical"
+				android:layout_below="@id/tv1"
+				android:layout_marginTop="10dp"
+				android:gravity="center"
+				android:background="@drawable/background_2">
+
+				<TextView
+					android:layout_height="wrap_content"
+					android:layout_width="wrap_content"
+					android:text="@string/kinematic_mru_displacement_choice1"
+					android:textSize="18sp"
+					android:textColor="@color/black"/>
+
+			</LinearLayout>
+
+			<LinearLayout
+				android:id="@+id/sVDisplacement"
+				android:layout_height="wrap_content"
+				android:layout_width="match_parent"
+				android:orientation="vertical"
+				android:layout_below="@id/fVDisplacement"
+				android:layout_marginTop="10dp"
+				android:gravity="center"
+				android:background="@drawable/background_2">
+
+				<TextView
+					android:layout_height="wrap_content"
+					android:layout_width="wrap_content"
+					android:text="@string/kinematic_mru_displacement_choice2"
+					android:textSize="18sp"
+					android:textColor="@color/black"/>
+
+			</LinearLayout>
+
+			<LinearLayout
+				android:id="@+id/tVDisplacement"
+				android:layout_height="wrap_content"
+				android:layout_width="match_parent"
+				android:orientation="vertical"
+				android:layout_below="@id/sVDisplacement"
+				android:layout_marginTop="10dp"
+				android:gravity="center"
+				android:background="@drawable/background_2">
+
+				<TextView
+					android:layout_height="wrap_content"
+					android:layout_width="wrap_content"
+					android:text="@string/kinematic_mru_displacement_choice3"
+					android:textSize="18sp"
+					android:textColor="@color/black"/>
+
+			</LinearLayout>
+
+			<LinearLayout
+				android:id="@+id/initial_displacement"
+				android:layout_height="wrap_content"
+				android:layout_width="match_parent"
+				android:orientation="vertical"
+				android:layout_below="@id/tVDisplacement"
+				android:layout_marginTop="10dp"
+				android:gravity="center"
+				android:background="@drawable/background_2">
+
+				<TextView
+					android:layout_height="wrap_content"
+					android:layout_width="wrap_content"
+					android:text="@string/kinematic_mru_initial_displacement"
+					android:textSize="18sp"
+					android:textColor="@color/black"/>
+
+			</LinearLayout>
+
+			<LinearLayout
+				android:id="@+id/final_displacement"
+				android:layout_height="wrap_content"
+				android:layout_width="match_parent"
+				android:orientation="vertical"
+				android:layout_below="@id/initial_displacement"
+				android:layout_marginTop="10dp"
+				android:gravity="center"
+				android:background="@drawable/background_2">
+
+				<TextView
+					android:layout_height="wrap_content"
+					android:layout_width="wrap_content"
+					android:text="@string/kinematic_mru_final_displacement"
+					android:textSize="18sp"
+					android:textColor="@color/black"/>
+
+			</LinearLayout>
+
+			<LinearLayout
+				android:id="@+id/displacement_law"
+				android:layout_height="wrap_content"
+				android:layout_width="match_parent"
+				android:orientation="vertical"
+				android:layout_below="@id/final_displacement"
+				android:layout_marginTop="10dp"
+				android:gravity="center"
+				android:background="@drawable/background_2">
+
+				<TextView
+					android:layout_height="wrap_content"
+					android:layout_width="wrap_content"
+					android:text="@string/kinematic_mru_displacement_law"
+					android:textSize="18sp"
+					android:textColor="@color/black"/>
+
+			</LinearLayout>
+
+			<View
+				android:id="@+id/view1"
+				android:background="?android:attr/dividerVertical"
+				android:layout_height="1dp"
+				android:layout_width="match_parent"
+				android:layout_below="@id/displacement_law"/>
+
+			<TextView
+				android:id="@+id/tv2"
+				android:layout_height="wrap_content"
+				android:layout_width="wrap_content"
+				android:text="@string/velocity"
+				android:layout_below="@id/view1"
+				app:autoSizeTextType="uniform"
+				android:layout_marginTop="20dp"
+				android:textSize="17sp"
+				android:layout_alignParentStart="true"/>
+
+			<LinearLayout
+				android:id="@+id/speed_law1"
+				android:layout_height="wrap_content"
+				android:layout_width="match_parent"
+				android:orientation="vertical"
+				android:layout_below="@id/tv2"
+				android:layout_marginTop="10dp"
+				android:gravity="center"
+				android:background="@drawable/background_2">
+
+				<TextView
+					android:layout_height="wrap_content"
+					android:layout_width="wrap_content"
+					android:text="@string/kinematic_mru_speed1"
+					android:textSize="18sp"
+					android:textColor="@color/black"/>
+
+			</LinearLayout>
+
+			<LinearLayout
+				android:id="@+id/speed_law2"
+				android:layout_height="wrap_content"
+				android:layout_width="match_parent"
+				android:orientation="vertical"
+				android:layout_below="@id/speed_law1"
+				android:layout_marginTop="10dp"
+				android:gravity="center"
+				android:background="@drawable/background_2">
+
+				<TextView
+					android:layout_height="wrap_content"
+					android:layout_width="wrap_content"
+					android:text="@string/kinematic_mru_speed2"
+					android:textSize="18sp"
+					android:textColor="@color/black"/>
+
+			</LinearLayout>
+
+			<View
+				android:id="@+id/view2"
+				android:background="?android:attr/dividerVertical"
+				android:layout_height="1dp"
+				android:layout_width="match_parent"
+				android:layout_below="@id/speed_law2"/>
+
+			<TextView
+				android:id="@+id/tv3"
+				android:layout_height="wrap_content"
+				android:layout_width="wrap_content"
+				android:text="@string/time"
+				android:layout_below="@id/view2"
+				app:autoSizeTextType="uniform"
+				android:layout_marginTop="20dp"
+				android:textSize="17sp"
+				android:layout_alignParentStart="true"/>
+
+			<LinearLayout
+				android:id="@+id/time1"
+				android:layout_height="wrap_content"
+				android:layout_width="match_parent"
+				android:orientation="vertical"
+				android:layout_below="@id/tv3"
+				android:layout_marginTop="10dp"
+				android:gravity="center"
+				android:background="@drawable/background_2">
+
+				<TextView
+					android:layout_height="wrap_content"
+					android:layout_width="wrap_content"
+					android:text="@string/kinematic_mru_time1"
+					android:textSize="18sp"
+					android:textColor="@color/black"/>
+
+			</LinearLayout>
+
+			<LinearLayout
+				android:id="@+id/time2"
+				android:layout_height="wrap_content"
+				android:layout_width="match_parent"
+				android:orientation="vertical"
+				android:layout_below="@id/time1"
+				android:layout_marginTop="10dp"
+				android:gravity="center"
+				android:background="@drawable/background_2">
+
+				<TextView
+					android:layout_height="wrap_content"
+					android:layout_width="wrap_content"
+					android:text="@string/kinematic_mru_time2"
+					android:textSize="18sp"
+					android:textColor="@color/black"
+					android:id="@+id/time2"/>
+
+			</LinearLayout>
+
+			<LinearLayout
+				android:id="@+id/time3"
+				android:layout_height="wrap_content"
+				android:layout_width="match_parent"
+				android:orientation="vertical"
+				android:layout_below="@id/time2"
+				android:layout_marginTop="10dp"
+				android:gravity="center"
+				android:background="@drawable/background_2">
+
+				<TextView
+					android:layout_height="wrap_content"
+					android:layout_width="wrap_content"
+					android:text="@string/kinematic_mru_time3"
+					android:textSize="18sp"
+					android:textColor="@color/black"/>
+
+			</LinearLayout>
+
+			<LinearLayout
+				android:id="@+id/initial_time"
+				android:layout_height="wrap_content"
+				android:layout_width="match_parent"
+				android:orientation="vertical"
+				android:layout_below="@id/time3"
+				android:layout_marginTop="10dp"
+				android:gravity="center"
+				android:background="@drawable/background_2">
+
+				<TextView
+					android:layout_height="wrap_content"
+					android:layout_width="wrap_content"
+					android:text="@string/kinematic_mru_initial_time"
+					android:textSize="18sp"
+					android:textColor="@color/black"/>
+
+			</LinearLayout>
+
+			<LinearLayout
+				android:id="@+id/final_time"
+				android:layout_height="wrap_content"
+				android:layout_width="match_parent"
+				android:orientation="vertical"
+				android:layout_below="@id/initial_time"
+				android:layout_marginTop="10dp"
+				android:gravity="center"
+				android:background="@drawable/background_2">
+
+				<TextView
+					android:layout_height="wrap_content"
+					android:layout_width="wrap_content"
+					android:text="@string/kinematic_mru_final_time"
+					android:textSize="18sp"
+					android:textColor="@color/black"/>
+
+			</LinearLayout>
+
+		</RelativeLayout>
+
+	</ScrollView>
+
+</LinearLayout>
+

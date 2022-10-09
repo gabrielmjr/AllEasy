@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="welcome">Bem vindo!</string>
+    <string name="new_user_title"></string>
+    <string name="new_user_message"></string>
+</resources>

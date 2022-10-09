@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <resources>
+        <!--Message of update-->
+        <string name="update_title">What’s new?</string>
+	    <string name="update_message">Kinematic</string>
+    </resources>
+    

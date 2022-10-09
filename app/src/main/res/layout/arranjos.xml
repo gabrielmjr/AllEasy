@@ -1,56 +1,66 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    tools:content="com.GabrielMJr.Twaire.AllEasy.Math.Arranjos"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="horizontal">
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:tools="http://schemas.android.com/tools"
+	tools:context=".math.Arranjos"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:orientation="vertical">
 
-    <EditText
-        android:id="@+id/n"
-        android:layout_width="40dp"
-        android:layout_height="40dp"
-        android:textSize="17sp"
-        android:imeOptions="actionNext"
-        android:inputType="number"
-        android:layout_marginTop="80dp"
-        android:layout_marginLeft="50dp"
-        android:hint="@string/n"
-        android:text=""/>
+    <include
+        layout="@layout/action_bar"/>
 
-    <TextView
-        android:id="@+id/a"
-        android:layout_width="60dp"
-        android:layout_height="65dp"
-        android:layout_marginTop="120dp"
-        android:layout_marginLeft="10dp"
-        android:textSize="70sp"
-        android:text="@string/a"/>
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="horizontal">
 
-    <EditText
-        android:id="@+id/p"
-        android:layout_width="40dp"
-        android:layout_height="40dp"
-        android:layout_marginTop="180dp"
-        android:layout_marginLeft="10dp"
-        android:textSize="17sp"
-        android:imeOptions="actionDone"
-        android:inputType="number"
-        android:hint="@string/p"
-        android:text=""/>
+        <EditText
+            android:id="@+id/n"
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:textSize="17sp"
+            android:imeOptions="actionNext"
+            android:inputType="number"
+            android:layout_marginTop="80dp"
+            android:layout_marginLeft="50dp"
+            android:hint="@string/n"
+            android:text=""/>
 
-    <TextView
-        android:id="@+id/result"
-        android:layout_height="wrap_content"
-        android:layout_width="wrap_content"
-        android:textSize="25sp"
-        android:layout_marginLeft="10dp"
-        android:layout_marginTop="170dp "
-        android:focusable="true"
-        android:typeface="normal"
-        android:textColorHighlight="#000000"
-        android:textIsSelectable="true"/>
+        <TextView
+            android:id="@+id/a"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="120dp"
+            android:layout_marginLeft="10dp"
+            android:textSize="70sp"
+            android:text="@string/a"/>
+
+        <EditText
+            android:id="@+id/p"
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="180dp"
+            android:layout_marginLeft="10dp"
+            android:textSize="17sp"
+            android:imeOptions="actionDone"
+            android:inputType="number"
+            android:hint="@string/p"
+            android:text=""/>
+
+        <TextView
+            android:id="@+id/result"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:textSize="25sp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="170dp "
+            android:focusable="true"
+            android:typeface="normal"
+            android:textColorHighlight="@color/black"
+            android:textIsSelectable="true"/>
+
+    </LinearLayout>
 
 </LinearLayout>
 

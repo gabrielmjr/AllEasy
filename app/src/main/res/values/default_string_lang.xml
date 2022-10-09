@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <resources>
+        <string name="arrj">Arrangments</string>
+        <string name="fat">Factorial</string>
+        <string name="comb">Combination</string>
+        <string name="fsg">Second-Degree Function</string>
+        <string name="det">Determine</string>
+        <string name="vaz">Fluid Flow</string>
+        <string name="vazo">Flow rate</string>
+        <string name="nvQ">Where: Q → flow rate</string>
+        <string name="nvV">V → volume (m3)</string>
+        <string name="nvt">∆t → time variation (s)</string>
+        <string name="nvA">A → area (m²)</string>
+        <string name="nvv">v → speed (m/s)</string>
+        <string name="nvp">π → pi = 3,14</string>
+        <string name="nvr">r → ray (m)</string>
+        <string name="nvd">d → diameter (m)</string>
+        <string name="v1">Calculate using:\n Q = V/∆t</string>
+        <string name="v2">Calculate using:\n Q = A × v</string>
+        <string name="v3">Calculate using:\n Q = π × r² × v</string>
+        <string name="t1">Calculate using:\n ∆t = V/Q</string>
+        <string name="V1">Calculate using:\n V = ∆t × Q</string>
+        <string name="vel1">Calculate using:\n v = Q/A</string>
+        <string name="vel2">Calculate using:\n v = Q / (π × r²)</string>
+        <string name="area1">Calculate using:\n A = Q/v</string>
+        <string name="raio1">Calculate using:\n r = √[Q / (π × v)]</string>
+        <string name="kinematic_mru_displacement_choice1">Calculate using:\n ∆S = Sf - Si</string>
+        <string name="kinematic_mru_displacement_choice2">Calculate using:\n ∆S = ∆t × vm</string>
+        <string name="kinematic_mru_displacement_choice3">Calculate using:\n ∆S = (tf - ti) × vm</string>
+        <string name="kinematic_mru_initial_displacement">Calculate using:\n Si = Sf - ∆S</string>
+        <string name="kinematic_mru_final_displacement">Calculate using:\n Sf = Si + ∆S</string>
+        <string name="kinematic_mru_displacement_law">Calculate using:\n S = Si + v × ∆t</string>
+        <string name="kinematic_mru_speed1">Calculate using:\n v = ∆S / ∆t</string>
+        <string name="kinematic_mru_speed2">Calculate using:\n v = (sf - si) × (tf - ti)</string>
+        <string name="kinematic_mru_time1">Calculate using:\n ∆t = tf - ti</string>
+        <string name="kinematic_mru_time2">Calculate using:\n ∆t = ∆S / v</string>
+        <string name="kinematic_mru_time3">Calculate using:\n ∆t = (Sf - Si) / v</string>
+        <string name="kinematic_mru_initial_time">Calculate using:\n ti = tf - ∆t</string>
+        <string name="kinematic_mru_final_time">Calculate using:\n tf = ti + ∆t</string>
+        <string name="dd">Data</string>
+        <string name="fm">Formula</string>
+        <string name="res">Resolution</string>
+        <string name="time">Time</string>
+        <string name="volume">Volume</string>
+        <string name="velocity">Speed</string>
+        <string name="raio">Ray</string>
+        <string name="area">Area</string>
+        <string name="null_field">This field can`t be empty!</string>
+        <string name="p_big_than_n">It`s not possible to determine with «p» greater than 《n》!</string>
+        <string name="big_value">Very high value!</string>
+        <string name="big_values">Very high values!</string>
+        <string name="invalid_value">Enter the value correctly!</string>
+        <string name="ooig_fsg">Ordered in origin = </string>
+        <string name="dot_value">This field can`t be a dot!</string>
+        <string name="cont">Continue</string>
+        <string name="close">Close</string>
+        <string name="kinematic">Kinematic</string>
+        <string name="displacement">Displacement</string>
+        <string name="resultp">Result = </string>
+        <string name="uniform_rectilinear_movement">Uniform Rectilinear Movement</string>
+    </resources>
