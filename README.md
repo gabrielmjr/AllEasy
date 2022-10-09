@@ -18,7 +18,8 @@ AllEasy é uma aplicação Android de código aberto feito em Java que tem como 
 - Cálculo de Arranjos
 - Cálculo de Combinação
 - Cálculo de Função de segundo grau
-- Cálculo de Vazão Volumétrica 
+- Cálculo de Vazão Volumétrica
+- Cinemática
 
 
 **Bibliotecas externas**
