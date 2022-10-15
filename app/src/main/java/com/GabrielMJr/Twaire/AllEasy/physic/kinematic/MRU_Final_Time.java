@@ -28,11 +28,10 @@ public class MRU_Final_Time extends AppCompatActivity {
 
     private void initialize () {
         initial_time = findViewById(R.id.initial_time);
-        delta_time =  findViewById(R.id.final_time);
+        delta_time =  findViewById(R.id.delta_time);
         final_time = findViewById(R.id.final_time);
         res = findViewById(R.id.res);
         toolbar =  findViewById(R.id.toolbar);
-
         tools = new Tools();
         mru = new MRU();
     }
@@ -93,6 +92,7 @@ public class MRU_Final_Time extends AppCompatActivity {
                                     + getText(R.string.newLine)
                                     + getText(R.string.final_time_ig)
                                     + " "
+                                    + mru.final_time(initialTime, deltaTime)
                                     + getText(R.string.second));
                     }
                 }

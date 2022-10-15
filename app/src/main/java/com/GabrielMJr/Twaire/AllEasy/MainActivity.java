@@ -23,7 +23,6 @@ import android.os.Handler;
 import android.content.Context;
 import android.support.v7.widget.Toolbar;
 
-
 public class MainActivity extends AppCompatActivity {
 
     // Atributes
@@ -60,6 +59,7 @@ public class MainActivity extends AppCompatActivity {
                 @Override
                 public void run() {
                     setContentView(R.layout.splash_screen);
+                    
                     
                     try {
                         packageInfo = getApplicationContext().getPackageManager().getPackageInfo(getApplicationContext().getPackageName(), 0);

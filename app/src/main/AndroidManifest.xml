@@ -3,8 +3,8 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.GabrielMJr.Twaire.AllEasy">
 
-    <!--prevent phone from sleeping-->
-    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <!--Request uninstall packages, used to uninstall this app and continue with new version-->
+    <uses-permission android:name="android.permission.REQUEST_DELETE_PACKAGES"/>
 
     <application
         android:allowBackup="true"
@@ -84,10 +84,6 @@
 
         </activity>
 
-
-
-        <!--Fisica-->
-        <!--Fluido volumétrico-->
         <activity
             android:name=".physic.vaz.FluidFlow_ActivityMain"
             android:label="@string/vaz">
@@ -228,9 +224,6 @@
 
         </activity>
 
-
-
-        <!--Cinemática-MRU-->
         <activity
             android:name=".physic.kinematic.Kinematic_ActivityMain"
             android:label="@string/kinematic">
@@ -245,7 +238,6 @@
 
         </activity>
 
-        <!--Displacement-->
         <activity
             android:name=".physic.kinematic.MRU_Displacement1"
             android:label="@string/displacement">
@@ -329,9 +321,7 @@
             </intent-filter>
 
         </activity>
-        
-        
-        <!--Speed-->
+
         <activity
             android:name=".physic.kinematic.MRU_Speed1"
             android:label="@string/velocity">
@@ -359,10 +349,7 @@
             </intent-filter>
 
         </activity>
-        
-        
-        <!--Time-->
-        
+
         <activity
             android:name=".physic.kinematic.MRU_Time1"
             android:label="@string/time">
@@ -376,7 +363,7 @@
             </intent-filter>
 
         </activity>
-        
+
         <activity
             android:name=".physic.kinematic.MRU_Time2"
             android:label="@string/time">
@@ -390,7 +377,7 @@
             </intent-filter>
 
         </activity>
-        
+
         <activity
             android:name=".physic.kinematic.MRU_Time3"
             android:label="@string/time">
@@ -404,7 +391,7 @@
             </intent-filter>
 
         </activity>
-        
+
         <activity
             android:name=".physic.kinematic.MRU_Initial_Time"
             android:label="@string/time">
@@ -418,7 +405,7 @@
             </intent-filter>
 
         </activity>
-        
+
         <activity
             android:name=".physic.kinematic.MRU_Final_Time"
             android:label="@string/time">
@@ -432,8 +419,6 @@
             </intent-filter>
 
         </activity>
-        
-        
 
         <meta-data
             android:name="android.max_aspect"

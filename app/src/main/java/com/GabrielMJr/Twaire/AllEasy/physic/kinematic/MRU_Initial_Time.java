@@ -32,6 +32,8 @@ public class MRU_Initial_Time extends AppCompatActivity {
         initial_time = findViewById(R.id.initial_time);
         res = findViewById(R.id.res);
         toolbar = findViewById(R.id.toolbar);
+        tools = new Tools();
+        mru = new MRU();
     }
 
     @Override
@@ -63,7 +65,7 @@ public class MRU_Initial_Time extends AppCompatActivity {
 
                     if (tools.isNull(final_time.getText().toString())) {
                         final_time.setError(getText(R.string.null_field));
-                        verify_deltaTime = 0;
+                        verify_finalTime = 0;
 
                     }
                     else if (tools.isDot(final_time.getText().toString())) {
