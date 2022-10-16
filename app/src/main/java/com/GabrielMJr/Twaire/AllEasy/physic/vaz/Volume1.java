@@ -2,7 +2,7 @@ package com.GabrielMJr.Twaire.AllEasy.physic.vaz;
 
 import com.gabrielMJr.twaire.tools.Tools;
 import com.gabrielMJr.twaire.physic.FluidFlow;
-import android.support.v7.app.AppCompatActivity;
+import com.GabrielMJr.Twaire.AllEasy.app.MyActivity;
 import android.os.Bundle;
 import com.GabrielMJr.Twaire.AllEasy.R;
 import android.widget.TextView;
@@ -11,7 +11,7 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.support.v7.widget.Toolbar;
 
-public class Volume1 extends AppCompatActivity {
+public class Volume1 extends MyActivity {
 
     // Atributos
     private static EditText tempo;
@@ -28,6 +28,8 @@ public class Volume1 extends AppCompatActivity {
     private static Tools Tools;
     
     private void initialize() {
+        setToolBar((Toolbar) findViewById(R.id.toolbar));
+        
         this.tempo = findViewById(R.id.time);
         this.vaz = findViewById(R.id.vaz);
         this.vol = findViewById(R.id.vol);

@@ -1,6 +1,6 @@
 package com.GabrielMJr.Twaire.AllEasy.physic.vaz;
 
-import android.support.v7.app.AppCompatActivity;
+import com.GabrielMJr.Twaire.AllEasy.app.MyActivity;
 import android.os.Bundle;
 import android.widget.LinearLayout;
 import android.view.View;
@@ -18,7 +18,7 @@ import com.GabrielMJr.Twaire.AllEasy.physic.vaz.Ray1;
 import com.GabrielMJr.Twaire.AllEasy.R;
 import android.support.v7.widget.Toolbar;
 
-public class FluidFlow_ActivityMain extends AppCompatActivity {
+public class FluidFlow_ActivityMain extends MyActivity {
 
     private static LinearLayout vaz1;
     private static LinearLayout vaz2;
@@ -29,9 +29,10 @@ public class FluidFlow_ActivityMain extends AppCompatActivity {
 	private static LinearLayout vel2;
     private static LinearLayout area1;
     private static LinearLayout raio1;
-    private static Toolbar toolbar;
     
     private void initialize() {
+        setToolBar((Toolbar) findViewById(R.id.toolbar));
+        
         this.vaz1 = findViewById(R.id.v1);
         this.vaz2 = findViewById(R.id.v2);
         this.vaz3 = findViewById(R.id.v3);
@@ -41,7 +42,6 @@ public class FluidFlow_ActivityMain extends AppCompatActivity {
         this.vel2 = findViewById(R.id.vel2);
         this.area1 = findViewById(R.id.area);
         this.raio1 = findViewById(R.id.raio1); 
-        this.toolbar =  findViewById(R.id.toolbar);
     }
    
     @Override
@@ -49,8 +49,7 @@ public class FluidFlow_ActivityMain extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.fluid_flow_main);
         this.initialize();
-        setSupportActionBar(toolbar);
-
+        
         this.vaz1.setOnClickListener(
             new OnClickListener() {
                 public void onClick(View view) {

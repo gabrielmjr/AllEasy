@@ -1,6 +1,6 @@
 package com.GabrielMJr.Twaire.AllEasy.physic.kinematic;
 
-import android.support.v7.app.AppCompatActivity;
+import com.GabrielMJr.Twaire.AllEasy.app.MyActivity;
 import android.os.Bundle;
 import com.GabrielMJr.Twaire.AllEasy.R;
 import android.widget.LinearLayout;
@@ -22,7 +22,7 @@ import com.GabrielMJr.Twaire.AllEasy.physic.kinematic.MRU_Time3;
 import com.GabrielMJr.Twaire.AllEasy.physic.kinematic.MRU_Initial_Time;
 import com.GabrielMJr.Twaire.AllEasy.physic.kinematic.MRU_Final_Time;
 
-public class Kinematic_ActivityMain extends AppCompatActivity {
+public class Kinematic_ActivityMain extends MyActivity {
 
     private static LinearLayout fVDisplacement;
     private static LinearLayout sVDisplacement;
@@ -38,9 +38,10 @@ public class Kinematic_ActivityMain extends AppCompatActivity {
     private static LinearLayout initial_time;
     private static LinearLayout final_time;
 
-    private static Toolbar toolbar;
-
+    
     private void initialize () {
+        setToolBar((Toolbar) findViewById(R.id.toolbar));
+        
         this.fVDisplacement = findViewById(R.id.fVDisplacement);
         this.sVDisplacement = findViewById(R.id.sVDisplacement);
         this.tVDiaplacement = findViewById(R.id.tVDisplacement);
@@ -54,7 +55,6 @@ public class Kinematic_ActivityMain extends AppCompatActivity {
         this.time3 = findViewById(R.id.time3);
         this.initial_time = findViewById(R.id.initial_time);
         this.final_time = findViewById(R.id.final_time);
-        this.toolbar = findViewById(R.id.toolbar);
     }
 
     @Override
@@ -62,8 +62,7 @@ public class Kinematic_ActivityMain extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.kinematic_main);
         this.initialize();
-        setSupportActionBar(toolbar);
-
+        
         this.fVDisplacement.setOnClickListener(
             new OnClickListener() {
                 @Override

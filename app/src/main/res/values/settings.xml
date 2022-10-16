@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="choose_theme">Choose theme</string>
+    <string name="light_mode">Light</string>
+    <string name="dark_mode">Dark</string>
+    <string name="system_auto_theme">Set by system</string>
+    <string name="cancel">Cancel</string>
+    <string name="theme">Theme</string>
+    <string name="actual_all_easy">AllEasy</string>
+    <string name="copyright">©</string>
+</resources>

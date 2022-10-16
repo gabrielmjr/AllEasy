@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="choose_theme">Escolher tema</string>
+    <string name="light_mode">Claro</string>
+    <string name="dark_mode">Escuro</string>
+    <string name="system_auto_theme">Definido pelo sistema</string>
+    <string name="cancel">Cancelar</string>
+    <string name="theme">Tema</string>
+</resources>

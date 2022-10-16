@@ -57,5 +57,7 @@
     <string name="displacement">Deslocamento</string>
     <string name="resultp">Resultado =</string>
 	<string name="uniform_rectilinear_movement">Movimento Retilíneo Uniforme</string>
-	
+	<string name="choose_theme">Escolher tema</string>
+    <string name="unsupported_sdk">  Muito obrigado por dar uma chance ao aplicativo.\n  Infelizmente o aplicativo tem problemas em versões iguais ou superiores ao android 10.\n  O problema será resolvido nas próximas versões do aplicativo.</string>
+    <string name="please_read">Aviso importante</string>
 </resources>

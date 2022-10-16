@@ -1,7 +1,6 @@
 package com.GabrielMJr.Twaire.AllEasy.math;
 
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.EditText;
@@ -10,9 +9,10 @@ import android.view.View.OnClickListener;
 import com.GabrielMJr.Twaire.AllEasy.R;
 import com.GabrielMJr.Twaire.Math.SDF;
 import com.gabrielMJr.twaire.tools.Tools;
+import com.GabrielMJr.Twaire.AllEasy.app.MyActivity;
 import android.support.v7.widget.Toolbar;
 
-public class FSG extends AppCompatActivity {
+public class FSG extends MyActivity {
     // Atrubutos
     private static Button calculate;
     private static EditText a;
@@ -21,7 +21,6 @@ public class FSG extends AppCompatActivity {
     private static TextView var_a_x;
     private static TextView var_b_x;
     private static TextView result;
-    private static Toolbar toolbar;
     
     private static String ax;
     private static String bx;
@@ -36,6 +35,8 @@ public class FSG extends AppCompatActivity {
     private static Tools Tools;
     
     private void initialize() {
+        setToolBar((Toolbar) findViewById (R.id.toolbar));
+        
         this.a = findViewById(R.id.a);
         this.b = findViewById(R.id.b);   
         this.c = findViewById(R.id.c);
@@ -43,7 +44,6 @@ public class FSG extends AppCompatActivity {
         this.var_b_x = findViewById(R.id.var_b_x);
         this.calculate = findViewById(R.id.calculate);
         this.result = findViewById(R.id.result);
-        this.toolbar = findViewById(R.id.toolbar);
         this.SDF = new SDF();
         this.Tools = new Tools();
     }
@@ -54,7 +54,6 @@ public class FSG extends AppCompatActivity {
         setContentView(R.layout.fsg);
         
         this.initialize();
-        setSupportActionBar(toolbar);
         
         // Onclick do botão "determinar"
         this.calculate.setOnClickListener(

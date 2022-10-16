@@ -1,7 +1,7 @@
 package com.GabrielMJr.Twaire.AllEasy.physic.vaz;
 
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
+import com.GabrielMJr.Twaire.AllEasy.app.MyActivity;
 import com.GabrielMJr.Twaire.AllEasy.R;
 import android.widget.TextView;
 import android.widget.EditText;
@@ -11,14 +11,13 @@ import com.gabrielMJr.twaire.tools.Tools;
 import com.gabrielMJr.twaire.physic.FluidFlow;
 import android.support.v7.widget.Toolbar;
 
-public class Time1 extends AppCompatActivity {
-
+public class Time1 extends MyActivity {
+    
     // Atrubutos
     private static EditText vol;
     private static EditText vaz;
     private static TextView tempo;
     private static TextView res;
-    private static Toolbar toolbar;
     
     private static int verifyVol;
     private static int verifyVaz;
@@ -28,11 +27,12 @@ public class Time1 extends AppCompatActivity {
     private static Tools Tools;
     
     private void initialize() {
+        setToolBar((Toolbar) findViewById(R.id.toolbar));
+        
         this.vol = findViewById(R.id.vol);
         this.vaz = findViewById(R.id.vaz);
         this.tempo = findViewById(R.id.tempo);
         this.res = findViewById(R.id.res);
-        this.toolbar = findViewById(R.id.toolbar);
         this.Tools = new Tools();
         this.FF = new FluidFlow();
      }
@@ -42,8 +42,7 @@ public class Time1 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.fluid_flow_time1);
         this.initialize();
-        setSupportActionBar(toolbar);
-
+        
         this.tempo.setOnClickListener(
             new OnClickListener() {
                 public void onClick(View view) {

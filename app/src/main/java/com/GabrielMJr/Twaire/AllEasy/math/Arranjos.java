@@ -1,8 +1,6 @@
-
 package com.GabrielMJr.Twaire.AllEasy.math;
 
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.view.View;
@@ -11,17 +9,17 @@ import android.widget.Toast;
 import com.GabrielMJr.Twaire.Math.Arranjo;
 import com.GabrielMJr.Twaire.AllEasy.R;
 import com.gabrielMJr.twaire.tools.Tools;
+import com.GabrielMJr.Twaire.AllEasy.app.MyActivity;
 import android.support.v7.widget.Toolbar;
 
-public class Arranjos extends AppCompatActivity {
+public class Arranjos extends MyActivity {
 
     // Atrubutes
     private static EditText n;
     private static EditText p;
     private static TextView a;
     private static TextView result;
-    private static Toolbar toolbar;
-    
+   
     private static Arranjo Arranjo;
     private static Tools Tools;
     private static int verifyN;
@@ -31,22 +29,23 @@ public class Arranjos extends AppCompatActivity {
 
     
     private void initialize() {
+        setToolBar((Toolbar) findViewById (R.id.toolbar));
+       
         this.n = findViewById(R.id.n);
         this.p = findViewById(R.id.p);
         this.a = findViewById(R.id.a);
         this.result = findViewById(R.id.result);
-        this.toolbar = findViewById(R.id.toolbar);
         this.Arranjo = new Arranjo();
         this.Tools = new Tools();
     }
-    
+
+ 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.arranjos);
 
         this.initialize();
-        setSupportActionBar(toolbar);
 
         this.a.setOnClickListener(
             new OnClickListener() {

@@ -5,7 +5,8 @@
 	tools:context=".math.Combination"
 	android:layout_width="match_parent"
 	android:orientation="horizontal"
-	android:layout_height="match_parent">
+	android:layout_height="match_parent"
+    android:background="@color/white">
     
     <include
         layout="@layout/action_bar"/>
@@ -16,6 +17,7 @@
 		android:layout_height="wrap_content"
 		android:layout_marginLeft="10dp"
 		android:textSize="70sp"
+        android:textColor="@color/textColor"
 		android:text="@string/c"
 		android:layout_marginTop="150dp"
 		android:layout_centerHorizontal="true"/>
@@ -25,6 +27,7 @@
 		android:layout_width="wrap_content"
 		android:layout_height="wrap_content"
 		android:textSize="17sp"
+        android:textColor="@color/textColor"
 		android:imeOptions="actionNext"
 		android:inputType="number"
 		android:hint="@string/n"
@@ -39,6 +42,7 @@
 		android:layout_width="wrap_content"
 		android:layout_height="wrap_content"
 		android:textSize="17sp"
+        android:textColor="@color/textColor"
 		android:imeOptions="actionNext"
 		android:inputType="number"
 		android:hint="@string/p"
@@ -52,6 +56,7 @@
 		android:layout_height="wrap_content"
 		android:layout_width="wrap_content"
 		android:textSize="25sp"
+        android:textColor="@color/textColor"
 		android:layout_marginTop="320dp"
 		android:focusable="true"
 		android:typeface="normal"

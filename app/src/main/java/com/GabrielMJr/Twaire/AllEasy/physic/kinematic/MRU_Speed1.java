@@ -1,6 +1,6 @@
 package com.GabrielMJr.Twaire.AllEasy.physic.kinematic;
 
-import android.support.v7.app.AppCompatActivity;
+import com.GabrielMJr.Twaire.AllEasy.app.MyActivity;
 import android.os.Bundle;
 import com.GabrielMJr.Twaire.AllEasy.R;
 import android.widget.EditText;
@@ -11,13 +11,12 @@ import android.view.View;
 import com.gabrielMJr.twaire.tools.Tools;
 import com.gabrielMJr.twaire.physic.MRU;
 
-public class MRU_Speed1 extends AppCompatActivity {
+public class MRU_Speed1 extends MyActivity {
     
     private static EditText delta_displacement;
     private static EditText delta_time;
     private static TextView speed;
     private static TextView res;
-    private static Toolbar toolbar;
     
     private static Tools tools;
     private static MRU mru;
@@ -27,11 +26,12 @@ public class MRU_Speed1 extends AppCompatActivity {
     private static double deltaTime;
     
     private void initialize() {
+        setToolBar((Toolbar) findViewById(R.id.toolbar));
+        
         delta_displacement=  findViewById(R.id.delta_displacement);
         delta_time = findViewById(R.id.delta_time);
         speed = findViewById(R.id.speed);
         res = findViewById(R.id.res);
-        toolbar = findViewById(R.id.toolbar);
         
         tools = new Tools();
         mru = new MRU();
@@ -42,7 +42,6 @@ public class MRU_Speed1 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.kinematic_mru_speed_law1);
         initialize();
-        setSupportActionBar(toolbar);
         
         
         speed.setOnClickListener(

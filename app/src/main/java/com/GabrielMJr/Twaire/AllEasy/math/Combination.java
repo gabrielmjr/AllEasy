@@ -1,7 +1,6 @@
 package com.GabrielMJr.Twaire.AllEasy.math;
 
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.view.View;
@@ -9,18 +8,18 @@ import android.view.View.OnClickListener;
 import android.widget.Toast;
 import com.GabrielMJr.Twaire.Math.Arranjo;
 import com.gabrielMJr.twaire.tools.Tools;
+import com.GabrielMJr.Twaire.AllEasy.app.MyActivity;
 import com.GabrielMJr.Twaire.AllEasy.R;
 import android.support.v7.widget.Toolbar;
 
-public class Combination extends AppCompatActivity {
+public class Combination extends MyActivity {
 
   // Atributes
   private static EditText n;
   private static EditText p;
   private static TextView c;
   private static TextView result;
-  private static Toolbar toolbar;
-    
+  
   private static String[] res = new String[4];
   private static Tools Tools;
   private static Arranjo Arranjo;
@@ -30,8 +29,7 @@ public class Combination extends AppCompatActivity {
   private static int verifyPfat;
   
   private void initialize() {
-      this.toolbar = findViewById(R.id.toolbar);
-      setSupportActionBar(toolbar);
+      setToolBar((Toolbar) findViewById(R.id.toolbar));
       
       this.n = findViewById(R.id.n);
       this.p = findViewById(R.id.p);

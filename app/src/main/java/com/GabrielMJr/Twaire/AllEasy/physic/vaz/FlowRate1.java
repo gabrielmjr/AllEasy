@@ -1,6 +1,6 @@
 package com.GabrielMJr.Twaire.AllEasy.physic.vaz;
 
-import android.support.v7.app.AppCompatActivity;
+import com.GabrielMJr.Twaire.AllEasy.app.MyActivity;
 import android.os.Bundle;
 import android.widget.TextView;
 import android.widget.Button;
@@ -12,13 +12,12 @@ import android.view.View.OnClickListener;
 import com.gabrielMJr.twaire.tools.Tools;
 import android.support.v7.widget.Toolbar;
 
-public class FlowRate1 extends AppCompatActivity {
+public class FlowRate1 extends MyActivity {
     
 	private static EditText vol;
     private static TextView res;
 	private static EditText dt;
 	private static TextView vaz;
-    private static Toolbar toolbar;
     
 	private static Double volume;
 	private static Double time;
@@ -28,11 +27,12 @@ public class FlowRate1 extends AppCompatActivity {
     private static FluidFlow FF;
     
     private void initialize() {
+        setToolBar((Toolbar) findViewById(R.id.toolbar));
+        
         this.vol = findViewById(R.id.vol);
         this.dt = findViewById(R.id.dt);
         this.vaz = findViewById(R.id.vaz);
         this.res = findViewById(R.id.res);
-        this.toolbar = findViewById(R.id.toolbar);
         this.FF = new FluidFlow();
 		this.Tools = new Tools();
     }
@@ -42,8 +42,7 @@ public class FlowRate1 extends AppCompatActivity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.fluid_flow_flow_rate1);
         this.initialize();
-        setSupportActionBar(toolbar);
-	
+        
 		this.vaz.setOnClickListener(
 			new OnClickListener() {
 				public void onClick(View view) {				

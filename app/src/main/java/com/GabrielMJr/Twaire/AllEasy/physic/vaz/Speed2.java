@@ -1,6 +1,6 @@
 package com.GabrielMJr.Twaire.AllEasy.physic.vaz;
 
-import android.support.v7.app.AppCompatActivity;
+import com.GabrielMJr.Twaire.AllEasy.app.MyActivity;
 import android.os.Bundle;
 import com.GabrielMJr.Twaire.AllEasy.R;
 import android.widget.EditText;
@@ -11,13 +11,12 @@ import com.gabrielMJr.twaire.tools.Tools;
 import com.gabrielMJr.twaire.physic.FluidFlow;
 import android.support.v7.widget.Toolbar;
 
-public class Speed2 extends AppCompatActivity {
+public class Speed2 extends MyActivity {
     
 	private static EditText vaz;
 	private static EditText ra;
 	private static TextView speed;
 	private static TextView res;
-    private static Toolbar toolbar;
     
 	private static Tools Tools;
 	private static int verifyVaz;
@@ -27,11 +26,12 @@ public class Speed2 extends AppCompatActivity {
 	private static FluidFlow FF;
     
     private void initialize() {
+        setToolBar((Toolbar) findViewById(R.id.toolbar));
+        
         this.vaz = findViewById(R.id.vaz);
         this.ra = findViewById(R.id.ra);
         this.speed = findViewById(R.id.speed);
         this.res = findViewById(R.id.res);
-        this.toolbar=  findViewById(R.id.toolbar);
         this.Tools = new Tools();
 		this.FF = new FluidFlow();
     }
@@ -41,8 +41,7 @@ public class Speed2 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.fluid_flow_speed2);
 		this.initialize();
-        setSupportActionBar(toolbar);
-		
+        
 		this.speed.setOnClickListener(
             new OnClickListener() {
 				public void onClick(View view) {

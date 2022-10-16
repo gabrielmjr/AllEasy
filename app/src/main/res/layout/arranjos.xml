@@ -5,7 +5,8 @@
 	tools:context=".math.Arranjos"
 	android:layout_width="match_parent"
 	android:layout_height="match_parent"
-	android:orientation="vertical">
+	android:orientation="vertical"
+    android:background="@color/white">
 
     <include
         layout="@layout/action_bar"/>
@@ -20,6 +21,7 @@
             android:layout_width="40dp"
             android:layout_height="wrap_content"
             android:textSize="17sp"
+            android:textColor="@color/textColor"
             android:imeOptions="actionNext"
             android:inputType="number"
             android:layout_marginTop="80dp"
@@ -34,6 +36,7 @@
             android:layout_marginTop="120dp"
             android:layout_marginLeft="10dp"
             android:textSize="70sp"
+            android:textColor="@color/textColor"
             android:text="@string/a"/>
 
         <EditText
@@ -43,6 +46,7 @@
             android:layout_marginTop="180dp"
             android:layout_marginLeft="10dp"
             android:textSize="17sp"
+            android:textColor="@color/textColor"
             android:imeOptions="actionDone"
             android:inputType="number"
             android:hint="@string/p"
@@ -53,6 +57,7 @@
             android:layout_height="wrap_content"
             android:layout_width="wrap_content"
             android:textSize="25sp"
+            android:textColor="@color/textColor"
             android:layout_marginLeft="10dp"
             android:layout_marginTop="170dp "
             android:focusable="true"

@@ -1,6 +1,6 @@
 package com.GabrielMJr.Twaire.AllEasy.physic.kinematic;
 
-import android.support.v7.app.AppCompatActivity;
+import com.GabrielMJr.Twaire.AllEasy.app.MyActivity;
 import android.os.Bundle;
 import com.GabrielMJr.Twaire.AllEasy.R;
 import android.widget.EditText;
@@ -11,13 +11,12 @@ import com.gabrielMJr.twaire.tools.Tools;
 import com.gabrielMJr.twaire.physic.MRU;
 import android.support.v7.widget.Toolbar;
 
-public class MRU_Displacement2 extends AppCompatActivity {
+public class MRU_Displacement2 extends MyActivity {
     
     private static EditText delta_time;
     private static EditText media_speed;
     private static TextView displacement;
     private static TextView res;
-    private static Toolbar toolbar;
     
     private static Double time;
     private static Double mediaSpeed;
@@ -27,10 +26,11 @@ public class MRU_Displacement2 extends AppCompatActivity {
     private static MRU mru;
     
     private void initialize() {
+        setToolBar((Toolbar) findViewById(R.id.toolbar));
+        
         this.delta_time = findViewById(R.id.delta_time);
         this.media_speed = findViewById(R.id.media_speed);
         this.displacement = findViewById(R.id.second_displacement);
-        this.toolbar = findViewById(R.id.toolbar);
         this.res = findViewById(R.id.res);
         this.tools = new Tools();
         this.mru = new MRU();
@@ -41,7 +41,6 @@ public class MRU_Displacement2 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.kinematic_mru_displacement2);
         initialize();
-        setSupportActionBar(toolbar);
         
         this.displacement.setOnClickListener(
             new OnClickListener() {

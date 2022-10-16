@@ -5,7 +5,8 @@
     tools:context=".math.Fatorial"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:background="@color/white">
 
     <include 
         layout="@layout/action_bar"/>
@@ -22,6 +23,7 @@
             android:layout_marginTop="60dp"
             android:layout_marginLeft="100dp"
             android:textSize="40sp"
+            android:textColor="@color/textColor"
             android:inputType="number"
             android:hint="@string/n"/>
 
@@ -32,6 +34,7 @@
             android:layout_marginTop="60dp"
             android:layout_marginLeft="10dp"
             android:textSize="60sp"
+            android:textColor="@color/textColor"
             android:text="@string/fatp"/>
 
         <HorizontalScrollView
@@ -43,11 +46,11 @@
                 android:layout_height="wrap_content"
                 android:layout_width="wrap_content"
                 android:textSize="25sp"
+                android:textColor="@color/textColor"
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="75dp "
                 android:focusable="true"
                 android:typeface="normal"
-                android:textColorHighlight="#000000"
                 android:textIsSelectable="true"/>
 
 		</HorizontalScrollView>

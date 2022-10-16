@@ -1,32 +1,32 @@
 package com.GabrielMJr.Twaire.AllEasy.math;
 
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.view.View;
 import android.view.View.OnClickListener;
 import com.GabrielMJr.Twaire.Math.Arranjo;
 import com.gabrielMJr.twaire.tools.Tools;
+import com.GabrielMJr.Twaire.AllEasy.app.MyActivity;
 import com.GabrielMJr.Twaire.AllEasy.R;
 import android.support.v7.widget.Toolbar;
 
-public class Fatorial extends AppCompatActivity {
+public class Fatorial extends MyActivity {
 
     // Atributes
     private static EditText n;
     private static TextView fat;
     private static TextView result;
-    private static Toolbar toolbar;
     
     private static Tools Tools;
     private static Arranjo Arranjo;
     
     private void initialize() {
+        setToolBar((Toolbar) findViewById(R.id.toolbar));
+        
         this.n = findViewById(R.id.n);
         this.fat = findViewById(R.id.fat);
         this.result = findViewById(R.id.result);
-        this.toolbar = findViewById(R.id.toolbar);
         this.Tools = new Tools();
         this.Arranjo = new Arranjo();
     }
@@ -37,8 +37,7 @@ public class Fatorial extends AppCompatActivity {
         setContentView(R.layout.fatorial);
 
         this.initialize();
-        setSupportActionBar(toolbar);
-
+        
         this.fat.setOnClickListener(
             new OnClickListener() {
                 public void onClick(View view) {

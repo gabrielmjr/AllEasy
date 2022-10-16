@@ -58,5 +58,7 @@
         <string name="displacement">Displacement</string>
         <string name="resultp">Result = </string>
         <string name="uniform_rectilinear_movement">Uniform Rectilinear Movement</string>
-        <string name="uninstalled_older_version">Enjoy the new version!</string>
+        <string name="unsupported_sdk">  Thank you so much for giving a chance to the application.\n  Unfortunately the application has problems in same or higher versions of Android 10.\n  The problem will be resolved in the next versions of the application.</string>
+        <string name="please_read">Warning</string>
+        
     </resources>

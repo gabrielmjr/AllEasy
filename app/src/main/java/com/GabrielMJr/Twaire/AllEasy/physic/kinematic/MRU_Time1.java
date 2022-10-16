@@ -1,6 +1,6 @@
 package com.GabrielMJr.Twaire.AllEasy.physic.kinematic;
 
-import android.support.v7.app.AppCompatActivity;
+import com.GabrielMJr.Twaire.AllEasy.app.MyActivity;
 import android.os.Bundle;
 import com.GabrielMJr.Twaire.AllEasy.R;
 import android.widget.EditText;
@@ -11,13 +11,12 @@ import com.gabrielMJr.twaire.physic.MRU;
 import android.view.View.OnClickListener;
 import android.view.View;
 
-public class MRU_Time1 extends AppCompatActivity {
+public class MRU_Time1 extends MyActivity {
     
     private static EditText initial_time;
     private static EditText final_time;
     private static TextView delta_time;
     private static TextView res;;
-    private static Toolbar toolbar;
     
     private static int verify_initialTime;
     private static int verify_finalTime;
@@ -27,11 +26,12 @@ public class MRU_Time1 extends AppCompatActivity {
     private static MRU mru;
     
     public void initialize() {
+        setToolBar((Toolbar) findViewById(R.id.toolbar));
+        
         initial_time = findViewById(R.id.initial_time);
         final_time = findViewById(R.id.final_time);
         delta_time = findViewById(R.id.delta_time);
         res = findViewById(R.id.res);
-        toolbar = findViewById(R.id.toolbar);
         
         tools = new Tools();
         mru = new MRU();
@@ -42,7 +42,6 @@ public class MRU_Time1 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.kinematic_mru_time1);
         initialize();
-        setSupportActionBar (toolbar);
         
         delta_time.setOnClickListener (
             new OnClickListener () {

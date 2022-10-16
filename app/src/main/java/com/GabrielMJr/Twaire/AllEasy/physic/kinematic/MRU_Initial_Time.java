@@ -1,6 +1,6 @@
 package com.GabrielMJr.Twaire.AllEasy.physic.kinematic;
 
-import android.support.v7.app.AppCompatActivity;
+import com.GabrielMJr.Twaire.AllEasy.app.MyActivity;
 import android.os.Bundle;
 import com.GabrielMJr.Twaire.AllEasy.R;
 import com.gabrielMJr.twaire.tools.Tools;
@@ -11,7 +11,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.View.OnClickListener;
 import android.view.View;
 
-public class MRU_Initial_Time extends AppCompatActivity {
+public class MRU_Initial_Time extends MyActivity {
 
     private static EditText delta_time;
     private static EditText final_time;
@@ -27,13 +27,13 @@ public class MRU_Initial_Time extends AppCompatActivity {
     private static MRU mru;
 
     private void initialize () {
+        setToolBar((Toolbar) findViewById(R.id.toolbar));
+        
         delta_time = findViewById(R.id.delta_time);
         final_time = findViewById(R.id.final_time);
         initial_time = findViewById(R.id.initial_time);
         res = findViewById(R.id.res);
         toolbar = findViewById(R.id.toolbar);
-        tools = new Tools();
-        mru = new MRU();
     }
 
     @Override
@@ -65,7 +65,7 @@ public class MRU_Initial_Time extends AppCompatActivity {
 
                     if (tools.isNull(final_time.getText().toString())) {
                         final_time.setError(getText(R.string.null_field));
-                        verify_finalTime = 0;
+                        verify_deltaTime = 0;
 
                     }
                     else if (tools.isDot(final_time.getText().toString())) {

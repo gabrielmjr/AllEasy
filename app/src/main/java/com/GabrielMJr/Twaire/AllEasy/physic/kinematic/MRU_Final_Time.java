@@ -1,6 +1,6 @@
 package com.GabrielMJr.Twaire.AllEasy.physic.kinematic;
 
-import android.support.v7.app.AppCompatActivity;
+import com.GabrielMJr.Twaire.AllEasy.app.MyActivity;
 import android.os.Bundle;
 import com.GabrielMJr.Twaire.AllEasy.R;
 import com.gabrielMJr.twaire.tools.Tools;
@@ -11,14 +11,13 @@ import com.gabrielMJr.twaire.physic.MRU;
 import android.view.View.OnClickListener;
 import android.view.View;
 
-public class MRU_Final_Time extends AppCompatActivity {
+public class MRU_Final_Time extends MyActivity {
 
     private static EditText initial_time;
     private static EditText delta_time;
     private static TextView final_time;
     private static TextView res;
-    private static Toolbar toolbar;
-
+    
     private static int verify_initialTime;
     private static int verify_deltaTime;
     private static double initialTime;
@@ -27,11 +26,13 @@ public class MRU_Final_Time extends AppCompatActivity {
     private static MRU mru;
 
     private void initialize () {
+        setToolBar((Toolbar) findViewById(R.id.toolbar));
+        
         initial_time = findViewById(R.id.initial_time);
-        delta_time =  findViewById(R.id.delta_time);
+        delta_time =  findViewById(R.id.final_time);
         final_time = findViewById(R.id.final_time);
         res = findViewById(R.id.res);
-        toolbar =  findViewById(R.id.toolbar);
+        
         tools = new Tools();
         mru = new MRU();
     }
@@ -41,8 +42,7 @@ public class MRU_Final_Time extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.kinematic_mru_final_time);
         initialize();
-        setSupportActionBar(toolbar);
-
+        
         final_time.setOnClickListener(
             new OnClickListener() {
                 @Override
@@ -92,7 +92,6 @@ public class MRU_Final_Time extends AppCompatActivity {
                                     + getText(R.string.newLine)
                                     + getText(R.string.final_time_ig)
                                     + " "
-                                    + mru.final_time(initialTime, deltaTime)
                                     + getText(R.string.second));
                     }
                 }

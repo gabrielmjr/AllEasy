@@ -5,7 +5,8 @@
 	tools:context=".physic.vaz.Area1"
 	android:layout_width="match_parent"
 	android:layout_height="match_parent"
-	android:orientation="vertical">
+	android:orientation="vertical"
+    android:background="@color/main_background">
 
 	<include
 		layout="@layout/action_bar"/>
@@ -44,6 +45,7 @@
 							android:layout_height="wrap_content"
 							android:text="@string/dd"
 							android:textSize="18sp"
+                            android:textColor="@color/textColor"
 							android:layout_gravity="center"/>
 
 						<LinearLayout
@@ -56,12 +58,14 @@
 								android:layout_width="wrap_content"
 								android:layout_height="wrap_content"
 								android:text="@string/flowRatep"
-								android:textSize="18sp"/>
+								android:textSize="18sp"
+                                android:textColor="@color/textColor"/>
 
 							<EditText
 								android:id="@+id/vaz"
 								android:layout_width="wrap_content"
 								android:inputType="numberDecimal"
+                                android:textColor="@color/textColor"
 								android:layout_height="wrap_content"
 								android:ems="3"/>
 
@@ -69,6 +73,7 @@
 								android:layout_width="wrap_content"
 								android:layout_height="wrap_content"
 								android:text="@string/speedmcps"
+                                android:textColor="@color/textColor"
 								android:textSize="18sp"/>
 
 						</LinearLayout>
@@ -84,6 +89,7 @@
 								android:layout_width="wrap_content"
 								android:layout_height="wrap_content"
 								android:text="@string/speedp"
+                                android:textColor="@color/textColor"
 								android:textSize="18sp"/>
 
 							<EditText
@@ -91,12 +97,14 @@
 								android:layout_width="wrap_content"
 								android:inputType="numberDecimal"
 								android:layout_height="wrap_content"
+                                android:textColor="@color/textColor"
 								android:ems="3"/>
 
 							<TextView
 								android:layout_width="wrap_content"
 								android:layout_height="wrap_content"
 								android:text="@string/speedmps"
+                                android:textColor="@color/textColor"
 								android:textSize="18sp"/>
 
 						</LinearLayout>
@@ -111,12 +119,14 @@
 								android:layout_width="wrap_content"
 								android:layout_height="wrap_content"
 								android:text="@string/areaSigle"
+                                android:textColor="@color/textColor"
 								android:textSize="18sp"/>
 
 							<TextView
 								android:layout_width="wrap_content"
 								android:layout_height="wrap_content"
 								android:text="@string/wht"
+                                android:textColor="@color/textColor"
 								android:textSize="18sp"/>
 
 						</LinearLayout>
@@ -138,6 +148,7 @@
 							android:layout_height="wrap_content"
 							android:text="@string/fm"
 							android:textSize="20sp"
+                            android:textColor="@color/textColor"
 							android:layout_gravity="center"/>
 
 						<TextView
@@ -151,6 +162,7 @@
 							android:ems="4"
 							android:gravity="center"
 							android:paddingStart="5dp"
+                            android:textColor="@color/textColor"
 							android:paddingEnd="5dp"/>
 
 					</LinearLayout>
@@ -175,6 +187,7 @@
 					android:layout_height="wrap_content"
 					android:text="@string/res"
 					android:textSize="18sp"
+                    android:textColor="@color/textColor"
 					android:layout_gravity="center"/>
 
 				<HorizontalScrollView
@@ -186,6 +199,7 @@
 						android:id="@+id/res"
 						android:layout_width="wrap_content"
 						android:layout_height="wrap_content"
+                        android:textColor="@color/textColor"
 						android:textSize="18sp"/>
 
 				</HorizontalScrollView>

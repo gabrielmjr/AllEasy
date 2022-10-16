@@ -5,6 +5,7 @@
 	tools:context=".physic.vaz.FluidFlow_ActivityMain"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/main_background"
 	android:orientation="vertical">
     
     <include
@@ -28,6 +29,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textSize="18sp"
+                    android:textColor="@color/textColor"
                     android:text="@string/vazo"/>
 
                 <LinearLayout
@@ -43,7 +45,7 @@
                         android:layout_height="wrap_content"
                         android:text="@string/v1"
                         android:textSize="18sp"
-                        android:textColor="@color/choices_1"
+                        android:textColor="@color/textColor"
                         android:layout_gravity="center"/>
 
                 </LinearLayout>
@@ -61,7 +63,7 @@
                         android:layout_height="wrap_content"
                         android:text="@string/v2"
                         android:textSize="18sp"
-                        android:textColor="@color/choices_1"
+                        android:textColor="@color/textColor"
                         android:layout_gravity="center"/>
 
                 </LinearLayout>
@@ -79,7 +81,7 @@
                         android:layout_height="wrap_content"
                         android:text="@string/v3"
                         android:textSize="18sp"
-                        android:textColor="@color/choices_1"
+                        android:textColor="@color/textColor"
                         android:layout_gravity="center"/>
 
                 </LinearLayout>
@@ -94,6 +96,7 @@
                     android:layout_height="wrap_content"
                     android:textSize="18sp"
                     android:layout_marginTop="25dp"
+                    android:textColor="@color/textColor"
                     android:text="@string/time"/>
 
                 <LinearLayout
@@ -108,7 +111,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textSize="18sp"
-                        android:textColor="@color/choices_1"
+                        android:textColor="@color/textColor"
                         android:text="@string/t1"
                         android:layout_gravity="center"/>
 
@@ -124,6 +127,7 @@
                     android:layout_height="wrap_content"
                     android:textSize="18sp"
                     android:layout_marginTop="25dp"
+                    android:textColor="@color/textColor"
                     android:text="@string/volume"/>
 
                 <LinearLayout
@@ -138,7 +142,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textSize="18sp"
-                        android:textColor="@color/choices_1"
+                        android:textColor="@color/textColor"
                         android:text="@string/V1"
                         android:layout_gravity="center"/>
 
@@ -154,6 +158,7 @@
                     android:layout_height="wrap_content"
                     android:textSize="18sp"
                     android:layout_marginTop="25dp"
+                    android:textColor="@color/textColor"
                     android:text="@string/velocity"/>
 
                 <LinearLayout
@@ -202,6 +207,7 @@
                     android:layout_height="wrap_content"
                     android:textSize="18sp"
                     android:layout_marginTop="25dp"
+                    android:textColor="@color/textColor"
                     android:text="@string/area"/>
 
                 <LinearLayout
@@ -216,7 +222,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textSize="18sp"
-                        android:textColor="@color/choices_1"
+                        android:textColor="@color/textColor"
                         android:text="@string/area1"
                         android:layout_gravity="center"/>
 
@@ -232,6 +238,7 @@
                     android:layout_height="wrap_content"
                     android:textSize="18sp"
                     android:layout_marginTop="25dp"
+                    android:textColor="@color/textColor"
                     android:text="@string/raio"/>
 
                 <LinearLayout
@@ -246,7 +253,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textSize="18sp"
-                        android:textColor="@color/choices_1"
+                        android:textColor="@color/textColor"
                         android:text="@string/raio1"
                         android:layout_gravity="center"/>
 
@@ -274,6 +281,7 @@
                     android:layout_height="wrap_content"
                     android:text="@string/nvQ"
                     android:layout_marginRight="15dp"
+                    android:textColor="@color/textColor"
                     android:textSize="15sp"/>
 
             </LinearLayout>
@@ -283,6 +291,7 @@
                 android:layout_height="wrap_content"
                 android:text="@string/nvV"
                 android:layout_marginRight="15dp"
+                android:textColor="@color/textColor"
                 android:textSize="15sp"/>
 
             <TextView
@@ -290,6 +299,7 @@
                 android:layout_height="wrap_content"
                 android:text="@string/nvt"
                 android:layout_marginRight="15dp"
+                android:textColor="@color/textColor"
                 android:textSize="15sp"/>
 
             <TextView
@@ -297,6 +307,7 @@
                 android:layout_height="wrap_content"
                 android:text="@string/nvA"
                 android:layout_marginRight="15dp"
+                android:textColor="@color/textColor"
                 android:textSize="15sp"/>
 
             <TextView
@@ -304,6 +315,7 @@
                 android:layout_height="wrap_content"
                 android:text="@string/nvv"
                 android:layout_marginRight="15dp"
+                android:textColor="@color/textColor"
                 android:textSize="15sp"/>
 
             <TextView
@@ -311,6 +323,7 @@
                 android:layout_height="wrap_content"
                 android:text="@string/nvp"
                 android:layout_marginRight="15dp"
+                android:textColor="@color/textColor"
                 android:textSize="15sp"/>
 
             <TextView
@@ -318,6 +331,7 @@
                 android:layout_height="wrap_content"
                 android:text="@string/nvr"
                 android:layout_marginRight="15dp"
+                android:textColor="@color/textColor"
                 android:textSize="15sp"/>
 
             <TextView
@@ -325,6 +339,7 @@
                 android:layout_height="wrap_content"
                 android:text="@string/nvd"
                 android:layout_marginRight="15dp"
+                android:textColor="@color/textColor"
                 android:textSize="15sp"/>
 
         </LinearLayout>

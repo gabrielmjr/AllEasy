@@ -5,6 +5,7 @@
 	tools:context=".physic.kinematic.MRU_Speed2"
 	android:layout_width="match_parent"
 	android:layout_height="match_parent"
+    android:background="@color/main_background"
 	android:orientation="vertical">
 
 	<include
@@ -35,6 +36,7 @@
 					android:layout_height="wrap_content"
 					android:layout_alignParentLeft="true"
 					android:layout_marginTop="40dp"
+                    android:textColor="@color/textColor"
 					android:layout_gravity="left">
 
 					<TextView
@@ -42,6 +44,7 @@
 						android:layout_height="wrap_content"
 						android:text="@string/dd"
 						android:textSize="20sp"
+                        android:textColor="@color/textColor"
 						android:layout_gravity="center"/>
 
 					<LinearLayout
@@ -54,6 +57,7 @@
 							android:layout_width="wrap_content"
 							android:layout_height="wrap_content"
 							android:text="@string/sip"
+                            android:textColor="@color/textColor"
 							android:textSize="19sp"/>
 
 						<EditText
@@ -62,12 +66,14 @@
 							android:inputType="numberDecimal"
 							android:layout_height="wrap_content"
 							android:ems="3"
+                            android:textColor="@color/textColor"
 							android:imeOptions="actionNext"/>
 
 						<TextView
 							android:layout_width="wrap_content"
 							android:layout_height="wrap_content"
 							android:text="@string/dm"
+                            android:textColor="@color/textColor"
 							android:textSize="18sp"/>
 
 					</LinearLayout>
@@ -82,6 +88,7 @@
 							android:layout_width="wrap_content"
 							android:layout_height="wrap_content"
 							android:text="@string/sfp"
+                            android:textColor="@color/textColor"
 							android:textSize="19sp"/>
 
 						<EditText
@@ -91,12 +98,14 @@
 							android:textSize="18sp"
 							android:ems="3"
 							android:imeOptions="actionNext"
+                            android:textColor="@color/textColor"
 							android:inputType="numberDecimal"/>
 
 						<TextView
 							android:layout_width="wrap_content"
 							android:layout_height="wrap_content"
 							android:textSize="18sp"
+                            android:textColor="@color/textColor"
 							android:text="@string/dm"/>
 
 					</LinearLayout>
@@ -111,6 +120,7 @@
 							android:layout_width="wrap_content"
 							android:layout_height="wrap_content"
 							android:text="@string/initial_time_ig"
+                            android:textColor="@color/textColor"
 							android:textSize="19sp"/>
 
 						<EditText
@@ -119,12 +129,14 @@
 							android:inputType="numberDecimal"
 							android:layout_height="wrap_content"
 							android:ems="3"
+                            android:textColor="@color/textColor"
 							android:imeOptions="actionNext"/>
 
 						<TextView
 							android:layout_width="wrap_content"
 							android:layout_height="wrap_content"
 							android:text="@string/second"
+                            android:textColor="@color/textColor"
 							android:textSize="18sp"/>
 
 					</LinearLayout>
@@ -139,6 +151,7 @@
 							android:layout_width="wrap_content"
 							android:layout_height="wrap_content"
 							android:text="@string/final_time_ig"
+                            android:textColor="@color/textColor"
 							android:textSize="19sp"/>
 
 						<EditText
@@ -148,12 +161,14 @@
 							android:textSize="18sp"
 							android:ems="3"
 							android:imeOptions="actionDone"
+                            android:textColor="@color/textColor"
 							android:inputType="numberDecimal"/>
 
 						<TextView
 							android:layout_width="wrap_content"
 							android:layout_height="wrap_content"
 							android:textSize="18sp"
+                            android:textColor="@color/textColor"
 							android:text="@string/second"/>
 
 					</LinearLayout>
@@ -168,12 +183,14 @@
 							android:layout_width="wrap_content"
 							android:layout_height="wrap_content"
 							android:text="@string/speedSigle"
+                            android:textColor="@color/textColor"
 							android:textSize="19sp"/>
 
 						<TextView
 							android:layout_width="wrap_content"
 							android:layout_height="wrap_content"
 							android:text="@string/wht"
+                            android:textColor="@color/textColor"
 							android:textSize="18sp"/>
 
 					</LinearLayout>
@@ -195,6 +212,7 @@
 						android:layout_height="wrap_content"
 						android:layout_gravity="center"
 						android:text="@string/fm"
+                        android:textColor="@color/textColor"
 						android:textSize="20sp"/>
 
 					<TextView
@@ -206,6 +224,7 @@
 						android:textSize="19sp"
 						android:background="@drawable/edge_btn_1"
 						android:ems="9"
+                        android:textColor="@color/textColor"
 						android:gravity="center"/>
 
 				</LinearLayout>
@@ -228,6 +247,7 @@
 					android:layout_height="wrap_content"
 					android:text="@string/res"
 					android:textSize="20sp"
+                    android:textColor="@color/textColor"
 					android:layout_gravity="center"/>
 
 				<HorizontalScrollView
@@ -239,6 +259,7 @@
 						android:id="@+id/res"
 						android:layout_width="wrap_content"
 						android:layout_height="wrap_content"
+                        android:textColor="@color/textColor"
 						android:textSize="18sp"/>
 
 				</HorizontalScrollView>
