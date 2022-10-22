@@ -16,15 +16,20 @@ import android.support.v7.app.AlertDialog;
 import android.widget.RadioGroup;
 import android.widget.RadioButton;
 import android.content.Intent;
-import com.GabrielMJr.Twaire.AllEasy.app.MainActivity;
+import com.GabrielMJr.Twaire.AllEasy.app.SendMailActivity;
+import com.GabrielMJr.Twaire.AllEasy.app.About;
 
 public class Settings extends MyActivity
 {
 
     // Atributes
     private static SharedPreferences sharedPreferences = null;
+
     private static LinearLayout theme_changer;
+    private static LinearLayout sendMail; 
+    private static LinearLayout about;
     private static TextView cancel;
+    private static TextView about_text;
     private static AlertDialog.Builder builder;
     private static AlertDialog dialog;
     private static View view;
@@ -32,6 +37,7 @@ public class Settings extends MyActivity
     private static RadioButton light_theme;
     private static RadioButton dark_theme;
     private static RadioButton set_by_system;
+
     private static String theme_mode;
 
     // Name of shared_preferences for app configuration
@@ -54,6 +60,11 @@ public class Settings extends MyActivity
     {
         setToolBar((Toolbar) findViewById(R.id.toolbar));  
         theme_changer = findViewById(R.id.theme_changer);
+        about_text = findViewById(R.id.about_text);
+
+        about_text.setText(getText(R.string.about) + " " + getString(R.string.app_name));
+        sendMail = findViewById(R.id.sendMail);
+        about = findViewById(R.id.about);
     }
 
     @Override
@@ -77,6 +88,27 @@ public class Settings extends MyActivity
                     chooseThemebuilder();
                 }
             });
+
+        // Send email activity
+        sendMail.setOnClickListener(
+            new OnClickListener() {
+                @Override
+                public void onClick(View view)
+                {
+                    startActivity(new Intent(getApplicationContext(), SendMailActivity.class));
+                }
+            });
+
+        // About the app activity
+        about.setOnClickListener(
+            new OnClickListener()
+            {
+                @Override
+                public void onClick(View vjew)
+                {
+                    startActivity(new Intent(getApplicationContext(), About.class));
+                }
+            });
     }
 
     // show alert dialog with choices
@@ -92,6 +124,7 @@ public class Settings extends MyActivity
         dark_theme = view.findViewById(R.id.dark_mode);
         set_by_system = view.findViewById(R.id.system_auto);
         cancel = view.findViewById(R.id.cancel);
+        sendMail = findViewById(R.id.sendMail);
 
         builder.setTitle(R.string.choose_theme);
         builder.setView(view);

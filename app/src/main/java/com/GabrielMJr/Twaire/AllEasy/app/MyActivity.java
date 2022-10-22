@@ -4,6 +4,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View.OnClickListener;
 import android.view.View;
+import android.os.Build;
 
 
 // Extends app compat activity and and set the back button on toolbar
@@ -27,4 +28,20 @@ public class MyActivity extends AppCompatActivity
         protected Toolbar setToolBar(Toolbar toolbar) {
             return setNavigationOnToolbar(toolbar);
         }
+        
+        
+        // Checker of sdk int
+        protected boolean isCompatible()
+        {
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q)
+            {
+                return false;
+            } 
+            else
+            {
+                return true;
+            }
+        }
+        
+    
     }

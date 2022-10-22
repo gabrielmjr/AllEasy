@@ -1,4 +1,4 @@
-package com.GabrielMJr.Twaire.AllEasy.physic.kinematic;
+package com.GabrielMJr.Twaire.AllEasy.physic.kinematic.mru;
 
 import com.GabrielMJr.Twaire.AllEasy.app.MyActivity;
 import android.os.Bundle;
@@ -43,7 +43,7 @@ public class MRU_Final_Time extends MyActivity {
         setContentView(R.layout.kinematic_mru_final_time);
         initialize();
         
-        final_time.setOnClickListener(
+        /*final_time.setOnClickListener(
             new OnClickListener() {
                 @Override
                 public void onClick (View view) {
@@ -95,7 +95,7 @@ public class MRU_Final_Time extends MyActivity {
                                     + getText(R.string.second));
                     }
                 }
-            });
+            });*/
     }
 
 }

@@ -10,6 +10,7 @@ import android.view.View;
 import com.gabrielMJr.twaire.tools.Tools;
 import com.gabrielMJr.twaire.physic.FluidFlow;
 import android.support.v7.widget.Toolbar;
+import com.gabrielMJr.twaire.physic.Physic;
 
 public class Speed2 extends MyActivity {
     
@@ -24,6 +25,7 @@ public class Speed2 extends MyActivity {
 	private static double fluidFlow;
 	private static double raio;
 	private static FluidFlow FF;
+    private static Physic physic;
     
     private void initialize() {
         setToolBar((Toolbar) findViewById(R.id.toolbar));
@@ -34,6 +36,7 @@ public class Speed2 extends MyActivity {
         this.res = findViewById(R.id.res);
         this.Tools = new Tools();
 		this.FF = new FluidFlow();
+        this.physic = new Physic();
     }
 	
     @Override
@@ -71,7 +74,7 @@ public class Speed2 extends MyActivity {
 
 
                     if (verifyVaz == 1 && verifyRay == 1) {
-                        res.setText((CharSequence) FF.sSpeed(fluidFlow, raio, FF.getStep));
+                        res.setText((CharSequence) FF.sSpeed(fluidFlow, raio, physic.GET_STEP));
                     } else {
                         return;
                     }

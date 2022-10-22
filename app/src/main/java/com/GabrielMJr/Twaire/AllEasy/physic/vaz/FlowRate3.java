@@ -10,6 +10,7 @@ import android.view.View.OnClickListener;
 import com.gabrielMJr.twaire.tools.Tools;
 import com.gabrielMJr.twaire.physic.FluidFlow;
 import android.support.v7.widget.Toolbar;
+import com.gabrielMJr.twaire.physic.Physic;
 
 public class FlowRate3 extends MyActivity {
 
@@ -25,6 +26,7 @@ public class FlowRate3 extends MyActivity {
 	private static int verifyRaio;
 	private static int verifyVelocity;
 	private static FluidFlow FF;
+    private static Physic physic;
     
     private void initialize() {
         setToolBar((Toolbar) findViewById(R.id.toolbar));
@@ -35,6 +37,7 @@ public class FlowRate3 extends MyActivity {
         this.res = findViewById(R.id.res);
         this.Tools = new Tools();
 		this.FF = new FluidFlow();
+        this.physic = new Physic();
     }
 
 	@Override
@@ -72,7 +75,7 @@ public class FlowRate3 extends MyActivity {
 
 
                     if (verifyRaio == 1 && verifyVelocity == 1) {
-                        res.setText((CharSequence) FF.tFluidFlow(raio, velocidade, FF.getStep));
+                        res.setText((CharSequence) FF.tFluidFlow(raio, velocidade, physic.GET_STEP));
                     } else {
                         return;
                     }

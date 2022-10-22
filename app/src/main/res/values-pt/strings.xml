@@ -1,63 +1,78 @@
-<resources>
-    <string name="arrj">Arranjos</string>
-    <string name="fat">Fatorial</string>
-    <string name="comb">Combinação</string>
-	<string name="fsg">Função de Segundo Grau</string>
-	<string name="det">Determinar</string>
-	<string name="vaz">Vazão Volumétrica</string>
-	<string name="vazo">Vazão</string>
-	<string name="nvQ">Onde: Q → vazão</string>
-	<string name="nvV">V → volume (m3)</string>
-	<string name="nvt">∆t → variação do tempo (s)</string>
-	<string name="nvA">A → área (m²)</string>
-	<string name="nvv">v → velocidade (m/s)</string>
-	<string name="nvp">π → pi = 3,14</string>
-	<string name="nvr">r → raio (m)</string>
-	<string name="nvd">d → diâmetro (m)</string>
-	<string name="v1">Calcular usando:\n Q = V/∆t</string>
-	<string name="v2">Calcular usando:\n Q = A × v</string>
-	<string name="v3">Calcular usando:\n Q = π × r² × v</string>
-	<string name="t1">Calcular usando:\n ∆t = V/Q</string>
-	<string name="V1">Calcular usando:\n V = ∆t × Q</string>
-	<string name="vel1">Calcular usando:\n v = Q/A</string>
-	<string name="vel2">Calcular usando:\n v = Q / (π × r²)</string>
-	<string name="area1">Calcular usando:\n A = Q/v</string>
-	<string name="raio1">Calcular usando:\n r = √[Q / (π × v)]</string>
-    <string name="kinematic_mru_displacement_choice1">Calcular usando:\n ∆S = Sf - Si</string>
-    <string name="kinematic_mru_displacement_choice2">Calcular usando:\n ∆S = ∆t × vm</string>
-    <string name="kinematic_mru_displacement_choice3">Calcular usando:\n ∆S = (tf - ti) × vm</string>
+<?xml version="1.0" encoding="utf-8"?>
+<resources>            
+    <!--"Onde"-->
+    <string name="nvQ">Where: Q → fluxo da vazão</string>
+    <string name="nvV">V → volume (m3)</string>
+    <string name="nvt">∆t → variação to tempo (s)</string>
+    <string name="nvA">A → area (m²)</string>
+    <string name="nvv">v → velocidade (m/s)</string>
+    <string name="nvp">π → pi = 3,14</string>
+    <string name="nvr">r → raio (m)</string>
+    <string name="nvd">d → diametro (m)</string>
+
+    <!--Vazão volumétrica-->
+    <string name="v1">Calcular usando:\n Q = V/∆t</string>
+    <string name="v2">Calcular usando:\n Q = A × v</string>
+    <string name="v3">Calcular usando:\n Q = π × r² × v</string>
+    <string name="t1">Calcular usando:\n ∆t = V/Q</string>
+    <string name="V1">Calcular usando:\n V = ∆t × Q</string>
+    <string name="vel1">Calcular usando:\n v = Q/A</string>
+    <string name="vel2">Calcular usando:\n v = Q / (π × r²)</string>
+    <string name="area1">Calcular usando:\n A = Q/v</string>
+    <string name="raio1">Calcular usando:\n r = √[Q / (π × v)]</string>
+
+    <!--Cinemática MRU-->
+    <string name="kinematic_mru_displacement1">Calcular usando:\n ∆S = Sf - Si</string>
+    <string name="kinematic_mru_displacement2">Calcular usando:\n ∆S = ∆t × vm</string>
+    <string name="kinematic_mru_displacement3">Calcular usando:\n ∆S = (tf - ti) × vm</string>
     <string name="kinematic_mru_initial_displacement">Calcular usando:\n Si = Sf - ∆S</string>
     <string name="kinematic_mru_final_displacement">Calcular usando:\n Sf = Si + ∆S</string>
     <string name="kinematic_mru_displacement_law">Calcular usando:\n S = Si + v × ∆t</string>
     <string name="kinematic_mru_speed1">Calcular usando:\n v = ∆S / ∆t</string>
-    <string name="kinematic_mru_speed2">Calcular usando:\n v = (Sf - Si) × (tf - ti)</string>
+    <string name="kinematic_mru_speed2">Calcular usando:\n v = (sf - si) × (tf - ti)</string>
     <string name="kinematic_mru_time1">Calcular usando:\n ∆t = tf - ti</string>
     <string name="kinematic_mru_time2">Calcular usando:\n ∆t = ∆S / v</string>
     <string name="kinematic_mru_time3">Calcular usando:\n ∆t = (Sf - Si) / v</string>
-    <string name="kinematic_mru_initial_time">ti = tf - ∆t</string>
-    <string name="kinematic_mru_final_time">tf = ti + ∆t</string>
-	<string name="dd">Dados</string>
-	<string name="fm">Fórmula</string>
-	<string name="res">Resolução</string>
-	<string name="time">Tempo</string>
-	<string name="volume">Volume</string>
-	<string name="velocity">Velocidade</string>
-	<string name="raio">Raio</string>
-	<string name="area">Área</string>
-    <string name="null_field">Este campo não pode estar vazio!</string>
+    <string name="kinematic_mru_initial_time">Calcular usando:\n ti = tf - ∆t</string>
+    <string name="kinematic_mru_final_time">Calcular usando:\n tf = ti + ∆t</string>
+
+    <!--Cinemática MUV-->
+
+    <string name="dd">Dados</string>
+    <string name="fm">Fórmula</string>
+    <string name="res">Resolução</string>     
+
+    <!--Lições-->
+    <string name="kinematic">Cinemática</string>
+    <string name="displacement">Deslocamento</string>
+    <string name="variated_uniform_movement">Movimento Uniformemente Variado</string>
+    <string name="arrj">Arranjos</string>
+    <string name="fat">Factorial</string>
+    <string name="comb">Combinação</string>
+    <string name="fsg">Função de Segundo Grau</string>
+    <string name="det">Determinar</string>
+    <string name="vaz">Vazão volumétrica</string>
+    <string name="vazo">Fluxo da vazão</string>
+    <string name="volume">Volume</string>
+    <string name="velocity">Velocidade</string>
+    <string name="raio">Raio</string>
+    <string name="area">Área</string>
+    <string name="acceleration">Aceleração</string>     
+    <string name="time">Tempo</string> 
+
+    <!---->
+    <string name="null_field">Este espaço não pode estar vazio!</string>
     <string name="p_big_than_n">Não é possível determinar com «p» maior que 《n》!</string>
     <string name="big_value">Valor muito elevado!</string>
     <string name="big_values">Valores muito elevados!</string>
-    <string name="invalid_value">Insira o valor correctamente!</string>
+    <string name="invalid_value">Insira o valor correctamete!</string>
     <string name="ooig_fsg">Ordenada na origem = </string>
-    <string name="dot_value">Este campo não pode ser um ponto!</string>
+    <string name="dot_value">Este espaço não pode ser um ponto!</string>
     <string name="cont">Continuar</string>
-	<string name="close">Fechar</string>
-	<string name="kinematic">Cinemática</string>
-    <string name="displacement">Deslocamento</string>
-    <string name="resultp">Resultado =</string>
-	<string name="uniform_rectilinear_movement">Movimento Retilíneo Uniforme</string>
-	<string name="choose_theme">Escolher tema</string>
-    <string name="unsupported_sdk">  Muito obrigado por dar uma chance ao aplicativo.\n  Infelizmente o aplicativo tem problemas em versões iguais ou superiores ao android 10.\n  O problema será resolvido nas próximas versões do aplicativo.</string>
-    <string name="please_read">Aviso importante</string>
+    <string name="close">Fechar</string>    
+    <string name="resultp">Resultado = </string>
+    <string name="uniform_rectilinear_movement">Movimento retilíneo uniforme</string>
+    <string name="unsupported_sdk">  Muito obrigado por dar uma chance ao app.\n  Infelizmente o app tem problemas em versões de Android iguais ou superiores à 10.\n  O problema será resolvido nas próximas versões do app.</string>
+    <string name="please_read">Aviso</string>
+
 </resources>

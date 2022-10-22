@@ -1,4 +1,4 @@
-package com.GabrielMJr.Twaire.AllEasy.physic.kinematic;
+package com.GabrielMJr.Twaire.AllEasy.physic.kinematic.mru;
 
 import com.GabrielMJr.Twaire.AllEasy.app.MyActivity;
 import android.os.Bundle;
@@ -10,6 +10,7 @@ import com.gabrielMJr.twaire.tools.Tools;
 import com.gabrielMJr.twaire.physic.MRU;
 import android.view.View.OnClickListener;
 import android.view.View;
+import com.gabrielMJr.twaire.physic.Physic;
 
 public class MRU_Speed2 extends MyActivity {
     
@@ -30,6 +31,7 @@ public class MRU_Speed2 extends MyActivity {
     private static double finalTime;
     private static Tools tools;
     private static MRU mru;
+    private static Physic physic;
     
     private void initialize() {
         setToolBar((Toolbar) findViewById(R.id.toolbar));
@@ -43,6 +45,7 @@ public class MRU_Speed2 extends MyActivity {
         
         tools = new Tools();
         mru = new MRU();
+        physic = new Physic();
     }
     
     @Override
@@ -118,7 +121,7 @@ public class MRU_Speed2 extends MyActivity {
                             res.setText(mru.speedLaw2(initialDisplacement,
                                                       finalDisplacement,
                                                       initialTime, finalTime,
-                                                      mru.getStep));
+                                                      physic.GET_STEP));
                         }
                 }
             });

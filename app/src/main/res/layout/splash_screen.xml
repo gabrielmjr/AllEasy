@@ -6,7 +6,7 @@
 	android:layout_width="fill_parent"
 	android:layout_height="fill_parent"
 	android:orientation="vertical"
-	android:background="@color/black"
+	android:background="@color/splash_background"
     android:colorPrimaryDark="#F00000">
 
 	<ImageView

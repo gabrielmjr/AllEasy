@@ -6,39 +6,30 @@
 	android:layout_width="match_parent"
 	android:layout_height="match_parent"
 	android:orientation="vertical"
-    android:background="@color/white">
+	android:background="@color/white">
 
-    <include
-        layout="@layout/action_bar"/>
+	<include
+		layout="@layout/action_bar"/>
 
-    <LinearLayout
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
-        android:orientation="horizontal">
+	<RelativeLayout
+		android:layout_width="fill_parent"
+		android:layout_height="fill_parent"
+		android:orientation="horizontal">
 
-        <EditText
-            android:id="@+id/n"
-            android:layout_width="40dp"
-            android:layout_height="wrap_content"
-            android:textSize="17sp"
-            android:textColor="@color/textColor"
-            android:imeOptions="actionNext"
-            android:inputType="number"
-            android:layout_marginTop="80dp"
-            android:layout_marginLeft="50dp"
-            android:hint="@string/n"
-            android:text=""/>
-
-        <TextView
-            android:id="@+id/a"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="120dp"
-            android:layout_marginLeft="10dp"
-            android:textSize="70sp"
-            android:textColor="@color/textColor"
-            android:text="@string/a"/>
-
+		<EditText
+			android:id="@+id/n"
+			android:layout_width="40dp"
+			android:layout_height="wrap_content"
+			android:textSize="17sp"
+			android:textColor="@color/textColor"
+			android:imeOptions="actionNext"
+			android:inputType="number"
+			android:layout_marginTop="80dp"
+			android:layout_marginLeft="50dp"
+			android:hint="@string/n"
+			android:text=""
+			android:textColorHint="@color/hint_color"/>
+        
         <EditText
             android:id="@+id/p"
             android:layout_width="40dp"
@@ -50,22 +41,33 @@
             android:imeOptions="actionDone"
             android:inputType="number"
             android:hint="@string/p"
-            android:text=""/>
+			android:text=""/>
 
-        <TextView
-            android:id="@+id/result"
-            android:layout_height="wrap_content"
-            android:layout_width="wrap_content"
-            android:textSize="25sp"
-            android:textColor="@color/textColor"
-            android:layout_marginLeft="10dp"
-            android:layout_marginTop="170dp "
-            android:focusable="true"
-            android:typeface="normal"
-            android:textColorHighlight="@color/black"
-            android:textIsSelectable="true"/>
+		<TextView
+			android:id="@+id/a"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_marginTop="120dp"
+			android:layout_marginLeft="10dp"
+			android:textSize="70sp"
+			android:textColor="@color/textColor"
+			android:text="@string/a"/>
+        
+		<TextView
+			android:id="@+id/result"
+			android:layout_height="wrap_content"
+			android:layout_width="wrap_content"
+			android:textSize="25sp"
+			android:textColor="@color/textColor"
+			android:layout_marginLeft="10dp"
+			android:layout_marginTop="170dp "
+			android:focusable="true"
+			android:typeface="normal"
+			android:textColorHighlight="@color/black"
+			android:textIsSelectable="true"
+            android:textColorHint="@color/hint_color"/>
 
-    </LinearLayout>
+	</RelativeLayout>
 
 </LinearLayout>
 

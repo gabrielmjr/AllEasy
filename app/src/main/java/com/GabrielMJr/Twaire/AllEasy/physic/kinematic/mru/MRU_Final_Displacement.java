@@ -1,4 +1,4 @@
-package com.GabrielMJr.Twaire.AllEasy.physic.kinematic;
+package com.GabrielMJr.Twaire.AllEasy.physic.kinematic.mru;
 
 import com.GabrielMJr.Twaire.AllEasy.app.MyActivity;
 import android.os.Bundle;

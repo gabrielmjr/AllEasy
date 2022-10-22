@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent"
+	tools:context=".app.SendMailActivity"
+	android:orientation="vertical"
+	android:background="@color/main_background">
+
+	<include
+		layout="@layout/action_bar"/>
+
+	<ScrollView
+		android:layout_height="wrap_content"
+		android:layout_width="wrap_content">
+
+		<RelativeLayout
+			android:layout_height="wrap_content"
+			android:layout_width="wrap_content">
+
+			<TextView
+				android:id="@+id/tv1_send_mail"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:textAppearance="?android:attr/textAppearanceSmall"
+				android:text="@string/send_mail_note"
+				android:textColor="@color/textColor"
+				android:layout_centerHorizontal="true"
+				android:layout_marginStart="25dp"
+				android:layout_marginLeft="15dp"/>
+
+			<EditText
+                android:id="@+id/mail_message"
+				android:inputType="textMultiLine"
+				android:layout_width="match_parent"
+				android:ems="10"
+				android:layout_height="300dp"
+				android:layout_below="@id/tv1_send_mail"
+				android:layout_marginTop="10dp"
+				android:layout_alignStart="@id/tv1_send_mail"
+				android:layout_alignEnd="@id/tv1_send_mail"
+				android:hint="@string/send_mail_hint_note"
+				android:textColorHint="@color/hint_color"
+				android:textColor="@color/textColor"			
+				android:background="@drawable/ic_send_mail_field"/>
+
+			<Button
+                android:id="@+id/send_mail"
+				style="?android:attr/buttonStyleSmall"
+				android:layout_height="wrap_content"
+				android:layout_width="wrap_content"
+				android:text="@string/send_mail"
+				android:textColor="@color/textColor"
+				android:layout_below="@id/mail_message"
+				android:layout_alignEnd="@id/mail_message"
+				android:layout_marginTop="10dp"
+				android:background="@drawable/background_2"
+				android:layout_marginEnd="20dp"/>
+
+		</RelativeLayout>
+
+	</ScrollView>
+
+</LinearLayout>
+

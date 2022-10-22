@@ -21,7 +21,7 @@ public class FSG extends MyActivity {
     private static TextView var_a_x;
     private static TextView var_b_x;
     private static TextView result;
-    
+      
     private static String ax;
     private static String bx;
     private static String cx;
@@ -53,7 +53,7 @@ public class FSG extends MyActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.fsg);
         
-        this.initialize();
+        initialize();
         
         // Onclick do botão "determinar"
         this.calculate.setOnClickListener(

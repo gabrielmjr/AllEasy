@@ -1,4 +1,4 @@
-package com.GabrielMJr.Twaire.AllEasy.physic.kinematic;
+package com.GabrielMJr.Twaire.AllEasy.physic.kinematic.mru;
 
 import com.GabrielMJr.Twaire.AllEasy.app.MyActivity;
 import android.os.Bundle;
@@ -10,6 +10,7 @@ import android.view.View;
 import com.gabrielMJr.twaire.tools.Tools;
 import com.gabrielMJr.twaire.physic.MRU;
 import android.support.v7.widget.Toolbar;
+import com.gabrielMJr.twaire.physic.Physic;
 
 
 public class MRU_Displacement3 extends MyActivity {
@@ -28,6 +29,7 @@ public class MRU_Displacement3 extends MyActivity {
     private static int verify_media_speed;
     private static Tools tools;
     private static MRU mru;
+    private static Physic physic;
     
     private void initialize() {
         setToolBar((Toolbar) findViewById(R.id.toolbar));
@@ -39,6 +41,7 @@ public class MRU_Displacement3 extends MyActivity {
         this.res = findViewById(R.id.res);
         this.tools= new Tools();
         this.mru = new MRU();
+        this.physic = new Physic();
     }
     
     @Override
@@ -100,7 +103,7 @@ public class MRU_Displacement3 extends MyActivity {
                       &&
                       verify_media_speed == 1) {
                                         
-                       res.setText((CharSequence)mru.tVDisplacement(initialTime, finalTime, mediaSpeed, mru.getStep));                       
+                       res.setText((CharSequence)mru.tVDisplacement(initialTime, finalTime, mediaSpeed, physic.GET_STEP));                       
                           
                       } else {
                           return;

@@ -1,4 +1,4 @@
-package com.GabrielMJr.Twaire.AllEasy.physic.kinematic;
+package com.GabrielMJr.Twaire.AllEasy.physic.kinematic.mru;
 
 import com.GabrielMJr.Twaire.AllEasy.app.MyActivity;
 import android.os.Bundle;
@@ -17,8 +17,7 @@ public class MRU_Initial_Time extends MyActivity {
     private static EditText final_time;
     private static TextView initial_time;
     private static TextView res;
-    private static Toolbar toolbar;
-
+    
     private static int verify_deltaTime;
     private static int verify_finalTime;
     private static double deltaTime;
@@ -33,7 +32,6 @@ public class MRU_Initial_Time extends MyActivity {
         final_time = findViewById(R.id.final_time);
         initial_time = findViewById(R.id.initial_time);
         res = findViewById(R.id.res);
-        toolbar = findViewById(R.id.toolbar);
     }
 
     @Override
@@ -41,8 +39,7 @@ public class MRU_Initial_Time extends MyActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.kinematic_mru_initial_time);
         initialize();
-        setSupportActionBar(toolbar);
-
+        
         initial_time.setOnClickListener(
             new OnClickListener() {
                 @Override

@@ -6,4 +6,10 @@
     <string name="system_auto_theme">Definido pelo sistema</string>
     <string name="cancel">Cancelar</string>
     <string name="theme">Tema</string>
+    <string name="contact">Contacte-me</string>
+    <string name="about">Sobre</string>
+    <string name="send_mail_note">Aqui você pode reportar um caso ou comentar sobre o app directamente para mim.</string>
+    <string name="send_mail_hint_note">Insira a tua mensagem aqui.</string>
+    <string name="send_mail">Enviar</string>
+    <string name="null_field_mail">Este campo não pode estar vazio!</string>
 </resources>

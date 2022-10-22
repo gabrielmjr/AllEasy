@@ -31,13 +31,15 @@
 					android:text="@string/theme"
 					android:textColor="@color/textColor"
 					android:id="@+id/settingsTextView1"
-					android:layout_alignParentLeft="true"/>
+					android:layout_alignParentLeft="true"
+					android:layout_marginTop="5dp"
+					android:layout_marginStart="25dp"/>
 
 				<LinearLayout
 					android:id="@+id/theme_changer"
-					android:layout_height="40dp"
+					android:layout_height="35dp"
 					android:layout_width="match_parent"
-					android:layout_marginTop="15dp"
+					android:layout_marginTop="10dp"
 					android:layout_below="@id/settingsTextView1"
 					android:background="@drawable/background_2"
 					android:orientation="horizontal">
@@ -46,8 +48,8 @@
 						android:layout_width="wrap_content"
 						android:layout_height="wrap_content"
 						android:src="@drawable/ic_theme_light_dark"
-						android:layout_marginTop="5dp"
-						android:layout_marginLeft="5dp"/>
+						android:layout_marginStart="25dp"
+						android:layout_gravity="center_vertical"/>
 
 					<TextView
 						android:layout_height="wrap_content"
@@ -56,37 +58,73 @@
 						android:text="@string/choose_theme"
 						android:textColor="@color/textColor"
 						android:layout_centerHorizontal="true"
-						android:layout_marginLeft="10dp"
-						android:layout_marginTop="10dp"/>
+						android:layout_gravity="center_vertical"
+						android:layout_marginStart="10dp"/>
+
+				</LinearLayout>
+
+				<LinearLayout
+					android:layout_height="wrap_content"
+					android:layout_width="match_parent"
+					android:orientation="vertical"
+					android:layout_below="@id/theme_changer"
+					android:background="@drawable/background_2"
+					android:layout_marginTop="15dp">
+
+					<LinearLayout
+						android:id="@+id/sendMail"
+						android:layout_height="35dp"
+						android:layout_width="match_parent"
+						android:orientation="horizontal">
+
+						<ImageView
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							android:src="@drawable/ic_email_outline"
+							android:layout_marginStart="25dp"
+							android:layout_gravity="center_vertical"/>
+
+						<TextView
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							android:textAppearance="?android:attr/textAppearanceMedium"
+							android:text="@string/contact"
+							android:textColor="@color/textColor"
+							android:layout_marginStart="10dp"
+							android:layout_gravity="center_vertical"/>
+
+					</LinearLayout>
+
+					<LinearLayout
+                        android:id="@+id/about"
+						android:layout_height="wrap_content"
+						android:layout_width="match_parent"
+						android:orientation="horizontal"
+						android:layout_marginTop="5dp"
+						android:paddingBottom="5dp">
+
+						<ImageView
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							android:src="@drawable/ic_information_outline"
+							android:layout_marginStart="25dp"
+							android:layout_gravity="center_vertical"/>
+
+						<TextView
+                            android:id="@+id/about_text"
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							android:textAppearance="?android:attr/textAppearanceMedium"
+							android:text="Medium Text"
+							android:layout_gravity="center_vertical"
+							android:textColor="@color/textColor"
+							android:layout_marginStart="10dp"/>
+
+					</LinearLayout>
 
 				</LinearLayout>
 
 			</RelativeLayout>
-
-			<RelativeLayout
-				android:layout_height="wrap_content"
-				android:layout_width="wrap_content"
-				android:layout_below="@id/theme_layout"
-				android:layout_marginTop="20dp"
-				android:id="@+id/settingsRelativeLayout1">
-
-			</RelativeLayout>
-
-			<TextView
-				android:layout_height="wrap_content"
-				android:textAppearance="?android:attr/textAppearanceSmall"
-				android:layout_width="wrap_content"
-				android:text="Small Text"/>
-
-			<TextView
-                android:id="@+id/version_info"
-				android:layout_height="wrap_content"
-				android:layout_width="wrap_content"
-				android:text=""
-				android:layout_alignParentBottom="true"
-				android:layout_centerHorizontal="true"
-                android:textColor="@color/textColor"
-				android:layout_below="@id/settingsRelativeLayout1"/>
 
 		</RelativeLayout>
 
