@@ -72,7 +72,7 @@ public class MRU_Displacement2 extends MyActivity {
 
                     if (verify_Time == 1 && verify_mediaSpeed == 1) {
 
-                        res.setText( getText(R.string.dsig)
+                        res.setText( getText(R.string.dsp)
                                     + " "
                                     + tools.normalize(tools.expNormalizer(Double.valueOf(delta_time.getText().toString())))
                                     + getText(R.string.second)
@@ -81,7 +81,7 @@ public class MRU_Displacement2 extends MyActivity {
                                     + getText(R.string.speedmps)
                                     
                                     + "\n"
-                                    + getText(R.string.dsig)
+                                    + getText(R.string.dsp)
                                     + " "
                                     + mru.sVDisplacement(time, mediaSpeed)
                                     + getText(R.string.dm));

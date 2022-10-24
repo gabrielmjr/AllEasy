@@ -29,7 +29,7 @@ public class MRU_Final_Time extends MyActivity {
         setToolBar((Toolbar) findViewById(R.id.toolbar));
         
         initial_time = findViewById(R.id.initial_time);
-        delta_time =  findViewById(R.id.final_time);
+        delta_time =  findViewById(R.id.delta_time);
         final_time = findViewById(R.id.final_time);
         res = findViewById(R.id.res);
         
@@ -43,7 +43,7 @@ public class MRU_Final_Time extends MyActivity {
         setContentView(R.layout.kinematic_mru_final_time);
         initialize();
         
-        /*final_time.setOnClickListener(
+        final_time.setOnClickListener(
             new OnClickListener() {
                 @Override
                 public void onClick (View view) {
@@ -80,7 +80,7 @@ public class MRU_Final_Time extends MyActivity {
 
                     if (verify_initialTime == 1 && verify_deltaTime == 1) {
 
-                        res.setText(getText(R.string.final_time_ig)
+                        res.setText(getText(R.string.final_timep)
                                     + " "
                                     + initialTime
                                     + getText(R.string.second)
@@ -90,12 +90,12 @@ public class MRU_Final_Time extends MyActivity {
                                     + deltaTime
                                     + getText(R.string.second)
                                     + getText(R.string.newLine)
-                                    + getText(R.string.final_time_ig)
+                                    + getText(R.string.final_timep)
                                     + " "
                                     + getText(R.string.second));
                     }
                 }
-            });*/
+            });
     }
 
 }

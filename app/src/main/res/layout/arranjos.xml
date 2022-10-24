@@ -12,9 +12,18 @@
 		layout="@layout/action_bar"/>
 
 	<RelativeLayout
-		android:layout_width="fill_parent"
-		android:layout_height="fill_parent"
-		android:orientation="horizontal">
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:orientation="horizontal"
+		android:gravity="center">
+
+		<TextView
+			android:id="@+id/a"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:textSize="70sp"
+			android:textColor="@color/textColor"
+			android:text="@string/a"/>
 
 		<EditText
 			android:id="@+id/n"
@@ -24,48 +33,41 @@
 			android:textColor="@color/textColor"
 			android:imeOptions="actionNext"
 			android:inputType="number"
-			android:layout_marginTop="80dp"
-			android:layout_marginLeft="50dp"
 			android:hint="@string/n"
 			android:text=""
-			android:textColorHint="@color/hint_color"/>
-        
-        <EditText
-            android:id="@+id/p"
-            android:layout_width="40dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="180dp"
-            android:layout_marginLeft="10dp"
-            android:textSize="17sp"
-            android:textColor="@color/textColor"
-            android:imeOptions="actionDone"
-            android:inputType="number"
-            android:hint="@string/p"
-			android:text=""/>
+			android:textColorHint="@color/hint_color"
+			android:layout_alignEnd="@id/a"
+			android:layout_above="@id/a"
+			android:layout_marginEnd="25dp"/>
 
-		<TextView
-			android:id="@+id/a"
-			android:layout_width="wrap_content"
+		<EditText
+			android:id="@+id/p"
+			android:layout_width="40dp"
 			android:layout_height="wrap_content"
-			android:layout_marginTop="120dp"
-			android:layout_marginLeft="10dp"
-			android:textSize="70sp"
+			android:layout_marginLeft="35dp"
+			android:textSize="17sp"
 			android:textColor="@color/textColor"
-			android:text="@string/a"/>
-        
+			android:imeOptions="actionDone"
+			android:inputType="number"
+			android:hint="@string/p"
+			android:textColorHint="@color/hint_color"
+			android:layout_alignStart="@id/a"
+			android:layout_below="@id/a"/>
+
 		<TextView
 			android:id="@+id/result"
 			android:layout_height="wrap_content"
 			android:layout_width="wrap_content"
-			android:textSize="25sp"
+			android:textSize="20sp"
 			android:textColor="@color/textColor"
-			android:layout_marginLeft="10dp"
-			android:layout_marginTop="170dp "
 			android:focusable="true"
 			android:typeface="normal"
 			android:textColorHighlight="@color/black"
 			android:textIsSelectable="true"
-            android:textColorHint="@color/hint_color"/>
+			android:layout_alignTop="@id/a"
+			android:layout_alignStart="@id/a"
+			android:layout_marginStart="50dp"
+			android:layout_marginTop="20dp"/>
 
 	</RelativeLayout>
 

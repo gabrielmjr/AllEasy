@@ -1,5 +1,6 @@
 <resources>
     <string name="app_name">AllEasy</string>
+    
     <string name="n">n</string>
 	<string name="ax">x²</string>
 	<string name="bx">x</string>
@@ -12,19 +13,7 @@
 	<string name="y">y =</string>
     <string name="fatp">!</string>
 	<string name="x">x</string>
-	<string name="flowRatep">Q = </string>
-	<string name="temperature">T</string>
-	<string name="volumeSigle">V</string>
-    <string name="volumeLitre">L</string>
-    <string name="ds">∆S</string>
-    <string name="dsig">∆S =</string>
-    <string name="sp">S =</string>
-	<string name="volumep">V = </string>
-	<string name="dtp">∆t = </string>
-	<string name="dt">∆t </string>
-	<string name="q">Q</string>
-    <string name="flowRatep">Q =</string>
-	<string name="wht"> = ? </string>
+    
 	<string name="fluid_flow_flowRate1_formula">Q = V / ∆t </string> <!--Formula of /fluid_flow/first_fluid_fluw_formula-->
 	<string name="fluid_flow_flowRate2_formula">Q = A × v </string> <!--Formula of /fluid_flow/second_fluid_flow_formula-->
 	<string name="fluid_flow_flowRate3_formula">Q = π × r² × v</string> <!--Formula of /fluid_flow/third_fluid_flow_formula-->
@@ -34,6 +23,7 @@
 	<string name="fluid_flow_speed2_formula">v = Q / (π × r²)</string> <!--Formula of /fluid_flow/speed2-->
 	<string name="fluid_flow_area1_formula">A = Q / v</string> <!--Formula of /fluid_flow/area-->
 	<string name="fluid_flow_ray1_formula">r = √[Q ÷ (π × v)]</string> <!--Formula of /fluid_flow/ray-->
+    
     <string name="kinematic_mru_displacement1_formula">∆S = Sf - Si</string>
     <string name="kinematic_mru_displacement2_formula">∆S = ∆t × vm</string>
     <string name="kinematic_mru_displacement3_formula">∆S = (tf - ti) × vm</string>
@@ -47,17 +37,14 @@
     <string name="kinematic_mru_time3_formula">∆t=  (Sf - Si) / v</string>
     <string name="kinematic_mru_initial_time_formula">ti = tf - ∆t</string>
     <string name="kinematic_mru_final_time_formula">tf = ti + ∆t</string>
-	<string name="areaSigle">A </string>
-	<string name="speedSigle">v </string>
-	<string name="vmc">m³ </string>
-	<string name="amq">m² </string>
-	<string name="dm">m </string>
-	<string name="speedmps">m/s </string>
-    <string name="speedmcps">m³/s</string>
-    <string name="second">s</string>
-	<string name="raySigle">r </string>
-	<string name="pip">π = </string>
+    
+    <string name="kinematic_muv_acceleration1_formula">a = ∆v ÷ ∆t</string>
+    <string name="kinematic_muv_acceleration2_formula">a = (∆v) ÷ (tf - ti)</string>
+    <string name="kinematic_muv_acceleration3_formula">a = (vf - vi) ÷ (∆t)</string>
+    <string name="kinematic_muv_acceleration4_formula">a = (vf - vi) ÷ (tf - ti)</string>
+
 	<string name="piValue"> 3.14 </string>
+    
 	<string name="areap">A = </string>
     <string name="rayp">r = </string>
 	<string name="speedp">v = </string>
@@ -66,25 +53,56 @@
     <string name="nfp">n! =</string>
     <string name="pfp">p! =</string>
     <string name="nmpfp">(n - p)! = </string>
-    <string name="multiplication">×</string>
-    <string name="division">/</string>
-    <string name="plus">+</string>
-    <string name="minus">-</string>
-    <string name="openParenthesis">(</string>
-    <string name="closeParenthesis">)</string>
     <string name="x1p">x1 =</string>
     <string name="x2p">x2 = </string>
     <string name="dfp">Df = </string>
     <string name="cdfp">D’f = </string>
     <string name="xvp">Xv = </string>
     <string name="yvp">Yv = </string>
+    <string name="initial_timep">ti = </string>
+    <string name="final_timep">tf = </string>
+    <string name="pip">π = </string>
+    <string name="sp">S =</string>
+    <string name="volumep">V = </string>
+    <string name="dtp">∆t = </string>
+    <string name="dt">∆t </string>
+    <string name="flowRatep">Q =</string>
+	<string name="wht"> = ? </string>
+    <string name="flowRatep">Q = </string>
+    <string name="dsp">∆S = </string>
+    <string name="dvp">∆v = </string>
+    <string name="vip">vi = </string>
+    <string name="vfp">vf = </string>
+    <string name="accelerationp">a = </string>
+
     <string name="media_speed">vm</string>
     <string name="final_time">tf</string>
     <string name="initial_time">ti</string>
     <string name="final_displacement">Sf</string>
     <string name="initial_displacement">Si</string>
-    <string name="initial_time_ig">ti = </string>
-    <string name="final_time_ig">tf = </string>
 	<string name="displacementSigle">S</string>
+    <string name="second">s</string>
+	<string name="ray">r </string>
+    <string name="area">A </string>
+	<string name="speed">v </string>
+    <string name="temperature">T</string>
+    <string name="volume">V</string>
+    <string name="volumeLitre">L</string> 
+    <string name="acceleration">a</string>
+    <string name="ds">∆S</string>
+    <string name="q">Q</string>
+    
+    <string name="vmc">m³ </string>
+    <string name="amq">m² </string>
+    <string name="dm">m </string>
+    <string name="speedmps">m/s </string>
+    <string name="speedmcps">m³/s</string>
+    
     <string name="newLine">\n</string>
+    <string name="multiplication">×</string>
+    <string name="division">/</string>
+    <string name="plus">+</string>
+    <string name="minus">-</string>
+    <string name="openParenthesis">(</string>
+    <string name="closeParenthesis">)</string>
 </resources>

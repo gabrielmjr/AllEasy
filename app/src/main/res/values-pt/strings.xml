@@ -44,21 +44,21 @@
 
     <!--Lições-->
     <string name="kinematic">Cinemática</string>
-    <string name="displacement">Deslocamento</string>
-    <string name="variated_uniform_movement">Movimento Uniformemente Variado</string>
-    <string name="arrj">Arranjos</string>
-    <string name="fat">Factorial</string>
-    <string name="comb">Combinação</string>
-    <string name="fsg">Função de Segundo Grau</string>
-    <string name="det">Determinar</string>
-    <string name="vaz">Vazão volumétrica</string>
-    <string name="vazo">Fluxo da vazão</string>
-    <string name="volume">Volume</string>
-    <string name="velocity">Velocidade</string>
-    <string name="raio">Raio</string>
-    <string name="area">Área</string>
-    <string name="acceleration">Aceleração</string>     
-    <string name="time">Tempo</string> 
+    <string name="displacementS">Deslocamento</string>
+    <string name="variated_uniform_movementS">Movimento Uniformemente Variado</string>
+    <string name="arrjS">Arranjos</string>
+    <string name="fatS">Factorial</string>
+    <string name="combS">Combinação</string>
+    <string name="fsgS">Função de Segundo Grau</string>
+    <string name="detS">Determinar</string>
+    <string name="vazS">Vazão volumétrica</string>
+    <string name="vazoS">Fluxo da vazão</string>
+    <string name="volumeS">Volume</string>
+    <string name="velocityS">Velocidade</string>
+    <string name="raioS">Raio</string>
+    <string name="areaS">Área</string>
+    <string name="accelerationS">Aceleração</string>     
+    <string name="timeS">Tempo</string> 
 
     <!---->
     <string name="null_field">Este espaço não pode estar vazio!</string>

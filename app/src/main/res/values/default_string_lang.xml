@@ -48,21 +48,21 @@
     
     <!--Lessons-->
     <string name="kinematic">Kinematic</string>
-    <string name="displacement">Displacement</string>
-    <string name="variated_uniform_movement">Variated Uniform Movement</string>
-    <string name="arrj">Arrangments</string>
-    <string name="fat">Factorial</string>
-    <string name="comb">Combination</string>
-    <string name="fsg">Second-Degree Function</string>
-    <string name="det">Determine</string>
-    <string name="vaz">Fluid Flow</string>
-    <string name="vazo">Flow rate</string>
-    <string name="volume">Volume</string>
-    <string name="velocity">Speed</string>
-    <string name="raio">Ray</string>
-    <string name="area">Area</string>
-    <string name="acceleration">Acceleration</string>     
-    <string name="time">Time</string>     
+    <string name="displacementS">Displacement</string>
+    <string name="variated_uniform_movementS">Variated Uniform Movement</string>
+    <string name="arrjS">Arrangments</string>
+    <string name="fatS">Factorial</string>
+    <string name="combS">Combination</string>
+    <string name="fsgS">Second-Degree Function</string>
+    <string name="detS">Determine</string>
+    <string name="vazS">Fluid Flow</string>
+    <string name="vazoS">Flow rate</string>
+    <string name="volumeS">Volume</string>
+    <string name="velocityS">Speed</string>
+    <string name="raioS">Ray</string>
+    <string name="areaS">Area</string>
+    <string name="accelerationS">Acceleration</string>     
+    <string name="timeS">Time</string>     
     
 
     <!---->

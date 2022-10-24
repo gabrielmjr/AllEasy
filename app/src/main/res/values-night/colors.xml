@@ -16,6 +16,7 @@
     <color name="bkg_orange">#FFFF9604</color>
     <color name="full_orange">#FF5601</color>
     <color name="textColor">#FFFFFFFF</color>
+    <!--<color name="textColor">#FF27B0CB</color>-->
     <color name="hint_color">#FF909090</color>
     <color name="splash_background">#FF000000</color>
     <color name="send_mail_background_field">@color/white</color>

@@ -73,7 +73,7 @@
         <!--Math-->
         <activity
             android:name=".math.Fatorial"
-            android:label="@string/fat">
+            android:label="@string/fatS">
 
             <intent-filter>
 
@@ -87,7 +87,7 @@
 
         <activity
             android:name=".math.Arranjos"
-            android:label="@string/arrj">
+            android:label="@string/arrjS">
 
             <intent-filter>
 
@@ -101,7 +101,7 @@
 
         <activity
             android:name=".math.Combination"
-            android:label="@string/comb">
+            android:label="@string/combS">
 
             <intent-filter>
 
@@ -115,7 +115,7 @@
 
         <activity
             android:name=".math.FSG"
-            android:label="@string/fsg">
+            android:label="@string/fsgS">
 
             <intent-filter>
 
@@ -131,7 +131,7 @@
         <!--Physic-->
         <activity
             android:name=".physic.vaz.FluidFlow_ActivityMain"
-            android:label="@string/vaz">
+            android:label="@string/vazS">
 
             <intent-filter>
 
@@ -147,7 +147,7 @@
         <!--Fluid flow-->
         <activity
             android:name=".physic.vaz.FlowRate1"
-            android:label="@string/vazo">
+            android:label="@string/vazoS">
 
             <intent-filter>
 
@@ -161,7 +161,7 @@
 
         <activity
             android:name=".physic.vaz.FlowRate2"
-            android:label="@string/vazo">
+            android:label="@string/vazoS">
 
             <intent-filter>
 
@@ -175,7 +175,7 @@
 
         <activity
             android:name=".physic.vaz.FlowRate3"
-            android:label="@string/vazo">
+            android:label="@string/vazoS">
 
             <intent-filter>
 
@@ -189,7 +189,7 @@
 
         <activity
             android:name=".physic.vaz.Time1"
-            android:label="@string/time">
+            android:label="@string/timeS">
 
             <intent-filter>
 
@@ -203,7 +203,7 @@
 
         <activity
             android:name=".physic.vaz.Volume1"
-            android:label="@string/volume">
+            android:label="@string/volumeS">
 
             <intent-filter>
 
@@ -217,7 +217,7 @@
 
         <activity
             android:name=".physic.vaz.Speed1"
-            android:label="@string/velocity">
+            android:label="@string/velocityS">
 
             <intent-filter>
 
@@ -231,7 +231,7 @@
 
         <activity
             android:name=".physic.vaz.Speed2"
-            android:label="@string/velocity">
+            android:label="@string/velocityS">
 
             <intent-filter>
 
@@ -245,7 +245,7 @@
 
         <activity
             android:name=".physic.vaz.Area1"
-            android:label="@string/area">
+            android:label="@string/areaS">
 
             <intent-filter>
 
@@ -259,7 +259,7 @@
 
         <activity
             android:name=".physic.vaz.Ray1"
-            android:label="@string/raio">
+            android:label="@string/raioS">
 
             <intent-filter>
 
@@ -290,7 +290,7 @@
         <!--MRU-->
         <activity
             android:name=".physic.kinematic.mru.MRU_Displacement1"
-            android:label="@string/displacement">
+            android:label="@string/displacementS">
 
             <intent-filter>
 
@@ -304,7 +304,7 @@
 
         <activity
             android:name=".physic.kinematic.mru.MRU_Displacement2"
-            android:label="@string/displacement">
+            android:label="@string/displacementS">
 
             <intent-filter>
 
@@ -318,7 +318,7 @@
 
         <activity
             android:name=".physic.kinematic.mru.MRU_Displacement3"
-            android:label="@string/displacement">
+            android:label="@string/displacementS">
 
             <intent-filter>
 
@@ -332,7 +332,7 @@
 
         <activity
             android:name=".physic.kinematic.mru.MRU_Initial_Displacement"
-            android:label="@string/displacement">
+            android:label="@string/displacementS">
 
             <intent-filter>
 
@@ -346,7 +346,7 @@
 
         <activity
             android:name=".physic.kinematic.mru.MRU_Final_Displacement"
-            android:label="@string/displacement">
+            android:label="@string/displacementS">
 
             <intent-filter>
 
@@ -360,7 +360,7 @@
 
         <activity
             android:name=".physic.kinematic.mru.MRU_Displacement_Law"
-            android:label="@string/displacement">
+            android:label="@string/displacementS">
 
             <intent-filter>
 
@@ -374,7 +374,7 @@
 
         <activity
             android:name=".physic.kinematic.mru.MRU_Speed1"
-            android:label="@string/velocity">
+            android:label="@string/velocityS">
 
             <intent-filter>
 
@@ -388,7 +388,7 @@
 
         <activity
             android:name=".physic.kinematic.mru.MRU_Speed2"
-            android:label="@string/velocity">
+            android:label="@string/velocityS">
 
             <intent-filter>
 
@@ -402,7 +402,7 @@
 
         <activity
             android:name=".physic.kinematic.mru.MRU_Time1"
-            android:label="@string/time">
+            android:label="@string/timeS">
 
             <intent-filter>
 
@@ -416,7 +416,7 @@
 
         <activity
             android:name=".physic.kinematic.mru.MRU_Time2"
-            android:label="@string/time">
+            android:label="@string/timeS">
 
             <intent-filter>
 
@@ -430,7 +430,7 @@
 
         <activity
             android:name=".physic.kinematic.mru.MRU_Time3"
-            android:label="@string/time">
+            android:label="@string/timeS">
 
             <intent-filter>
 
@@ -444,7 +444,7 @@
 
         <activity
             android:name=".physic.kinematic.mru.MRU_Initial_Time"
-            android:label="@string/time">
+            android:label="@string/timeS">
 
             <intent-filter>
 
@@ -458,7 +458,7 @@
 
         <activity
             android:name=".physic.kinematic.mru.MRU_Final_Time"
-            android:label="@string/time">
+            android:label="@string/timeS">
 
             <intent-filter>
 
@@ -474,8 +474,8 @@
 
         <!--MUV-->
         <activity
-            android:name=".physic.kinematic.muv.MRU_Acceleration1"
-            android:label="@string/acceleration">
+            android:name=".physic.kinematic.muv.MUV_Acceleration1"
+            android:label="@string/accelerationS">
 
             <intent-filter>
 
@@ -488,8 +488,8 @@
         </activity>
 
         <activity
-            android:name=".physic.kinematic.muv.MRU_Acceleration2"
-            android:label="@string/acceleration">
+            android:name=".physic.kinematic.muv.MUV_Acceleration2"
+            android:label="@string/accelerationS">
 
             <intent-filter>
 
@@ -502,8 +502,8 @@
         </activity>
 
         <activity
-            android:name=".physic.kinematic.muv.MRU_Acceleration3"
-            android:label="@string/acceleration">
+            android:name=".physic.kinematic.muv.MUV_Acceleration3"
+            android:label="@string/accelerationS">
 
             <intent-filter>
 
@@ -516,8 +516,8 @@
         </activity>
 
         <activity
-            android:name=".physic.kinematic.muv.MRU_Acceleration4"
-            android:label="@string/acceleration">
+            android:name=".physic.kinematic.muv.MUV_Acceleration4"
+            android:label="@string/accelerationS">
 
             <intent-filter>
 

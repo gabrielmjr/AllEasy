@@ -73,7 +73,7 @@ public class MRU_Displacement1 extends MyActivity {
 
                     if (verify_ID == 1 && verify_FD == 1) {
 
-                        res.setText(getText(R.string.dsig)
+                        res.setText(getText(R.string.dsp)
                                     + " "
                                     + tools.normalize(tools.expNormalizer(Double.valueOf(sf.getText().toString())))
                                     + getText(R.string.dm)
@@ -82,7 +82,7 @@ public class MRU_Displacement1 extends MyActivity {
                                     + getText(R.string.dm)
                                     
                                     + "\n"
-                                    + getText(R.string.dsig)
+                                    + getText(R.string.dsp)
                                     + " "
                                     + mru.fVDisplacement(initialDisplacement, finalDisplacement)
                                     + getText(R.string.dm));

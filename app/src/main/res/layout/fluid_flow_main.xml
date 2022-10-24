@@ -30,7 +30,7 @@
 					android:layout_height="wrap_content"
 					android:textSize="16sp"
 					android:textColor="@color/textColor"
-					android:text="@string/vazo"/>
+					android:text="@string/vazoS"/>
 
 				<LinearLayout
 					android:id="@+id/v1"
@@ -97,7 +97,7 @@
 					android:textSize="16sp"
 					android:layout_marginTop="25dp"
 					android:textColor="@color/textColor"
-					android:text="@string/time"/>
+					android:text="@string/timeS"/>
 
 				<LinearLayout
 					android:id="@+id/t1"
@@ -159,7 +159,7 @@
 					android:textSize="16sp"
 					android:layout_marginTop="25dp"
 					android:textColor="@color/textColor"
-					android:text="@string/velocity"/>
+					android:text="@string/velocityS"/>
 
 				<LinearLayout
 					android:id="@+id/vel1"
@@ -239,7 +239,7 @@
 					android:textSize="16sp"
 					android:layout_marginTop="25dp"
 					android:textColor="@color/textColor"
-					android:text="@string/raio"/>
+					android:text="@string/raioS"/>
 
 				<LinearLayout
 					android:id="@+id/raio1"

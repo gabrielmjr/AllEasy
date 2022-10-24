@@ -55,7 +55,7 @@
 						<TextView
 							android:layout_width="wrap_content"
 							android:layout_height="wrap_content"
-							android:text="@string/initial_time_ig"
+							android:text="@string/initial_timep"
                             android:textColor="@color/textColor"
 							android:textSize="19sp"/>
 
@@ -86,7 +86,7 @@
 						<TextView
 							android:layout_width="wrap_content"
 							android:layout_height="wrap_content"
-							android:text="@string/final_time_ig"
+							android:text="@string/final_timep"
                             android:textColor="@color/textColor"
 							android:textSize="19sp"/>
 
