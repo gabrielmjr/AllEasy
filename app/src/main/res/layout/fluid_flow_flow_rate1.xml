@@ -6,7 +6,7 @@
 	android:layout_width="match_parent"
 	android:layout_height="match_parent"
 	android:orientation="vertical"
-    android:background="@color/main_background">
+	android:background="@color/main_background">
 
 	<include
 		layout="@layout/action_bar"/>
@@ -43,7 +43,7 @@
 						android:layout_height="wrap_content"
 						android:text="@string/dd"
 						android:textSize="20sp"
-                        android:textColor="@color/textColor"
+						android:textColor="@color/textColor"
 						android:layout_gravity="center"/>
 
 					<LinearLayout
@@ -55,22 +55,22 @@
 							android:layout_width="wrap_content"
 							android:layout_height="wrap_content"
 							android:text="@string/volumep"
-                            android:textColor="@color/textColor"
+							android:textColor="@color/textColor"
 							android:textSize="19sp"/>
 
 						<EditText
-							android:id="@+id/vol"
+							android:id="@+id/ff1_vol"
 							android:layout_width="wrap_content"
 							android:inputType="numberDecimal"
 							android:layout_height="wrap_content"
-                            android:textColor="@color/textColor"
+							android:textColor="@color/textColor"
 							android:ems="3"/>
 
 						<TextView
 							android:layout_width="wrap_content"
 							android:layout_height="wrap_content"
 							android:text="@string/vmc"
-                            android:textColor="@color/textColor"
+							android:textColor="@color/textColor"
 							android:textSize="18sp"/>
 
 					</LinearLayout>
@@ -85,22 +85,22 @@
 							android:layout_width="wrap_content"
 							android:layout_height="wrap_content"
 							android:text="@string/dtp"
-                            android:textColor="@color/textColor"
+							android:textColor="@color/textColor"
 							android:textSize="19sp"/>
 
 						<EditText
-							android:id="@+id/dt"
+							android:id="@+id/ff1_dt"
 							android:layout_width="wrap_content"
 							android:inputType="numberDecimal"
 							android:layout_height="wrap_content"
-                            android:textColor="@color/textColor"
+							android:textColor="@color/textColor"
 							android:ems="3"/>
 
 						<TextView
 							android:layout_width="wrap_content"
 							android:layout_height="wrap_content"
 							android:text="@string/second"
-                            android:textColor="@color/textColor"
+							android:textColor="@color/textColor"
 							android:textSize="18sp"/>
 
 					</LinearLayout>
@@ -115,14 +115,14 @@
 							android:layout_width="wrap_content"
 							android:layout_height="wrap_content"
 							android:text="@string/q"
-                            android:textColor="@color/textColor"
+							android:textColor="@color/textColor"
 							android:textSize="19sp"/>
 
 						<TextView
 							android:layout_width="wrap_content"
 							android:layout_height="wrap_content"
 							android:text="@string/wht"
-                            android:textColor="@color/textColor"
+							android:textColor="@color/textColor"
 							android:textSize="18sp"/>
 
 					</LinearLayout>
@@ -144,11 +144,11 @@
 						android:layout_height="wrap_content"
 						android:text="@string/fm"
 						android:textSize="20sp"
-                        android:textColor="@color/textColor"
+						android:textColor="@color/textColor"
 						android:layout_gravity="center"/>
 
 					<TextView
-						android:id="@+id/vaz"
+						android:id="@+id/ff1_vaz"
 						android:layout_width="wrap_content"
 						android:layout_height="wrap_content"
 						android:text="@string/fluid_flow_flowRate1_formula"
@@ -156,7 +156,7 @@
 						android:layout_gravity="center_horizontal"
 						android:background="@drawable/edge_btn_1"
 						android:ems="5"
-                        android:textColor="@color/textColor"
+						android:textColor="@color/textColor"
 						android:gravity="center"/>
 
 				</LinearLayout>
@@ -179,7 +179,7 @@
 					android:layout_height="wrap_content"
 					android:text="@string/res"
 					android:textSize="20sp"
-                    android:textColor="@color/textColor"
+					android:textColor="@color/textColor"
 					android:layout_gravity="center"/>
 
 				<HorizontalScrollView
@@ -189,10 +189,10 @@
 					android:layout_gravity="center">
 
 					<TextView
-						android:id="@+id/res"
+						android:id="@+id/ff1_res"
 						android:layout_width="wrap_content"
 						android:layout_height="wrap_content"
-                        android:textColor="@color/textColor"
+						android:textColor="@color/textColor"
 						android:textSize="19sp"/>
 
 				</HorizontalScrollView>

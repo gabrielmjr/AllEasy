@@ -29,10 +29,10 @@ public class FlowRate1 extends MyActivity {
     private void initialize() {
         setToolBar((Toolbar) findViewById(R.id.toolbar));
         
-        this.vol = findViewById(R.id.vol);
-        this.dt = findViewById(R.id.dt);
-        this.vaz = findViewById(R.id.vaz);
-        this.res = findViewById(R.id.res);
+        this.vol = findViewById(R.id.ff1_vol);
+        this.dt = findViewById(R.id.ff1_dt);
+        this.vaz = findViewById(R.id.ff1_vaz);
+        this.res = findViewById(R.id.ff1_res);
         this.FF = new FluidFlow();
 		this.Tools = new Tools();
     }
@@ -74,7 +74,7 @@ public class FlowRate1 extends MyActivity {
                         dt.setError(getText(R.string.dot_value));
                         verifyTime = 0;
 
-					    // Se não for, comtinue
+					    // Se não for, continue
                     } else {
                         time = Double.valueOf(dt.getText().toString());
                         verifyTime = 1;
@@ -85,10 +85,10 @@ public class FlowRate1 extends MyActivity {
                     if (verifyVolume == 1 && verifyTime == 1) {
                         res.setText(getText(R.string.flowRatep)
                                     + " "
-                                    + Tools.normalize(Tools.expNormalizer(volume))
+                                    + volume 
                                     + getText(R.string.vmc)
                                     + getText(R.string.division)
-                                    + Tools.normalize(Tools.expNormalizer(time))
+                                    + time
                                     + getText(R.string.second));
 
                         res.setText((CharSequence) res.getText().toString()

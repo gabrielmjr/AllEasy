@@ -98,10 +98,10 @@ public class MUV_Acceleration1 extends MyActivity
 
                         res.setText(getText(R.string.accelerationp)
                                     + " "
-                                    + tools.normalize(tools.expNormalizer(Double.valueOf(delta_speed.getText().toString())))
+                                    + delta_speed.getText().toString()
                                     + getText(R.string.dm)
                                     + " - "
-                                    + tools.normalize(tools.expNormalizer(Double.valueOf(delta_time.getText().toString())))
+                                    +delta_time.getText().toString()
                                     + getText(R.string.dm)
 
                                     + "\n"

@@ -45,8 +45,7 @@ public class Volume1 extends MyActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.fluid_flow_volume1);
         this.initialize();
-        setSupportActionBar(toolbar);
-
+        
         this.vol.setOnClickListener(
             new OnClickListener() {
                 public void onClick(View view) {
@@ -78,12 +77,12 @@ public class Volume1 extends MyActivity {
                     if (verifyTime == 1 && verifyVaz == 1) {                    
                         res.setText(getText(R.string.volumep)
                                     + " "
-                                    + Tools.normalize(Tools.expNormalizer(time))
+                                    + time
                                     + getText(R.string.second)
                                     + " "
                                     + getText(R.string.multiplication)
                                     + " ("
-                                    + Tools.normalize(Tools.expNormalizer(vazao))
+                                    + vazao
                                     + getText(R.string.speedmcps)
                                     + ")");
 

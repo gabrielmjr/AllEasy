@@ -76,12 +76,12 @@ public class Speed1 extends MyActivity {
                         res.setText(getText(R.string.speedp)
                                     + " "
                                     + "("
-                                    + Tools.normalize(Tools.expNormalizer(vazao))
+                                    + vazao
                                     + getText(R.string.vmc)
                                     + ") "
                                     + getText(R.string.division)
                                     + " ("
-                                    + Tools.normalize(Tools.expNormalizer(area))
+                                    + area
                                     + getText(R.string.amq)
                                     + ")");
                                     

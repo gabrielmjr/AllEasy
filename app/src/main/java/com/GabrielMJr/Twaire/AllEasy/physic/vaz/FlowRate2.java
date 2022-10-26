@@ -74,12 +74,12 @@ public class FlowRate2 extends MyActivity {
                     if (verifyVelocity == 1 && verifyArea == 1) {
                         res.setText(getText(R.string.flowRatep)
                                     + " "
-                                    + Tools.normalize(Tools.expNormalizer(area))
+                                    + area
                                     + getText(R.string.amq)
                                     + " "
                                     + getText(R.string.multiplication)
                                     + " "
-                                    + Tools.normalize(Tools.expNormalizer(velocidade))
+                                    + velocidade
                                     + getText(R.string.speedmps));
 
                         res.setText((CharSequence) res.getText().toString()

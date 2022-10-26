@@ -74,10 +74,10 @@ public class MRU_Displacement2 extends MyActivity {
 
                         res.setText( getText(R.string.dsp)
                                     + " "
-                                    + tools.normalize(tools.expNormalizer(Double.valueOf(delta_time.getText().toString())))
+                                    + delta_time.getText().toString()
                                     + getText(R.string.second)
                                     + " × "
-                                    + tools.normalize(tools.expNormalizer(Double.valueOf(media_speed.getText().toString())))
+                                    + media_speed.getText().toString()
                                     + getText(R.string.speedmps)
                                     
                                     + "\n"

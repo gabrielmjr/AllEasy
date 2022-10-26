@@ -45,7 +45,7 @@ public class MRU_Initial_Time extends MyActivity {
                 @Override
                 public void onClick (View view) {
 
-                    /*if (tools.isNull(delta_time.getText().toString())) {
+                    if (tools.isNull(delta_time.getText().toString())) {
                         delta_time.setError(getText(R.string.null_field));
                         verify_deltaTime = 0;
 
@@ -75,8 +75,8 @@ public class MRU_Initial_Time extends MyActivity {
                         verify_finalTime = 1;
                     }
 
-                    /*if (verify_deltaTime == 1 && verify_finalTime == 1) {
-                        res.setText(getText(R.string.initial_time_ig)
+                    if (verify_deltaTime == 1 && verify_finalTime == 1) {
+                        res.setText(getText(R.string.initial_timep)
                                     + " "
                                     + finalTime
                                     + getText(R.string.second)
@@ -86,10 +86,10 @@ public class MRU_Initial_Time extends MyActivity {
                                     + deltaTime
                                     + getText(R.string.second)
                                     + getText(R.string.newLine)
-                                    + getText(R.string.initial_time_ig)
+                                    + getText(R.string.initial_timep)
                                     + " " 
                                     + mru.initial_time(deltaTime, finalTime));
-                    }*/
+                    }
                 }
             });
     }

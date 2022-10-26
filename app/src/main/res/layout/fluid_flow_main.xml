@@ -128,7 +128,7 @@
 					android:textSize="16sp"
 					android:layout_marginTop="25dp"
 					android:textColor="@color/textColor"
-					android:text="@string/volume"/>
+					android:text="@string/volumeS"/>
 
 				<LinearLayout
 					android:id="@+id/V1"
@@ -208,7 +208,7 @@
 					android:textSize="16sp"
 					android:layout_marginTop="25dp"
 					android:textColor="@color/textColor"
-					android:text="@string/area"/>
+					android:text="@string/areaS"/>
 
 				<LinearLayout
 					android:id="@+id/area"

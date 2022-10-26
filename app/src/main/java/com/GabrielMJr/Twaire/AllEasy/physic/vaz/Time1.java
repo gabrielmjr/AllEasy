@@ -73,12 +73,12 @@ public class Time1 extends MyActivity {
 
                     if (verifyVaz == 1 && verifyVol == 1) {
                         res.setText(getText(R.string.dtp)
-                                    + Tools.normalize(Tools.expNormalizer(volume))
+                                    + String.valueOf(volume)
                                     + getText(R.string.vmc)
                                     + " "
                                     + getText(R.string.division)
                                     + " ("
-                                    + Tools.normalize(Tools.expNormalizer(vazao))
+                                    + vazao
                                     + getText(R.string.speedmcps)
                                     + ")");
 

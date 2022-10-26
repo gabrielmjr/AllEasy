@@ -75,10 +75,10 @@ public class MRU_Displacement1 extends MyActivity {
 
                         res.setText(getText(R.string.dsp)
                                     + " "
-                                    + tools.normalize(tools.expNormalizer(Double.valueOf(sf.getText().toString())))
+                                    + sf.getText().toString()
                                     + getText(R.string.dm)
                                     + " - "
-                                    + tools.normalize(tools.expNormalizer(Double.valueOf(si.getText().toString())))
+                                    + si.getText().toString()
                                     + getText(R.string.dm)
                                     
                                     + "\n"
