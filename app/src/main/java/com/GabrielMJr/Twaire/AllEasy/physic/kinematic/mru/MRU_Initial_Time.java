@@ -32,6 +32,9 @@ public class MRU_Initial_Time extends MyActivity {
         final_time = findViewById(R.id.final_time);
         initial_time = findViewById(R.id.initial_time);
         res = findViewById(R.id.res);
+        
+        tools = new Tools();
+        mru = new MRU();
     }
 
     @Override
@@ -88,7 +91,8 @@ public class MRU_Initial_Time extends MyActivity {
                                     + getText(R.string.newLine)
                                     + getText(R.string.initial_timep)
                                     + " " 
-                                    + mru.initial_time(deltaTime, finalTime));
+                                    + mru.initial_time(deltaTime, finalTime)
+                                    + getText(R.string.second));
                     }
                 }
             });

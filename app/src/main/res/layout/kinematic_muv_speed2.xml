@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".physic.kinematic.muv.MUV_Speed2"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/main_background"
+    android:orientation="vertical">
+
+    <include
+        layout="@layout/action_bar"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_gravity="top">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:background="@drawable/background_1"
+                android:orientation="horizontal"
+                android:gravity="top"
+                android:layout_marginTop="-40dp">
+
+                <LinearLayout
+                    android:id="@+id/dados"
+                    android:orientation="vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginTop="40dp"
+                    android:layout_gravity="left">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/dd"
+                        android:textSize="20sp"
+                        android:textColor="@color/textColor"
+                        android:layout_gravity="center"/>
+
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/vip"
+                            android:textColor="@color/textColor"
+                            android:textSize="19sp"/>
+
+                        <EditText
+                            android:id="@+id/initial_speed"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="18sp"
+                            android:ems="3"
+                            android:imeOptions="actionNext"
+                            android:textColor="@color/textColor"
+                            android:inputType="numberDecimal"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="18sp"
+                            android:textColor="@color/textColor"
+                            android:text="@string/speedmps"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingTop="10dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/vfp"
+                            android:textColor="@color/textColor"
+                            android:textSize="19sp"/>
+
+                        <EditText
+                            android:id="@+id/final_speed"
+                            android:layout_width="wrap_content"
+                            android:inputType="numberDecimal"
+                            android:layout_height="wrap_content"
+                            android:ems="3"
+                            android:textColor="@color/textColor"
+                            android:imeOptions="actionNext"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/speedmps"
+                            android:textColor="@color/textColor"
+                            android:textSize="18sp"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/dtp"
+                            android:textColor="@color/textColor"
+                            android:textSize="19sp"/>
+
+                        <EditText
+                            android:id="@+id/delta_time"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="18sp"
+                            android:ems="3"
+                            android:imeOptions="actionDone"
+                            android:textColor="@color/textColor"
+                            android:inputType="numberDecimal"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="18sp"
+                            android:textColor="@color/textColor"
+                            android:text="@string/second"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/acceleration"
+                            android:textColor="@color/textColor"
+                            android:textSize="19sp"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/wht"
+                            android:textColor="@color/textColor"
+                            android:textSize="18sp"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/formula"
+                    android:orientation="vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="40dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_gravity="right"
+                    android:layout_marginEnd="20dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="@string/fm"
+                        android:textColor="@color/textColor"
+                        android:textSize="20sp"/>
+
+                    <TextView
+                        android:id="@+id/acceleration"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="@string/kinematic_muv_acceleration3_formula"
+                        android:textSize="19sp"
+                        android:background="@drawable/edge_btn_1"
+                        android:ems="8"
+                        android:textColor="@color/textColor"
+                        android:gravity="center"/>
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/resulucao"
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="125dp"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/background_1"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:layout_marginTop="220dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/res"
+                    android:textSize="20sp"
+                    android:textColor="@color/textColor"
+                    android:layout_gravity="center"/>
+
+                <HorizontalScrollView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal">
+
+                    <TextView
+                        android:id="@+id/res"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/textColor"
+                        android:textSize="18sp"/>
+
+                </HorizontalScrollView>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+</LinearLayout>
+

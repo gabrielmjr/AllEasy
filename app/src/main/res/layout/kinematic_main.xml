@@ -329,32 +329,32 @@
 			</LinearLayout>
 
 			<TextView
+				android:id="@+id/tv4"
 				android:layout_width="wrap_content"
 				android:layout_height="wrap_content"
 				android:textAppearance="?android:attr/textAppearanceMedium"
 				android:layout_below="@id/mru_final_time"
 				android:layout_marginTop="30dp"
 				android:text="@string/variated_uniform_movementS"
-				android:textColor="@color/textColor"
-				android:id="@+id/kinematicmainTextView1"/>
+				android:textColor="@color/textColor"/>
 
 			<TextView
+				android:id="@+id/tv5"
 				android:layout_width="wrap_content"
 				android:layout_height="wrap_content"
 				android:textAppearance="?android:attr/textAppearanceSmall"
 				android:text="@string/accelerationS"
 				android:textColor="@color/textColor"
-				android:layout_below="@id/kinematicmainTextView1"
+				android:layout_below="@id/tv4"
 				android:textSize="16sp"
-				android:layout_marginTop="10dp"
-				android:id="@+id/kinematicmainTextView2"/>
+				android:layout_marginTop="10dp"/>
 
 			<LinearLayout
 				android:id="@+id/muv_acceleration1"
 				android:layout_height="wrap_content"
 				android:layout_width="match_parent"
 				android:orientation="vertical"
-				android:layout_below="@id/kinematicmainTextView2"
+				android:layout_below="@id/tv5"
 				android:layout_marginTop="10dp"
 				android:gravity="center"
 				android:background="@drawable/background_2">
@@ -420,6 +420,93 @@
 					android:layout_height="wrap_content"
 					android:layout_width="wrap_content"
 					android:text="@string/kinematic_muv_acceleration4"
+					android:textSize="18sp"
+					android:textColor="@color/textColor"/>
+
+			</LinearLayout>
+
+			<TextView
+				android:id="@+id/tv7"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:textAppearance="?android:attr/textAppearanceSmall"
+				android:text="@string/velocityS"
+				android:textColor="@color/textColor"
+				android:layout_below="@id/muv_acceleration4"
+				android:textSize="16sp"
+				android:layout_marginTop="20dp"/>
+
+			<LinearLayout
+				android:id="@+id/muv_speed1"
+				android:layout_height="wrap_content"
+				android:layout_width="match_parent"
+				android:orientation="vertical"
+				android:layout_below="@id/tv7"
+				android:layout_marginTop="10dp"
+				android:gravity="center"
+				android:background="@drawable/background_2">
+
+				<TextView
+					android:layout_height="wrap_content"
+					android:layout_width="wrap_content"
+					android:text="@string/kinematic_muv_speed1"
+					android:textSize="18sp"
+					android:textColor="@color/textColor"/>
+
+			</LinearLayout>
+
+			<LinearLayout
+				android:id="@+id/muv_speed2"
+				android:layout_height="wrap_content"
+				android:layout_width="match_parent"
+				android:orientation="vertical"
+				android:layout_below="@id/muv_speed1"
+				android:layout_marginTop="10dp"
+				android:gravity="center"
+				android:background="@drawable/background_2">
+
+				<TextView
+					android:layout_height="wrap_content"
+					android:layout_width="wrap_content"
+					android:text="@string/kinematic_muv_speed2"
+					android:textSize="18sp"
+					android:textColor="@color/textColor"/>
+
+			</LinearLayout>
+
+			<LinearLayout
+				android:id="@+id/muv_speed3"
+				android:layout_height="wrap_content"
+				android:layout_width="match_parent"
+				android:orientation="vertical"
+				android:layout_below="@id/muv_speed2"
+				android:layout_marginTop="10dp"
+				android:gravity="center"
+				android:background="@drawable/background_2">
+
+				<TextView
+					android:layout_height="wrap_content"
+					android:layout_width="wrap_content"
+					android:text="@string/kinematic_muv_speed3"
+					android:textSize="18sp"
+					android:textColor="@color/textColor"/>
+
+			</LinearLayout>
+
+			<LinearLayout
+				android:id="@+id/muv_speed4"
+				android:layout_height="wrap_content"
+				android:layout_width="match_parent"
+				android:orientation="vertical"
+				android:layout_below="@id/muv_speed3"
+				android:layout_marginTop="10dp"
+				android:gravity="center"
+				android:background="@drawable/background_2">
+
+				<TextView
+					android:layout_height="wrap_content"
+					android:layout_width="wrap_content"
+					android:text="@string/kinematic_muv_speed4"
 					android:textSize="18sp"
 					android:textColor="@color/textColor"/>
 

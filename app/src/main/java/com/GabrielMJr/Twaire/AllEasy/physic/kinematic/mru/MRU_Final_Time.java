@@ -85,13 +85,14 @@ public class MRU_Final_Time extends MyActivity {
                                     + initialTime
                                     + getText(R.string.second)
                                     + " "
-                                    + getText(R.string.minus)
+                                    + getText(R.string.plus)
                                     + " "
                                     + deltaTime
                                     + getText(R.string.second)
                                     + getText(R.string.newLine)
                                     + getText(R.string.final_timep)
                                     + " "
+                                    + mru.final_time(initialTime ,deltaTime)
                                     + getText(R.string.second));
                     }
                 }

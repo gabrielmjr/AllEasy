@@ -528,6 +528,62 @@
             </intent-filter>
 
         </activity>
+        
+        <activity
+            android:name=".physic.kinematic.muv.MUV_Speed1"
+            android:label="@string/accelerationS">
+
+            <intent-filter>
+
+                <action android:name="android.intent.action.PARENT"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+
+            </intent-filter>
+
+        </activity>
+        
+        <activity
+            android:name=".physic.kinematic.muv.MUV_Speed2"
+            android:label="@string/accelerationS">
+
+            <intent-filter>
+
+                <action android:name="android.intent.action.PARENT"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+
+            </intent-filter>
+
+        </activity>
+        
+        <activity
+            android:name=".physic.kinematic.muv.MUV_Speed3"
+            android:label="@string/accelerationS">
+
+            <intent-filter>
+
+                <action android:name="android.intent.action.PARENT"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+
+            </intent-filter>
+
+        </activity>
+        
+        <activity
+            android:name=".physic.kinematic.muv.MUV_Speed4"
+            android:label="@string/accelerationS">
+
+            <intent-filter>
+
+                <action android:name="android.intent.action.PARENT"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+
+            </intent-filter>
+
+        </activity>
 
         <meta-data
             android:name="android.max_aspect"

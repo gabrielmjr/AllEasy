@@ -42,6 +42,10 @@
     <string name="kinematic_muv_acceleration2_formula">a = (∆v) ÷ (tf - ti)</string>
     <string name="kinematic_muv_acceleration3_formula">a = (vf - vi) ÷ (∆t)</string>
     <string name="kinematic_muv_acceleration4_formula">a = (vf - vi) ÷ (tf - ti)</string>
+    <string name="kinematic_muv_speed1_formula">∆v = ∆t × a</string>
+    <string name="kinematic_muv_speed2_formula">∆v = (tf - ti) × a</string>
+    <string name="kinematic_muv_speed3_formula">vi = vf - ∆t × a</string>
+    <string name="kinematic_muv_speed4_formula">vf = vi + ∆t × a</string>
 
 	<string name="piValue"> 3.14 </string>
     
@@ -90,6 +94,7 @@
     <string name="volumeLitre">L</string> 
     <string name="acceleration">a</string>
     <string name="ds">∆S</string>
+    <string name="dv">∆v</string>
     <string name="q">Q</string>
     
     <string name="vmc">m³ </string>
