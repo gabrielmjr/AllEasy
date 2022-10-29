@@ -87,12 +87,12 @@
 						<TextView
 							android:layout_width="wrap_content"
 							android:layout_height="wrap_content"
-							android:text="@string/accelerationp"
+							android:text="@string/dtp"
 							android:textColor="@color/textColor"
 							android:textSize="19sp"/>
 
 						<EditText
-							android:id="@+id/acceleration"
+							android:id="@+id/delta_time"
 							android:layout_width="wrap_content"
 							android:inputType="numberDecimal"
 							android:layout_height="wrap_content"
@@ -103,7 +103,7 @@
 						<TextView
 							android:layout_width="wrap_content"
 							android:layout_height="wrap_content"
-							android:text="@string/speedmps"
+							android:text="@string/second"
 							android:textColor="@color/textColor"
 							android:textSize="18sp"/>
 
@@ -118,12 +118,12 @@
 						<TextView
 							android:layout_width="wrap_content"
 							android:layout_height="wrap_content"
-							android:text="@string/dtp"
+							android:text="@string/accelerationp"
 							android:textColor="@color/textColor"
 							android:textSize="19sp"/>
 
 						<EditText
-							android:id="@+id/delta_time"
+							android:id="@+id/acceleration"
 							android:layout_width="wrap_content"
 							android:layout_height="wrap_content"
 							android:textSize="18sp"
@@ -137,7 +137,7 @@
 							android:layout_height="wrap_content"
 							android:textSize="18sp"
 							android:textColor="@color/textColor"
-							android:text="@string/second"/>
+							android:text="@string/mpsq"/>
 
 					</LinearLayout>
 

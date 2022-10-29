@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/ic_alert_dialog_1_0_1"
+    android:layout_gravity="center">
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+        <TextView
+            android:id="@+id/unsupported_tv1"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:text="@string/unsupported_sdk"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@color/textColor"/>
+
+        <TextView
+            android:id="@+id/close"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:text="@string/close"
+            android:layout_below="@id/unsupported_tv1"
+            android:layout_marginTop="30dp"
+            android:layout_centerHorizontal="true"
+            android:textColor="@color/textColor"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:background="@drawable/background_2"
+            android:padding="10dp"
+            android:gravity="center"/>
+
+    </RelativeLayout>
+
+</ScrollView>
+

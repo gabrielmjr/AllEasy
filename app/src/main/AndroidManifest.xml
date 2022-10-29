@@ -1,7 +1,8 @@
 <?xml version='1.0' encoding='utf-8'?>
 <manifest
     xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.GabrielMJr.Twaire.AllEasy">
+    package="com.GabrielMJr.Twaire.AllEasy"
+    android:versionName="1.2.3-beta_3">
 
     <application
         android:allowBackup="true"
@@ -531,7 +532,7 @@
         
         <activity
             android:name=".physic.kinematic.muv.MUV_Speed1"
-            android:label="@string/accelerationS">
+            android:label="@string/velocityS">
 
             <intent-filter>
 
@@ -545,7 +546,7 @@
         
         <activity
             android:name=".physic.kinematic.muv.MUV_Speed2"
-            android:label="@string/accelerationS">
+            android:label="@string/velocityS">
 
             <intent-filter>
 
@@ -559,7 +560,7 @@
         
         <activity
             android:name=".physic.kinematic.muv.MUV_Speed3"
-            android:label="@string/accelerationS">
+            android:label="@string/velocityS">
 
             <intent-filter>
 
@@ -573,7 +574,7 @@
         
         <activity
             android:name=".physic.kinematic.muv.MUV_Speed4"
-            android:label="@string/accelerationS">
+            android:label="@string/velocityS">
 
             <intent-filter>
 

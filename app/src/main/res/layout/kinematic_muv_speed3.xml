@@ -60,7 +60,7 @@
 							android:textSize="19sp"/>
 
 						<EditText
-							android:id="@+id/initial_speed"
+							android:id="@+id/final_speed"
 							android:layout_width="wrap_content"
 							android:layout_height="wrap_content"
 							android:textSize="18sp"
@@ -103,7 +103,7 @@
 						<TextView
 							android:layout_width="wrap_content"
 							android:layout_height="wrap_content"
-							android:text="@string/second"
+							android:text="@string/speedmps"
 							android:textColor="@color/textColor"
 							android:textSize="18sp"/>
 
@@ -137,7 +137,7 @@
 							android:layout_height="wrap_content"
 							android:textSize="18sp"
 							android:textColor="@color/textColor"
-							android:text="@string/mpsq"/>
+							android:text="@string/second"/>
 
 					</LinearLayout>
 

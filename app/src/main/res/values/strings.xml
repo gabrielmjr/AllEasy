@@ -45,7 +45,7 @@
     <string name="kinematic_muv_speed1_formula">∆v = ∆t × a</string>
     <string name="kinematic_muv_speed2_formula">∆v = (tf - ti) × a</string>
     <string name="kinematic_muv_speed3_formula">vi = vf - ∆t × a</string>
-    <string name="kinematic_muv_speed4_formula">vf = vi + ∆t × a</string>
+    <string name="kinematic_muv_speed4_formula">vf = ∆t × a + vi</string>
 
 	<string name="piValue"> 3.14 </string>
     
@@ -69,7 +69,6 @@
     <string name="sp">S =</string>
     <string name="volumep">V = </string>
     <string name="dtp">∆t = </string>
-    <string name="dt">∆t </string>
     <string name="flowRatep">Q =</string>
 	<string name="wht"> = ? </string>
     <string name="flowRatep">Q = </string>
@@ -79,9 +78,10 @@
     <string name="vfp">vf = </string>
     <string name="accelerationp">a = </string>
 
-    <string name="media_speed">vm</string>
+    <string name="delta_speed">∆v</string>
     <string name="initial_speed">vi</string>
     <string name="final_speed">vf</string>
+    <string name="delta_time">∆t </string>
     <string name="final_time">tf</string>
     <string name="initial_time">ti</string>
     <string name="final_displacement">Sf</string>
@@ -96,7 +96,6 @@
     <string name="volumeLitre">L</string> 
     <string name="acceleration">a</string>
     <string name="ds">∆S</string>
-    <string name="dv">∆v</string>
     <string name="q">Q</string>
     
     <string name="vmc">m³ </string>

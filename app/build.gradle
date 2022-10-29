@@ -10,13 +10,14 @@ android {
         targetSdkVersion 29
         
         versionCode 105
-        versionName "1.2.3"
+        //versionName "1.2.3"
     }
     buildTypes {
         release {
             minifyEnabled true
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
-        }
+            
+        }    
     }
 }
 
