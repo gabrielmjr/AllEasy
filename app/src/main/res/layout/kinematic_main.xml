@@ -512,6 +512,131 @@
 
 			</LinearLayout>
 
+			<TextView
+				android:id="@+id/tv8"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:textAppearance="?android:attr/textAppearanceSmall"
+				android:text="@string/timeS"
+				android:textColor="@color/textColor"
+				android:layout_below="@id/muv_speed4"
+				android:textSize="16sp"
+				android:layout_marginTop="20dp"/>
+
+			<LinearLayout
+				android:id="@+id/muv_time1"
+				android:layout_height="wrap_content"
+				android:layout_width="match_parent"
+				android:orientation="vertical"
+				android:layout_below="@id/tv8"
+				android:layout_marginTop="10dp"
+				android:gravity="center"
+				android:background="@drawable/background_2">
+
+				<TextView
+					android:layout_height="wrap_content"
+					android:layout_width="wrap_content"
+					android:text="@string/kinematic_muv_time1"
+					android:textSize="18sp"
+					android:textColor="@color/textColor"/>
+
+			</LinearLayout>
+
+			<LinearLayout
+				android:id="@+id/muv_time2"
+				android:layout_height="wrap_content"
+				android:layout_width="match_parent"
+				android:orientation="vertical"
+				android:layout_below="@id/muv_time1"
+				android:layout_marginTop="10dp"
+				android:gravity="center"
+				android:background="@drawable/background_2">
+
+				<TextView
+					android:layout_height="wrap_content"
+					android:layout_width="wrap_content"
+					android:text="@string/kinematic_muv_time2"
+					android:textSize="18sp"
+					android:textColor="@color/textColor"/>
+
+			</LinearLayout>
+
+			<LinearLayout
+				android:id="@+id/muv_time3"
+				android:layout_height="wrap_content"
+				android:layout_width="match_parent"
+				android:orientation="vertical"
+				android:layout_below="@id/muv_time2"
+				android:layout_marginTop="10dp"
+				android:gravity="center"
+				android:background="@drawable/background_2">
+
+				<TextView
+					android:layout_height="wrap_content"
+					android:layout_width="wrap_content"
+					android:text="@string/kinematic_muv_time3"
+					android:textSize="18sp"
+					android:textColor="@color/textColor"/>
+
+			</LinearLayout>
+
+			<LinearLayout
+				android:id="@+id/muv_time4"
+				android:layout_height="wrap_content"
+				android:layout_width="match_parent"
+				android:orientation="vertical"
+				android:layout_below="@id/muv_time3"
+				android:layout_marginTop="10dp"
+				android:gravity="center"
+				android:background="@drawable/background_2">
+
+				<TextView
+					android:layout_height="wrap_content"
+					android:layout_width="wrap_content"
+					android:text="@string/kinematic_muv_time4"
+					android:textSize="18sp"
+					android:textColor="@color/textColor"/>
+
+			</LinearLayout>
+
+			<LinearLayout
+				android:id="@+id/muv_time5"
+				android:layout_height="wrap_content"
+				android:layout_width="match_parent"
+				android:orientation="vertical"
+				android:layout_below="@id/muv_time4"
+				android:layout_marginTop="10dp"
+				android:gravity="center"
+				android:background="@drawable/background_2">
+
+				<TextView
+					android:layout_height="wrap_content"
+					android:layout_width="wrap_content"
+					android:text="@string/kinematic_muv_time5"
+					android:textSize="18sp"
+					android:textColor="@color/textColor"/>
+
+			</LinearLayout>
+
+			<LinearLayout
+				android:id="@+id/muv_time6"
+				android:layout_height="wrap_content"
+				android:layout_width="match_parent"
+				android:orientation="vertical"
+				android:layout_below="@id/muv_time5"
+				android:layout_marginTop="10dp"
+				android:gravity="center"
+				android:background="@drawable/background_2">
+
+				<TextView
+					android:layout_height="wrap_content"
+					android:layout_width="wrap_content"
+					android:text="@string/kinematic_muv_time6"
+					android:textSize="18sp"
+					android:textColor="@color/textColor"/>
+
+			</LinearLayout>
+
 		</RelativeLayout>
 
 	</ScrollView>

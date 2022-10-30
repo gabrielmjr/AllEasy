@@ -45,6 +45,12 @@
     <string name="kinematic_muv_speed2">Calculate using:\n ∆v = (tf - ti) × a</string>
     <string name="kinematic_muv_speed3">Calculate using:\n vi = vf - ∆t × a</string>
     <string name="kinematic_muv_speed4">Calculate using:\n vf = vi + ∆t × a</string>
+    <string name="kinematic_muv_time1">Calculate using:\n ∆t = ∆v ÷ a</string>
+    <string name="kinematic_muv_time2">Calculate using:\n ∆t = (vf - vi) ÷ a</string>
+    <string name="kinematic_muv_time3">Calculate using:\n ti = tf - ∆v ÷ a</string>
+    <string name="kinematic_muv_time4">Calculate using:\n ti = tf - (vf - vi) ÷ a</string>
+    <string name="kinematic_muv_time5">Calculate using:\n tf = ti + ∆v ÷ a</string>
+    <string name="kinematic_muv_time6">Calculate using:\n tf = ti + (vf - vi) ÷ a</string>
 
     <string name="dd">Data</string>
     <string name="fm">Formula</string>
