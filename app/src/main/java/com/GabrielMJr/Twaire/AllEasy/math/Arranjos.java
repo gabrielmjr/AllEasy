@@ -1,8 +1,8 @@
 package com.GabrielMJr.Twaire.AllEasy.math;
 
 import android.os.Bundle;
-import android.widget.EditText;
-import android.widget.TextView;
+import android.support.v7.widget.AppCompatTextView;
+import android.support.v7.widget.AppCompatEditText;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Toast;
@@ -15,10 +15,10 @@ import android.support.v7.widget.Toolbar;
 public class Arranjos extends MyActivity {
 
     // Atrubutes
-    private static EditText n;
-    private static EditText p;
-    private static TextView a;
-    private static TextView result;
+    private static AppCompatEditText n;
+    private static AppCompatEditText p;
+    private static AppCompatTextView a;
+    private static AppCompatTextView result;
    
     private static Arranjo Arranjo;
     private static Tools Tools;

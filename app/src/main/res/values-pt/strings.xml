@@ -65,6 +65,7 @@
     <string name="fatS">Factorial</string>
     <string name="combS">Combinação</string>
     <string name="fsgS">Função de Segundo Grau</string>
+    <string name="fsgSs">Função de Segundo\nGrau</string>
     <string name="detS">Determinar</string>
     <string name="vazS">Vazão volumétrica</string>
     <string name="vazoS">Fluxo da vazão</string>

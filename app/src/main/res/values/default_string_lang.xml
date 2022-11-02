@@ -57,13 +57,14 @@
     <string name="res">Resolution</string>
     
     <!--Lessons-->
-    <string name="kinematic">Kinematic</string>
+    <string name="kinematicS">Kinematic</string>
     <string name="displacementS">Displacement</string>
     <string name="variated_uniform_movementS">Variated Uniform Movement</string>
     <string name="arrjS">Arrangments</string>
     <string name="fatS">Factorial</string>
     <string name="combS">Combination</string>
     <string name="fsgS">Second-Degree Function</string>
+    <string name="fsgSs">Second-Degree\nFunction</string>
     <string name="detS">Determine</string>
     <string name="vazS">Fluid Flow</string>
     <string name="vazoS">Flow rate</string>

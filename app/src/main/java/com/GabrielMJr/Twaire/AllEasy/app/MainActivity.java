@@ -12,7 +12,6 @@ import android.support.v7.app.AppCompatDelegate;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.view.View.OnClickListener;
-import android.widget.TextView;
 import com.GabrielMJr.Twaire.AllEasy.R;
 // import com.GabrielMJr.Twaire.AllEasy.app.MyActivity;
 import com.GabrielMJr.Twaire.AllEasy.app.MyMainActivity;
@@ -25,6 +24,8 @@ import com.GabrielMJr.Twaire.AllEasy.math.Fatorial;
 import com.GabrielMJr.Twaire.AllEasy.physic.kinematic.Kinematic_ActivityMain;
 import com.GabrielMJr.Twaire.AllEasy.physic.vaz.FluidFlow_ActivityMain;
 import com.GabrielMJr.Twaire.AllEasy.tools.DialogAlertData;
+import android.support.v7.widget.CardView;
+import android.widget.TextView;
 //import android.app.AlertDialog;
 
 
@@ -32,12 +33,12 @@ public class MainActivity extends MyMainActivity
 {
 
     // Atributes
-    private static TextView arranjos;
-    private static TextView comb;
-    private static TextView fat;
-    private static TextView fsg;
-    private static TextView vaz;
-    private static TextView kinematic;
+    private static CardView arranjos;
+    private static CardView comb;
+    private static CardView fat;
+    private static CardView fsg;
+    private static CardView vaz;
+    private static CardView kinematic;
     private static TextView welcome;
     private static Toolbar toolbar;
 

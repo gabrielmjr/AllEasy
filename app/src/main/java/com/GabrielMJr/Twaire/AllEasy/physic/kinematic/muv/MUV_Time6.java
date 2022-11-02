@@ -5,7 +5,7 @@ import com.GabrielMJr.Twaire.AllEasy.app.MyActivity;
 import com.GabrielMJr.Twaire.AllEasy.R;
 import android.support.v7.widget.Toolbar;
 
-public class MUV_Time4 extends MyActivity {
+public class MUV_Time6 extends MyActivity {
 
 
     private void initialize()
@@ -16,7 +16,7 @@ public class MUV_Time4 extends MyActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.kinematic_muv_time4);
+        setContentView(R.layout.kinematic_muv_time6);
         initialize();
     }
 

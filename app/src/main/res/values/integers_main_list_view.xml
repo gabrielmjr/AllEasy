@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <integer name="row_total_main">3</integer>
+    <integer name="column_total_main">2</integer>
+    
+    <integer name="row_arranjment">0</integer>
+    <integer name="column_arranjment">0</integer>
+    
+    <integer name="row_combination">0</integer>
+    <integer name="column_combimation">1</integer>
+    
+    <integer name="row_fatorial">1</integer>
+    <integer name="row_fatorial">0</integer>
+    
+    <integer name="row_fluidFlow">1</integer>
+    <integer name="column_fluidFlow">1</integer>
+    
+    <integer name="row_secondDegreeFunction">2</integer>
+    <integer name="column_secondDegreeFunction">0</integer>
+    
+    <integer name="row_kinematic">2</integer>
+    <integer name="column_kinematic">1</integer>
+</resources>

@@ -17,7 +17,7 @@
 		android:orientation="horizontal"
 		android:gravity="center">
 
-		<TextView
+		<android.support.v7.widget.AppCompatTextView
 			android:id="@+id/a"
 			android:layout_width="wrap_content"
 			android:layout_height="wrap_content"
@@ -25,7 +25,7 @@
 			android:textColor="@color/textColor"
 			android:text="@string/a"/>
 
-		<EditText
+		<android.support.v7.widget.AppCompatEditText
 			android:id="@+id/n"
 			android:layout_width="40dp"
 			android:layout_height="wrap_content"
@@ -36,11 +36,11 @@
 			android:hint="@string/n"
 			android:text=""
 			android:textColorHint="@color/hint_color"
-			android:layout_alignEnd="@id/a"
-			android:layout_above="@id/a"
-			android:layout_marginEnd="25dp"/>
+			android:layout_alignTop="@id/a"
+			android:layout_marginTop="-15dp"
+			android:layout_marginLeft="-15dp"/>
 
-		<EditText
+		<android.support.v7.widget.AppCompatEditText
 			android:id="@+id/p"
 			android:layout_width="40dp"
 			android:layout_height="wrap_content"
@@ -54,7 +54,7 @@
 			android:layout_alignStart="@id/a"
 			android:layout_below="@id/a"/>
 
-		<TextView
+		<android.support.v7.widget.AppCompatTextView
 			android:id="@+id/result"
 			android:layout_height="wrap_content"
 			android:layout_width="wrap_content"

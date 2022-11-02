@@ -276,7 +276,7 @@
         <!--Kinematic-->
         <activity
             android:name=".physic.kinematic.Kinematic_ActivityMain"
-            android:label="@string/kinematic">
+            android:label="@string/kinematicS">
 
             <intent-filter>
 
@@ -630,6 +630,34 @@
         
         <activity
             android:name="physic.kinematic.muv.MUV_Time4"
+            android:label="@string/timeS">
+
+            <intent-filter>
+
+                <action android:name="android.intent.action.PARENT"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+
+            </intent-filter>
+
+        </activity>
+        
+        <activity
+            android:name="physic.kinematic.muv.MUV_Time5"
+            android:label="@string/timeS">
+
+            <intent-filter>
+
+                <action android:name="android.intent.action.PARENT"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+
+            </intent-filter>
+
+        </activity>
+        
+        <activity
+            android:name="physic.kinematic.muv.MUV_Time6"
             android:label="@string/timeS">
 
             <intent-filter>
