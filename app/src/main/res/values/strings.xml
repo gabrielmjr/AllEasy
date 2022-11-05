@@ -13,6 +13,8 @@
 	<string name="y">y =</string>
     <string name="fatp">!</string>
 	<string name="x">x</string>
+	
+	<string name="clear">C</string>
     
 	<string name="fluid_flow_flowRate1_formula">Q = V / ∆t </string> <!--Formula of /fluid_flow/first_fluid_fluw_formula-->
 	<string name="fluid_flow_flowRate2_formula">Q = A × v </string> <!--Formula of /fluid_flow/second_fluid_flow_formula-->

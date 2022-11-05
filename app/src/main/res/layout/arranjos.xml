@@ -69,6 +69,16 @@
 			android:layout_marginStart="50dp"
 			android:layout_marginTop="20dp"/>
 
+		<Button
+			android:layout_width="wrap_content"
+			style="?android:attr/buttonStyleSmall"
+			android:layout_height="wrap_content"
+			android:text="@string/clear"
+			android:layout_alignParentBottom="true"
+			android:layout_alignParentRight="true"
+			android:layout_margin="30dp"
+			android:background="@drawable/circle_button"/>
+
 	</RelativeLayout>
 
 </LinearLayout>
