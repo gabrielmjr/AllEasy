@@ -66,7 +66,8 @@
 							android:layout_height="wrap_content"
 							android:ems="3"
 							android:textColor="@color/textColor"
-							android:imeOptions="actionNext"/>
+							android:imeOptions="actionNext"
+							android:hint="@string/nullDouble"/>
 
 						<TextView
 							android:layout_width="wrap_content"
@@ -98,7 +99,8 @@
 							android:ems="3"
 							android:imeOptions="actionDone"
 							android:textColor="@color/textColor"
-							android:inputType="numberDecimal"/>
+							android:inputType="numberDecimal"
+							android:hint="@string/nullDouble"/>
 
 						<TextView
 							android:layout_width="wrap_content"

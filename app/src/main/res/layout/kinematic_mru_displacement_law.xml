@@ -67,6 +67,7 @@
 							android:ems="3"
 							android:imeOptions="actionNext"
                             android:textColor="@color/textColor"
+                            android:hint="@string/nullDouble"
 							android:inputType="numberDecimal"/>
 
 						<TextView
@@ -98,6 +99,7 @@
 							android:layout_height="wrap_content"
 							android:ems="3"
                             android:textColor="@color/textColor"
+                            android:hint="@string/nullDouble"
 							android:imeOptions="actionNext"/>
 
 						<TextView
@@ -129,6 +131,7 @@
 							android:textSize="18sp"
 							android:ems="3"
                             android:textColor="@color/textColor"
+                            android:hint="@string/nullDouble"
 							android:imeOptions="actionDone"
 							android:inputType="numberDecimal"/>
 

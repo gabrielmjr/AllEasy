@@ -36,7 +36,7 @@
 			android:layout_marginTop="100dp"
 			android:ems="2"
 			android:textColor="@color/textColor"
-			android:layout_toEndOf="@id/yx"
+            android:layout_toEndOf="@id/yx"
 			android:layout_marginLeft="10dp"/>
 
 		<TextView
@@ -61,7 +61,7 @@
 			android:ems="2"
 			android:layout_toEndOf="@id/var_a_x"
 			android:textColor="@color/textColor"
-			android:layout_marginLeft="5dp"/>
+            android:layout_marginLeft="5dp"/>
 
 		<TextView
 			android:id="@+id/var_b_x"
@@ -85,7 +85,7 @@
 			android:layout_toEndOf="@id/var_b_x"
 			android:layout_marginLeft="5dp"
 			android:textColor="@color/textColor"
-			android:ems="2"/>
+            android:ems="2"/>
 
 		<Button
 			android:id="@+id/calculate"

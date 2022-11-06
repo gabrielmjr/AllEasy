@@ -64,7 +64,8 @@
 							android:inputType="numberDecimal"
 							android:layout_height="wrap_content"
 							android:textColor="@color/textColor"
-							android:ems="3"/>
+							android:ems="3"
+							android:hint="@string/nullDouble"/>
 
 						<TextView
 							android:layout_width="wrap_content"
@@ -94,7 +95,8 @@
 							android:inputType="numberDecimal"
 							android:layout_height="wrap_content"
 							android:textColor="@color/textColor"
-							android:ems="3"/>
+							android:ems="3"
+							android:hint="@string/nullDouble"/>
 
 						<TextView
 							android:layout_width="wrap_content"

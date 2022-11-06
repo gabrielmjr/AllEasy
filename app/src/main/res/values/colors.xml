@@ -17,7 +17,7 @@
     <color name="full_orange">#FF5601</color>
     <color name="textColor">#FF000000</color>
     <!--<color name="textColor">#FF27B0CB</color>-->
-    <color name="hint_color">#FF7F7F7F</color>
+    <color name="hintColor">#FF7F7F7F</color>
     <color name="splash_background">#FFFFFFFF</color>
     <color name="send_mail_background_field">#FFFFFFFF</color>
 </resources>

@@ -9,6 +9,7 @@
     <string name="nvp">π → pi = 3,14</string>
     <string name="nvr">r → ray (m)</string>
     <string name="nvd">d → diameter (m)</string>
+    <string name="nullDouble">0.0</string>
 
     <!--Fluidflow-->
     <string name="v1">Calculate using:\n Q = V/∆t</string>

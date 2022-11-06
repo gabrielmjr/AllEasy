@@ -58,7 +58,7 @@
     <string name="res">Resolução</string>     
 
     <!--Lições-->
-    <string name="kinematic">Cinemática</string>
+    <string name="kinematicS">Cinemática</string>
     <string name="displacementS">Deslocamento</string>
     <string name="variated_uniform_movementS">Movimento Uniformemente Variado</string>
     <string name="arrjS">Arranjos</string>

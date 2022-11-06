@@ -87,7 +87,7 @@ public class MainActivity extends MyMainActivity
                     setContentView(R.layout.splash_screen);
 
 
-                    try
+                    /*try
                     {
                         packageInfo = getApplicationContext().getPackageManager().getPackageInfo(getApplicationContext().getPackageName(), 0);
                         versionCode = packageInfo.versionCode;
@@ -104,7 +104,7 @@ public class MainActivity extends MyMainActivity
                         welcome.setText(R.string.welcome);
                     }
 
-                    dialogAlertData = new DialogAlertData(context);
+                    dialogAlertData = new DialogAlertData(context);*/
                 }
             }, 1);
             

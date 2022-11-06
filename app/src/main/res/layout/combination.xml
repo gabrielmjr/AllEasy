@@ -6,62 +6,59 @@
 	android:layout_width="match_parent"
 	android:orientation="horizontal"
 	android:layout_height="match_parent"
-    android:background="@color/white">
-    
-    <include
-        layout="@layout/action_bar"/>
+	android:background="@color/white">
+
+	<include
+		layout="@layout/action_bar"/>
 
 	<TextView
 		android:id="@+id/c"
 		android:layout_width="wrap_content"
 		android:layout_height="wrap_content"
-		android:layout_marginLeft="10dp"
 		android:textSize="70sp"
-        android:textColor="@color/textColor"
+		android:textColor="@color/textColor"
 		android:text="@string/c"
-		android:layout_marginTop="150dp"
-		android:layout_centerHorizontal="true"/>
+		android:layout_centerHorizontal="true"
+		android:layout_centerInParent="true"/>
 
 	<EditText
 		android:id="@+id/n"
-		android:layout_width="wrap_content"
+		android:layout_width="40dp"
 		android:layout_height="wrap_content"
 		android:textSize="17sp"
-        android:textColor="@color/textColor"
-		android:imeOptions="actionNext"
+		android:textColor="@color/textColor"
+        android:imeOptions="actionNext"
 		android:inputType="number"
 		android:hint="@string/n"
 		android:text=""
-		android:layout_marginTop="110dp"
-		android:layout_marginStart="70dp"
-		android:ems="4"
-		android:layout_alignEnd="@id/c"/>
+		android:layout_toLeftOf="@id/c"
+		android:layout_above="@id/c"/>
 
 	<EditText
 		android:id="@+id/p"
 		android:layout_width="wrap_content"
 		android:layout_height="wrap_content"
 		android:textSize="17sp"
-        android:textColor="@color/textColor"
-		android:imeOptions="actionNext"
+		android:textColor="@color/textColor"
+        android:imeOptions="actionNext"
 		android:inputType="number"
 		android:hint="@string/p"
 		android:text=""
 		android:ems="2"
-		android:layout_toEndOf="@id/c"
-		android:layout_marginTop="210dp"/>
+		android:layout_below="@id/c"
+		android:layout_toRightOf="@id/c"/>
 
 	<TextView
 		android:id="@+id/result"
 		android:layout_height="wrap_content"
 		android:layout_width="wrap_content"
 		android:textSize="25sp"
-        android:textColor="@color/textColor"
-		android:layout_marginTop="320dp"
+		android:textColor="@color/textColor"
 		android:focusable="true"
 		android:typeface="normal"
 		android:textIsSelectable="true"
-		android:layout_alignParentStart="true"/>
+		android:layout_alignParentStart="true"
+		android:layout_below="@id/p"/>
 
 </RelativeLayout>
 

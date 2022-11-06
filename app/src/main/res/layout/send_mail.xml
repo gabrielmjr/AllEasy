@@ -31,7 +31,7 @@
 				android:layout_marginLeft="15dp"/>
 
 			<EditText
-                android:id="@+id/mail_message"
+				android:id="@+id/mail_message"
 				android:inputType="textMultiLine"
 				android:layout_width="match_parent"
 				android:ems="10"
@@ -41,17 +41,17 @@
 				android:layout_alignStart="@id/tv1_send_mail"
 				android:layout_alignEnd="@id/tv1_send_mail"
 				android:hint="@string/send_mail_hint_note"
-				android:textColorHint="@color/hint_color"
-				android:textColor="@color/textColor"			
-				android:background="@drawable/ic_send_mail_field"/>
+				android:textColor="@color/textColor"
+				android:background="@drawable/ic_send_mail_field"
+				android:gravity="center"/>
 
 			<Button
-                android:id="@+id/send_mail"
+				android:id="@+id/send_mail"
 				style="?android:attr/buttonStyleSmall"
 				android:layout_height="wrap_content"
 				android:layout_width="wrap_content"
 				android:text="@string/send_mail"
-				android:textColor="@color/textColor"
+				android:textColor="@color/hintColor"
 				android:layout_below="@id/mail_message"
 				android:layout_alignEnd="@id/mail_message"
 				android:layout_marginTop="10dp"
