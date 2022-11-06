@@ -1,124 +1,135 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView
+<LinearLayout
 	xmlns:android="http://schemas.android.com/apk/res/android"
 	xmlns:tools="http://schemas.com.android.com/tools"
 	tools:context="math.FSG"
-	android:layout_width="fill_parent"
-	android:layout_height="fill_parent"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
 	android:background="@color/white"
 	android:orientation="vertical">
 
+	<include
+		layout="@layout/action_bar"/>
+
 	<RelativeLayout
-		android:layout_width="fill_parent"
-		android:layout_height="fill_parent">
+		android:layout_width="match_parent"
+		android:layout_height="match_parent">
 
 		<include
-			layout="@layout/action_bar"/>
+			layout="@layout/clear_button"/>
 
-		<TextView
-			android:id="@+id/yx"
-			android:layout_width="wrap_content"
-			android:layout_height="wrap_content"
-			android:textSize="20sp"
-			android:layout_marginTop="105dp"
-			android:text="@string/y"
-			android:textColor="@color/textColor"
-			android:layout_alignParentStart="true"/>
-
-		<EditText
-			android:id="@+id/a"
-			android:layout_width="wrap_content"
-			android:layout_height="wrap_content"
-			android:hint="@string/ha"
-			android:textSize="20sp"
-			android:imeOptions="actionNext"
-			android:inputType="phone"
-			android:layout_marginTop="100dp"
-			android:ems="2"
-			android:textColor="@color/textColor"
-            android:layout_toEndOf="@id/yx"
-			android:layout_marginLeft="10dp"/>
-
-		<TextView
-			android:id="@+id/var_a_x"
-			android:layout_width="wrap_content"
-			android:layout_height="wrap_content"
-			android:textSize="20sp"
-			android:layout_marginTop="110dp"
-			android:text="@string/ax"
-			android:textColor="@color/textColor"
-			android:layout_toEndOf="@id/a"/>
-
-		<EditText
-			android:id="@+id/b"
-			android:layout_width="wrap_content"
-			android:layout_height="wrap_content"
-			android:hint="@string/hb"
-			android:imeOptions="actionNext"
-			android:textSize="20sp"
-			android:inputType="phone"
-			android:layout_marginTop="100dp"
-			android:ems="2"
-			android:layout_toEndOf="@id/var_a_x"
-			android:textColor="@color/textColor"
-            android:layout_marginLeft="5dp"/>
-
-		<TextView
-			android:id="@+id/var_b_x"
-			android:layout_width="wrap_content"
-			android:layout_height="wrap_content"
-			android:textSize="20sp"
-			android:layout_marginTop="110dp"
-			android:text="@string/bx"
-			android:textColor="@color/textColor"
-			android:layout_toEndOf="@id/b"/>
-
-		<EditText
-			android:id="@+id/c"
-			android:layout_width="wrap_content"
-			android:layout_height="wrap_content"
-			android:textSize="20sp"
-			android:imeOptions="actionDone"
-			android:hint="@string/hc"
-			android:inputType="phone"
-			android:layout_marginTop="100dp"
-			android:layout_toEndOf="@id/var_b_x"
-			android:layout_marginLeft="5dp"
-			android:textColor="@color/textColor"
-            android:ems="2"/>
-
-		<Button
-			android:id="@+id/calculate"
-			android:layout_width="wrap_content"
-			android:layout_height="wrap_content"
-			android:textSize="15sp"
-			android:text="@string/detS"
-			android:typeface="normal"
-			android:background="@drawable/circle_button"
-			android:ems="8"
-			android:layout_below="@id/a"
-			android:textColor="@color/textColor"
-			android:layout_marginTop="10dp"/>
-
-		<TextView
-			android:id="@+id/result"
-			android:layout_width="wrap_content"
-			android:layout_height="wrap_content"
-			android:layout_marginTop="20dp"
-			android:layout_marginRight="20dp"
-			android:textSize="18sp"
-			android:textIsSelectable="true"
-			android:textColor="@color/textColor"
-			android:layout_below="@id/calculate"/>
-
-		<!--<com.jjoe64.graphview.GraphView
-			android:id="@+id/graph"
+		<ScrollView
 			android:layout_width="match_parent"
-			android:layout_height="250dp"
-			android:layout_below="@id/result"
-			android:layout_marginTop="10dp"/>
-        -->
+			android:layout_height="match_parent">
+
+			<RelativeLayout
+				android:layout_width="match_parent"
+				android:layout_height="match_parent">
+
+				<TextView
+					android:id="@+id/yx"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:textSize="20sp"
+					android:layout_marginTop="105dp"
+					android:text="@string/y"
+					android:textColor="@color/textColor"
+					android:layout_alignParentStart="true"/>
+
+				<EditText
+					android:id="@+id/a"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:hint="@string/ha"
+					android:textSize="20sp"
+					android:imeOptions="actionNext"
+					android:inputType="phone"
+					android:layout_marginTop="100dp"
+					android:ems="2"
+					android:textColor="@color/textColor"
+					android:layout_toEndOf="@id/yx"
+					android:layout_marginLeft="10dp"
+					android:gravity="right"/>
+
+				<TextView
+					android:id="@+id/var_a_x"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:textSize="20sp"
+					android:layout_marginTop="110dp"
+					android:text="@string/ax"
+					android:textColor="@color/textColor"
+					android:layout_toEndOf="@id/a"/>
+
+				<EditText
+					android:id="@+id/b"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:hint="@string/hb"
+					android:imeOptions="actionNext"
+					android:textSize="20sp"
+					android:inputType="phone"
+					android:layout_marginTop="100dp"
+					android:ems="2"
+					android:layout_toEndOf="@id/var_a_x"
+					android:textColor="@color/textColor"
+					android:layout_marginLeft="5dp"
+					android:gravity="right"/>
+
+				<TextView
+					android:id="@+id/var_b_x"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:textSize="20sp"
+					android:layout_marginTop="110dp"
+					android:text="@string/bx"
+					android:textColor="@color/textColor"
+					android:layout_toEndOf="@id/b"/>
+
+				<EditText
+					android:id="@+id/c"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:textSize="20sp"
+					android:imeOptions="actionDone"
+					android:hint="@string/hc"
+					android:inputType="phone"
+					android:layout_marginTop="100dp"
+					android:layout_toEndOf="@id/var_b_x"
+					android:layout_marginLeft="5dp"
+					android:textColor="@color/textColor"
+					android:ems="2"
+					android:gravity="center"/>
+
+				<Button
+					android:id="@+id/calculate"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:textSize="15sp"
+					android:text="@string/detS"
+					android:typeface="normal"
+					android:background="@drawable/circle_button"
+					android:ems="8"
+					android:layout_below="@id/a"
+					android:textColor="@color/textColor"
+					android:layout_marginTop="10dp"/>
+
+				<TextView
+					android:id="@+id/result"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_marginTop="20dp"
+					android:layout_marginRight="20dp"
+					android:textSize="18sp"
+					android:textIsSelectable="true"
+					android:textColor="@color/textColor"
+					android:layout_below="@id/calculate"/>
+
+			</RelativeLayout>
+
+		</ScrollView>
+
 	</RelativeLayout>
 
-</ScrollView>
+</LinearLayout>
 

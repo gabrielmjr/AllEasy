@@ -1,59 +1,65 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    tools:context=".math.Fatorial"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:background="@color/white">
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:tools="http://schemas.android.com/tools"
+	tools:context=".math.Fatorial"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:orientation="vertical"
+	android:background="@color/white">
 
-    <include 
-        layout="@layout/action_bar"/>
+	<include
+		layout="@layout/action_bar"/>
 
-    <LinearLayout
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
-        android:orientation="horizontal">
+	<RelativeLayout
+		android:layout_width="fill_parent"
+		android:layout_height="fill_parent">
 
-        <EditText
-            android:id="@+id/n"
-            android:layout_width="60dp"
-            android:layout_height="80dp"
-            android:layout_marginTop="60dp"
-            android:layout_marginLeft="100dp"
-            android:textSize="40sp"
-            android:textColor="@color/textColor"
-            android:inputType="number"
-            android:hint="@string/n"/>
+		<include
+			layout="@layout/clear_button"/>
 
-        <TextView
-            android:id="@+id/fat"
-            android:layout_width="60dp"
-            android:layout_height="80dp"
-            android:layout_marginTop="60dp"
-            android:layout_marginLeft="10dp"
-            android:textSize="60sp"
-            android:textColor="@color/textColor"
-            android:text="@string/fatp"/>
+		<EditText
+			android:id="@+id/n"
+			android:layout_width="60dp"
+			android:layout_height="80dp"
+			android:textSize="40sp"
+			android:textColor="@color/textColor"
+			android:inputType="number"
+			android:hint="@string/n"
+			android:layout_centerInParent="true"/>
 
-        <HorizontalScrollView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
+		<TextView
+			android:id="@+id/fat"
+			android:layout_width="wrap_content"
+			android:layout_height="80dp"
+			android:textSize="60sp"
+			android:textColor="@color/textColor"
+			android:text="@string/fatp"
+			android:layout_toEndOf="@id/n"
+			android:layout_alignTop="@id/n"/>
 
-            <TextView
-                android:id="@+id/result"
-                android:layout_height="wrap_content"
-                android:layout_width="wrap_content"
-                android:textSize="25sp"
-                android:textColor="@color/textColor"
-                android:layout_marginLeft="10dp"
-                android:layout_marginTop="75dp "
-                android:focusable="true"
-                android:typeface="normal"
-                android:textIsSelectable="true"/>
+		<HorizontalScrollView
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_toEndOf="@id/fat"
+			android:layout_marginTop="20dp"
+			android:layout_alignTop="@id/n">
+
+			<TextView
+				android:id="@+id/result"
+				android:layout_height="wrap_content"
+				android:layout_width="wrap_content"
+				android:textSize="25sp"
+				android:textColor="@color/textColor"
+				android:layout_marginLeft="10dp"
+				android:layout_marginTop="75dp "
+				android:focusable="true"
+				android:typeface="normal"
+				android:textIsSelectable="true"/>
 
 		</HorizontalScrollView>
-    </LinearLayout>
+
+	</RelativeLayout>
 
 </LinearLayout>
+

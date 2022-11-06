@@ -10,6 +10,9 @@
 
 	<include
 		layout="@layout/action_bar"/>
+    
+    <include
+        layout="@layout/clear_button"/>
 
 	<TextView
 		android:id="@+id/c"

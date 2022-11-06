@@ -10,11 +10,15 @@
 
 	<include
 		layout="@layout/action_bar"/>
+    
 
 	<RelativeLayout
 		android:layout_width="match_parent"
 		android:layout_height="match_parent"
 		android:orientation="horizontal">
+        
+        <include
+            layout="@layout/clear_button"/>
 
 		<TextView
 			android:id="@+id/a"
@@ -34,7 +38,7 @@
 			android:imeOptions="actionNext"
 			android:inputType="number"
 			android:hint="@string/n"
-			android:text=""	
+			android:text=""
 			android:layout_above="@id/a"
 			android:layout_toLeftOf="@id/a"/>
 
