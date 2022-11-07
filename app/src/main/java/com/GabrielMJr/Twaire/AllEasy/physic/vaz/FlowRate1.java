@@ -18,6 +18,7 @@ public class FlowRate1 extends MyActivity {
     private static TextView res;
 	private static EditText dt;
 	private static TextView vaz;
+    private static Button clear;
     
 	private static Double volume;
 	private static Double time;
@@ -33,6 +34,7 @@ public class FlowRate1 extends MyActivity {
         this.dt = findViewById(R.id.ff1_dt);
         this.vaz = findViewById(R.id.ff1_vaz);
         this.res = findViewById(R.id.ff1_res);
+        this.clear = findViewById(R.id.clear);
         this.FF = new FluidFlow();
 		this.Tools = new Tools();
     }
@@ -97,9 +99,25 @@ public class FlowRate1 extends MyActivity {
                                     + " "
                                     + FF.fFluidFlow(volume, time)
                                     + getText(R.string.speedmcps));
+                                    
+                                    return;
                     } else {
                         return;
                     }
+                }
+            });
+            
+        this.clear.setOnClickListener(
+            new OnClickListener()
+            {
+                @Override
+                public void onClick(View view)
+                {
+                    vol.setText(null);
+                    dt.setText(null);
+                    res.setText(null);
+                    
+                    return;
                 }
             });
     }

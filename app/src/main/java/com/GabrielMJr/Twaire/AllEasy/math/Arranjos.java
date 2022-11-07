@@ -1,16 +1,17 @@
 package com.GabrielMJr.Twaire.AllEasy.math;
 
 import android.os.Bundle;
-import android.widget.TextView;
-import android.widget.EditText;
+import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.view.View.OnClickListener;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
-import com.GabrielMJr.Twaire.Math.Arranjo;
 import com.GabrielMJr.Twaire.AllEasy.R;
-import com.gabrielMJr.twaire.tools.Tools;
 import com.GabrielMJr.Twaire.AllEasy.app.MyActivity;
-import android.support.v7.widget.Toolbar;
+import com.GabrielMJr.Twaire.Math.Arranjo;
+import com.gabrielMJr.twaire.tools.Tools;
 
 public class Arranjos extends MyActivity
 {
@@ -20,6 +21,7 @@ public class Arranjos extends MyActivity
     private static EditText p;
     private static TextView a;
     private static TextView result;
+    private static Button clear;
 
     private static Arranjo Arranjo;
     private static Tools Tools;
@@ -37,6 +39,7 @@ public class Arranjos extends MyActivity
         this.p = findViewById(R.id.p);
         this.a = findViewById(R.id.a);
         this.result = findViewById(R.id.result);
+        this.clear = findViewById(R.id.clear);
         this.Arranjo = new Arranjo();
         this.Tools = new Tools();
     }
@@ -101,11 +104,22 @@ public class Arranjos extends MyActivity
                             }
                         }
                     }
-                    else
-                    {
-                        return;
-                    }	
+                    return;
                 }
             }); 
+            
+            this.clear.setOnClickListener(
+                new OnClickListener()
+                {
+                    @Override
+                    public void onClick(View view)
+                    {
+                        n.setText(null);
+                        p.setText(null);
+                        result.setText(null);
+                        
+                        return;
+                    }
+                });
     }
 }

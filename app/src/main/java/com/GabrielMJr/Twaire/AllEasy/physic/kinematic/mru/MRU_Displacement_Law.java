@@ -11,6 +11,7 @@ import android.view.View;
 import com.gabrielMJr.twaire.tools.Tools;
 import com.gabrielMJr.twaire.physic.MRU;
 import com.gabrielMJr.twaire.physic.Physic;
+import android.widget.Button;
 
 public class MRU_Displacement_Law extends MyActivity {
 
@@ -19,6 +20,7 @@ public class MRU_Displacement_Law extends MyActivity {
     private static EditText delta_time;
     private static TextView displacement;
     private static TextView res;
+    private static Button clear;
     
     private static int verifyInitialDisplacement;
     private static int verifySpeed;
@@ -38,6 +40,7 @@ public class MRU_Displacement_Law extends MyActivity {
         this.delta_time = findViewById(R.id.delta_time);
         this.displacement = findViewById(R.id.displacement);
         this.res = findViewById(R.id.res);
+        this.clear = findViewById(R.id.clear);
         
         this.tools = new Tools();
         this.mru = new MRU();
@@ -107,10 +110,27 @@ public class MRU_Displacement_Law extends MyActivity {
                         verifyDeltaTime == 1) {
                         res.setText(mru.spaceLaw(initialDisplacement, speedValue, deltaTime, physic.GET_STEP));
 
-                    }
-                    else {
                         return;
-                    }                                                                                                 
+                    }
+                    else
+                    {
+                        return;
+                    }
+                }
+            });
+            
+        this.clear.setOnClickListener(
+            new OnClickListener()
+            {
+                @Override
+                public void onClick(View view)
+                {
+                    initial_displacement.setText(null);
+                    speed.setText(null);
+                    delta_time.setText(null);
+                    res.setText(null);
+                    
+                    return;
                 }
             });
     }

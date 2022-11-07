@@ -10,6 +10,7 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import com.gabrielMJr.twaire.tools.Tools;
 import android.support.v7.widget.Toolbar;
+import android.widget.Button;
 
 public class Area1 extends MyActivity {
 
@@ -18,6 +19,7 @@ public class Area1 extends MyActivity {
     private static EditText vel;
     private static TextView area;
     private static TextView res;
+    private static Button clear;
     
     private static int verifyVaz;
     private static int verifyVel;
@@ -33,6 +35,7 @@ public class Area1 extends MyActivity {
         this.vaz = findViewById(R.id.vaz);
         this.area = findViewById(R.id.area);
         this.res = findViewById(R.id.res);
+        this.clear = findViewById(R.id.clear);
         this.FF = new FluidFlow();
         this.Tools = new Tools();
     }
@@ -88,10 +91,26 @@ public class Area1 extends MyActivity {
                                     + " "
                                     + FF.area(vazao, velocidade)
                                     + getText(R.string.amq));
+                                    
+                                    return;
                     } else {
                         return;
                     }
                 }
             });
+            
+            this.clear.setOnClickListener(
+                new OnClickListener()
+                {
+                    @Override
+                    public void onClick(View view)
+                    {
+                        vaz.setText(null);
+                        vel.setText(null);
+                        res.setText(null);
+                        
+                        return;
+                    }
+                });
     }
 }

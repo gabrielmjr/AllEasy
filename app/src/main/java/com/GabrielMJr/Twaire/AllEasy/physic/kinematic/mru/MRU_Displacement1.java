@@ -1,15 +1,16 @@
 package com.GabrielMJr.Twaire.AllEasy.physic.kinematic.mru;
 
-import com.GabrielMJr.Twaire.AllEasy.app.MyActivity;
 import android.os.Bundle;
-import com.GabrielMJr.Twaire.AllEasy.R;
+import android.support.v7.widget.Toolbar;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
-import android.view.View.OnClickListener;
-import android.view.View;
-import com.gabrielMJr.twaire.tools.Tools;
+import com.GabrielMJr.Twaire.AllEasy.R;
+import com.GabrielMJr.Twaire.AllEasy.app.MyActivity;
 import com.gabrielMJr.twaire.physic.MRU;
-import android.support.v7.widget.Toolbar;
+import com.gabrielMJr.twaire.tools.Tools;
 
 public class MRU_Displacement1 extends MyActivity {
 
@@ -17,6 +18,7 @@ public class MRU_Displacement1 extends MyActivity {
     private static EditText si;
     private static TextView displacement;
     private static TextView res;
+    private static Button clear;
     
     private static double initialDisplacement;
     private static double finalDisplacement;
@@ -32,6 +34,7 @@ public class MRU_Displacement1 extends MyActivity {
         sf = findViewById(R.id.final_displacement);
         displacement = findViewById(R.id.displacement);
         res = findViewById(R.id.res);
+        clear = findViewById(R.id.clear);
         tools = new Tools();
         mru = new MRU();
     }
@@ -86,10 +89,28 @@ public class MRU_Displacement1 extends MyActivity {
                                     + " "
                                     + mru.fVDisplacement(initialDisplacement, finalDisplacement)
                                     + getText(R.string.dm));
+                                    
+                                    return;
 
-                    } else {
+                    }
+                    else
+                    {
                         return;
                     }
+                }
+            });
+            
+        clear.setOnClickListener(
+            new OnClickListener()
+            {
+                @Override
+                public void onClick(View view)
+                {
+                    si.setText(null);
+                    sf.setText(null);
+                    res.setText(null);
+                    
+                    return;
                 }
             });
     }

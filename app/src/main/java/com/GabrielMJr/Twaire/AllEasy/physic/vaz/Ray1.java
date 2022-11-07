@@ -11,6 +11,7 @@ import com.gabrielMJr.twaire.tools.Tools;
 import com.gabrielMJr.twaire.physic.FluidFlow;
 import android.support.v7.widget.Toolbar;
 import com.gabrielMJr.twaire.physic.Physic;
+import android.widget.Button;
 
 public class Ray1 extends MyActivity {
 
@@ -19,6 +20,7 @@ public class Ray1 extends MyActivity {
     private static EditText vel;
     private static TextView raio;
     private static TextView res;
+    private static Button clear;
     
     private static int verifyVaz;
     private static int verifyVelocity;
@@ -35,6 +37,7 @@ public class Ray1 extends MyActivity {
         this.vel = findViewById(R.id.vel);
         this.raio = findViewById(R.id.raio);
         this.res = findViewById(R.id.res);
+        this.clear = findViewById(R.id.clear);
         this.Tools = new Tools();
         this.FF = new FluidFlow();
         this.physic = new Physic();
@@ -76,9 +79,25 @@ public class Ray1 extends MyActivity {
 
                     if (verifyVaz == 1 && verifyVelocity == 1) {
                         res.setText(FF.ray(vazao, velocidade, physic.GET_STEP));
+                        
+                        return;
                     } else {
                         return;
                     }
+                }
+            });
+            
+        this.clear.setOnClickListener(
+            new OnClickListener()
+            {
+                @Override
+                public void onClick(View view)
+                {
+                    vaz.setText(null);
+                    vel.setText(null);
+                    res.setText(null);
+                    
+                    return;
                 }
             });
     }

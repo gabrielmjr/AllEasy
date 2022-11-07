@@ -10,6 +10,7 @@ import com.gabrielMJr.twaire.tools.Tools;
 import com.GabrielMJr.Twaire.AllEasy.app.MyActivity;
 import com.GabrielMJr.Twaire.AllEasy.R;
 import android.support.v7.widget.Toolbar;
+import android.widget.Button;
 
 public class Fatorial extends MyActivity {
 
@@ -17,6 +18,7 @@ public class Fatorial extends MyActivity {
     private static EditText n;
     private static TextView fat;
     private static TextView result;
+    private static Button clear;
     
     private static Tools Tools;
     private static Arranjo Arranjo;
@@ -27,6 +29,7 @@ public class Fatorial extends MyActivity {
         this.n = findViewById(R.id.n);
         this.fat = findViewById(R.id.fat);
         this.result = findViewById(R.id.result);
+        this.clear = findViewById(R.id.clear);
         this.Tools = new Tools();
         this.Arranjo = new Arranjo();
     }
@@ -64,7 +67,22 @@ public class Fatorial extends MyActivity {
                             result.setText((CharSequence) "=" + String.valueOf(res));
                         }
                     }
+                    
+                    return;
                 }
     });
+    
+        this.clear.setOnClickListener(
+            new OnClickListener()
+            {
+                @Override
+                public void onClick(View view)
+                {
+                    n.setText(null);
+                    result.setText(null);
+                    
+                    return;
+                }
+            });
     }
    }

@@ -21,6 +21,7 @@ public class FSG extends MyActivity {
     private static TextView var_a_x;
     private static TextView var_b_x;
     private static TextView result;
+    private static Button clear;
       
     private static String ax;
     private static String bx;
@@ -44,6 +45,7 @@ public class FSG extends MyActivity {
         this.var_b_x = findViewById(R.id.var_b_x);
         this.calculate = findViewById(R.id.calculate);
         this.result = findViewById(R.id.result);
+        this.clear = findViewById(R.id.clear);
         this.SDF = new SDF();
         this.Tools = new Tools();
     }
@@ -160,11 +162,30 @@ public class FSG extends MyActivity {
                                        + SDF.getEES()
                                        + "\n\nConcavidade virada para"
                                        + SDF.getConcavidade());
+                                       
+                                       return;
 
                         // Senão, retorna um vazio
                     } else {
                         return;
                     }
+                }
+            });
+            
+        this.clear.setOnClickListener(
+            new OnClickListener()
+            {
+                @Override
+                public void onClick(View view)
+                {
+                    a.setText(null);
+                    b.setText(null);
+                    c.setText(null);
+                    var_a_x.setText(null);
+                    var_b_x.setText(null);
+                    result.setText(null);
+                    
+                    return;
                 }
             });
     }

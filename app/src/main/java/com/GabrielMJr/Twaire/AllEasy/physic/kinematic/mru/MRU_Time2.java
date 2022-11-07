@@ -10,6 +10,7 @@ import com.gabrielMJr.twaire.physic.MRU;
 import android.support.v7.widget.Toolbar;
 import android.view.View.OnClickListener;
 import android.view.View;
+import android.widget.Button;
 
 public class MRU_Time2 extends MyActivity {
     
@@ -17,6 +18,7 @@ public class MRU_Time2 extends MyActivity {
     private static EditText media_speed;
     private static TextView delta_time;
     private static TextView res;
+    private static Button clear;
     
     private static int verify_deltaDisplacement;
     private static int verify_mediaSpeed;
@@ -32,6 +34,7 @@ public class MRU_Time2 extends MyActivity {
         media_speed = findViewById(R.id.media_speed);
         delta_time = findViewById(R.id.delta_time);
         res = findViewById(R.id.res);
+        clear = findViewById(R.id.clear);
         tools = new Tools();
         mru = new MRU();
     }
@@ -93,8 +96,27 @@ public class MRU_Time2 extends MyActivity {
                                    + " "
                                    + mru.sVTime(deltaDisplacement, mediaSpeed)
                                    + getText(R.string.second));
+                                   
+                                   return;
                     }
-                        
+                    else
+                    {
+                        return;
+                    }
+                }
+            });
+            
+        this.clear.setOnClickListener(
+            new OnClickListener()
+            {
+                @Override
+                public void onClick(View view)
+                {
+                    delta_displacement.setText(null);
+                    media_speed.setText(null);
+                    res.setText(null);
+                    
+                    return;
                 }
             });
     }

@@ -10,6 +10,7 @@ import com.GabrielMJr.Twaire.AllEasy.R;
 import com.GabrielMJr.Twaire.AllEasy.app.MyActivity;
 import com.gabrielMJr.twaire.physic.MUV;
 import com.gabrielMJr.twaire.tools.Tools;
+import android.widget.Button;
 
 public class MUV_Speed1 extends MyActivity
 {
@@ -19,6 +20,7 @@ public class MUV_Speed1 extends MyActivity
     private static EditText acceleration;
     private static TextView speed;
     private static TextView res;
+    private static Button clear;
 
     private static int verify_deltaTime;
     private static int verify_acceleration;
@@ -35,6 +37,7 @@ public class MUV_Speed1 extends MyActivity
         acceleration =  findViewById(R.id.acceleration);
         speed = findViewById(R.id.speed);
         res = findViewById(R.id.res);
+        clear = findViewById(R.id.clear);
 
         tools = new Tools();
         muv = new MUV();
@@ -109,11 +112,26 @@ public class MUV_Speed1 extends MyActivity
                                     + muv.fVSpeed(deltaTime, accelerationV)
                                     + getText(R.string.speedmps));
 
+                                    return;
                     }
                     else
                     {
                         return;
                     }
+                }
+            });
+            
+        this.clear.setOnClickListener(
+            new OnClickListener()
+            {
+                @Override
+                public void onClick(View view)
+                {
+                    delta_time.setText(null);
+                    acceleration.setText(null);
+                    res.setText(null);
+                    
+                    return;
                 }
             });
     }

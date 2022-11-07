@@ -11,6 +11,7 @@ import com.GabrielMJr.Twaire.AllEasy.app.MyActivity;
 import com.gabrielMJr.twaire.physic.MUV;
 import com.gabrielMJr.twaire.tools.Tools;
 import com.gabrielMJr.twaire.physic.Physic;
+import android.widget.Button;
 
 public class MUV_Speed2 extends MyActivity
 {
@@ -21,6 +22,7 @@ public class MUV_Speed2 extends MyActivity
     private static EditText acceleration;
     private static TextView speed;
     private static TextView res;
+    private static Button clear;
 
     private static int verify_initialTime;
     private static int verify_finalTime;
@@ -41,6 +43,7 @@ public class MUV_Speed2 extends MyActivity
         acceleration =  findViewById(R.id.acceleration);
         speed = findViewById(R.id.speed);
         res = findViewById(R.id.res);
+        clear = findViewById(R.id.clear);
 
         tools = new Tools();
         muv = new MUV();
@@ -119,11 +122,28 @@ public class MUV_Speed2 extends MyActivity
                     {
 
                         res.setText(muv.sVSpeed(initialTime, finalTime, accelerationV, physic.GET_STEP));
+                        
+                        return;
                     }
                     else
                     {
                         return;
                     }
+                }
+            });
+            
+        this.clear.setOnClickListener(
+            new OnClickListener()
+            {
+                @Override
+                public void onClick(View view)
+                {
+                    initial_time.setText(null);
+                    final_time.setText(null);
+                    acceleration.setText(null);
+                    res.setText(null);
+                    
+                    return;
                 }
             });
     }

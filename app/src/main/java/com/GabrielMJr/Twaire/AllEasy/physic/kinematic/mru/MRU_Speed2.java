@@ -11,6 +11,7 @@ import com.gabrielMJr.twaire.physic.MRU;
 import android.view.View.OnClickListener;
 import android.view.View;
 import com.gabrielMJr.twaire.physic.Physic;
+import android.widget.Button;
 
 public class MRU_Speed2 extends MyActivity {
     
@@ -20,6 +21,7 @@ public class MRU_Speed2 extends MyActivity {
     private static EditText final_time;
     private static TextView speed;
     private static TextView res;
+    private static Button clear;
     
     private static int verify_initialDisplacement;
     private static int verify_finalDisplacement;
@@ -42,6 +44,7 @@ public class MRU_Speed2 extends MyActivity {
         final_time= findViewById(R.id.final_time);
         speed = findViewById(R.id.speed);
         res = findViewById(R.id.res);
+        clear = findViewById(R.id.clear);
         
         tools = new Tools();
         mru = new MRU();
@@ -122,7 +125,29 @@ public class MRU_Speed2 extends MyActivity {
                                                       finalDisplacement,
                                                       initialTime, finalTime,
                                                       physic.GET_STEP));
+                                                      
+                                                      return;
                         }
+                        else
+                        {
+                            return;
+                        }
+                }
+            });
+            
+        this.clear.setOnClickListener(
+            new OnClickListener()
+            {
+                @Override
+                public void onClick(View view)
+                {
+                    initial_time.setText(null);
+                    final_time.setText(null);
+                    initial_displacement.setText(null);
+                    final_displacement.setText(null);
+                    res.setText(null);
+                    
+                    return;
                 }
             });
     }

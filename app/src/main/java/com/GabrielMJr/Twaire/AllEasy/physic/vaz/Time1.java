@@ -10,6 +10,7 @@ import android.view.View.OnClickListener;
 import com.gabrielMJr.twaire.tools.Tools;
 import com.gabrielMJr.twaire.physic.FluidFlow;
 import android.support.v7.widget.Toolbar;
+import android.widget.Button;
 
 public class Time1 extends MyActivity {
     
@@ -18,6 +19,7 @@ public class Time1 extends MyActivity {
     private static EditText vaz;
     private static TextView tempo;
     private static TextView res;
+    private static Button clear;
     
     private static int verifyVol;
     private static int verifyVaz;
@@ -33,6 +35,7 @@ public class Time1 extends MyActivity {
         this.vaz = findViewById(R.id.vaz);
         this.tempo = findViewById(R.id.tempo);
         this.res = findViewById(R.id.res);
+        this.clear = findViewById(R.id.clear);
         this.Tools = new Tools();
         this.FF = new FluidFlow();
      }
@@ -88,9 +91,25 @@ public class Time1 extends MyActivity {
                                     + " "
                                     + FF.time(volume, vazao)
                                     + getText(R.string.second));
+                                    
+                                    return;
                     } else { 
                         return;
                     }
+                }
+            });
+            
+        this.clear.setOnClickListener(
+            new OnClickListener()
+            {
+                @Override
+                public void onClick(View view)
+                {
+                    vol.setText(null);
+                    vaz.setText(null);
+                    res.setText(null);
+                    
+                    return;
                 }
             });
 

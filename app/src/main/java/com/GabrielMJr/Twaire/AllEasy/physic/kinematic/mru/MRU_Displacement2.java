@@ -10,6 +10,7 @@ import android.view.View;
 import com.gabrielMJr.twaire.tools.Tools;
 import com.gabrielMJr.twaire.physic.MRU;
 import android.support.v7.widget.Toolbar;
+import android.widget.Button;
 
 public class MRU_Displacement2 extends MyActivity {
     
@@ -17,6 +18,7 @@ public class MRU_Displacement2 extends MyActivity {
     private static EditText media_speed;
     private static TextView displacement;
     private static TextView res;
+    private static Button clear;
     
     private static Double time;
     private static Double mediaSpeed;
@@ -32,6 +34,7 @@ public class MRU_Displacement2 extends MyActivity {
         this.media_speed = findViewById(R.id.media_speed);
         this.displacement = findViewById(R.id.second_displacement);
         this.res = findViewById(R.id.res);
+        this.clear = findViewById(R.id.clear);
         this.tools = new Tools();
         this.mru = new MRU();
     }
@@ -86,14 +89,27 @@ public class MRU_Displacement2 extends MyActivity {
                                     + mru.sVDisplacement(time, mediaSpeed)
                                     + getText(R.string.dm));
 
-                    } else {
+                                    return;
+                    } 
+                    else
+                    {
                         return;
                     }
                 }
             });
+            
+        this.clear.setOnClickListener(
+            new OnClickListener()
+            {
+                @Override
+                public void onClick(View view)
+                {
+                    delta_time.setText(null);
+                    media_speed.setText(null);
+                    res.setText(null);
+                    
+                    return;
+                }
+            });
     }
-    
-    
-    
-    
 }

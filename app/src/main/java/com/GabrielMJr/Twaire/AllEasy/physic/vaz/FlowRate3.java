@@ -11,6 +11,7 @@ import com.gabrielMJr.twaire.tools.Tools;
 import com.gabrielMJr.twaire.physic.FluidFlow;
 import android.support.v7.widget.Toolbar;
 import com.gabrielMJr.twaire.physic.Physic;
+import android.widget.Button;
 
 public class FlowRate3 extends MyActivity {
 
@@ -19,6 +20,7 @@ public class FlowRate3 extends MyActivity {
 	private static EditText vel;
 	private static TextView vaz;
 	private static TextView res;
+    private static Button clear;
     
 	private static Tools Tools;
 	private static Double velocidade;
@@ -35,6 +37,7 @@ public class FlowRate3 extends MyActivity {
         this.vel = findViewById(R.id.vel);
         this.vaz = findViewById(R.id.vaz);
         this.res = findViewById(R.id.res);
+        this.clear = findViewById(R.id.clear);
         this.Tools = new Tools();
 		this.FF = new FluidFlow();
         this.physic = new Physic();
@@ -76,10 +79,26 @@ public class FlowRate3 extends MyActivity {
 
                     if (verifyRaio == 1 && verifyVelocity == 1) {
                         res.setText((CharSequence) FF.tFluidFlow(raio, velocidade, physic.GET_STEP));
+                        
+                        return;
                     } else {
                         return;
                     }
 				}
 			});
+            
+        this.clear.setOnClickListener(
+            new OnClickListener()
+            {
+                @Override
+                public void onClick(View view)
+                {
+                    ra.setText(null);
+                    vel.setText(null);
+                    res.setText(null);
+                    
+                    return;
+                }
+            });
 	}
 }

@@ -11,143 +11,181 @@ import com.gabrielMJr.twaire.tools.Tools;
 import com.GabrielMJr.Twaire.AllEasy.app.MyActivity;
 import com.GabrielMJr.Twaire.AllEasy.R;
 import android.support.v7.widget.Toolbar;
+import android.widget.Button;
 
-public class Combination extends MyActivity {
+public class Combination extends MyActivity
+{
 
-  // Atributes
-  private static EditText n;
-  private static EditText p;
-  private static TextView c;
-  private static TextView result;
-  
-  private static String[] res = new String[4];
-  private static Tools Tools;
-  private static Arranjo Arranjo;
-  private static int verifyN;
-  private static int verifyP;
-  private static int verifyNfat;
-  private static int verifyPfat;
-  
-  private void initialize() {
-      setToolBar((Toolbar) findViewById(R.id.toolbar));
-      
-      this.n = findViewById(R.id.n);
-      this.p = findViewById(R.id.p);
-      this.c = findViewById(R.id.c);
-      this.result = findViewById(R.id.result);
-      this.Tools = new Tools();
-      this.Arranjo = new Arranjo();
-  }
+    // Atributes
+    private static EditText n;
+    private static EditText p;
+    private static TextView c;
+    private static TextView result;
+    private static Button clear;
 
-  @Override
-  protected void onCreate(Bundle savedInstanceState) {
-    super.onCreate(savedInstanceState);
-    setContentView(R.layout.combination);
+    private static String[] res = new String[4];
+    private static Tools Tools;
+    private static Arranjo Arranjo;
+    private static int verifyN;
+    private static int verifyP;
+    private static int verifyNfat;
+    private static int verifyPfat;
 
-    this.initialize();
+    private void initialize()
+    {
+        setToolBar((Toolbar) findViewById(R.id.toolbar));
 
-    this.c.setOnClickListener(
-      new OnClickListener() {
-        public void onClick(View view) {
+        this.n = findViewById(R.id.n);
+        this.p = findViewById(R.id.p);
+        this.c = findViewById(R.id.c);
+        this.result = findViewById(R.id.result);
+        this.clear = findViewById(R.id.clear);
+        this.Tools = new Tools();
+        this.Arranjo = new Arranjo();
+    }
 
-          if (Tools.isNull(n.getText().toString())) {
-            n.setError(getText(R.string.null_field));
-            Combination.verifyN = 0;
-          } else {
-            Combination.verifyN = 1;
-          }
+    @Override
+    protected void onCreate(Bundle savedInstanceState)
+    {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.combination);
 
-          if (Tools.isNull(p.getText().toString())) {
-            p.setError(getText(R.string.null_field));
-            Combination.verifyP = 0;
-          } else {
-            Combination.verifyP = 1;
-          }
+        this.initialize();
 
-          if (Combination.verifyN == 1 && Combination.verifyP == 1) {
+        this.c.setOnClickListener(
+            new OnClickListener() {
+                public void onClick(View view)
+                {
 
-            // Valores de n e p do .xml
-            Integer nn = Integer.valueOf(n.getText().toString());
-            Integer pp = Integer.valueOf(p.getText().toString());
+                    if (Tools.isNull(n.getText().toString()))
+                    {
+                        n.setError(getText(R.string.null_field));
+                        Combination.verifyN = 0;
+                    }
+                    else
+                    {
+                        Combination.verifyN = 1;
+                    }
 
-            if (pp > nn) {
-              Toast.makeText(Combination.this, R.string.p_big_than_n, Toast.LENGTH_SHORT).show();
-            } else {
+                    if (Tools.isNull(p.getText().toString()))
+                    {
+                        p.setError(getText(R.string.null_field));
+                        Combination.verifyP = 0;
+                    }
+                    else
+                    {
+                        Combination.verifyP = 1;
+                    }
 
-              // Mandar n para classe ~/.twaire.math.fatorial e pegar a String result
-              Long res = Arranjo.valueOf(nn, nn);
-              String nfat = String.valueOf(res);
+                    if (Combination.verifyN == 1 && Combination.verifyP == 1)
+                    {
 
-              // Mandar n-p para classe ~/.twaire.math.fatorial e pegar a String result
-              res = Arranjo.valueOf((nn - pp), (nn - pp));
-              String nmpfat = String.valueOf(res);
+                        // Valores de n e p do .xml
+                        Integer nn = Integer.valueOf(n.getText().toString());
+                        Integer pp = Integer.valueOf(p.getText().toString());
 
-              // Mandar p para classe ~/.twaire.math.fatorial e pegar a String result
-              res = Arranjo.valueOf(pp, pp);
-              String pfat = String.valueOf(res);
+                        if (pp > nn)
+                        {
+                            Toast.makeText(Combination.this, R.string.p_big_than_n, Toast.LENGTH_SHORT).show();
+                        }
+                        else
+                        {
 
-              // Resultado final de Combinação
-              String resfat = String.valueOf(Double.valueOf(nfat) / (Double.valueOf(nmpfat) * Double.valueOf(pfat)));
+                            // Mandar n para classe ~/.twaire.math.fatorial e pegar a String result
+                            Long res = Arranjo.valueOf(nn, nn);
+                            String nfat = String.valueOf(res);
 
-              // Mandar todos os resultados para uma String[] result
-              Combination.setRes(nfat, pfat, nmpfat, resfat);
+                            // Mandar n-p para classe ~/.twaire.math.fatorial e pegar a String result
+                            res = Arranjo.valueOf((nn - pp), (nn - pp));
+                            String nmpfat = String.valueOf(res);
 
-              if (Long.valueOf(nfat) <= 0) {
-                Toast.makeText(Combination.this, R.string.big_values, Toast.LENGTH_SHORT).show();
-                Combination.verifyNfat = 0;
-              } else {
-                Combination.verifyNfat = 1;
-              }
+                            // Mandar p para classe ~/.twaire.math.fatorial e pegar a String result
+                            res = Arranjo.valueOf(pp, pp);
+                            String pfat = String.valueOf(res);
 
-              if (Long.valueOf(pfat) <= 0) {
-                Toast.makeText(Combination.this, R.string.big_values,  Toast.LENGTH_SHORT).show();
-                Combination.verifyPfat = 0;
-              } else {
-                Combination.verifyPfat = 1;
-              }
+                            // Resultado final de Combinação
+                            String resfat = String.valueOf(Double.valueOf(nfat) / (Double.valueOf(nmpfat) * Double.valueOf(pfat)));
 
-              if (Combination.verifyNfat == 1 && Combination.verifyPfat == 1) {  
-                Combination.setRes(nfat, pfat, nmpfat, resfat);    
-                result.setText(
-                  (CharSequence)getText(R.string.nfp)
-                  + " "
-                  + String.valueOf(Combination.getRes()[0])
-                  + "\n"
-                  + getText(R.string.pfp)
-                  + " "
-                  + String.valueOf(Combination.getRes()[1])
-                  + "\n"
-                  + getText(R.string.nmpfp)
-                  + " "
-                  + String.valueOf(Combination.getRes()[2])
-                  + "\n"
-                  + getText(R.string.resultp)
-                  + " "
-                  + String.valueOf(Combination.getRes()[3]));
+                            // Mandar todos os resultados para uma String[] result
+                            Combination.setRes(nfat, pfat, nmpfat, resfat);
 
-              } else {
-                Combination.setRes("", "", "", "");
-              }
-            }
-            // Mandar resultados para o .xml
+                            if (Long.valueOf(nfat) <= 0)
+                            {
+                                Toast.makeText(Combination.this, R.string.big_values, Toast.LENGTH_SHORT).show();
+                                Combination.verifyNfat = 0;
+                            }
+                            else
+                            {
+                                Combination.verifyNfat = 1;
+                            }
 
-          } else {
-            return;
-          }
-        }
-      });
-  }
+                            if (Long.valueOf(pfat) <= 0)
+                            {
+                                Toast.makeText(Combination.this, R.string.big_values,  Toast.LENGTH_SHORT).show();
+                                Combination.verifyPfat = 0;
+                            }
+                            else
+                            {
+                                Combination.verifyPfat = 1;
+                            }
+
+                            if (Combination.verifyNfat == 1 && Combination.verifyPfat == 1)
+                            {  
+                                Combination.setRes(nfat, pfat, nmpfat, resfat);    
+                                result.setText(
+                                    getText(R.string.nfp)
+                                    + " "
+                                    + String.valueOf(Combination.getRes()[0])
+                                    + "\n"
+                                    + getText(R.string.pfp)
+                                    + " "
+                                    + String.valueOf(Combination.getRes()[1])
+                                    + "\n"
+                                    + getText(R.string.nmpfp)
+                                    + " "
+                                    + String.valueOf(Combination.getRes()[2])
+                                    + "\n"
+                                    + getText(R.string.resultp)
+                                    + " "
+                                    + String.valueOf(Combination.getRes()[3]));
+
+                            }
+                            
+                        }    
+                    }
+                    return;
+                }
+            });
+
+        this.clear.setOnClickListener(
+            new OnClickListener()
+            {
+                @Override
+                public void onClick(View view)
+                {
+                    n.setText(null);
+                    p.setText(null);
+                    result.setText(null);
+                    
+                    return;
+                }
+            });
+    }
 
 
-  // Setters e getters
-  private static void setRes(String nfat, String pfat, String nmpfat, String resfat) {
-    Combination.res[0] = nfat;
-    Combination.res[1] = pfat;
-    Combination.res[2] = nmpfat;
-    Combination.res[3] = resfat;
-  }
+    // Setters e getters
+    private static void setRes(String nfat, String pfat, String nmpfat, String resfat)
+    {
+        Combination.res[0] = nfat;
+        Combination.res[1] = pfat;
+        Combination.res[2] = nmpfat;
+        Combination.res[3] = resfat;
+        
+        return;
+    }
 
-  private static String[] getRes() {
-    return res;
-  }
+    private static String[] getRes()
+    {
+        return res;
+    }
 }

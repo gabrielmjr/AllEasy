@@ -11,6 +11,7 @@ import com.gabrielMJr.twaire.physic.MUV;
 import com.gabrielMJr.twaire.physic.Physic;
 import com.gabrielMJr.twaire.tools.Tools;
 import android.support.v7.widget.Toolbar;
+import android.widget.Button;
 
 public class MUV_Speed4 extends MyActivity
 {
@@ -21,6 +22,7 @@ public class MUV_Speed4 extends MyActivity
     private static EditText acceleration;
     private static TextView speed;
     private static TextView res;
+    private static Button clear;
 
     private static int verify_initialSpeed;;
     private static int verify_deltaTime;
@@ -41,6 +43,7 @@ public class MUV_Speed4 extends MyActivity
         acceleration =  findViewById(R.id.acceleration);
         speed = findViewById(R.id.speed);
         res = findViewById(R.id.res);
+        clear = findViewById(R.id.clear);
 
         tools = new Tools();
         muv = new MUV();
@@ -116,6 +119,8 @@ public class MUV_Speed4 extends MyActivity
                 if (verify_initialSpeed == 1 && verify_deltaTime == 1 && verify_acceleration == 1)
                 {
                     res.setText(muv.finalSpeed(initialSpeed, deltaTime, accelerationV, physic.GET_STEP));
+                    
+                    return;
                 } 
                 else
                 {
@@ -123,5 +128,20 @@ public class MUV_Speed4 extends MyActivity
                 }
             }
         });
+        
+        this.clear.setOnClickListener(
+            new OnClickListener()
+            {
+                @Override
+                public void onClick(View view)
+                {
+                    initial_speed.setText(null);
+                    delta_time.setText(null);
+                    acceleration.setText(null);
+                    res.setText(null);
+                    
+                    return;
+                }
+            });
     }
 }

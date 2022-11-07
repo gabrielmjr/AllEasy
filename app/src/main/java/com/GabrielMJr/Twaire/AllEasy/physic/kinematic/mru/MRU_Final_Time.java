@@ -10,6 +10,7 @@ import android.support.v7.widget.Toolbar;
 import com.gabrielMJr.twaire.physic.MRU;
 import android.view.View.OnClickListener;
 import android.view.View;
+import android.widget.Button;
 
 public class MRU_Final_Time extends MyActivity {
 
@@ -17,6 +18,7 @@ public class MRU_Final_Time extends MyActivity {
     private static EditText delta_time;
     private static TextView final_time;
     private static TextView res;
+    private static Button clear;
     
     private static int verify_initialTime;
     private static int verify_deltaTime;
@@ -32,6 +34,7 @@ public class MRU_Final_Time extends MyActivity {
         delta_time =  findViewById(R.id.delta_time);
         final_time = findViewById(R.id.final_time);
         res = findViewById(R.id.res);
+        clear = findViewById(R.id.clear);
         
         tools = new Tools();
         mru = new MRU();
@@ -94,7 +97,27 @@ public class MRU_Final_Time extends MyActivity {
                                     + " "
                                     + mru.final_time(initialTime ,deltaTime)
                                     + getText(R.string.second));
+                           
+                                    return;
                     }
+                    else
+                    {
+                        return;
+                    }
+                }
+            });
+            
+        this.clear.setOnClickListener(
+            new OnClickListener()
+            {
+                @Override
+                public void onClick(View view)
+                {
+                    initial_time.setText(null);
+                    delta_time.setText(null);
+                    res.setText(null);
+                    
+                    return;
                 }
             });
     }

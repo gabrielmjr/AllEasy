@@ -10,6 +10,7 @@ import android.view.View.OnClickListener;
 import android.view.View;
 import com.gabrielMJr.twaire.tools.Tools;
 import com.gabrielMJr.twaire.physic.MRU;
+import android.widget.Button;
 
 public class MRU_Initial_Displacement extends MyActivity {
 
@@ -17,6 +18,7 @@ public class MRU_Initial_Displacement extends MyActivity {
     private static EditText final_displacement;
     private static TextView displacement;
     private static TextView res;
+    private static Button clear;
     
     private static int verify_delta_displacement;
     private static int verify_final_displacement;
@@ -32,6 +34,7 @@ public class MRU_Initial_Displacement extends MyActivity {
         final_displacement = findViewById(R.id.final_displacement);
         displacement = findViewById(R.id.displacement);
         res = findViewById(R.id.res);
+        clear = findViewById(R.id.clear);
         
         tools = new Tools();
         mru = new MRU();
@@ -90,8 +93,28 @@ public class MRU_Initial_Displacement extends MyActivity {
                                     + " = "
                                     + mru.initial_displacement(deltaDisplacement, finalDisplacement)
                                     + getText(R.string.dm));
+                                    
+                                    return;
 
                     }
+                    else
+                    {
+                        return;
+                    }
+                }
+            });
+            
+        this.clear.setOnClickListener(
+            new OnClickListener()
+            {
+                @Override
+                public void onClick(View view)
+                {
+                    delta_displacement.setText(null);
+                    final_displacement.setText(null);
+                    res.setText(null);
+                    
+                    return;
                 }
             });
     }
