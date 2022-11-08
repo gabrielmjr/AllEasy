@@ -12,21 +12,23 @@
 		layout="@layout/action_bar"/>
 
 	<RelativeLayout
-		android:layout_width="fill_parent"
-		android:layout_height="fill_parent">
+		android:layout_width="match_parent"
+		android:layout_height="match_parent">
 
 		<include
 			layout="@layout/clear_button"/>
 
 		<EditText
 			android:id="@+id/n"
-			android:layout_width="60dp"
+			android:layout_width="wrap_content"
 			android:layout_height="80dp"
 			android:textSize="40sp"
 			android:textColor="@color/textColor"
 			android:inputType="number"
 			android:hint="@string/n"
-			android:layout_centerInParent="true"/>
+			android:layout_centerVertical="true"
+			android:layout_alignParentLeft="true"
+			android:layout_margin="10dp"/>
 
 		<TextView
 			android:id="@+id/fat"
@@ -38,26 +40,19 @@
 			android:layout_toEndOf="@id/n"
 			android:layout_alignTop="@id/n"/>
 
-		<HorizontalScrollView
-			android:layout_width="wrap_content"
+		<TextView
+			android:id="@+id/result"
 			android:layout_height="wrap_content"
-			android:layout_toEndOf="@id/fat"
-			android:layout_marginTop="20dp"
-			android:layout_alignTop="@id/n">
-
-			<TextView
-				android:id="@+id/result"
-				android:layout_height="wrap_content"
-				android:layout_width="wrap_content"
-				android:textSize="25sp"
-				android:textColor="@color/textColor"
-				android:layout_marginLeft="10dp"
-				android:layout_marginTop="75dp "
-				android:focusable="true"
-				android:typeface="normal"
-				android:textIsSelectable="true"/>
-
-		</HorizontalScrollView>
+			android:layout_width="wrap_content"
+			android:textSize="25sp"
+			android:textColor="@color/textColor"
+			android:layout_marginLeft="10dp"
+			android:focusable="true"
+			android:typeface="normal"
+			android:textIsSelectable="true"
+			android:gravity="center"
+			android:layout_centerVertical="true"
+			android:layout_toRightOf="@id/fat"/>
 
 	</RelativeLayout>
 

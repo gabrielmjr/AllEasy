@@ -67,6 +67,7 @@ public class Area1 extends MyActivity {
                         verifyVel = 0;
                     } else if (Tools.isDot(vel.getText().toString())) {
                         vel.setError(getText(R.string.dot_value));
+                        verifyVel = 0;
                     } else {
                         velocidade = Double.valueOf(vel.getText().toString());
                         verifyVel = 1;
@@ -76,12 +77,12 @@ public class Area1 extends MyActivity {
                     if (verifyVaz == 1 && verifyVel == 1) {
                         res.setText(getText(R.string.areap)
                                     + " ("
-                                    + Tools.normalize(Tools.expNormalizer(vazao))
+                                    + vazao
                                     + getText(R.string.speedmcps)
                                     + ") "
                                     + getText(R.string.division)
                                     + " ("
-                                    + Tools.normalize(Tools.expNormalizer(velocidade))
+                                    + velocidade
                                     + getText(R.string.speedmps)
                                     + ")");
                                     
@@ -91,7 +92,7 @@ public class Area1 extends MyActivity {
                                     + " "
                                     + FF.area(vazao, velocidade)
                                     + getText(R.string.amq));
-                                    
+                                   
                                     return;
                     } else {
                         return;
