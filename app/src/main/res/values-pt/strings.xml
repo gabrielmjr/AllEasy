@@ -88,7 +88,28 @@
     <string name="close">Fechar</string>    
     <string name="resultp">Resultado = </string>
     <string name="uniform_rectilinear_movement">Movimento retilíneo uniforme</string>
-    <string name="unsupported_sdk">  Muito obrigado por dar uma chance ao app.\n  Infelizmente o app tem problemas em versões de Android iguais ou superiores à 10.\n  O problema será resolvido nas próximas versões do app.</string>
-    <string name="please_read">Aviso</string>
-
+    
+    <string name="name">Nome: </string>
+    <string name="version">Versão: </string>
+    <string name="license">Licensa</string>
+    
+    <string name="settings">Definições</string>
+    <string name="choose_theme">Escolher tema</string>
+    <string name="light_mode">Claro</string>
+    <string name="dark_mode">Escuro</string>
+    <string name="system_auto_theme">Definido pelo sistema</string>
+    <string name="cancel">Cancelar</string>
+    <string name="theme">Tema</string>
+    <string name="contact">Contacte-me</string>
+    <string name="about">Sobre</string>
+    <string name="send_mail_note">Aqui você pode reportar um caso ou comentar sobre o app directamente para mim.</string>
+    <string name="send_mail_hint_note">Insira a tua mensagem aqui.</string>
+    <string name="send_mail">Enviar</string>
+    <string name="null_field_mail">Este campo não pode estar vazio!</string>
+    
+    <string-array name="message_category">
+        <item>Categorua</item>
+        <item>Reportar erro</item>
+        <item>Revisão</item>
+    </string-array>
 </resources>

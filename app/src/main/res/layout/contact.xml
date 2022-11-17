@@ -28,7 +28,16 @@
 				android:textColor="@color/textColor"
 				android:layout_centerHorizontal="true"
 				android:layout_marginStart="@dimen/dp25"
-				android:layout_marginLeft="@dimen/dp15"/>
+				android:layout_marginLeft="@dimen/dp25"
+				android:textStyle="italic"/>
+
+			<Spinner
+				android:id="@+id/category"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_below="@id/tv1_send_mail"
+				android:layout_centerHorizontal="true"
+				android:layout_margin="@dimen/dp10"/>
 
 			<EditText
 				android:id="@+id/mail_message"
@@ -36,7 +45,7 @@
 				android:layout_width="match_parent"
 				android:ems="10"
 				android:layout_height="@dimen/dp300"
-				android:layout_below="@id/tv1_send_mail"
+				android:layout_below="@id/category"
 				android:layout_marginTop="10dp"
 				android:layout_alignStart="@id/tv1_send_mail"
 				android:layout_alignEnd="@id/tv1_send_mail"

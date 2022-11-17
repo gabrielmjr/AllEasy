@@ -87,7 +87,7 @@ public class MainActivity extends MyMainActivity
                     setContentView(R.layout.splash_screen);
 
 
-                    /*try
+                    try
                     {
                         packageInfo = getApplicationContext().getPackageManager().getPackageInfo(getApplicationContext().getPackageName(), 0);
                         versionCode = packageInfo.versionCode;
@@ -103,14 +103,11 @@ public class MainActivity extends MyMainActivity
                         welcome = findViewById(R.id.welcome);
                         welcome.setText(R.string.welcome);
                     }
-
-                    dialogAlertData = new DialogAlertData(context);*/
+                    
+                    dialogAlertData = new DialogAlertData(context);
                 }
             }, 1);
             
-        // If is compatible
-        /*if (activity.isCompatible())
-        {*/
 
             handler.postDelayed(new Runnable() {
                     @Override
@@ -201,7 +198,6 @@ public class MainActivity extends MyMainActivity
 
                     }
                 }, 2500);
-        //} 
 
     }
 
