@@ -11,7 +11,7 @@
         android:text="@string/clear"     
         android:layout_alignParentRight="true"
         android:layout_alignParentBottom="true"
-        android:layout_margin="30dp"
+        android:layout_margin="@dimen/dp30"
         android:textColor="@color/textColor"
         android:background="@drawable/circle_button"/>
     

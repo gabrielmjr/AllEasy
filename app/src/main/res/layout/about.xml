@@ -3,18 +3,62 @@
 	xmlns:android="http://schemas.android.com/apk/res/android"
 	android:layout_height="match_parent"
 	android:layout_width="match_parent"
-	android:orientation="vertical">
+	android:orientation="vertical"
+    android:background="@color/main_background">
+    
+    <include
+        layout="@layout/action_bar"/>
 
 	<RelativeLayout
 		android:layout_height="match_parent"
 		android:layout_width="match_parent">
 
 		<ImageView
+			android:id="@+id/app_icon"
+			android:layout_width="@dimen/dp180"
+			android:layout_height="@dimen/dp180"
+			android:layout_marginTop="@dimen/dp50"
+			android:src="@drawable/ic_app_icon"
+			android:layout_centerHorizontal="true"/>
+
+		<TextView
+			android:id="@+id/app_name"
 			android:layout_width="wrap_content"
 			android:layout_height="wrap_content"
+			android:textAppearance="?android:attr/textAppearanceMedium"
+			android:layout_below="@id/app_icon"
 			android:layout_centerHorizontal="true"
-			android:layout_marginTop="100dp"
-			android:src="@drawable/ic_launcher_foreground"/>
+			android:layout_margin="@dimen/dp10"
+			android:text="@string/name"/>
+
+		<TextView
+			android:id="@+id/app_version"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="@string/version"
+			android:textAppearance="?android:attr/textAppearanceMedium"
+			android:layout_below="@id/app_name"
+			android:layout_centerHorizontal="true"/>
+
+		<TextView
+			android:id="@+id/copyright"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="Small Text"
+			android:textAppearance="?android:attr/textAppearanceSmall"
+			android:layout_alignParentBottom="true"
+			android:layout_centerHorizontal="true"
+			android:layout_margin="@dimen/dp10"/>
+
+		<Button
+			android:layout_width="wrap_content"
+			style="?android:attr/buttonStyleSmall"
+			android:layout_height="wrap_content"
+			android:text="@string/license"
+			android:layout_below="@id/app_version"
+			android:id="@+id/license"
+			android:layout_centerHorizontal="true"
+			android:layout_marginTop="@dimen/dp15"/>
 
 	</RelativeLayout>
 

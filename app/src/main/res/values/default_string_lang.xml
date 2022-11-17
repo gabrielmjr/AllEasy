@@ -91,5 +91,25 @@
     <string name="uniform_rectilinear_movement">Uniform Rectilinear Movement</string>
     <string name="unsupported_sdk">  Thank you so much for giving a chance to the application.\n  Unfortunately the application has problems in same or higher versions of Android 10.\n  The problem will be resolved in the next versions of the application.</string>
     <string name="please_read">Warning</string>
+    
+    <string name="name">Name: </string>
+    <string name="version">Version: </string>
+    <string name="license">License</string>
+    
+    <string name="settings">Settings</string>
+    <string name="choose_theme">Choose theme</string>
+    <string name="light_mode">Light</string>
+    <string name="dark_mode">Dark</string>
+    <string name="system_auto_theme">Set by system</string>
+    <string name="cancel">Cancel</string>
+    <string name="theme">Theme</string>
+    <string name="contact">Contact us</string>
+    <string name="about">About</string>
+    <string name="send_mail_note">Here you can report an issue or comment about the app directly to me.</string>
+    <string name="send_mail_hint_note">Enter your mail here.</string>
+    <string name="send_mail">Send</string>
+    <string name="null_field_mail">This field cannot be empty!</string>
+    <string name="choose_category">Please, select one category</string>
+    
 
 </resources>
