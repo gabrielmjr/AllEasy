@@ -1,5 +1,7 @@
 <resources>
     <string name="app_name">AllEasy</string>
+    <string name="copyright">Copyright ©</string>
+    <string name="owner">Gabriel MJr</string>
     
     <string name="n">n</string>
 	<string name="ax">x²</string>

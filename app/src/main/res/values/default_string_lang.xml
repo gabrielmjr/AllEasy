@@ -111,5 +111,11 @@
     <string name="null_field_mail">This field cannot be empty!</string>
     <string name="choose_category">Please, select one category</string>
     
-
+    <string name="illselicense">App license is not available yet.</string>
+    
+    <string-array name="message_category">
+        <item>Category</item>
+        <item>Report issue</item>
+        <item>Review</item>
+    </string-array>
 </resources>

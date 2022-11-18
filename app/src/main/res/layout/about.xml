@@ -29,13 +29,15 @@
 			android:layout_below="@id/app_icon"
 			android:layout_centerHorizontal="true"
 			android:layout_margin="@dimen/dp10"
-			android:text="@string/name"/>
+			android:text="@string/name"
+            android:textColor="@color/textColor"/>
 
 		<TextView
 			android:id="@+id/app_version"
 			android:layout_width="wrap_content"
 			android:layout_height="wrap_content"
 			android:text="@string/version"
+            android:textColor="@color/textColor"
 			android:textAppearance="?android:attr/textAppearanceMedium"
 			android:layout_below="@id/app_name"
 			android:layout_centerHorizontal="true"/>
@@ -44,10 +46,10 @@
 			android:id="@+id/copyright"
 			android:layout_width="wrap_content"
 			android:layout_height="wrap_content"
-			android:text="Small Text"
 			android:textAppearance="?android:attr/textAppearanceSmall"
 			android:layout_alignParentBottom="true"
 			android:layout_centerHorizontal="true"
+            android:textColor="@color/textColor"
 			android:layout_margin="@dimen/dp10"/>
 
 		<Button
@@ -55,6 +57,7 @@
 			style="?android:attr/buttonStyleSmall"
 			android:layout_height="wrap_content"
 			android:text="@string/license"
+            android:textColor="@color/textColor"
 			android:layout_below="@id/app_version"
 			android:id="@+id/license"
 			android:layout_centerHorizontal="true"

@@ -58,7 +58,7 @@
 
         <activity
             android:name=".app.About"
-            android:label="@string/contact">
+            android:label="@string/about">
 
             <intent-filter>
 
