@@ -168,7 +168,7 @@
 			android:id="@+id/resulucao"
 			android:orientation="vertical"
 			android:layout_width="wrap_content"
-			android:layout_height="@dimen/dp130"
+			android:layout_height="@dimen/dp105"
 			android:layout_centerHorizontal="true"
 			android:background="@drawable/background_1"
 			android:paddingLeft="@dimen/dp10"

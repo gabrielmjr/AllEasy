@@ -169,12 +169,12 @@
 			android:id="@+id/resulucao"
 			android:orientation="vertical"
 			android:layout_width="wrap_content"
-			android:layout_height="130dp"
+			android:layout_height="@dimen/dp105"
 			android:layout_centerHorizontal="true"
 			android:background="@drawable/background_1"
-			android:paddingLeft="10dp"
-			android:paddingRight="10dp"
-			android:layout_marginTop="165dp">
+			android:paddingLeft="@dimen/dp10"
+			android:paddingRight="@dimen/dp10"
+			android:layout_marginTop="@dimen/dp192">
 
 			<TextView
 				android:layout_width="wrap_content"

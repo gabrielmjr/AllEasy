@@ -22,7 +22,7 @@
 
 		<RelativeLayout
 			android:layout_width="match_parent"
-			android:layout_height="@dimen/dp280"
+			android:layout_height="@dimen/dp250"
 			android:background="@drawable/background_1"
 			android:orientation="horizontal"
 			android:gravity="top"
@@ -190,12 +190,12 @@
 			android:id="@+id/resulucao"
 			android:orientation="vertical"
 			android:layout_width="wrap_content"
-			android:layout_height="@dimen/dp160"
+			android:layout_height="@dimen/dp105"
 			android:layout_centerHorizontal="true"
 			android:background="@drawable/background_1"
 			android:paddingLeft="@dimen/dp15"
 			android:paddingRight="@dimen/dp15"
-			android:layout_marginTop="@dimen/dp220">
+			android:layout_marginTop="@dimen/dp192">
 
 			<TextView
 				android:layout_width="wrap_content"
