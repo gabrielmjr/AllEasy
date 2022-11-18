@@ -107,8 +107,10 @@
     <string name="send_mail">Enviar</string>
     <string name="null_field_mail">Este campo não pode estar vazio!</string>
     
+    <string name="illselicense">Licensa da aplicação ainda não está disponivel</string>
+    
     <string-array name="message_category">
-        <item>Categorua</item>
+        <item>Categoria</item>
         <item>Reportar erro</item>
         <item>Revisão</item>
     </string-array>
