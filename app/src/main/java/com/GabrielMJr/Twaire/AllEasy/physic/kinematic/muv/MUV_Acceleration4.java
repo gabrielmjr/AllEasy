@@ -2,7 +2,7 @@ package com.GabrielMJr.Twaire.AllEasy.physic.kinematic.muv;
 
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
-import android.view.View;
+import android.view.View; 
 import android.view.View.OnClickListener;
 import android.widget.EditText;
 import android.widget.TextView;

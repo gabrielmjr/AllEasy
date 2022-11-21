@@ -18,50 +18,120 @@ import android.widget.RadioButton;
 import android.content.Intent;
 import com.GabrielMJr.Twaire.AllEasy.app.SendMailActivity;
 import com.GabrielMJr.Twaire.AllEasy.app.About;
+import java.util.Locale;
+import android.content.res.Resources;
+import android.content.res.Configuration;
 
 public class Settings extends MyActivity
 {
 
     // Atributes
-    private static SharedPreferences sharedPreferences = null;
+    
+    // Shared preferences names
+    private SharedPreferences themeSharedPreferences = null;
+    private SharedPreferences langSharedPreferences = null;
+    
+    // Locales codes
+    private final String EN_CODE = "en";
+    private final String PT_CODE = "pt";
 
     private static LinearLayout theme_changer;
+    private static LinearLayout language_changer;
     private static LinearLayout sendMail; 
     private static LinearLayout about;
-    private static TextView cancel;
+    
+    private static TextView cancelTheme;
+    private static TextView cancelLang;
     private static TextView about_text;
+    
     private static AlertDialog.Builder builder;
     private static AlertDialog dialog;
-    private static View view;
+    
+    private static View viewTheme;
+    private static View viewLang;
+    
+    // Theme changer
     private static RadioGroup radioGroup;
     private static RadioButton light_theme;
     private static RadioButton dark_theme;
     private static RadioButton set_by_system;
+    
+    // Language changer
+    private static RadioGroup choose_lang;
+    private static RadioButton lang_pt;
+    private static RadioButton lang_en;
+    private static RadioButton lang_follow_sys;
 
     private static String theme_mode;
+    
+    private static String lang;
 
     // Name of shared_preferences for app configuration
     public final String SHARED_PREFERENCES_CONFIG_NAME = "app_config";
+    
+    // Name of sh for app lang
+    private final String SHARED_PREFERENCES_CONFIG_LANG_NAME = "lang";
 
+    // Shared preferences editor
+    private SharedPreferences.Editor update;
+    
     // Name of field for the name of theme
     public final String THEME_NAME = "theme_mode";
+    
+    // Name of field for the name of lang
+    public final String LANG_NAME = "lang";
 
     // Night, set by system and Light mode final string
     public final String NIGHT_MODE = "night_mode";
     public final String LIGHT_MODE = "dark_mode";
+    
+    // Lang
+    public final String PT = "portuguese";
+    public final String EN = "english";
+    
     public final String SET_BY_SYSTEM = "set_by_system";
 
     // Id name of actual theme
     public final String THEME_ID = "theme_id";
 
-
+    // Id of actual lang
+    public final String LANG_ID = "lang_id";
+    
+    // Locale variable
+    private Locale locale;
+    
+    // Resources variable
+    private Resources resources;
+    
+    // Configurations variable
+    private Configuration config;
+    
     // Starting activity
     private void initialize()
     {
         setToolBar((Toolbar) findViewById(R.id.toolbar));  
         theme_changer = findViewById(R.id.theme_changer);
+        language_changer = findViewById(R.id.language_changer);
         about_text = findViewById(R.id.about_text);
 
+        // Inflating another layout
+        viewTheme = getLayoutInflater().inflate(R.layout.settings_choose_theme_dialog, null);
+        viewLang = getLayoutInflater().inflate(R.layout.settings_choose_language_dialog, null);
+        
+        radioGroup = viewTheme.findViewById(R.id.choose_theme);
+        light_theme = viewTheme.findViewById(R.id.light_mode);
+        dark_theme = viewTheme.findViewById(R.id.dark_mode);
+        set_by_system = viewTheme.findViewById(R.id.system_auto);
+        
+        cancelTheme = viewTheme.findViewById(R.id.cancel);
+        cancelLang = viewLang.findViewById(R.id.cancel);
+        
+        choose_lang = viewLang.findViewById(R.id.choose_lang);
+        lang_pt = viewLang.findViewById(R.id.lang_pt);
+        lang_en = viewLang.findViewById(R.id.lang_en);
+        lang_follow_sys = viewLang.findViewById(R.id.lang_follow_sys);
+        
+        sendMail = findViewById(R.id.sendMail);
         about_text.setText(getText(R.string.about) + " " + getString(R.string.app_name));
         sendMail = findViewById(R.id.sendMail);
         about = findViewById(R.id.about);
@@ -74,11 +144,14 @@ public class Settings extends MyActivity
         setContentView(R.layout.settings);
         initialize();
 
-        // Starting shared_preference theme for the variables
-        sharedPreferences = getSharedPreferences(SHARED_PREFERENCES_CONFIG_NAME, 0);
-        theme_mode = sharedPreferences.getString(THEME_NAME, SET_BY_SYSTEM);
+        // Initializing shared_preference theme
+        themeSharedPreferences = getSharedPreferences(SHARED_PREFERENCES_CONFIG_NAME, 0);
+        theme_mode = themeSharedPreferences.getString(THEME_NAME, SET_BY_SYSTEM);
 
-
+        // Initializing SP language
+        langSharedPreferences = getSharedPreferences(SHARED_PREFERENCES_CONFIG_LANG_NAME, 0);
+        lang = langSharedPreferences.getString(LANG_NAME, SET_BY_SYSTEM);
+        
         // For on click of theme changer field:
         theme_changer.setOnClickListener(
             new OnClickListener() {
@@ -88,6 +161,18 @@ public class Settings extends MyActivity
                     chooseThemebuilder();
                 }
             });
+            
+         // For on click of language changer field
+         language_changer.setOnClickListener(
+             new OnClickListener()
+             
+{
+                 @Override
+                 public void onClick(View vjew)
+                 {
+                     chooseLanguageBuilder();
+                 }
+             });
 
         // Send email activity
         sendMail.setOnClickListener(
@@ -115,19 +200,8 @@ public class Settings extends MyActivity
     private void chooseThemebuilder()
     {     
         builder = new AlertDialog.Builder(this);
-
-        // Inflating another layout
-        view = getLayoutInflater().inflate(R.layout.settings_choose_theme_dialog, null);
-
-        radioGroup = view.findViewById(R.id.choose_theme);
-        light_theme = view.findViewById(R.id.light_mode);
-        dark_theme = view.findViewById(R.id.dark_mode);
-        set_by_system = view.findViewById(R.id.system_auto);
-        cancel = view.findViewById(R.id.cancel);
-        sendMail = findViewById(R.id.sendMail);
-
         builder.setTitle(R.string.choose_theme);
-        builder.setView(view);
+        builder.setView(viewTheme);
 
         dialog = builder.create();
         dialog.show();
@@ -162,7 +236,7 @@ public class Settings extends MyActivity
                     AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
 
                     // Update sharedpreferences on theme_config to light
-                    SharedPreferences.Editor update = sharedPreferences.edit();
+                    SharedPreferences.Editor update = themeSharedPreferences.edit();
                     update.putString(THEME_NAME, LIGHT_MODE);
                     update.putInt(THEME_ID, AppCompatDelegate.MODE_NIGHT_NO);
                     update.commit();
@@ -180,7 +254,7 @@ public class Settings extends MyActivity
                     AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES);
 
                     // Update sharedpreferences on theme_config to dark
-                    SharedPreferences.Editor update = sharedPreferences.edit();
+                    SharedPreferences.Editor update = themeSharedPreferences.edit();
                     update.putString(THEME_NAME, NIGHT_MODE);
                     update.putInt(THEME_ID, AppCompatDelegate.MODE_NIGHT_YES);
                     update.commit();
@@ -198,7 +272,7 @@ public class Settings extends MyActivity
                     AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_FOLLOW_SYSTEM);
 
                     // Update sharedpreferences on theme_config to set by system
-                    SharedPreferences.Editor update = sharedPreferences.edit();
+                    SharedPreferences.Editor update = themeSharedPreferences.edit();
                     update.putString(THEME_NAME, SET_BY_SYSTEM);
                     update.putInt(THEME_ID, AppCompatDelegate.MODE_NIGHT_FOLLOW_SYSTEM);
                     update.commit();
@@ -206,6 +280,124 @@ public class Settings extends MyActivity
                     onBackPressed();
                 }
             });
+            
+        // Cancel button
+        cancelTheme.setOnClickListener(
+            new OnClickListener()
+            {
+                @Override
+                public void onClick(View View)
+                {
+                    dialog.dismiss();
+                }    
+            });
+    }
+    
+    // Choose language builder
+    private void chooseLanguageBuilder()
+    {
+        builder = new AlertDialog.Builder(this);
+        builder.setTitle(getText(R.string.choose_language));
+        builder.setView(viewLang);
+        
+        dialog = builder.create();
+        dialog.show();
+        
+        // Setting checked field for the actual theme
+        // Set as checked the english lang button
+        if (lang.equals(EN))
+        {
+            lang_en.setChecked(true);
+
+            // Set as checked the dark button
+        }
+        else if (lang.equals(PT))
+        {
+            lang_pt.setChecked(true);
+
+            // Set as checked the defined by system button
+        }
+        else if (lang.equals(SET_BY_SYSTEM))
+        {
+            lang_follow_sys.setChecked(true);
+        }
+        
+        // Switch to en lang when the button is clicked
+        lang_en.setOnClickListener(
+            new OnClickListener() {
+                @Override
+                public void onClick(View view)
+                {
+                    // Update language
+                    setLang(EN_CODE);
+                    
+                    update = langSharedPreferences.edit();
+                    
+                    // Save into sharedPreferences
+                    update.putString(LANG_NAME, EN);
+                    update.putString(LANG_ID, EN_CODE);
+                    update.commit();
+                    dialog.dismiss();
+                    //onBackPressed();
+                }
+            });
+
+        // Switch to portuguese language when the button is clicked
+        lang_pt.setOnClickListener(
+            new OnClickListener() { 
+                @Override
+                public void onClick(View view)
+                {
+                    // Update language
+                    setLang(PT_CODE);
+
+                    update = langSharedPreferences.edit();
+
+                    // Save into sharedPreferences
+                    update.putString(LANG_NAME, PT);
+                    update.putString(LANG_ID, PT_CODE);
+                    update.commit();
+                    dialog.dismiss();
+                  //  onBackPressed();                        
+                }
+            });
+
+        // Switch to set by system
+        lang_follow_sys.setOnClickListener(
+            new OnClickListener() {
+                @Override
+                public void onClick(View view)
+                {
+                   // Update language
+                    setLang(EN_CODE);
+
+                    update = langSharedPreferences.edit();
+                    
+                   // Save into sharedPreferences
+                    
+                    update.clear();
+                    update.commit();
+                    dialog.dismiss();
+                   //onBackPressed();
+                }
+            });
     }
 
+    // Set language method
+    private void setLang(String langCode)
+    {
+        // Set locale
+        locale = new Locale(langCode);
+        locale.setDefault(locale);
+        
+        // Get resources
+        resources = this.getResources();
+        config = resources.getConfiguration();
+        
+        // Set configuration
+        config.setLocale(locale);
+        
+        // And finally update resources
+        resources.updateConfiguration(config, resources.getDisplayMetrics());
+    }
 }

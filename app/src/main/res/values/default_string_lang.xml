@@ -97,19 +97,32 @@
     <string name="license">License</string>
     
     <string name="settings">Settings</string>
+    
     <string name="choose_theme">Choose theme</string>
+    <string name="choose_language">Choose language</string>
+    
     <string name="light_mode">Light</string>
     <string name="dark_mode">Dark</string>
     <string name="system_auto_theme">Set by system</string>
+    
+    <string name="system_lang_en">English</string>
+    <string name="system_lang_pt">Português</string>
+    <string name="system_lang_follow">Follow system</string>
+    
     <string name="cancel">Cancel</string>
     <string name="theme">Theme</string>
+    <string name="language">Language</string>
+    
     <string name="contact">Contact us</string>
     <string name="about">About</string>
+    
     <string name="send_mail_note">Here you can report an issue or comment about the app directly to me.</string>
     <string name="send_mail_hint_note">Enter your mail here.</string>
     <string name="send_mail">Send</string>
     <string name="null_field_mail">This field cannot be empty!</string>
     <string name="choose_category">Please, select one category</string>
+    
+    
     
     <string name="illselicense">App license is not available yet.</string>
     

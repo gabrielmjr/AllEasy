@@ -10,7 +10,7 @@
     <integer name="column_combimation">1</integer>
 
     <integer name="row_fatorial">0</integer>
-    <integer name="row_fatorial">2</integer>
+    <integer name="column_fatorial">2</integer>
 
     <integer name="row_fluidFlow">0</integer>
     <integer name="column_fluidFlow">3</integer>

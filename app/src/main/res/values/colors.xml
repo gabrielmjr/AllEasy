@@ -20,5 +20,11 @@
     <color name="hintColor">#FF7F7F7F</color>
     <color name="splash_background">#FFFFFFFF</color>
     <color name="send_mail_background_field">#FFFFFFFF</color>
+    
+    <color name="transparent">#00000000</color>
+    
+    <color name="green">#FF00FE05</color>
+    <color name="red">#FFFC0505</color>
+    <color name="yellow">#FFFCB809</color>
 </resources>
 

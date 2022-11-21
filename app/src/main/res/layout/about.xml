@@ -4,10 +4,10 @@
 	android:layout_height="match_parent"
 	android:layout_width="match_parent"
 	android:orientation="vertical"
-    android:background="@color/main_background">
-    
-    <include
-        layout="@layout/action_bar"/>
+	android:background="@color/main_background">
+
+	<include
+		layout="@layout/action_bar"/>
 
 	<RelativeLayout
 		android:layout_height="match_parent"
@@ -15,9 +15,9 @@
 
 		<ImageView
 			android:id="@+id/app_icon"
-			android:layout_width="@dimen/dp180"
-			android:layout_height="@dimen/dp180"
-			android:layout_marginTop="@dimen/dp50"
+			android:layout_width="180dp"
+			android:layout_height="180dp"
+			android:layout_marginTop="50dp"
 			android:src="@drawable/ic_app_icon"
 			android:layout_centerHorizontal="true"/>
 
@@ -28,16 +28,16 @@
 			android:textAppearance="?android:attr/textAppearanceMedium"
 			android:layout_below="@id/app_icon"
 			android:layout_centerHorizontal="true"
-			android:layout_margin="@dimen/dp10"
+			android:layout_margin="10dp"
 			android:text="@string/name"
-            android:textColor="@color/textColor"/>
+			android:textColor="@color/textColor"/>
 
 		<TextView
 			android:id="@+id/app_version"
 			android:layout_width="wrap_content"
 			android:layout_height="wrap_content"
 			android:text="@string/version"
-            android:textColor="@color/textColor"
+			android:textColor="@color/textColor"
 			android:textAppearance="?android:attr/textAppearanceMedium"
 			android:layout_below="@id/app_name"
 			android:layout_centerHorizontal="true"/>
@@ -49,19 +49,51 @@
 			android:textAppearance="?android:attr/textAppearanceSmall"
 			android:layout_alignParentBottom="true"
 			android:layout_centerHorizontal="true"
-            android:textColor="@color/textColor"
-			android:layout_margin="@dimen/dp10"/>
+			android:textColor="@color/textColor"
+			android:layout_margin="10dp"/>
+
+		<TextView
+			android:id="@+id/view1"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_below="@id/app_version"
+			android:layout_centerHorizontal="true"
+			android:textSize="30sp"
+			android:textColor="@color/textColor"
+			android:text=": "
+			android:layout_marginTop="15dp"
+			android:gravity="center"/>
 
 		<Button
+			android:id="@+id/check_update"
+			android:layout_width="wrap_content"
+			style="?android:attr/buttonStyleSmall"
+			android:layout_height="wrap_content"
+            android:textColor="@color/textColor"
+			android:text="Small Button"
+			android:layout_centerHorizontal="true"
+			android:layout_toStartOf="@id/view1"
+			android:layout_alignTop="@id/view1"/>
+
+		<Button
+			android:id="@+id/updater_status"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+            android:textColor="@color/textColor"
+			android:text="Button"
+			android:layout_toEndOf="@id/view1"
+			android:layout_alignTop="@id/view1"/>
+
+		<Button
+			android:id="@+id/license"
 			android:layout_width="wrap_content"
 			style="?android:attr/buttonStyleSmall"
 			android:layout_height="wrap_content"
 			android:text="@string/license"
-            android:textColor="@color/textColor"
-			android:layout_below="@id/app_version"
-			android:id="@+id/license"
+			android:textColor="@color/textColor"
 			android:layout_centerHorizontal="true"
-			android:layout_marginTop="@dimen/dp15"/>
+			android:layout_marginTop="15dp"
+			android:layout_below="@id/check_update"/>
 
 	</RelativeLayout>
 

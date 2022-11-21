@@ -5,37 +5,54 @@
 	android:layout_height="match_parent"
 	android:layout_gravity="center_horizontal">
 
-	<ScrollView
-		android:layout_width="wrap_content"
+	<RadioGroup
+		android:id="@+id/choose_lang"
+		android:layout_width="match_parent"
 		android:layout_height="wrap_content"
-		android:orientation="vertical"
-		android:layout_centerInParent="true">
+		android:background="@color/blue_background_1">
 
-		<RadioGroup
-			android:id="@+id/choose_theme"
-			android:layout_width="match_parent"
+		<RadioButton
+			android:id="@+id/lang_en"
 			android:layout_height="wrap_content"
-			android:background="@color/blue_background_1">
+			android:layout_width="match_parent"
+			android:textColor="@color/black"
+			android:text="@string/system_lang_en"
+			android:textAppearance="?android:attr/textAppearanceMedium"
+			android:layout_margin="5dp"/>
 
-			<RadioButton
-				android:id="@+id/portuguese_lang"
-				android:layout_height="wrap_content"
-				android:layout_width="match_parent"
-				android:textColor="@color/black"
-				android:text="@string/dark_mode"
-				android:textAppearance="?android:attr/textAppearanceMedium"/>
+		<RadioButton
+			android:id="@+id/lang_pt"
+			android:layout_height="wrap_content"
+			android:layout_width="match_parent"
+			android:textColor="@color/black"
+			android:text="@string/system_lang_pt"
+			android:textAppearance="?android:attr/textAppearanceMedium"
+			android:layout_margin="5dp"/>
 
-			<RadioButton
-				android:id="@+id/english_lang"
-				android:layout_height="wrap_content"
-				android:layout_width="match_parent"
-				android:textColor="@color/black"
-				android:text="@string/system_auto_theme"
-				android:textAppearance="?android:attr/textAppearanceMedium"/>
+		<RadioButton
+			android:id="@+id/lang_follow_sys"
+			android:layout_height="wrap_content"
+			android:layout_width="match_parent"
+			android:textColor="@color/black"
+			android:text="@string/system_lang_follow"
+			android:textAppearance="?android:attr/textAppearanceMedium"
+			android:layout_margin="5dp"/>
 
-		</RadioGroup>
-
-	</ScrollView>
+	</RadioGroup>
+    
+    <TextView
+        android:id="@+id/cancel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/choose_lang"
+        android:textColor="@color/textColor"
+        android:text="@string/cancel"
+        android:textSize="18sp"
+        android:layout_marginTop="@dimen/dp5"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:layout_alignParentEnd="true"
+        android:padding="@dimen/dp10"
+		android:background="@drawable/circle_button"/>
 
 </RelativeLayout>
 

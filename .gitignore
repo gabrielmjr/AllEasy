@@ -83,3 +83,8 @@ lint/generated/
 lint/outputs/
 lint/tmp/
 # lint/reports/
+
+
+src/main/res/drawable/ic_edge_button_red.xml
+src/main/res/drawable/ic_edge_button_geeen.xml
+src/main/res/drawable/ic_edge_button_yellow.xml
