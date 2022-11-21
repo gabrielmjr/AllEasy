@@ -5,15 +5,18 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
+import android.content.res.Configuration;
+import android.content.res.Resources;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.v7.app.AppCompatDelegate;
+import android.support.v7.widget.CardView;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.view.View.OnClickListener;
+import android.widget.TextView;
 import com.GabrielMJr.Twaire.AllEasy.R;
-// import com.GabrielMJr.Twaire.AllEasy.app.MyActivity;
 import com.GabrielMJr.Twaire.AllEasy.app.MyMainActivity;
 import com.GabrielMJr.Twaire.AllEasy.app.Settings;
 import com.GabrielMJr.Twaire.AllEasy.databaseManager.DataManager;
@@ -24,8 +27,7 @@ import com.GabrielMJr.Twaire.AllEasy.math.Fatorial;
 import com.GabrielMJr.Twaire.AllEasy.physic.kinematic.Kinematic_ActivityMain;
 import com.GabrielMJr.Twaire.AllEasy.physic.vaz.FluidFlow_ActivityMain;
 import com.GabrielMJr.Twaire.AllEasy.tools.DialogAlertData;
-import android.support.v7.widget.CardView;
-import android.widget.TextView;
+import java.util.Locale;
 //import android.app.AlertDialog;
 
 
@@ -48,6 +50,7 @@ public class MainActivity extends MyMainActivity
     private static final String TB_NAME = "version_info";
     private static int updaterStatus;
     private static int lastChoosenTheme;
+    private static String lastChoosenLang;
 
     private static DataManager DM;
     private static DialogAlertData dialogAlertData;
@@ -82,6 +85,28 @@ public class MainActivity extends MyMainActivity
                         AppCompatDelegate.setDefaultNightMode(lastChoosenTheme);
                         //startActivity(new Intent(getApplicationContext(), MainActivity.class));
                         recreate();
+                    }
+                    
+                    // Loading language
+                    sharedPreferences = getSharedPreferences(settings.SHARED_PREFERENCES_CONFIG_LANG_NAME, 0);
+                    lastChoosenLang = sharedPreferences.getString(settings.LANG_ID, null);
+                    if (lastChoosenLang != null && lastChoosenLang != settings.getLang(getApplicationContext()))
+                    {
+                        // Set locale
+                        Locale locale = new Locale(lastChoosenLang);
+                        locale.setDefault(locale);
+
+                        // Get resources
+                        Resources resources = getResources();
+                        Configuration config = resources.getConfiguration();
+
+                        // Set configuration
+                        config.setLocale(locale);
+
+                        // And finally update resources
+                        resources.updateConfiguration(config, resources.getDisplayMetrics());
+                        
+                      //  settings.restartApp(getApplicationContext());
                     }
 
                     setContentView(R.layout.splash_screen);

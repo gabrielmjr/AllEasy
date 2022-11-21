@@ -1,26 +1,27 @@
 package com.GabrielMJr.Twaire.AllEasy.app;
 
 // Important imports
-import com.GabrielMJr.Twaire.AllEasy.app.MyActivity;
-import android.os.Bundle;
-import com.GabrielMJr.Twaire.AllEasy.R;
-import android.support.v7.widget.Toolbar;
+import android.content.Context;
+import android.content.Intent;
 import android.content.SharedPreferences;
+import android.content.res.Configuration;
+import android.content.res.Resources;
+import android.os.Bundle;
+import android.os.Process;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatDelegate;
-import android.widget.TextView;
+import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.LinearLayout;
-import android.view.LayoutInflater;
-import android.support.v7.app.AlertDialog;
-import android.widget.RadioGroup;
 import android.widget.RadioButton;
-import android.content.Intent;
-import com.GabrielMJr.Twaire.AllEasy.app.SendMailActivity;
+import android.widget.RadioGroup;
+import android.widget.TextView;
+import com.GabrielMJr.Twaire.AllEasy.R;
 import com.GabrielMJr.Twaire.AllEasy.app.About;
+import com.GabrielMJr.Twaire.AllEasy.app.MyActivity;
+import com.GabrielMJr.Twaire.AllEasy.app.SendMailActivity;
 import java.util.Locale;
-import android.content.res.Resources;
-import android.content.res.Configuration;
 
 public class Settings extends MyActivity
 {
@@ -32,8 +33,8 @@ public class Settings extends MyActivity
     private SharedPreferences langSharedPreferences = null;
     
     // Locales codes
-    private final String EN_CODE = "en";
-    private final String PT_CODE = "pt";
+    public static final String EN_CODE = "en";
+    public static final String PT_CODE = "pt";
 
     private static LinearLayout theme_changer;
     private static LinearLayout language_changer;
@@ -70,7 +71,7 @@ public class Settings extends MyActivity
     public final String SHARED_PREFERENCES_CONFIG_NAME = "app_config";
     
     // Name of sh for app lang
-    private final String SHARED_PREFERENCES_CONFIG_LANG_NAME = "lang";
+    public final String SHARED_PREFERENCES_CONFIG_LANG_NAME = "lang";
 
     // Shared preferences editor
     private SharedPreferences.Editor update;
@@ -329,7 +330,7 @@ public class Settings extends MyActivity
                 public void onClick(View view)
                 {
                     // Update language
-                    setLang(EN_CODE);
+                    setLang(EN_CODE, getApplicationContext());
                     
                     update = langSharedPreferences.edit();
                     
@@ -338,7 +339,7 @@ public class Settings extends MyActivity
                     update.putString(LANG_ID, EN_CODE);
                     update.commit();
                     dialog.dismiss();
-                    //onBackPressed();
+                    restartApp(getApplicationContext());
                 }
             });
 
@@ -349,7 +350,7 @@ public class Settings extends MyActivity
                 public void onClick(View view)
                 {
                     // Update language
-                    setLang(PT_CODE);
+                    setLang(PT_CODE, getApplicationContext());
 
                     update = langSharedPreferences.edit();
 
@@ -358,7 +359,7 @@ public class Settings extends MyActivity
                     update.putString(LANG_ID, PT_CODE);
                     update.commit();
                     dialog.dismiss();
-                  //  onBackPressed();                        
+                    restartApp(getApplicationContext());                      
                 }
             });
 
@@ -369,7 +370,7 @@ public class Settings extends MyActivity
                 public void onClick(View view)
                 {
                    // Update language
-                    setLang(EN_CODE);
+                    setLang(EN_CODE, getApplicationContext());
 
                     update = langSharedPreferences.edit();
                     
@@ -378,20 +379,20 @@ public class Settings extends MyActivity
                     update.clear();
                     update.commit();
                     dialog.dismiss();
-                   //onBackPressed();
+                    restartApp(getApplicationContext());
                 }
             });
     }
 
     // Set language method
-    private void setLang(String langCode)
+    public void setLang(String langCode, Context context)
     {
         // Set locale
         locale = new Locale(langCode);
         locale.setDefault(locale);
         
         // Get resources
-        resources = this.getResources();
+        resources = getResources();
         config = resources.getConfiguration();
         
         // Set configuration
@@ -399,5 +400,19 @@ public class Settings extends MyActivity
         
         // And finally update resources
         resources.updateConfiguration(config, resources.getDisplayMetrics());
+    }
+    
+    // Restart app method
+    public void restartApp(Context context) 
+    {
+        Process.killProcess(Process.myPid());
+        finishAndRemoveTask();
+        startActivity(new Intent(context,MainActivity.class));
+    }
+    
+    // Get actual language method
+    public String getLang(Context context)
+    {
+         return context.getResources().getConfiguration().locale.getLanguage();
     }
 }
