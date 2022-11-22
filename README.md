@@ -1,28 +1,28 @@
 # AllEasy
-### Baseado em estudos escolares
+### Based on school studies
 
-AllEasy é uma aplicação Android de código aberto feito em Java que tem como finalidade automatizar cálculos e resultados em Física e Matemática.
+AllEasy is an open source Android application made in Java that aims to automate calculations and results in Physics and Mathematics.
 
 
-**Mais informações**
-- Pacote: com.GabrielMJr.Twaire.AllEasy
-- Nome: AllEasy
-- Criado por: Gabriel MJr
+# **More info**
+- Package: com.GabrielMJr.Twaire.AllEasy
+- Name: AllEasy
+- Created by: Gabriel MJr
 - OS: Android
-- Primeira versão: 29/06/2022
+- First version: 29/06/2022
 
 
 
-**Features**
-- Cálculo de Fatorial
-- Cálculo de Arranjos
-- Cálculo de Combinação
-- Cálculo de Função de segundo grau
-- Cálculo de Vazão Volumétrica
-- Cinemática
+# **Features**
+- Factorial Calculation
+- Calculation of Arrangements
+- Combination Calculation
+- Second Degree Function Calculus
+- Volumetric Flow Calculation
+- Kinematics
 
 
-**Bibliotecas externas**
-- Ferramentas - [Tools](https://gitHub.com/gabrielmjr/Tools)
-- Cálculos Físicos - [Physic](https://github.com/gabrielmjr/Physic)
-- Cálculos Matemáticos - [Math](https://gitHub.com/gabrielmjr/Math)
+# **External libraries**
+- Tools - [Tools](https://gitHub.com/gabrielmjr/Tools)
+- Physical Calculations - [Physic](https://github.com/gabrielmjr/Physic)
+- Mathematical Calculations - [Math](https://gitHub.com/gabrielmjr/Math)
