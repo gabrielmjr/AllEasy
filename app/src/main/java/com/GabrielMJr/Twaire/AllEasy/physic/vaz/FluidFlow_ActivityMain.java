@@ -32,7 +32,6 @@ public class FluidFlow_ActivityMain extends MyActivity {
     
     private void initialize() {
         setToolBar((Toolbar) findViewById(R.id.toolbar));
-        
         this.vaz1 = findViewById(R.id.v1);
         this.vaz2 = findViewById(R.id.v2);
         this.vaz3 = findViewById(R.id.v3);

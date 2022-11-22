@@ -4,6 +4,8 @@
     package="com.GabrielMJr.Twaire.AllEasy"
     android:versionName="1.2.3-Beta_3">
     
+    <!--Used to ckech online updates-->
+    <uses-permission android:name="android.permission.INTERNET"/>
     
     <application
         android:allowBackup="true"

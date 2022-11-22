@@ -69,20 +69,23 @@
 			android:layout_width="wrap_content"
 			style="?android:attr/buttonStyleSmall"
 			android:layout_height="wrap_content"
-            android:textColor="@color/textColor"
+			android:textColor="@color/textColor"
 			android:text="Small Button"
 			android:layout_centerHorizontal="true"
 			android:layout_toStartOf="@id/view1"
 			android:layout_alignTop="@id/view1"/>
 
-		<Button
+		<TextView
 			android:id="@+id/updater_status"
 			android:layout_width="wrap_content"
 			android:layout_height="wrap_content"
-            android:textColor="@color/textColor"
+			android:textColor="@color/textColor"
 			android:text="Button"
 			android:layout_toEndOf="@id/view1"
-			android:layout_alignTop="@id/view1"/>
+			android:layout_alignTop="@id/check_update"
+			android:layout_alignBottom="@id/check_update"
+			android:layout_marginLeft="10dp"
+			android:gravity="center"/>
 
 		<Button
 			android:id="@+id/license"

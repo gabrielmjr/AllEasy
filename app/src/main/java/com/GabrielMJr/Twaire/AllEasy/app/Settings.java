@@ -407,7 +407,7 @@ public class Settings extends MyActivity
     {
         Process.killProcess(Process.myPid());
         finishAndRemoveTask();
-        startActivity(new Intent(context,MainActivity.class));
+        startActivity(getIntent());
     }
     
     // Get actual language method
