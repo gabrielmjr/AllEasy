@@ -12,8 +12,10 @@ AllEasy is an open source Android application made in Java that aims to automate
 - Name: AllEasy
 - Created by: Gabriel MJr
 - OS: Android
+- Min SDK Version: 14
+- Latest beta: v1.2.3-beta_3
+- Latest Release: v1.2.2
 - First version: 29/06/2022
-
 
 
 # **Features**
@@ -31,5 +33,5 @@ AllEasy is an open source Android application made in Java that aims to automate
 - Mathematical Calculations - [Math](https://gitHub.com/gabrielmjr/Math)
 
 
-@ Licence
+# Licence
 [Apache Licence, V2](https://www.apache.org/licenses/LICENSE-2.0)
