@@ -29,3 +29,7 @@ AllEasy is an open source Android application made in Java that aims to automate
 - Tools - [Tools](https://gitHub.com/gabrielmjr/Tools)
 - Physical Calculations - [Physic](https://github.com/gabrielmjr/Physic)
 - Mathematical Calculations - [Math](https://gitHub.com/gabrielmjr/Math)
+
+
+@ Licence
+[Apache Licence, V2](https://www.apache.org/licenses/LICENSE-2.0)
