@@ -1,7 +1,10 @@
 # AllEasy
+
+![AllEasy](HTTPS://raw.githubusercontent.com/gabrielmjr/AllEasy/master/app/src/main/res//mipmap-xxxhdpi/ic_launcher_round.png)
 ### Based on school studies
 
 AllEasy is an open source Android application made in Java that aims to automate calculations and results in Physics and Mathematics.
+
 
 
 # **More info**
