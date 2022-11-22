@@ -10,15 +10,14 @@
 
 	<include
 		layout="@layout/action_bar"/>
-    
 
 	<RelativeLayout
 		android:layout_width="match_parent"
 		android:layout_height="match_parent"
 		android:orientation="horizontal">
-        
-        <include
-            layout="@layout/clear_button"/>
+
+		<include
+			layout="@layout/clear_button"/>
 
 		<TextView
 			android:id="@+id/a"
@@ -65,9 +64,9 @@
 			android:textColorHighlight="@color/black"
 			android:textIsSelectable="true"
 			android:layout_alignTop="@id/a"
-			android:layout_alignStart="@id/a"
-			android:layout_marginStart="@dimen/dp50"
-			android:layout_marginTop="@dimen/dp20"/>
+			android:layout_alignBottom="@id/a"
+			android:gravity="center"
+			android:layout_toRightOf="@id/a"/>
 
 	</RelativeLayout>
 
