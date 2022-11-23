@@ -62,7 +62,7 @@
     <string name="displacementS">Deslocamento</string>
     <string name="variated_uniform_movementS">Movimento Uniformemente Variado</string>
     <string name="arrjS">Arranjos</string>
-    <string name="fatS">Factorial</string>
+    <string name="fatS">Fatorial</string>
     <string name="combS">Combinação</string>
     <string name="fsgS">Função de Segundo Grau</string>
     <string name="fsgSs">Função de Segundo\nGrau</string>
@@ -94,24 +94,40 @@
     <string name="license">Licensa</string>
     
     <string name="settings">Definições</string>
+    <string name="choose_language">Escolher idioma</string>
+    
     <string name="choose_theme">Escolher tema</string>
+    
     <string name="light_mode">Claro</string>
     <string name="dark_mode">Escuro</string>
     <string name="system_auto_theme">Definido pelo sistema</string>
+    
+    <string name="system_lang_follow">Definido pelo sistema</string>
+    
     <string name="cancel">Cancelar</string>
     <string name="theme">Tema</string>
+    <string name="language">Idioma</string>
+    
     <string name="contact">Contacte-me</string>
     <string name="about">Sobre</string>
+    <string name="check_update">Verificar atualização</string>
+    
     <string name="send_mail_note">Aqui você pode reportar um caso ou comentar sobre o app directamente para mim.</string>
     <string name="send_mail_hint_note">Insira a tua mensagem aqui.</string>
     <string name="send_mail">Enviar</string>
     <string name="null_field_mail">Este campo não pode estar vazio!</string>
+    <string name="choose_category">Por favor!, Escolha uma categoria</string>
     
-    <string name="illselicense">Licensa da aplicação ainda não está disponivel</string>
+    <string name="illselicense">Licensa da aplicação ainda não está disponivel no app, para vê-lo visite o repositório oficial do github.</string>
     
     <string-array name="message_category">
         <item>Categoria</item>
         <item>Reportar erro</item>
         <item>Revisão</item>
     </string-array>
+    
+    <string name="updated">Actualizado</string>
+    <string name="unable_to_check_update">Não foi possível verificar</string>
+    <string name="update_available">Disponível</string>
+    <string name="not_verified">Não verificado</string>
 </resources>

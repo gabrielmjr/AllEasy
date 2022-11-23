@@ -23,8 +23,9 @@
     
     <color name="transparent">#00000000</color>
     
-    <color name="green">#FF00FE05</color>
-    <color name="red">#FFFC0505</color>
-    <color name="yellow">#FFFCB809</color>
+    <color name="blue">#FF0000FF</color>
+    <color name="green">#FF00FF00</color>
+    <color name="red">#FFFF0000</color>
+    <color name="yellow">#F0FFE600</color>
 </resources>
 

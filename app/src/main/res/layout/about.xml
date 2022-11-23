@@ -15,9 +15,9 @@
 
 		<ImageView
 			android:id="@+id/app_icon"
-			android:layout_width="180dp"
-			android:layout_height="180dp"
-			android:layout_marginTop="50dp"
+			android:layout_width="@dimen/dp180"
+			android:layout_height="@dimen/dp180"
+			android:layout_marginTop="@dimen/dp50"
 			android:src="@drawable/ic_app_icon"
 			android:layout_centerHorizontal="true"/>
 
@@ -28,7 +28,7 @@
 			android:textAppearance="?android:attr/textAppearanceMedium"
 			android:layout_below="@id/app_icon"
 			android:layout_centerHorizontal="true"
-			android:layout_margin="10dp"
+			android:layout_margin="@dimen/dp10"
 			android:text="@string/name"
 			android:textColor="@color/textColor"/>
 
@@ -50,7 +50,7 @@
 			android:layout_alignParentBottom="true"
 			android:layout_centerHorizontal="true"
 			android:textColor="@color/textColor"
-			android:layout_margin="10dp"/>
+			android:layout_margin="@dimen/dp10"/>
 
 		<TextView
 			android:id="@+id/view1"
@@ -61,7 +61,7 @@
 			android:textSize="30sp"
 			android:textColor="@color/textColor"
 			android:text=": "
-			android:layout_marginTop="15dp"
+			android:layout_marginTop="@dimen/dp15"
 			android:gravity="center"/>
 
 		<Button
@@ -70,22 +70,27 @@
 			style="?android:attr/buttonStyleSmall"
 			android:layout_height="wrap_content"
 			android:textColor="@color/textColor"
-			android:text="Small Button"
+			android:text="@string/check_update"
 			android:layout_centerHorizontal="true"
 			android:layout_toStartOf="@id/view1"
-			android:layout_alignTop="@id/view1"/>
+			android:layout_alignTop="@id/view1"
+			android:layout_alignBottom="@id/view1"
+			android:background="@drawable/background_2"
+			android:padding="@dimen/dp5"/>
 
 		<TextView
 			android:id="@+id/updater_status"
 			android:layout_width="wrap_content"
 			android:layout_height="wrap_content"
 			android:textColor="@color/textColor"
-			android:text="Button"
 			android:layout_toEndOf="@id/view1"
 			android:layout_alignTop="@id/check_update"
 			android:layout_alignBottom="@id/check_update"
-			android:layout_marginLeft="10dp"
-			android:gravity="center"/>
+			android:layout_marginLeft="@dimen/dp10"
+			android:gravity="center"
+			android:padding="@dimen/dp5"
+			android:background="@drawable/ic_edge_button_yellow"
+			android:text="@string/not_verified"/>
 
 		<Button
 			android:id="@+id/license"
@@ -95,8 +100,10 @@
 			android:text="@string/license"
 			android:textColor="@color/textColor"
 			android:layout_centerHorizontal="true"
-			android:layout_marginTop="15dp"
-			android:layout_below="@id/check_update"/>
+			android:layout_marginTop="@dimen/dp15"
+			android:layout_below="@id/check_update"
+			android:background="@drawable/background_2"
+			android:padding="@dimen/dp10"/>
 
 	</RelativeLayout>
 

@@ -115,6 +115,7 @@
     
     <string name="contact">Contact us</string>
     <string name="about">About</string>
+    <string name="check_update">Check update</string>
     
     <string name="send_mail_note">Here you can report an issue or comment about the app directly to me.</string>
     <string name="send_mail_hint_note">Enter your mail here.</string>
@@ -122,13 +123,16 @@
     <string name="null_field_mail">This field cannot be empty!</string>
     <string name="choose_category">Please, select one category</string>
     
-    
-    
-    <string name="illselicense">App license is not available yet.</string>
+    <string name="illselicense">App license is not available on the app yet, to see it visit the oficial repository on github.</string>
     
     <string-array name="message_category">
         <item>Category</item>
         <item>Report issue</item>
         <item>Review</item>
     </string-array>
+    
+    <string name="updated">Updated</string>
+    <string name="unable_to_check_update">Unable to check</string>
+    <string name="update_available">Available</string>
+    <string name="not_verified">Not verified</string>
 </resources>

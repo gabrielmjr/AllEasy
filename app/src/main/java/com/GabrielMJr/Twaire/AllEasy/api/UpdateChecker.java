@@ -1,20 +1,19 @@
 package com.GabrielMJr.Twaire.AllEasy.api;
+
+
 import com.android.volley.RequestQueue;
-import com.android.volley.toolbox.JsonObjectRequest;
 import org.json.JSONObject;
-import com.android.volley.toolbox.JsonArrayRequest;
+import com.GabrielMJr.Twaire.AllEasy.api.JARequest;
 import com.android.volley.Request;
 import com.android.volley.Response;
 import org.json.JSONArray;
 import com.android.volley.VolleyError;
 import org.json.JSONException;
-import com.android.volley.toolbox.HttpResponse;
-import javax.microedition.khronos.opengles.GL11Ext;
 import com.android.volley.toolbox.Volley;
+import com.GabrielMJr.Twaire.AllEasy.api.Constants;
 import android.content.Context;
-import java.util.Map;
 import java.util.HashMap;
-import com.android.volley.NetworkResponse;
+import java.net.HttpURLConnection;
 
 public class UpdateChecker
 {
@@ -23,14 +22,12 @@ public class UpdateChecker
     private final String url = "https://api.github.com/repos/gabrielmjr/AllEasy/releases";
 
     // Latest version code
-    private Integer latestVC = -1;
-
-    // Map that contains some json values and response code
-    private Map<String, Integer> api_info;
     
-    
+    // Map that contains some response values and response code
+    private HashMap<String, Integer> api_info;
+    public String toS;
     private RequestQueue queue;
-    private JsonArrayRequest request;
+    private JARequest request;
     private JSONObject object;
     
     // Constructor
@@ -43,42 +40,55 @@ public class UpdateChecker
     // Check update from my github releases
     public void checkUpdate()
     {
-        
-        request = new JsonArrayRequest(Request.Method.GET, url, null,
+        request = new JARequest(JARequest.Method.GET, url,
             new Response.Listener<JSONArray>() {
                 @Override
                 public void onResponse(JSONArray response) {
                     try
                     {
                         object = (JSONObject) response.get(0);
-                        setVersionCode(object.getInt("tag_name"));
                         
+                        // Save the code into response status
+                        put_apiInfo(Constants.RESPONSE_STATUS, request.getResponseCode());
+                        
+                        // Save version code into map
+                        put_apiInfo(Constants.VERSION_CODE, object.getInt(Constants.TAG));
                     }
                     catch (JSONException e)
                     {}
                 }
 
             } 
+            // On error
             , new Response.ErrorListener() {
                 @Override
                 public void onErrorResponse(VolleyError error) {
-                    setVersionCode(error.networkResponse.statusCode);
+                    // Put the error code into map      
+                    put_apiInfo(Constants.RESPONSE_STATUS, request.getResponseCode());
                 }
             });       
-
+           
 // Add the request to the RequestQueue.
         queue.add(request);
+        put_apiInfo(Constants.RESPONSE_STATUS, request.getResponseCode());
     }
     
     // Getters and setters
-    // Latest version code from github
-    public int getVersionCode()
+    // get apiInfo from github
+    public HashMap getApiInfo()
     {
-        return latestVC;
+        return api_info;
     }
     
-    private void setVersionCode(int latestVC)
+    // Put value into api info map
+    private void put_apiInfo(String key, int value)
     {
-        this.latestVC = latestVC;
+        remove_apiInfo(key);
+        api_info.put(key, value);
+    }
+    
+    private void remove_apiInfo(String key)
+    {
+        api_info.remove(key);
     }
 }

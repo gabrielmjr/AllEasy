@@ -21,7 +21,7 @@ public class SendMailActivity extends MyActivity
     private static Intent intent;
 
     // This is mail of AllEasy support
-    private static final String[] ALLEASY_SUPPORT_MAIL = {"alleasygmt@myself.com"};
+    private static final String[] ALLEASY_SUPPORT_MAIL = {"alleasy@myself.com"};
 
 
     @Override
