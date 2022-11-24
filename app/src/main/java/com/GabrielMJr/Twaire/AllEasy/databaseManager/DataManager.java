@@ -86,21 +86,18 @@ public class DataManager extends SQLiteOpenHelper {
 		SQLiteDatabase db = this.getWritableDatabase();
 		ContentValues CV = new ContentValues();
 		Cursor cursor = db.rawQuery("SELECT * FROM " + getTableName(), null);
-        Integer vC;
-        String database_versionCode = "0";
-        
+        int vC = 0;
 
-        while (cursor.moveToNext()) {
-             database_versionCode = cursor.getString(1);       
+        if (cursor.moveToLast()) {
+             vC = cursor.getInt(1);       
         }
-
-        vC = Integer.valueOf(database_versionCode);
+        
         if (vC != 0) {
 
             if (vC > application_versionCode) {
                 return  -1; // App desatualizado
 
-            } else if (vC.equals(application_versionCode)) {
+            } else if (vC == application_versionCode) {
                 return 0; // Nada feito com o app
 
             } else if (vC < application_versionCode) {		

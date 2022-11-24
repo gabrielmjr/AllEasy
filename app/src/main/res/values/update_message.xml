@@ -2,6 +2,10 @@
     <resources>
         <!--Message of update-->
         <string name="update_title">What’s new?</string>
-	    <string name="update_message">Kinematic</string>
+	    <string name="update_message">- Introduction to cinematics;
+            \n- Option to change language;
+            \n- Update checker;
+            \n- Field to send email directly to me "creator";
+            \n- Resizing for specific screens.</string>
     </resources>
     

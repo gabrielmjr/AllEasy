@@ -105,8 +105,6 @@ public class MainActivity extends MyMainActivity
 
                         // And finally update resources
                         resources.updateConfiguration(config, resources.getDisplayMetrics());
-                        
-                      //  settings.restartApp(getApplicationContext());
                     }
 
                     setContentView(R.layout.splash_screen);
