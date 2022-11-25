@@ -130,4 +130,7 @@
     <string name="unable_to_check_update">Não foi possível verificar</string>
     <string name="update_available">Disponível</string>
     <string name="not_verified">Não verificado</string>
+    
+    <string name="something_went_wrong">Algo deu errado</string>
+    <string name="try_later">Falha na requisição, tente novamente mais tarde</string>
 </resources>

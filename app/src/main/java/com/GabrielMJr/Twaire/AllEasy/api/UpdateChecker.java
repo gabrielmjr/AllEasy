@@ -1,19 +1,17 @@
 package com.GabrielMJr.Twaire.AllEasy.api;
 
 
-import com.android.volley.RequestQueue;
-import org.json.JSONObject;
-import com.GabrielMJr.Twaire.AllEasy.api.JARequest;
-import com.android.volley.Request;
-import com.android.volley.Response;
-import org.json.JSONArray;
-import com.android.volley.VolleyError;
-import org.json.JSONException;
-import com.android.volley.toolbox.Volley;
-import com.GabrielMJr.Twaire.AllEasy.api.Constants;
 import android.content.Context;
+import com.GabrielMJr.Twaire.AllEasy.api.Constants;
+import com.GabrielMJr.Twaire.AllEasy.api.JARequest;
+import com.android.volley.RequestQueue;
+import com.android.volley.Response;
+import com.android.volley.VolleyError;
+import com.android.volley.toolbox.Volley;
 import java.util.HashMap;
-import java.net.HttpURLConnection;
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
 
 public class UpdateChecker
 {
@@ -21,20 +19,22 @@ public class UpdateChecker
     // URL to do the request
     private final String url = "https://api.github.com/repos/gabrielmjr/AllEasy/releases";
 
-    // Latest version code
-    
     // Map that contains some response values and response code
     private HashMap<String, Integer> api_info;
-    public String toS;
+
     private RequestQueue queue;
     private JARequest request;
     private JSONObject object;
     
+    // My response interface
+    private final ResponseIF myResponse;
+    
     // Constructor
-    public UpdateChecker(Context context)
+    public UpdateChecker(Context context, ResponseIF myResponse)
     {
         queue = Volley.newRequestQueue(context);
         api_info = new HashMap<String, Integer>();
+        this.myResponse = myResponse;
     }
 
     // Check update from my github releases
@@ -43,52 +43,35 @@ public class UpdateChecker
         request = new JARequest(JARequest.Method.GET, url,
             new Response.Listener<JSONArray>() {
                 @Override
-                public void onResponse(JSONArray response) {
+                public void onResponse(JSONArray response)
+                {
                     try
                     {
+                        // Get data from JSON, add to hashmap and call on response method
                         object = (JSONObject) response.get(0);
+                        api_info.put(Constants.TAG, object.getInt(Constants.TAG));
+                        myResponse.onResponse(api_info);
                         
-                        // Save the code into response status
-                        put_apiInfo(Constants.RESPONSE_STATUS, request.getResponseCode());
-                        
-                        // Save version code into map
-                        put_apiInfo(Constants.VERSION_CODE, object.getInt(Constants.TAG));
                     }
                     catch (JSONException e)
-                    {}
+                    {
+                       // Call on json error method
+                       myResponse.onJSONError();
+                    }
                 }
 
             } 
             // On error
             , new Response.ErrorListener() {
                 @Override
-                public void onErrorResponse(VolleyError error) {
-                    // Put the error code into map      
-                    put_apiInfo(Constants.RESPONSE_STATUS, request.getResponseCode());
+                public void onErrorResponse(VolleyError error)
+                {
+                   // Call on error response from interface
+                   myResponse.onErrorResponse();
                 }
             });       
-           
+
 // Add the request to the RequestQueue.
         queue.add(request);
-        put_apiInfo(Constants.RESPONSE_STATUS, request.getResponseCode());
-    }
-    
-    // Getters and setters
-    // get apiInfo from github
-    public HashMap getApiInfo()
-    {
-        return api_info;
-    }
-    
-    // Put value into api info map
-    private void put_apiInfo(String key, int value)
-    {
-        remove_apiInfo(key);
-        api_info.put(key, value);
-    }
-    
-    private void remove_apiInfo(String key)
-    {
-        api_info.remove(key);
     }
 }

@@ -135,4 +135,7 @@
     <string name="unable_to_check_update">Unable to check</string>
     <string name="update_available">Available</string>
     <string name="not_verified">Not verified</string>
+    
+    <string name="something_went_wrong">Something went wrong</string>
+    <string name="try_later">Request failed, please try again later</string>
 </resources>

@@ -1,7 +1,6 @@
 package com.GabrielMJr.Twaire.AllEasy.app;
 
 import android.os.Bundle;
-import android.os.Handler;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -10,30 +9,28 @@ import android.widget.TextView;
 import android.widget.Toast;
 import com.GabrielMJr.Twaire.AllEasy.R;
 import com.GabrielMJr.Twaire.AllEasy.api.Constants;
+import com.GabrielMJr.Twaire.AllEasy.api.ResponseIF;
 import com.GabrielMJr.Twaire.AllEasy.api.UpdateChecker;
 import com.GabrielMJr.Twaire.AllEasy.app.MyActivity;
 import com.GabrielMJr.Twaire.AllEasy.databaseManager.DateNormalizer;
 import com.GabrielMJr.Twaire.AllEasy.util.AppInfo;
 import java.util.HashMap;
-import javax.net.ssl.HttpsURLConnection;
 
-public class About extends MyActivity
+public class About extends MyActivity implements ResponseIF
 {
 
     // Attributes
-    private static TextView app_name;
-    private static TextView app_version;
+    private TextView app_name;
+    private TextView app_version;
     private TextView updater_status;
-    private static TextView copyright;
+    private TextView copyright;
 
-    private static Button license;
-
+    private Button license;
     private Button update_checker;
 
     private UpdateChecker updateChecker;
 
     private AppInfo appInfo;
-    private HashMap map_appInfo;
     private int versionCode;
 
     // About the app activity
@@ -53,19 +50,20 @@ public class About extends MyActivity
                 @Override
                 public void onClick(View view)
                 {
-                    verifyUpdate();             
+                    // Start checking from updates
+                    updateChecker.checkUpdate();
                 }
             });
 
         license.setOnClickListener(
-         new OnClickListener()
-         {
-         @Override
-         public void onClick(View view)
-         {
-             Toast.makeText(getApplicationContext(), getString(R.string.illselicense), Toast.LENGTH_LONG).show();
-         }
-         });
+            new OnClickListener()
+            {
+                @Override
+                public void onClick(View view)
+                {
+                    Toast.makeText(getApplicationContext(), getString(R.string.illselicense), Toast.LENGTH_LONG).show();
+                }
+            });
     }
 
     // Initialize
@@ -78,11 +76,59 @@ public class About extends MyActivity
         copyright = findViewById(R.id.copyright);
         license = findViewById(R.id.license);
         appInfo = new AppInfo(getApplicationContext());
-        updateChecker = new UpdateChecker(getApplicationContext());
+        updateChecker = new UpdateChecker(getApplicationContext(), this);
         setAppInfo();
         setCopyright();
     }
 
+    // If the request returns successful response
+    @Override
+    public void onResponse(HashMap api_info)
+    {
+        // Response code of connection
+        versionCode = (Integer)api_info.get(Constants.TAG);
+
+        // Update available
+        if (versionCode > appInfo.getVersionCode())
+        {
+            updater_status.setBackground(getDrawable(R.drawable.ic_edge_button_blue));
+            updater_status.setText(R.string.update_available);
+        }
+
+        // Already updated
+        else if (versionCode == appInfo.getVersionCode())
+        {
+            updater_status.setBackground(getDrawable(R.drawable.ic_edge_button_green));
+            updater_status.setText(R.string.updated);
+        }
+    }
+
+    // If the api returns bad response
+    @Override
+    public void onErrorResponse()
+    {
+        // Unable to verify
+        updater_status.setBackground(getDrawable(R.drawable.ic_edge_button_red));
+        updater_status.setText(R.string.unable_to_check_update);
+    }
+    
+    // Problems with json
+    @Override
+    public void onJSONError()
+    {
+        
+    }
+
+    // Show license method
+    /*private void showLicense()
+     {
+     setContentView(R.layout.app_license);
+     getSupportActionBar().hide();
+     }*/
+
+
+
+    // Getters and setters
     // Setting app name
     private void setAppInfo()
     {
@@ -122,59 +168,4 @@ public class About extends MyActivity
         // Setting the copyright into textview
         copyright.setText((CharSequence) CR);
     }
-
-    // Check and set version code from github
-    private void verifyUpdate()
-    {  
-
-
-        // checkUpdate
-        updateChecker.checkUpdate();
-
-        // Delay 5000milis to show the result
-        Handler handler = new Handler();
-        handler.postDelayed(new Runnable()
-            {
-                @Override
-                public void run()
-                {
-                    try
-                    {
-                        // Get response
-                        map_appInfo = updateChecker.getApiInfo();
-
-                        // Response code of connection
-                        versionCode = map_appInfo.get(Constants.VERSION_CODE);
-                        
-                        // Update available
-                        if (versionCode > appInfo.getVersionCode())
-                        {
-                            updater_status.setBackground(getDrawable(R.drawable.ic_edge_button_blue));
-                            updater_status.setText(R.string.update_available);
-                        }
-                        
-                        // Already updated
-                        else if (versionCode == appInfo.getVersionCode())
-                        {
-                            updater_status.setBackground(getDrawable(R.drawable.ic_edge_button_green));
-                            updater_status.setText(R.string.updated);
-                        }
-                       
-                    } 
-                    catch (Exception e)
-                    {
-                        // Unable to verify
-                        updater_status.setBackground(getDrawable(R.drawable.ic_edge_button_red));
-                        updater_status.setText(R.string.unable_to_check_update);
-                    }
-                }
-            }, 5000);
-    }
-
-    // Show license method
-    /*private void showLicense()
-     {
-     setContentView(R.layout.app_license);
-     getSupportActionBar().hide();
-     }*/
 }
