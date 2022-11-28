@@ -25,8 +25,8 @@ public class Arranjos extends MyActivity
 
     private static Arranjo Arranjo;
     private static Tools Tools;
-    private static int verifyN;
-    private static int verifyP;
+    private static Boolean verifyN;
+    private static Boolean verifyP;
     private static int vn;
     private static int vp;
 
@@ -58,68 +58,68 @@ public class Arranjos extends MyActivity
                 public void onClick(View view)
                 {
 
-                    if (Tools.isNull(Arranjos.n.getText().toString()))
+                    if (Tools.isNull(n.getText().toString()))
                     {
                         n.setError(getText(R.string.null_field));
-                        Arranjos.verifyN = 0; // Retorna 0 se nulo
+                        verifyN = false; // Retorna 0 se nulo
                     }
                     else
                     {
-                        Arranjos.vn = Integer.valueOf(n.getText().toString());
-                        Arranjos.verifyN = 1; // Retorna 1 se não nulo
+                        vn = Integer.valueOf(n.getText().toString());
+                        verifyN = true; // Retorna 1 se não nulo
                     }
 
-                    if (Tools.isNull(Arranjos.p.getText().toString()))
+                    if (Tools.isNull(p.getText().toString()))
                     {
                         p.setError(getText(R.string.null_field));
-                        Arranjos.verifyP = 0;
+                        verifyP = false;
                     }
                     else
                     {
-                        Arranjos.vp = Integer.valueOf(Arranjos.p.getText().toString());
-                        Arranjos.verifyP = 1;
+                        vp = Integer.valueOf(p.getText().toString());
+                        verifyP = true;
                     }
 
 
-                    if (Arranjos.verifyN == 1 && Arranjos.verifyP == 1)
+                    if (verifyN && verifyP)
                     {
 
 
-                        if (Arranjos.vn < Arranjos.vp)
+                        if (vn < vp)
                         {
-                            Toast.makeText(Arranjos.this, R.string.p_big_than_n, Toast.LENGTH_SHORT).show();
+                            Toast.makeText(getApplicationContext(), R.string.p_big_than_n, Toast.LENGTH_SHORT).show();
                         }
                         else
                         {
                             // Mandar n e p para OpEngeneer e pegar a String[] result
-                            Long res = Arranjo.valueOf(Arranjos.vn, Arranjos.vp);
+                            Long res = Arranjo.valueOf(vn, vp);
 
                             if (res < 0)
                             {
-                                Toast.makeText(Arranjos.this, R.string.big_values, Toast.LENGTH_SHORT).show();
+                                Toast.makeText(getApplicationContext(), R.string.big_values, Toast.LENGTH_SHORT).show();
                             }
                             else
                             {
-                                result.setText((CharSequence) "=" + String.valueOf(res));
+                                result.setText("=" + res);
                             }
                         }
                     }
                     return;
                 }
             }); 
-            
-            this.clear.setOnClickListener(
-                new OnClickListener()
+
+        this.clear.setOnClickListener(
+            new OnClickListener()
+            {
+                @Override
+                public void onClick(View view)
                 {
-                    @Override
-                    public void onClick(View view)
-                    {
-                        n.setText(null);
-                        p.setText(null);
-                        result.setText(null);
-                        
-                        return;
-                    }
-                });
+                    n.setText(null);
+                    p.setText(null);
+                    result.setText(null);
+
+                    return;
+                }
+            });
     }
 }
