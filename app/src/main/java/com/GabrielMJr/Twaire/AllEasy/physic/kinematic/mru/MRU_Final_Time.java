@@ -20,8 +20,8 @@ public class MRU_Final_Time extends MyActivity {
     private static TextView res;
     private static Button clear;
     
-    private static int verify_initialTime;
-    private static int verify_deltaTime;
+    private static Boolean verify_initialTime;
+    private static Boolean verify_deltaTime;
     private static double initialTime;
     private static double deltaTime;
     private static Tools tools;
@@ -53,35 +53,35 @@ public class MRU_Final_Time extends MyActivity {
 
                     if (tools.isNull(initial_time.getText().toString())) {
                         initial_time.setError(getText(R.string.null_field));
-                        verify_initialTime = 0;
+                        verify_initialTime = false;
 
                     }
                     else if (tools.isDot(initial_time.getText().toString())) {
                         initial_time.setError(getText(R.string.dot_value));
-                        verify_initialTime = 0;
+                        verify_initialTime = false;
 
                     }
                     else {
                         initialTime = Double.valueOf(initial_time.getText().toString());
-                        verify_initialTime = 1;
+                        verify_initialTime = true;
                     }
 
                     if (tools.isNull(delta_time.getText().toString())) {
                         delta_time.setError(getText(R.string.null_field));
-                        verify_deltaTime = 0;
+                        verify_deltaTime = false;
 
                     }
                     else if (tools.isDot(delta_time.getText().toString())) {
                         delta_time.setError(getText(R.string.dot_value));
-                        verify_deltaTime = 0;
+                        verify_deltaTime = false;
 
                     }
                     else {
                         deltaTime = Double.valueOf(delta_time.getText().toString());
-                        verify_deltaTime = 1;
+                        verify_deltaTime = true;
                     }
 
-                    if (verify_initialTime == 1 && verify_deltaTime == 1) {
+                    if (verify_initialTime && verify_deltaTime) {
 
                         res.setText(getText(R.string.final_timep)
                                     + " "

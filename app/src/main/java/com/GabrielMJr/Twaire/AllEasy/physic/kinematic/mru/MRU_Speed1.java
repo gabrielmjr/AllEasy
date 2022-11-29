@@ -22,8 +22,8 @@ public class MRU_Speed1 extends MyActivity {
     
     private static Tools tools;
     private static MRU mru;
-    private static int verify_deltaDisplacement;
-    private static int verify_deltaTime;
+    private static Boolean verify_deltaDisplacement;
+    private static Boolean verify_deltaTime;
     private static double deltaDisplacement;
     private static double deltaTime;
     
@@ -54,31 +54,31 @@ public class MRU_Speed1 extends MyActivity {
                     
                     if (tools.isNull(delta_displacement.getText ().toString())) { 
                       delta_displacement.setError (getText(R.string.null_field));
-                      verify_deltaDisplacement = 0;
+                      verify_deltaDisplacement = false;
                       
                     } else if (tools.isDot(delta_displacement.getText().toString())) {
                         delta_displacement.setError(getText(R.string.dot_value));
-                        verify_deltaDisplacement = 0;
+                        verify_deltaDisplacement = false;
                         
                     } else {
                         deltaDisplacement = Double.valueOf(delta_displacement.getText().toString());
-                        verify_deltaDisplacement = 1;
+                        verify_deltaDisplacement = true;
                     }
                     
                     if (tools.isNull(delta_time.getText ().toString())) { 
                         delta_time.setError (getText(R.string.null_field));
-                        verify_deltaTime = 0;
+                        verify_deltaTime = false;
 
                     } else if (tools.isDot(delta_time.getText().toString())) {
                         delta_time.setError(getText(R.string.dot_value));
-                        verify_deltaTime = 0;
+                        verify_deltaTime = false;
 
                     } else {
                         deltaTime = Double.valueOf(delta_time.getText().toString());
-                        verify_deltaTime = 1;
+                        verify_deltaTime = true;
                     }
                     
-                    if (verify_deltaDisplacement == 1 && verify_deltaTime == 1) {
+                    if (verify_deltaDisplacement && verify_deltaTime) {
                         res.setText(getText(R.string.speedp)
                                    + " "
                                    + deltaDisplacement

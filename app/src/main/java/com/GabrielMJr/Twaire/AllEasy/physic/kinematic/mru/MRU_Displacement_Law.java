@@ -22,9 +22,9 @@ public class MRU_Displacement_Law extends MyActivity {
     private static TextView res;
     private static Button clear;
     
-    private static int verifyInitialDisplacement;
-    private static int verifySpeed;
-    private static int verifyDeltaTime;
+    private static Boolean verifyInitialDisplacement;
+    private static Boolean verifySpeed;
+    private static Boolean verifyDeltaTime;
     private static double initialDisplacement;
     private static double speedValue;
     private static double deltaTime;
@@ -60,54 +60,54 @@ public class MRU_Displacement_Law extends MyActivity {
 
                     if (tools.isNull(initial_displacement.getText().toString())) {
                         initial_displacement.setError(getText(R.string.null_field));
-                        verifyInitialDisplacement = 0;
+                        verifyInitialDisplacement = false;
 
                     }
                     else if (tools.isDot(initial_displacement.getText().toString())) {
                         initial_displacement.setError(getText(R.string.dot_value));
-                        verifyInitialDisplacement = 0;
+                        verifyInitialDisplacement = false;
 
                     }
                     else {
                         initialDisplacement = Double.valueOf(initial_displacement.getText().toString());
-                        verifyInitialDisplacement = 1;
+                        verifyInitialDisplacement = true;
                     }
 
                     if (tools.isNull(speed.getText().toString())) {
                         speed.setError(getText(R.string.null_field));
-                        verifySpeed = 0;
+                        verifySpeed = false;
 
                     }
                     else if (tools.isDot(speed.getText().toString())) {
                         speed.setError(getText(R.string.dot_value));
-                        verifySpeed = 0;
+                        verifySpeed = false;
 
                     }
                     else {
                         speedValue = Double.valueOf(speed.getText().toString());
-                        verifySpeed = 1;
+                        verifySpeed = true;
                     }
 
                     if (tools.isNull(delta_time.getText().toString())) {
                         delta_time.setError(getText(R.string.null_field));
-                        verifyDeltaTime = 0;
+                        verifyDeltaTime = false;
 
                     }
                     else if (tools.isDot(delta_time.getText().toString())) {
                         delta_time.setError(getText(R.string.dot_value));
-                        verifyDeltaTime = 0;
+                        verifyDeltaTime = false;
 
                     }
                     else {
                         deltaTime = Double.valueOf(delta_time.getText().toString());
-                        verifyDeltaTime = 1;
+                        verifyDeltaTime = true;
                     }
 
-                    if (verifyInitialDisplacement == 1
+                    if (verifyInitialDisplacement
                         &&
-                        verifySpeed == 1
+                        verifySpeed
                         &&
-                        verifyDeltaTime == 1) {
+                        verifyDeltaTime) {
                         res.setText(mru.spaceLaw(initialDisplacement, speedValue, deltaTime, physic.GET_STEP));
 
                         return;

@@ -22,8 +22,8 @@ public class MRU_Displacement1 extends MyActivity {
     
     private static double initialDisplacement;
     private static double finalDisplacement;
-    private static int verify_ID;
-    private static int verify_FD;
+    private static Boolean verify_ID;
+    private static Boolean verify_FD;
     private static Tools tools;
     private static MRU mru;
 
@@ -52,29 +52,29 @@ public class MRU_Displacement1 extends MyActivity {
 
                     if (tools.isNull(si.getText().toString())) {
                         si.setError(getText(R.string.null_field));
-                        verify_ID = 0;
+                        verify_ID = false;
                     } else if (tools.isDot(si.getText().toString())) {
                         si.setError(getText(R.string.dot_value));
-                        verify_ID = 0;
+                        verify_ID = false;
                     } else {
                         initialDisplacement = Double.valueOf(si.getText().toString());
-                        verify_ID = 1;
+                        verify_ID = true;
                     }
 
 
                     if (tools.isNull(sf.getText().toString())) {
                         sf.setError(getText(R.string.null_field));
-                        verify_FD = 0;
+                        verify_FD = false;
                     } else if (tools.isDot(sf.getText().toString())) {
                         sf.setError(getText(R.string.dot_value));
-                        verify_FD = 0;
+                        verify_FD = false;
                     } else {
                         finalDisplacement = Double.valueOf(sf.getText().toString());
-                        verify_FD = 1;
+                        verify_FD = true;
                     }
 
 
-                    if (verify_ID == 1 && verify_FD == 1) {
+                    if (verify_ID && verify_FD) {
 
                         res.setText(getText(R.string.dsp)
                                     + " "

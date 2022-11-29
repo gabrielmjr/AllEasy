@@ -23,10 +23,10 @@ public class MRU_Speed2 extends MyActivity {
     private static TextView res;
     private static Button clear;
     
-    private static int verify_initialDisplacement;
-    private static int verify_finalDisplacement;
-    private static int verify_initialTime;
-    private static int verify_finalTime;
+    private static Boolean verify_initialDisplacement;
+    private static boolean verify_finalDisplacement;
+    private static Boolean verify_initialTime;
+    private static Boolean verify_finalTime;
     private static double initialDisplacement;
     private static double finalDisplacement;
     private static double initialTime;
@@ -63,63 +63,63 @@ public class MRU_Speed2 extends MyActivity {
                 public void onClick(View view) {
                     if (tools.isNull(initial_displacement.getText ().toString ())) {
                         initial_displacement.setError(getText(R.string.null_field));
-                        verify_initialDisplacement = 0;
+                        verify_initialDisplacement = false;
                         
                     } else if (tools.isDot(initial_displacement.getText().toString())) {
                         initial_displacement.setError(getText(R.string.dot_value));
-                        verify_initialDisplacement = 0;
+                        verify_initialDisplacement = false;
                         
                     } else {
                         initialDisplacement = Double.valueOf(initial_displacement.getText ().toString ());
-                        verify_initialDisplacement = 1;
+                        verify_initialDisplacement = true;
                     }
                     
                     if (tools.isNull(final_displacement.getText ().toString ())) {
                         final_displacement.setError(getText(R.string.null_field));
-                        verify_finalDisplacement = 0;
+                        verify_finalDisplacement = false;
 
                     } else if (tools.isDot(final_displacement.getText().toString())) {
                         final_displacement.setError(getText(R.string.dot_value));
-                        verify_finalDisplacement = 0;
+                        verify_finalDisplacement = false;
 
                     } else {
                         finalDisplacement = Double.valueOf(final_displacement.getText ().toString ());
-                        verify_finalDisplacement = 1;
+                        verify_finalDisplacement = true;
                     }
                     
                     if (tools.isNull(initial_time.getText ().toString ())) {
                         initial_time.setError(getText(R.string.null_field));
-                        verify_initialTime = 0;
+                        verify_initialTime = false;
 
                     } else if (tools.isDot(initial_time.getText().toString())) {
                         initial_time.setError(getText(R.string.dot_value));
-                        verify_initialTime = 0;
+                        verify_initialTime = false;
 
                     } else {
                         initialTime = Double.valueOf(initial_time.getText ().toString ());
-                        verify_initialTime = 1;
+                        verify_initialTime = true;
                     }
                     
                     if (tools.isNull(final_time.getText ().toString ())) {
                         final_time.setError(getText(R.string.null_field));
-                        verify_finalTime = 0;
+                        verify_finalTime = false;
                         
                     } else if (tools.isDot(final_time.getText().toString())) {
                         final_time.setError(getText(R.string.dot_value));
-                        verify_finalTime = 0;
+                        verify_finalTime = false;
 
                     } else {
                         finalTime = Double.valueOf(final_time.getText ().toString ());
-                        verify_finalTime = 1;
+                        verify_finalTime = true;
                     }
                     
-                    if (verify_initialDisplacement == 1
+                    if (verify_initialDisplacement
                         &&
-                        verify_finalDisplacement == 1
+                        verify_finalDisplacement
                         &&
-                        verify_initialTime == 1
+                        verify_initialTime
                         &&
-                        verify_finalTime == 1) {
+                        verify_finalTime) {
                             
                             res.setText(mru.speedLaw2(initialDisplacement,
                                                       finalDisplacement,
