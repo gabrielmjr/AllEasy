@@ -16,19 +16,19 @@ public class MUV_Acceleration1 extends MyActivity
 {
 
     // Attributes
-    private static EditText delta_speed;
-    private static EditText delta_time;
-    private static TextView acceleration;
-    private static TextView res;
-    private static Button clear;
+    private EditText delta_speed;
+    private EditText delta_time;
+    private TextView acceleration;
+    private TextView res;
+    private Button clear;
 
-    private static int verify_deltaSpeed;
-    private static int verify_deltaTime;
-    private static double deltaSpeed;
-    private static double deltaTime;
-    private static Tools tools;
-    private static MUV muv;
-
+    private Boolean verify_deltaSpeed;
+    private Boolean verify_deltaTime;
+    private double deltaSpeed;
+    private double deltaTime;
+    private Tools tools;
+    private MUV muv;
+    
     private void initialize()
     {
         setToolBar((Toolbar) findViewById(R.id.toolbar));
@@ -61,42 +61,42 @@ public class MUV_Acceleration1 extends MyActivity
                     if (tools.isNull(delta_speed.getText().toString()))
                     {
                         delta_speed.setError(getText(R.string.null_field));
-                        verify_deltaSpeed = 0;
+                        verify_deltaSpeed = false;
 
                     }
                     else if (tools.isDot(delta_speed.getText().toString()))
                     {
                         delta_speed.setError(getText(R.string.dot_value));
-                        verify_deltaSpeed = 0;
+                        verify_deltaSpeed = false;
 
                     }
                     else
                     {
                         deltaSpeed = Double.valueOf(delta_speed.getText().toString());
-                        verify_deltaSpeed = 1;
+                        verify_deltaSpeed = true;
                     }
 
 
                     if (tools.isNull(delta_time.getText().toString()))
                     {
                         delta_time.setError(getText(R.string.null_field));
-                        verify_deltaTime = 0;
+                        verify_deltaTime = false;
 
                     }
                     else if (tools.isDot(delta_time.getText().toString()))
                     {
                         delta_time.setError(getText(R.string.dot_value));
-                        verify_deltaTime = 0;
+                        verify_deltaTime = false;
 
                     }
                     else
                     {
                         deltaTime = Double.valueOf(delta_time.getText().toString());
-                        verify_deltaTime = 1;
+                        verify_deltaTime = true;
                     }
 
 
-                    if (verify_deltaSpeed == 1 && verify_deltaTime == 1)
+                    if (verify_deltaSpeed && verify_deltaTime)
                     {
 
                         res.setText(getText(R.string.accelerationp)
