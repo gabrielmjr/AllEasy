@@ -12,32 +12,34 @@ import com.gabrielMJr.twaire.tools.Tools;
 import com.GabrielMJr.Twaire.AllEasy.app.MyActivity;
 import android.support.v7.widget.Toolbar;
 
-public class FSG extends MyActivity {
+public class FSG extends MyActivity
+{
     // Atrubutos
-    private static Button calculate;
-    private static EditText a;
-    private static EditText b;
-    private static EditText c;
-    private static TextView var_a_x;
-    private static TextView var_b_x;
-    private static TextView result;
-    private static Button clear;
-      
-    private static String ax;
-    private static String bx;
-    private static String cx;
-    private static SDF SDF;
-    private static int av;
-    private static int bv;
-    private static int cv;
-    private static long value_a;
-    private static Long value_b;
-    private static Long value_c;
-    private static Tools Tools;
-    
-    private void initialize() {
-        setToolBar((Toolbar) findViewById (R.id.toolbar));
-        
+    private Button calculate;
+    private EditText a;
+    private EditText b;
+    private EditText c;
+    private TextView var_a_x;
+    private TextView var_b_x;
+    private TextView result;
+    private Button clear;
+
+    private String ax;
+    private String bx;
+    private String cx;
+    private SDF SDF;
+    private Boolean av;
+    private Boolean bv;
+    private Boolean cv;
+    private long value_a;
+    private Long value_b;
+    private Long value_c;
+    private Tools Tools;
+
+    private void initialize()
+    {
+        setToolBar((Toolbar) findViewById(R.id.toolbar));
+
         this.a = findViewById(R.id.a);
         this.b = findViewById(R.id.b);   
         this.c = findViewById(R.id.c);
@@ -51,16 +53,18 @@ public class FSG extends MyActivity {
     }
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState)
+    {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.fsg);
-        
+
         initialize();
-        
+
         // Onclick do botão "determinar"
         this.calculate.setOnClickListener(
             new OnClickListener() {
-                public void onClick(View view) {
+                public void onClick(View view)
+                {
 
                     // Armazenar valores de a, b e c em suas variavéis+"x"
                     ax = a.getText().toString();
@@ -68,60 +72,86 @@ public class FSG extends MyActivity {
                     cx = c.getText().toString();
 
                     // Verificar se valor de <a> é nulo, inválido ou válido
-                    if (Tools.isNull(ax)) {
+                    if (Tools.isNull(ax))
+                    {
                         a.setError(getText(R.string.null_field));
-                        av = 0;
-                    } else { try {
+                        av = false;
+                    }
+                    else
+                    { 
+                    try
+                        {
                             value_a = Long.valueOf(ax);
-                            av = 1;
-                        } catch (Exception e) {
+                            av = true;
+                        }
+                        catch (Exception e)
+                        {
                             a.setError(getText(R.string.invalid_value));
-                            av = 0;
+                            av = false;
                         }
                     }
 
                     // Verificar se valor de <b> é nulo, invàlido ou válido
-                    if (Tools.isNull(bx)) {
+                    if (Tools.isNull(bx))
+                    {
                         b.setError(getText(R.string.null_field));
-                        bv = 0;
-                    } else { try {
+                        bv = false;
+                    }
+                    else
+                    { try
+                        {
                             value_b = Long.valueOf(bx);
-                            bv = 1;
-                        } catch (Exception e) {
+                            bv = true;
+                        }
+                        catch (Exception e)
+                        {
                             b.setError(getText(R.string.invalid_value));
-                            bv = 0;
+                            bv = false;
                         }
                     }
 
                     // Verificar se valor de <c> é nulo, inválido ou válido
-                    if (Tools.isNull(cx)) {
+                    if (Tools.isNull(cx))
+                    {
                         c.setError(getText(R.string.null_field));
-                        cv = 0;
-                    } else { try {
+                        cv = false;
+                    }
+                    else
+                    { try
+                        {
                             value_c = Long.valueOf(cx);
-                            cv = 1;
-                        } catch ( Exception e) {
+                            cv = true;
+                        }
+                        catch ( Exception e)
+                        {
                             c.setError(getText(R.string.invalid_value));			
-                            cv = 0;
+                            cv = false;
                         }
                     }
 
                     // Se os valores forem inseridos correctamente, prossiga normalmente
-                    if ((av == 1) && (bv == 1) && (cv == 1)) {
-                        if (value_b >= 0) {
+                    if (av && bv && cv)
+                    {
+                        if (value_b >= 0)
+                        {
                             var_a_x.setText("");
                             var_a_x.setText(getText(R.string.ax)
                                             + " +");
-                        } else {
+                        }
+                        else
+                        {
                             var_a_x.setText("");
                             var_a_x.setText(R.string.ax);
                         }
 
-                        if (value_c >= 0) {
+                        if (value_c >= 0)
+                        {
                             var_b_x.setText("");
                             var_b_x.setText(getText(R.string.bx)
                                             + " +");
-                        } else {
+                        }
+                        else
+                        {
                             var_b_x.setText("");
                             var_b_x.setText(R.string.bx);
                         }
@@ -162,16 +192,18 @@ public class FSG extends MyActivity {
                                        + SDF.getEES()
                                        + "\n\nConcavidade virada para"
                                        + SDF.getConcavidade());
-                                       
-                                       return;
+
+                        return;
 
                         // Senão, retorna um vazio
-                    } else {
+                    }
+                    else
+                    {
                         return;
                     }
                 }
             });
-            
+
         this.clear.setOnClickListener(
             new OnClickListener()
             {
@@ -184,7 +216,7 @@ public class FSG extends MyActivity {
                     var_a_x.setText(null);
                     var_b_x.setText(null);
                     result.setText(null);
-                    
+
                     return;
                 }
             });

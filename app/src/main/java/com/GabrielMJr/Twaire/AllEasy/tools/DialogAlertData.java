@@ -9,7 +9,7 @@ import android.graphics.drawable.Drawable;
 
 public class DialogAlertData {
     
-    private static Context context;
+    private Context context;
     
     // Construtor
     public DialogAlertData(Context context) {

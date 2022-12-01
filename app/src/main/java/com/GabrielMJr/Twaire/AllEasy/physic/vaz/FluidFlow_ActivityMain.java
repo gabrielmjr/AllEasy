@@ -20,15 +20,15 @@ import android.support.v7.widget.Toolbar;
 
 public class FluidFlow_ActivityMain extends MyActivity {
 
-    private static LinearLayout vaz1;
-    private static LinearLayout vaz2;
-    private static LinearLayout vaz3;
-    private static LinearLayout t1;
-    private static LinearLayout V1;
-    private static LinearLayout vel1;
-	private static LinearLayout vel2;
-    private static LinearLayout area1;
-    private static LinearLayout raio1;
+    private LinearLayout vaz1;
+    private LinearLayout vaz2;
+    private LinearLayout vaz3;
+    private LinearLayout t1;
+    private LinearLayout V1;
+    private LinearLayout vel1;
+	private LinearLayout vel2;
+    private LinearLayout area1;
+    private LinearLayout raio1;
     
     private void initialize() {
         setToolBar((Toolbar) findViewById(R.id.toolbar));

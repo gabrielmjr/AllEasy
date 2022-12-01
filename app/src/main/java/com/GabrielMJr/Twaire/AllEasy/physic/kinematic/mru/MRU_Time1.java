@@ -14,18 +14,18 @@ import android.widget.Button;
 
 public class MRU_Time1 extends MyActivity {
     
-    private static EditText initial_time;
-    private static EditText final_time;
-    private static TextView delta_time;
-    private static TextView res;
-    private static Button clear;
+    private EditText initial_time;
+    private EditText final_time;
+    private TextView delta_time;
+    private TextView res;
+    private Button clear;
     
-    private static int verify_initialTime;
-    private static int verify_finalTime;
-    private static double initialTime;
-    private static double finalTime;
-    private static Tools tools;
-    private static MRU mru;
+    private Boolean verify_initialTime;
+    private Boolean verify_finalTime;
+    private double initialTime;
+    private double finalTime;
+    private Tools tools;
+    private MRU mru;
     
     public void initialize() {
         setToolBar((Toolbar) findViewById(R.id.toolbar));
@@ -53,31 +53,31 @@ public class MRU_Time1 extends MyActivity {
                     
                     if (tools.isNull(initial_time.getText().toString())) {
                         initial_time.setError (getText(R.string.null_field));
-                        verify_initialTime = 0;
+                        verify_initialTime = false;
                         
                     } else if (tools.isDot(initial_time.getText().toString())) {
                         initial_time.setError (getText(R.string.dot_value));
-                        verify_initialTime = 0;
+                        verify_initialTime = false;
                         
                     } else {
                         initialTime = Double.valueOf(initial_time.getText().toString());
-                        verify_initialTime = 1;
+                        verify_initialTime = true;
                     }
                     
                     if (tools.isNull(final_time.getText().toString())) {
                         final_time.setError (getText(R.string.null_field));
-                        verify_finalTime = 0;
+                        verify_finalTime = false;
 
                     } else if (tools.isDot(final_time.getText().toString())) {
                         final_time.setError (getText(R.string.dot_value));
-                        verify_finalTime = 0;
+                        verify_finalTime = false;
 
                     } else {
                         finalTime = Double.valueOf(final_time.getText().toString());
-                        verify_finalTime = 1;
+                        verify_finalTime = true;
                     }
                     
-                    if (verify_initialTime == 1 && verify_finalTime == 1) {
+                    if (verify_initialTime && verify_finalTime) {
                         res.setText(getText(R.string.dtp)
                                    + " "
                                    + finalTime

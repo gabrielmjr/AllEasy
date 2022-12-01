@@ -14,18 +14,18 @@ import android.widget.Button;
 
 public class MRU_Initial_Displacement extends MyActivity {
 
-    private static EditText delta_displacement;
-    private static EditText final_displacement;
-    private static TextView displacement;
-    private static TextView res;
-    private static Button clear;
+    private EditText delta_displacement;
+    private EditText final_displacement;
+    private TextView displacement;
+    private TextView res;
+    private Button clear;
     
-    private static int verify_delta_displacement;
-    private static int verify_final_displacement;
-    private static double deltaDisplacement;
-    private static double finalDisplacement;
-    private static Tools tools;
-    private static MRU mru;
+    private Boolean verify_delta_displacement;
+    private Boolean verify_final_displacement;
+    private double deltaDisplacement;
+    private double finalDisplacement;
+    private Tools tools;
+    private MRU mru;
 
     private void initialize () {
         setToolBar((Toolbar) findViewById(R.id.toolbar));
@@ -52,35 +52,35 @@ public class MRU_Initial_Displacement extends MyActivity {
                 public void onClick (View view) {
                     if (tools.isNull(delta_displacement.getText().toString())) {
                         delta_displacement.setError(getText(R.string.null_field));
-                        verify_delta_displacement = 0;
+                        verify_delta_displacement = false;
 
                     }
                     else if (tools.isDot(delta_displacement.getText().toString())) {
                         delta_displacement.setError(getText(R.string.dot_value));
-                        verify_delta_displacement = 0;
+                        verify_delta_displacement = false;
 
                     }
                     else {
                         deltaDisplacement = Double.valueOf(delta_displacement.getText().toString());
-                        verify_delta_displacement = 1;
+                        verify_delta_displacement = true;
                     }
 
                     if (tools.isNull(final_displacement.getText().toString())) {
                         final_displacement.setError(getText(R.string.null_field));
-                        verify_final_displacement = 0;
+                        verify_final_displacement = false;
 
                     }
                     else if (tools.isDot(final_displacement.getText().toString())) {
                         final_displacement.setError(getText(R.string.dot_value));
-                        verify_final_displacement = 0;
+                        verify_final_displacement = false;
 
                     }
                     else {
                         finalDisplacement = Double.valueOf(final_displacement.getText().toString());
-                        verify_final_displacement = 1;
+                        verify_final_displacement = true;
                     }
 
-                    if (verify_delta_displacement == 1 && verify_final_displacement == 1) {
+                    if (verify_delta_displacement && verify_final_displacement) {
                         res.setText(getText(R.string.initial_displacement)
                                     + " = "
                                     + finalDisplacement

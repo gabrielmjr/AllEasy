@@ -13,17 +13,17 @@ import android.view.View;
 
 public class MRU_Final_Displacement extends MyActivity {
 
-    private static EditText initial_displacement;
-    private static EditText delta_displacement;
-    private static TextView displacement;
-    private static TextView res;
+    private EditText initial_displacement;
+    private EditText delta_displacement;
+    private TextView displacement;
+    private TextView res;
     
-    private static double initialDisplacement;
-    private static double deltaDisplacement;
-    private static int verifyInitialDisplacement;
-    private static int verifyDeltaDisplacement;
-    private static Tools tools;
-    private static MRU mru;
+    private double initialDisplacement;
+    private double deltaDisplacement;
+    private Boolean verifyInitialDisplacement;
+    private Boolean verifyDeltaDisplacement;
+    private Tools tools;
+    private MRU mru;
 
     private void initialize () {
         setToolBar((Toolbar) findViewById(R.id.toolbar));
@@ -50,36 +50,36 @@ public class MRU_Final_Displacement extends MyActivity {
 
                     if (tools.isNull(initial_displacement.getText().toString())) {
                         initial_displacement.setError(getText(R.string.null_field));
-                        verifyInitialDisplacement = 0;
+                        verifyInitialDisplacement = false;
 
                     }
                     else if (tools.isDot(initial_displacement.getText().toString())) {
                         initial_displacement.setError(getText(R.string.dot_value));
-                        verifyInitialDisplacement = 0;
+                        verifyInitialDisplacement = false;
 
                     }
                     else {
                         initialDisplacement = Double.valueOf(initial_displacement.getText().toString());
-                        verifyInitialDisplacement = 1;
+                        verifyInitialDisplacement = true;
                     }                 
 
                     if (tools.isNull(delta_displacement.getText().toString())) {
                         delta_displacement.setError(getText(R.string.null_field));
-                        verifyDeltaDisplacement = 0;
+                        verifyDeltaDisplacement = false;
 
                     }
                     else if (tools.isDot(delta_displacement.getText().toString())) {
                         delta_displacement.setError(getText(R.string.dot_value));
-                        verifyDeltaDisplacement = 0;
+                        verifyDeltaDisplacement = false;
 
                     }
                     else {
                         deltaDisplacement = Double.valueOf(delta_displacement.getText().toString());
-                        verifyDeltaDisplacement = 1;
+                        verifyDeltaDisplacement = true;
                     }              
 
 
-                    if (verifyInitialDisplacement == 1 && verifyDeltaDisplacement == 1) {
+                    if (verifyInitialDisplacement && verifyDeltaDisplacement) {
                         res.setText(getText(R.string.final_displacement)
                                     + " = "
                                     + delta_displacement.getText().toString()

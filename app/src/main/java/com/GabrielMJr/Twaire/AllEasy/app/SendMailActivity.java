@@ -16,9 +16,9 @@ public class SendMailActivity extends MyActivity
 {
 
     // Attributes
-    private static EditText mail_message;
-    private static Button send_mail;
-    private static Intent intent;
+    private EditText mail_message;
+    private Button send_mail;
+    private Intent intent;
 
     // This is mail of AllEasy support
     private static final String[] ALLEASY_SUPPORT_MAIL = {"alleasy@myself.com"};

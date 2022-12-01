@@ -12,20 +12,22 @@ import com.GabrielMJr.Twaire.AllEasy.R;
 import android.support.v7.widget.Toolbar;
 import android.widget.Button;
 
-public class Fatorial extends MyActivity {
+public class Fatorial extends MyActivity
+{
 
     // Atributes
-    private static EditText n;
-    private static TextView fat;
-    private static TextView result;
-    private static Button clear;
-    
-    private static Tools Tools;
-    private static Arranjo Arranjo;
-    
-    private void initialize() {
+    private EditText n;
+    private TextView fat;
+    private TextView result;
+    private Button clear;
+
+    private Tools Tools;
+    private Arranjo Arranjo;
+
+    private void initialize()
+    {
         setToolBar((Toolbar) findViewById(R.id.toolbar));
-        
+
         this.n = findViewById(R.id.n);
         this.fat = findViewById(R.id.fat);
         this.result = findViewById(R.id.result);
@@ -35,43 +37,51 @@ public class Fatorial extends MyActivity {
     }
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState)
+    {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.fatorial);
 
         this.initialize();
-        
+
         this.fat.setOnClickListener(
             new OnClickListener() {
-                public void onClick(View view) {
+                public void onClick(View view)
+                {
 
                     // Verifica se n é nulo
-                    if (Tools.isNull(n.getText().toString())) {
+                    if (Tools.isNull(n.getText().toString()))
+                    {
                         n.setError(getText(R.string.null_field));
-                    } else {
-						
+                    }
+                    else
+                    {
+
                         // Verifica se o limite de n do .xml é maior que 20 ou não
                         //Se for maior, não vai calcular, pois o resultado estará incorrecto
-						
-                        if (Integer.valueOf(n.getText().toString()) > 20) {
+
+                        if (Integer.valueOf(n.getText().toString()) > 20)
+                        {
                             n.setError(getText(R.string.big_value));
-							
-                        } else {
+
+                        }
+                        else
+                        {
 
                             // Senão, calcule normalmente
                             // Mandar n e p para OpEngeneer.Math
-                           Long res = Arranjo.valueOf(
+                            Long res = Arranjo.valueOf(
                                 Integer.valueOf(n.getText().toString()), Integer.valueOf(n.getText().toString()));
 
                             // Pegar a String[] result
-                            result.setText((CharSequence) "=" + String.valueOf(res));
+                            result.setText("=" + String.valueOf(res));
                         }
                     }
-                    
+
                     return;
                 }
-    });
-    
+            });
+
         this.clear.setOnClickListener(
             new OnClickListener()
             {
@@ -80,9 +90,9 @@ public class Fatorial extends MyActivity {
                 {
                     n.setText(null);
                     result.setText(null);
-                    
+
                     return;
                 }
             });
     }
-   }
+}

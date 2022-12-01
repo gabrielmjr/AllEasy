@@ -16,22 +16,22 @@ import android.widget.Button;
 
 public class MRU_Displacement3 extends MyActivity {
     
-    private static EditText initial_time;
-    private static EditText final_time;
-    private static EditText media_speed;
-    private static TextView displacement;
-    private static TextView res;
-    private static Button clear;
+    private EditText initial_time;
+    private EditText final_time;
+    private EditText media_speed;
+    private TextView displacement;
+    private TextView res;
+    private Button clear;
     
-    private static double initialTime;
-    private static double finalTime;
-    private static double mediaSpeed;
-    private static int verify_initial_time;
-    private static int verify_final_time;
-    private static int verify_media_speed;
-    private static Tools tools;
-    private static MRU mru;
-    private static Physic physic;
+    private double initialTime;
+    private double finalTime;
+    private double mediaSpeed;
+    private Boolean verify_initial_time;
+    private Boolean verify_final_time;
+    private Boolean verify_media_speed;
+    private Tools tools;
+    private MRU mru;
+    private Physic physic;
     
     private void initialize() {
         setToolBar((Toolbar) findViewById(R.id.toolbar));
@@ -60,51 +60,51 @@ public class MRU_Displacement3 extends MyActivity {
                     
                     if (tools.isNull(initial_time.getText().toString())) {
                         initial_time.setError(getText(R.string.null_field));
-                        verify_initial_time = 0;
+                        verify_initial_time = false;
                         
                     } else if (tools.isDot(initial_time.getText().toString())) {
                         initial_time.setError(getText(R.string.dot_value));
-                        verify_initial_time = 0;
+                        verify_initial_time = false;
                         
                     } else {
                         initialTime = Double.valueOf(initial_time.getText().toString());
-                        verify_initial_time = 1;
+                        verify_initial_time = true;
                     }
                     
                     
                     if (tools.isNull(final_time.getText().toString())) {
                         final_time.setError(getText(R.string.null_field));
-                        verify_final_time = 0;
+                        verify_final_time = false;
 
                     } else if (tools.isDot(final_time.getText().toString())) {
                         final_time.setError(getText(R.string.dot_value));
-                        verify_final_time = 0;
+                        verify_final_time = false;
 
                     } else {
                         finalTime = Double.valueOf(final_time.getText().toString());
-                        verify_final_time = 1;
+                        verify_final_time = true;
                     }
                     
                     
                     if (tools.isNull(media_speed.getText().toString())) {
                         media_speed.setError(getText(R.string.null_field));
-                        verify_media_speed = 0;
+                        verify_media_speed = false;
 
                     } else if (tools.isDot(media_speed.getText().toString())) {
                         media_speed.setError(getText(R.string.dot_value));
-                        verify_media_speed = 0;
+                        verify_media_speed = false;
 
                     } else {
                         mediaSpeed = Double.valueOf(media_speed.getText().toString());
-                        verify_media_speed = 1;
+                        verify_media_speed = true;
                     }
                     
                     
-                    if(verify_initial_time == 1
+                    if(verify_initial_time
                       &&
-                      verify_final_time == 1
+                      verify_final_time
                       &&
-                      verify_media_speed == 1) {
+                      verify_media_speed) {
                                         
                        res.setText((CharSequence)mru.tVDisplacement(initialTime, finalTime, mediaSpeed, physic.GET_STEP));                       
                           

@@ -15,18 +15,18 @@ import android.widget.Button;
 public class FlowRate2 extends MyActivity {
 
 	// Atributos
-	private static EditText vel;
-	private static TextView vaz;
-	private static EditText ar;
-	private static TextView res;
-    private static Button clear;
+	private EditText vel;
+	private TextView vaz;
+	private EditText ar;
+	private TextView res;
+    private Button clear;
     
-	private static Tools Tools;
-	private static int verifyVelocity;
-	private static int verifyArea;
-	private static Double velocidade;
-	private static Double area;
-	private static FluidFlow FF;
+	private Tools Tools;
+	private Boolean verifyVelocity;
+	private Boolean verifyArea;
+	private Double velocidade;
+	private Double area;
+	private FluidFlow FF;
     
     private void initialize() {
         setToolBar((Toolbar) findViewById(R.id.toolbar));
@@ -52,29 +52,29 @@ public class FlowRate2 extends MyActivity {
 
                     if (Tools.isNull(ar.getText().toString())) {
                         ar.setText(getText(R.string.null_field));
-                        verifyArea = 0;
+                        verifyArea = false;
                     } else if (Tools.isDot(ar.getText().toString())) {
                         ar.setError(getText(R.string.dot_value));
-                        verifyArea = 0;
+                        verifyArea = false;
                     } else {
                         area = Double.valueOf(ar.getText().toString());
-                        verifyArea = 1;
+                        verifyArea = true;
                     }
 
 
                     if (Tools.isNull(vel.getText().toString())) {
                         vel.setError(getText(R.string.null_field));
-                        verifyVelocity = 0;
+                        verifyVelocity = false;
                     } else if (Tools.isDot(vel.getText().toString())) {
                         vel.setError(getText(R.string.dot_value));
-                        verifyVelocity = 0;
+                        verifyVelocity = false;
                     } else {
                         velocidade = Double.valueOf(vel.getText().toString());
-                        verifyVelocity = 1;
+                        verifyVelocity = true;
                     }
 
                     
-                    if (verifyVelocity == 1 && verifyArea == 1) {
+                    if (verifyVelocity && verifyArea) {
                         res.setText(getText(R.string.flowRatep)
                                     + " "
                                     + area

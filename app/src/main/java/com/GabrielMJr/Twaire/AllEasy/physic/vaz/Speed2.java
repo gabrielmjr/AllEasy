@@ -15,19 +15,19 @@ import android.widget.Button;
 
 public class Speed2 extends MyActivity {
     
-	private static EditText vaz;
-	private static EditText ra;
-	private static TextView speed;
-	private static TextView res;
-    private static Button clear;
+	private EditText vaz;
+	private EditText ra;
+	private TextView speed;
+	private TextView res;
+    private Button clear;
     
-	private static Tools Tools;
-	private static int verifyVaz;
-	private static int verifyRay;
-	private static double fluidFlow;
-	private static double raio;
-	private static FluidFlow FF;
-    private static Physic physic;
+	private Tools Tools;
+	private Boolean verifyVaz;
+	private Boolean verifyRay;
+	private double fluidFlow;
+	private double raio;
+	private FluidFlow FF;
+    private Physic physic;
     
     private void initialize() {
         setToolBar((Toolbar) findViewById(R.id.toolbar));
@@ -54,29 +54,29 @@ public class Speed2 extends MyActivity {
 
                         if (Tools.isNull(vaz.getText().toString())) {
                             vaz.setError(getText(R.string.null_field));
-                            verifyVaz = 0;
+                            verifyVaz = false;
                         } else if (Tools.isDot(vaz.getText().toString())) {
 							vaz.setError(getText(R.string.dot_value));
-							verifyVaz = 0;
+							verifyVaz = false;
 						} else {
                             fluidFlow = Double.valueOf(vaz.getText().toString());
-                            verifyVaz = 1;
+                            verifyVaz = true;
                         }
 
                     
                         if (Tools.isNull(ra.getText().toString())) {
                             ra.setError(getText(R.string.null_field));
-                            verifyRay = 0;
+                            verifyRay = false;
                         } else if (Tools.isDot(ra.getText().toString())) {
 							ra.setError(getText(R.string.dot_value));
-							verifyRay = 0;
+							verifyRay = false;
 						} else {
                             raio = Double.valueOf(ra.getText().toString());
-                            verifyRay = 1;
+                            verifyRay = true;
                         }
 
 
-                    if (verifyVaz == 1 && verifyRay == 1) {
+                    if (verifyVaz && verifyRay) {
                         res.setText((CharSequence) FF.sSpeed(fluidFlow, raio, physic.GET_STEP));
                         
                         return;

@@ -17,19 +17,19 @@ public class Combination extends MyActivity
 {
 
     // Atributes
-    private static EditText n;
-    private static EditText p;
-    private static TextView c;
-    private static TextView result;
-    private static Button clear;
+    private EditText n;
+    private EditText p;
+    private TextView c;
+    private TextView result;
+    private Button clear;
 
-    private static String[] res = new String[4];
-    private static Tools Tools;
-    private static Arranjo Arranjo;
-    private static int verifyN;
-    private static int verifyP;
-    private static int verifyNfat;
-    private static int verifyPfat;
+    private String[] res = new String[4];
+    private Tools Tools;
+    private Arranjo Arranjo;
+    private Boolean verifyN;
+    private Boolean verifyP;
+    private Boolean verifyNfat;
+    private Boolean verifyPfat;
 
     private void initialize()
     {
@@ -60,24 +60,24 @@ public class Combination extends MyActivity
                     if (Tools.isNull(n.getText().toString()))
                     {
                         n.setError(getText(R.string.null_field));
-                        Combination.verifyN = 0;
+                        verifyN = false;
                     }
                     else
                     {
-                        Combination.verifyN = 1;
+                        verifyN = true;
                     }
 
                     if (Tools.isNull(p.getText().toString()))
                     {
                         p.setError(getText(R.string.null_field));
-                        Combination.verifyP = 0;
+                        verifyP = false;
                     }
                     else
                     {
-                        Combination.verifyP = 1;
+                        verifyP = true;
                     }
 
-                    if (Combination.verifyN == 1 && Combination.verifyP == 1)
+                    if (verifyN && verifyP)
                     {
 
                         // Valores de n e p do .xml
@@ -86,7 +86,7 @@ public class Combination extends MyActivity
 
                         if (pp > nn)
                         {
-                            Toast.makeText(Combination.this, R.string.p_big_than_n, Toast.LENGTH_SHORT).show();
+                            Toast.makeText(getApplicationContext(), R.string.p_big_than_n, Toast.LENGTH_SHORT).show();
                         }
                         else
                         {
@@ -107,50 +107,50 @@ public class Combination extends MyActivity
                             String resfat = String.valueOf(Double.valueOf(nfat) / (Double.valueOf(nmpfat) * Double.valueOf(pfat)));
 
                             // Mandar todos os resultados para uma String[] result
-                            Combination.setRes(nfat, pfat, nmpfat, resfat);
+                            setRes(nfat, pfat, nmpfat, resfat);
 
                             if (Long.valueOf(nfat) <= 0)
                             {
-                                Toast.makeText(Combination.this, R.string.big_values, Toast.LENGTH_SHORT).show();
-                                Combination.verifyNfat = 0;
+                                Toast.makeText(getApplicationContext(), R.string.big_values, Toast.LENGTH_SHORT).show();
+                                verifyNfat = false;
                             }
                             else
                             {
-                                Combination.verifyNfat = 1;
+                                verifyNfat = true;
                             }
 
                             if (Long.valueOf(pfat) <= 0)
                             {
-                                Toast.makeText(Combination.this, R.string.big_values,  Toast.LENGTH_SHORT).show();
-                                Combination.verifyPfat = 0;
+                                Toast.makeText(getApplicationContext(), R.string.big_values, Toast.LENGTH_SHORT).show();
+                                verifyPfat = false;
                             }
                             else
                             {
-                                Combination.verifyPfat = 1;
+                                verifyPfat = true;
                             }
 
-                            if (Combination.verifyNfat == 1 && Combination.verifyPfat == 1)
+                            if (verifyNfat && verifyPfat)
                             {  
-                                Combination.setRes(nfat, pfat, nmpfat, resfat);    
+                                setRes(nfat, pfat, nmpfat, resfat);    
                                 result.setText(
                                     getText(R.string.nfp)
                                     + " "
-                                    + String.valueOf(Combination.getRes()[0])
+                                    + String.valueOf(getRes()[0])
                                     + "\n"
                                     + getText(R.string.pfp)
                                     + " "
-                                    + String.valueOf(Combination.getRes()[1])
+                                    + String.valueOf(getRes()[1])
                                     + "\n"
                                     + getText(R.string.nmpfp)
                                     + " "
-                                    + String.valueOf(Combination.getRes()[2])
+                                    + String.valueOf(getRes()[2])
                                     + "\n"
                                     + getText(R.string.resultp)
                                     + " "
-                                    + String.valueOf(Combination.getRes()[3]));
+                                    + String.valueOf(getRes()[3]));
 
                             }
-                            
+
                         }    
                     }
                     return;
@@ -166,7 +166,7 @@ public class Combination extends MyActivity
                     n.setText(null);
                     p.setText(null);
                     result.setText(null);
-                    
+
                     return;
                 }
             });
@@ -174,17 +174,17 @@ public class Combination extends MyActivity
 
 
     // Setters e getters
-    private static void setRes(String nfat, String pfat, String nmpfat, String resfat)
+    private void setRes(String nfat, String pfat, String nmpfat, String resfat)
     {
-        Combination.res[0] = nfat;
-        Combination.res[1] = pfat;
-        Combination.res[2] = nmpfat;
-        Combination.res[3] = resfat;
-        
+        res[0] = nfat;
+        res[1] = pfat;
+        res[2] = nmpfat;
+        res[3] = resfat;
+
         return;
     }
 
-    private static String[] getRes()
+    private String[] getRes()
     {
         return res;
     }

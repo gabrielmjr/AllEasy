@@ -17,22 +17,22 @@ public class MUV_Acceleration3 extends MyActivity
 {
 
     // Attributes
-    private static EditText initial_speed;
-    private static EditText final_speed;
-    private static EditText delta_time;
-    private static TextView acceleration;
-    private static TextView res;
-    private static Button clear;
+    private EditText initial_speed;
+    private EditText final_speed;
+    private EditText delta_time;
+    private TextView acceleration;
+    private TextView res;
+    private Button clear;
 
-    private static int verify_initialSpeed;
-    private static int verify_finalSpeed;
-    private static int verify_deltaTime;
-    private static double initialSpeed;
-    private static double finalSpeed;
-    private static double deltaTime;
-    private static Tools tools;
-    private static MUV muv;
-    private static Physic physic;
+    private Boolean verify_initialSpeed;
+    private Boolean verify_finalSpeed;
+    private Boolean verify_deltaTime;
+    private double initialSpeed;
+    private double finalSpeed;
+    private double deltaTime;
+    private Tools tools;
+    private MUV muv;
+    private Physic physic;
 
     private void initialize()
     {
@@ -66,64 +66,64 @@ public class MUV_Acceleration3 extends MyActivity
                     if (tools.isNull(initial_speed.getText().toString()))
                     {
                         initial_speed.setError(getText(R.string.null_field));
-                        verify_initialSpeed = 0;
+                        verify_initialSpeed = false;
 
                     }
                     else if (tools.isDot(initial_speed.getText().toString()))
                     {
                         initial_speed.setError(getText(R.string.dot_value));
-                        verify_initialSpeed = 0;
+                        verify_initialSpeed = false;
 
                     }
                     else
                     {
                         initialSpeed = Double.valueOf(initial_speed.getText().toString());
-                        verify_initialSpeed = 1;
+                        verify_initialSpeed = true;
                     }
 
 
                     if (tools.isNull(final_speed.getText().toString()))
                     {
                         final_speed.setError(getText(R.string.null_field));
-                        verify_finalSpeed = 0;
+                        verify_finalSpeed = false;
 
                     }
                     else if (tools.isDot(final_speed.getText().toString()))
                     {
                         final_speed.setError(getText(R.string.dot_value));
-                        verify_finalSpeed = 0;
+                        verify_finalSpeed = false;
 
                     }
                     else
                     {
                         finalSpeed = Double.valueOf(final_speed.getText().toString());
-                        verify_finalSpeed = 1;
+                        verify_finalSpeed = true;
                     }
 
                     if (tools.isNull(delta_time.getText().toString()))
                     {
                         delta_time.setError(getText(R.string.null_field));
-                        verify_deltaTime = 0;
+                        verify_deltaTime = false;
 
                     }
                     else if (tools.isDot(delta_time.getText().toString()))
                     {
                         delta_time.setError(getText(R.string.dot_value));
-                        verify_deltaTime = 0;
+                        verify_deltaTime = false;
 
                     }
                     else
                     {
                         deltaTime = Double.valueOf(delta_time.getText().toString());
-                        verify_deltaTime = 1;
+                        verify_deltaTime = true;
                     }
 
 
-                    if (verify_initialSpeed == 1 
+                    if (verify_initialSpeed 
                         &&
-                        verify_finalSpeed == 1
+                        verify_finalSpeed
                         &&
-                        verify_deltaTime == 1)
+                        verify_deltaTime)
                     {
 
                         res.setText(muv.tAcceleration(initialSpeed, finalSpeed, deltaTime, physic.GET_STEP));

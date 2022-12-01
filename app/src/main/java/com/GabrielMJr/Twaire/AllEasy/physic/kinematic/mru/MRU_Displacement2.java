@@ -14,18 +14,18 @@ import android.widget.Button;
 
 public class MRU_Displacement2 extends MyActivity {
     
-    private static EditText delta_time;
-    private static EditText media_speed;
-    private static TextView displacement;
-    private static TextView res;
-    private static Button clear;
+    private EditText delta_time;
+    private EditText media_speed;
+    private TextView displacement;
+    private TextView res;
+    private Button clear;
     
-    private static Double time;
-    private static Double mediaSpeed;
-    private static int verify_Time;
-    private static int verify_mediaSpeed;
-    private static Tools tools;
-    private static MRU mru;
+    private Double time;
+    private Double mediaSpeed;
+    private Boolean verify_Time;
+    private Boolean verify_mediaSpeed;
+    private Tools tools;
+    private MRU mru;
     
     private void initialize() {
         setToolBar((Toolbar) findViewById(R.id.toolbar));
@@ -51,29 +51,29 @@ public class MRU_Displacement2 extends MyActivity {
                 public void onClick(View view) {
                     if (tools.isNull(delta_time.getText().toString())) {
                         delta_time.setError(getText(R.string.null_field));
-                        verify_Time = 0;
+                        verify_Time = false;
                     } else if (tools.isDot(delta_time.getText().toString())) {
                         delta_time.setError(getText(R.string.dot_value));
-                        verify_Time = 0;
+                        verify_Time = false;
                     } else {
                         time = Double.valueOf(delta_time.getText().toString());
-                        verify_Time = 1;
+                        verify_Time = true;
                     }
 
 
                     if (tools.isNull(media_speed.getText().toString())) {
                        media_speed.setError(getText(R.string.null_field));
-                        verify_mediaSpeed = 0;
+                        verify_mediaSpeed = false;
                     } else if (tools.isDot(media_speed.getText().toString())) {
                         media_speed.setError(getText(R.string.dot_value));
-                        verify_mediaSpeed = 0;
+                        verify_mediaSpeed = false;
                     } else {
                         mediaSpeed = Double.valueOf(media_speed.getText().toString());
-                        verify_mediaSpeed = 1;
+                        verify_mediaSpeed = true;
                     }
 
 
-                    if (verify_Time == 1 && verify_mediaSpeed == 1) {
+                    if (verify_Time && verify_mediaSpeed) {
 
                         res.setText( getText(R.string.dsp)
                                     + " "

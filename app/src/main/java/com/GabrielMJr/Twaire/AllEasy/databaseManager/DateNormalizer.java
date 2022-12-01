@@ -11,7 +11,6 @@ public class DateNormalizer {
 	private static final SimpleDateFormat sdfdy = new SimpleDateFormat("DD");
 	private static final SimpleDateFormat sdfm = new SimpleDateFormat("MM");
 	private static final SimpleDateFormat sdfd = new SimpleDateFormat("dd");
-	//private static final SimpleDateFormat sdfh = new SimpleDateFormat("hh");
 	private static final SimpleDateFormat sdfM = new SimpleDateFormat("mm");
 	private static final SimpleDateFormat sdfs = new SimpleDateFormat("ss");
 	private static int[] normalizeDate = new int[7];

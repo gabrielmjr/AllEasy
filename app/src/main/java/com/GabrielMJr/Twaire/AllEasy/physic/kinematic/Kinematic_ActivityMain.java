@@ -47,36 +47,36 @@ public class Kinematic_ActivityMain extends MyActivity
 
     // MRU
     // Displacement
-    private static LinearLayout mru_fVDisplacement;
-    private static LinearLayout mru_sVDisplacement;
-    private static LinearLayout mru_tVDiaplacement;
-    private static LinearLayout mru_initial_displacement;
-    private static LinearLayout mru_final_displacement;
-    private static LinearLayout mru_displacement_law;
+    private LinearLayout mru_fVDisplacement;
+    private LinearLayout mru_sVDisplacement;
+    private LinearLayout mru_tVDiaplacement;
+    private LinearLayout mru_initial_displacement;
+    private LinearLayout mru_final_displacement;
+    private LinearLayout mru_displacement_law;
 
     // Speed
-    private static LinearLayout mru_speed_law1;
-    private static LinearLayout mru_speed_law2;
+    private LinearLayout mru_speed_law1;
+    private LinearLayout mru_speed_law2;
 
     // Time
-    private static LinearLayout mru_time1;
-    private static LinearLayout mru_time2;
-    private static LinearLayout mru_time3;
-    private static LinearLayout mru_initial_time;
-    private static LinearLayout mru_final_time;
+    private LinearLayout mru_time1;
+    private LinearLayout mru_time2;
+    private LinearLayout mru_time3;
+    private LinearLayout mru_initial_time;
+    private LinearLayout mru_final_time;
 
     // MUV
     // Acceleration
-    private static LinearLayout muv_acceleration1;
-    private static LinearLayout muv_acceleration2;
-    private static LinearLayout muv_acceleration3;
-    private static LinearLayout muv_acceleration4;
+    private LinearLayout muv_acceleration1;
+    private LinearLayout muv_acceleration2;
+    private LinearLayout muv_acceleration3;
+    private LinearLayout muv_acceleration4;
     
     // Speed
-    private static LinearLayout muv_speed1;
-    private static LinearLayout muv_speed2;
-    private static LinearLayout muv_speed3;
-    private static LinearLayout muv_speed4;
+    private LinearLayout muv_speed1;
+    private LinearLayout muv_speed2;
+    private LinearLayout muv_speed3;
+    private LinearLayout muv_speed4;
 
     private void initialize()
     {

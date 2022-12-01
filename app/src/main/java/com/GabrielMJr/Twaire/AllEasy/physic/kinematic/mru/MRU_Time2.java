@@ -14,18 +14,18 @@ import android.widget.Button;
 
 public class MRU_Time2 extends MyActivity {
     
-    private static EditText delta_displacement;
-    private static EditText media_speed;
-    private static TextView delta_time;
-    private static TextView res;
-    private static Button clear;
+    private EditText delta_displacement;
+    private EditText media_speed;
+    private TextView delta_time;
+    private TextView res;
+    private Button clear;
     
-    private static int verify_deltaDisplacement;
-    private static int verify_mediaSpeed;
-    private static double deltaDisplacement;
-    private static double mediaSpeed;
-    private static Tools tools;
-    private static MRU mru;
+    private Boolean verify_deltaDisplacement;
+    private Boolean verify_mediaSpeed;
+    private double deltaDisplacement;
+    private double mediaSpeed;
+    private Tools tools;
+    private MRU mru;
     
     private void initialize() {
         setToolBar((Toolbar) findViewById(R.id.toolbar));
@@ -52,32 +52,32 @@ public class MRU_Time2 extends MyActivity {
                     
                     if (tools.isNull(delta_displacement.getText().toString())) {
                         delta_displacement.setError(getText(R.string.null_field));
-                        verify_deltaDisplacement = 0;
+                        verify_deltaDisplacement = false;
                         
                     } else if (tools.isDot(delta_displacement.getText().toString ())) {
                         delta_displacement.setError(getText(R.string.dot_value));
-                        verify_deltaDisplacement = 0;
+                        verify_deltaDisplacement = false;
                         
                     } else {
                         deltaDisplacement = Double.valueOf(delta_displacement.getText().toString());
-                        verify_deltaDisplacement = 1;
+                        verify_deltaDisplacement = true;
                         
-                    }
+                    
                     
                     if (tools.isNull(media_speed.getText().toString())) {
                         media_speed.setError(getText(R.string.null_field));
-                        verify_mediaSpeed = 0;
+                        verify_mediaSpeed = false;
                         
                     } else if (tools.isDot(media_speed.getText().toString ())) {
                         media_speed.setError(getText(R.string.dot_value));
-                        verify_mediaSpeed = 0;                   
+                        verify_mediaSpeed = false;                   
                        
                     } else {
                         mediaSpeed = Double.valueOf(media_speed.getText ().toString());
-                        verify_mediaSpeed = 1;                    
+                        verify_mediaSpeed = true;                    
                     }
                     
-                    if (verify_deltaDisplacement == 1 && verify_mediaSpeed == 1) {
+                    if (verify_deltaDisplacement && verify_mediaSpeed) {
                         res.setText(getText(R.string.dtp)
                                    + " "
                                    + getText(R.string.openParenthesis)
@@ -104,6 +104,7 @@ public class MRU_Time2 extends MyActivity {
                         return;
                     }
                 }
+            }
             });
             
         this.clear.setOnClickListener(
