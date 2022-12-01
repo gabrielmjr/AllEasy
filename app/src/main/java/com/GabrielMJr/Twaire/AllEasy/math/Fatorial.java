@@ -16,13 +16,13 @@ public class Fatorial extends MyActivity
 {
 
     // Atributes
-    private static EditText n;
-    private static TextView fat;
-    private static TextView result;
-    private static Button clear;
+    private EditText n;
+    private TextView fat;
+    private TextView result;
+    private Button clear;
 
-    private static Tools Tools;
-    private static Arranjo Arranjo;
+    private Tools Tools;
+    private Arranjo Arranjo;
 
     private void initialize()
     {

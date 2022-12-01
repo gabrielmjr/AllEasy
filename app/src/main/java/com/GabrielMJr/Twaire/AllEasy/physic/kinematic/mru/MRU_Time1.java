@@ -14,18 +14,18 @@ import android.widget.Button;
 
 public class MRU_Time1 extends MyActivity {
     
-    private static EditText initial_time;
-    private static EditText final_time;
-    private static TextView delta_time;
-    private static TextView res;
-    private static Button clear;
+    private EditText initial_time;
+    private EditText final_time;
+    private TextView delta_time;
+    private TextView res;
+    private Button clear;
     
-    private static Boolean verify_initialTime;
-    private static Boolean verify_finalTime;
-    private static double initialTime;
-    private static double finalTime;
-    private static Tools tools;
-    private static MRU mru;
+    private Boolean verify_initialTime;
+    private Boolean verify_finalTime;
+    private double initialTime;
+    private double finalTime;
+    private Tools tools;
+    private MRU mru;
     
     public void initialize() {
         setToolBar((Toolbar) findViewById(R.id.toolbar));

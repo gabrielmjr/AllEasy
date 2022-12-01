@@ -14,18 +14,18 @@ import android.widget.Button;
 
 public class MRU_Speed1 extends MyActivity {
     
-    private static EditText delta_displacement;
-    private static EditText delta_time;
-    private static TextView speed;
-    private static TextView res;
-    private static Button clear;
+    private EditText delta_displacement;
+    private EditText delta_time;
+    private TextView speed;
+    private TextView res;
+    private Button clear;
     
-    private static Tools tools;
-    private static MRU mru;
-    private static Boolean verify_deltaDisplacement;
-    private static Boolean verify_deltaTime;
-    private static double deltaDisplacement;
-    private static double deltaTime;
+    private Tools tools;
+    private MRU mru;
+    private Boolean verify_deltaDisplacement;
+    private Boolean verify_deltaTime;
+    private double deltaDisplacement;
+    private double deltaTime;
     
     private void initialize() {
         setToolBar((Toolbar) findViewById(R.id.toolbar));

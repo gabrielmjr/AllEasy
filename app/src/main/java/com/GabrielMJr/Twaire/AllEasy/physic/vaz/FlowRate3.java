@@ -16,19 +16,19 @@ import android.widget.Button;
 public class FlowRate3 extends MyActivity {
 
 	// Atrubutos
-	private static EditText ra;
-	private static EditText vel;
-	private static TextView vaz;
-	private static TextView res;
-    private static Button clear;
+	private EditText ra;
+	private EditText vel;
+	private TextView vaz;
+	private TextView res;
+    private Button clear;
     
-	private static Tools Tools;
-	private static Double velocidade;
-	private static Double raio;
-	private static int verifyRaio;
-	private static int verifyVelocity;
-	private static FluidFlow FF;
-    private static Physic physic;
+	private Tools Tools;
+	private Double velocidade;
+	private Double raio;
+	private Boolean verifyRaio;
+	private Boolean verifyVelocity;
+	private FluidFlow FF;
+    private Physic physic;
     
     private void initialize() {
         setToolBar((Toolbar) findViewById(R.id.toolbar));
@@ -55,29 +55,29 @@ public class FlowRate3 extends MyActivity {
 
                     if (Tools.isNull(ra.getText().toString())) {
                         ra.setError(getText(R.string.null_field));
-                        verifyRaio = 0;
+                        verifyRaio = false;
                     } else if (Tools.isDot(ra.getText().toString())) {
                         ra.setError(getText(R.string.dot_value));
-                        verifyRaio = 0;
+                        verifyRaio = false;
                     } else {
                         raio = Double.valueOf(ra.getText().toString());
-                        verifyRaio = 1;
+                        verifyRaio = true;
                     }
 
                     
                     if (Tools.isNull(vel.getText().toString())) {
                         vel.setError(getText(R.string.null_field));
-                        verifyVelocity = 0;
+                        verifyVelocity = false;
                     } else if (Tools.isDot(vel.getText().toString())) {
                         vel.setError(getText(R.string.dot_value));
-                        verifyVelocity = 0;
+                        verifyVelocity = false;
                     } else {
                         velocidade = Double.valueOf(vel.getText().toString());
-                        verifyVelocity = 1;
+                        verifyVelocity = true;
                     }
 
 
-                    if (verifyRaio == 1 && verifyVelocity == 1) {
+                    if (verifyRaio && verifyVelocity) {
                         res.setText((CharSequence) FF.tFluidFlow(raio, velocidade, physic.GET_STEP));
                         
                         return;

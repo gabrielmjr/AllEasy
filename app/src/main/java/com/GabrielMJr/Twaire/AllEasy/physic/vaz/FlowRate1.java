@@ -14,19 +14,19 @@ import android.support.v7.widget.Toolbar;
 
 public class FlowRate1 extends MyActivity {
     
-	private static EditText vol;
-    private static TextView res;
-	private static EditText dt;
-	private static TextView vaz;
-    private static Button clear;
+	private EditText vol;
+    private TextView res;
+	private EditText dt;
+	private TextView vaz;
+    private Button clear;
     
-	private static Double volume;
-	private static Double time;
-	private static Tools Tools;
-	private static Integer verifyVolume;
-	private static Integer verifyTime;
-    private static FluidFlow FF;
-    
+	private Double volume;
+	private Double time;
+	private Tools Tools;
+	private Boolean verifyVolume;
+	private Boolean verifyTime;
+    private FluidFlow FF;
+  
     private void initialize() {
         setToolBar((Toolbar) findViewById(R.id.toolbar));
         
@@ -52,39 +52,39 @@ public class FlowRate1 extends MyActivity {
                     // Verificar se volume é nulo ou ponto através do método Tools
                     if (Tools.isNull(vol.getText().toString())) {
                         vol.setError(getText(R.string.null_field));
-                        verifyVolume = 0;
+                        verifyVolume = false;
 
 					    // Se for ponto, pare
                     } else if (Tools.isDot(vol.getText().toString())) {
                         vol.setError(getText(R.string.dot_value));
-                        verifyVolume = 0;
+                        verifyVolume = false;
 
                         // Se não for nulo, continue
                     } else {           
                         volume = Double.valueOf(vol.getText().toString());
-                        verifyVolume = 1;
+                        verifyVolume = true;
                     }
 
 
                     // Verificar se delta tempo é nulo
                     if (Tools.isNull(dt.getText().toString())) {                        
                         dt.setError(getText(R.string.null_field));
-                        verifyTime = 0;
+                        verifyTime = false;
 
 					    // Se for ponto, pare
                     } else if (Tools.isDot(dt.getText().toString())) {
                         dt.setError(getText(R.string.dot_value));
-                        verifyTime = 0;
+                        verifyTime = false;
 
 					    // Se não for, continue
                     } else {
                         time = Double.valueOf(dt.getText().toString());
-                        verifyTime = 1;
+                        verifyTime = true;
                     }
 
                     
                     // Se os valores VerifyVolume e time forem true, efectuar a operação
-                    if (verifyVolume == 1 && verifyTime == 1) {
+                    if (verifyVolume && verifyTime) {
                         res.setText(getText(R.string.flowRatep)
                                     + " "
                                     + volume 

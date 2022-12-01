@@ -16,19 +16,19 @@ import android.widget.Button;
 public class Ray1 extends MyActivity {
 
     // Atrubutos
-    private static EditText vaz;
-    private static EditText vel;
-    private static TextView raio;
-    private static TextView res;
-    private static Button clear;
+    private EditText vaz;
+    private EditText vel;
+    private TextView raio;
+    private TextView res;
+    private Button clear;
     
-    private static int verifyVaz;
-    private static int verifyVelocity;
-    private static Double vazao;
-    private static Double velocidade;
-    private static Tools Tools;
-    private static FluidFlow FF;
-    private static Physic physic;
+    private Boolean verifyVaz;
+    private Boolean verifyVelocity;
+    private Double vazao;
+    private Double velocidade;
+    private Tools Tools;
+    private FluidFlow FF;
+    private Physic physic;
 
     private void initialize() {
         setToolBar((Toolbar) findViewById(R.id.toolbar));
@@ -55,29 +55,29 @@ public class Ray1 extends MyActivity {
 
                     if (Tools.isNull(vaz.getText().toString())) {
                         vaz.setError(getText(R.string.null_field));
-                        verifyVaz = 0;
+                        verifyVaz = false;
                     } else if (Tools.isDot(vaz.getText().toString())) {
                         vaz.setError(getText(R.string.dot_value));
-                        verifyVaz = 0;
+                        verifyVaz = false;
                     } else {
                         vazao = Double.valueOf(vaz.getText().toString());
-                        verifyVaz = 1;
+                        verifyVaz = true;
                     }
 
 
                     if (Tools.isNull(vel.getText().toString())) {
                         vel.setError(getText(R.string.null_field));
-                        verifyVelocity = 0;
+                        verifyVelocity = false;
                     } else if (Tools.isDot(vel.getText().toString())) {
                         vel.setError(getText(R.string.dot_value));
-                        verifyVelocity = 0;
+                        verifyVelocity = true;
                     } else {
                         velocidade = Double.valueOf(vel.getText().toString());
-                        verifyVelocity = 1;
+                        verifyVelocity = false;
                     }
 
 
-                    if (verifyVaz == 1 && verifyVelocity == 1) {
+                    if (verifyVaz && verifyVelocity) {
                         res.setText(FF.ray(vazao, velocidade, physic.GET_STEP));
                         
                         return;

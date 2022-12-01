@@ -33,39 +33,39 @@ public class Settings extends MyActivity
     private SharedPreferences langSharedPreferences = null;
     
     // Locales codes
-    public static final String EN_CODE = "en";
-    public static final String PT_CODE = "pt";
+    public final String EN_CODE = "en";
+    public final String PT_CODE = "pt";
 
-    private static LinearLayout theme_changer;
-    private static LinearLayout language_changer;
-    private static LinearLayout sendMail; 
-    private static LinearLayout about;
+    private LinearLayout theme_changer;
+    private LinearLayout language_changer;
+    private LinearLayout sendMail; 
+    private LinearLayout about;
     
-    private static TextView cancelTheme;
-    private static TextView cancelLang;
-    private static TextView about_text;
+    private TextView cancelTheme;
+    private TextView cancelLang;
+    private TextView about_text;
     
-    private static AlertDialog.Builder builder;
-    private static AlertDialog dialog;
+    private AlertDialog.Builder builder;
+    private AlertDialog dialog;
     
-    private static View viewTheme;
-    private static View viewLang;
+    private View viewTheme;
+    private View viewLang;
     
     // Theme changer
-    private static RadioGroup radioGroup;
-    private static RadioButton light_theme;
-    private static RadioButton dark_theme;
-    private static RadioButton set_by_system;
+    private RadioGroup radioGroup;
+    private RadioButton light_theme;
+    private RadioButton dark_theme;
+    private RadioButton set_by_system;
     
     // Language changer
-    private static RadioGroup choose_lang;
-    private static RadioButton lang_pt;
-    private static RadioButton lang_en;
-    private static RadioButton lang_follow_sys;
+    private RadioGroup choose_lang;
+    private RadioButton lang_pt;
+    private RadioButton lang_en;
+    private RadioButton lang_follow_sys;
 
-    private static String theme_mode;
+    private String theme_mode;
     
-    private static String lang;
+    private String lang;
 
     // Name of shared_preferences for app configuration
     public final String SHARED_PREFERENCES_CONFIG_NAME = "app_config";

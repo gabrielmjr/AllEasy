@@ -35,33 +35,33 @@ public class MainActivity extends MyMainActivity
 {
 
     // Atributes
-    private static CardView arranjos;
-    private static CardView comb;
-    private static CardView fat;
-    private static CardView fsg;
-    private static CardView vaz;
-    private static CardView kinematic;
-    private static TextView welcome;
-    private static Toolbar toolbar;
+    private CardView arranjos;
+    private CardView comb;
+    private CardView fat;
+    private CardView fsg;
+    private CardView vaz;
+    private CardView kinematic;
+    private TextView welcome;
+    private Toolbar toolbar;
 
-    private static String title;
-    private static String message;
-    private static final String DB_NAME = "app_info";
-    private static final String TB_NAME = "version_info";
-    private static int updaterStatus;
-    private static int lastChoosenTheme;
-    private static String lastChoosenLang;
+    private String title;
+    private String message;
+    private final String DB_NAME = "app_info";
+    private final String TB_NAME = "version_info";
+    private int updaterStatus;
+    private int lastChoosenTheme;
+    private String lastChoosenLang;
 
-    private static DataManager DM;
-    private static DialogAlertData dialogAlertData;
-    private static Drawable icon;
-    private static int versionCode;
-    private static PackageInfo packageInfo;
-    private static Handler handler;
+    private DataManager DM;
+    private DialogAlertData dialogAlertData;
+    private Drawable icon;
+    private int versionCode;
+    private PackageInfo packageInfo;
+    private Handler handler;
     private final Context context = this;
-    // private static MyActivity activity;
-    private static Settings settings;
-    private static SharedPreferences sharedPreferences;
+   
+    private Settings settings;
+    private SharedPreferences sharedPreferences;
 
     @Override
     protected void onCreate(Bundle savedInstanceState)

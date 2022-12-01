@@ -15,18 +15,18 @@ import android.widget.Button;
 public class Speed1 extends MyActivity {
 
     // Atributos
-    private static EditText vaz;
-    private static EditText ar;
-    private static TextView vel;
-    private static TextView res;
-    private static Button clear;
+    private EditText vaz;
+    private EditText ar;
+    private TextView vel;
+    private TextView res;
+    private Button clear;
     
-    private static int verifyVaz;
-    private static int verifyAr;
-    private static Double vazao;
-    private static Double area;
-    private static FluidFlow FF;
-    private static Tools Tools;
+    private Boolean verifyVaz;
+    private Boolean verifyAr;
+    private Double vazao;
+    private Double area;
+    private FluidFlow FF;
+    private Tools Tools;
     
     
     private void initialize() {
@@ -53,29 +53,29 @@ public class Speed1 extends MyActivity {
 
                     if (Tools.isNull(vaz.getText().toString())) {
                         vaz.setError(getText(R.string.null_field));
-                        verifyVaz = 0;
+                        verifyVaz = false;
                     } else if (Tools.isDot(vaz.getText().toString())) {
                         vaz.setError(getText(R.string.dot_value));
-                        verifyVaz = 0;
+                        verifyVaz = false;
                     } else {
                         vazao = Double.valueOf(vaz.getText().toString());
-                        verifyVaz = 1;
+                        verifyVaz = true;
                     }
 
 
                     if (Tools.isNull(ar.getText().toString())) {
                         ar.setError(getText(R.string.null_field));
-                        verifyAr = 0;
+                        verifyAr = false;
                     } else if (Tools.isDot(ar.getText().toString())) {
                         ar.setError(getText(R.string.dot_value));
-                        verifyAr = 0;
+                        verifyAr = false;
                     } else {
                         area = Double.valueOf(ar.getText().toString());
-                        verifyAr = 1;
+                        verifyAr = true;
                     }
 
                     
-                    if (verifyVaz == 1 && verifyAr == 1) {
+                    if (verifyVaz && verifyAr) {
                         res.setText(getText(R.string.speedp)
                                     + " "
                                     + "("

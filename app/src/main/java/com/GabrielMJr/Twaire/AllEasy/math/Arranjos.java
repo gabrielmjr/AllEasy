@@ -17,18 +17,18 @@ public class Arranjos extends MyActivity
 {
 
     // Atrubutes
-    private static EditText n;
-    private static EditText p;
-    private static TextView a;
-    private static TextView result;
-    private static Button clear;
+    private EditText n;
+    private EditText p;
+    private TextView a;
+    private TextView result;
+    private Button clear;
 
-    private static Arranjo Arranjo;
-    private static Tools Tools;
-    private static Boolean verifyN;
-    private static Boolean verifyP;
-    private static int vn;
-    private static int vp;
+    private Arranjo Arranjo;
+    private Tools Tools;
+    private Boolean verifyN;
+    private Boolean verifyP;
+    private int vn;
+    private int vp;
 
 
     private void initialize()

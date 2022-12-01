@@ -15,26 +15,26 @@ import android.support.v7.widget.Toolbar;
 public class FSG extends MyActivity
 {
     // Atrubutos
-    private static Button calculate;
-    private static EditText a;
-    private static EditText b;
-    private static EditText c;
-    private static TextView var_a_x;
-    private static TextView var_b_x;
-    private static TextView result;
-    private static Button clear;
+    private Button calculate;
+    private EditText a;
+    private EditText b;
+    private EditText c;
+    private TextView var_a_x;
+    private TextView var_b_x;
+    private TextView result;
+    private Button clear;
 
-    private static String ax;
-    private static String bx;
-    private static String cx;
-    private static SDF SDF;
-    private static Boolean av;
-    private static Boolean bv;
-    private static Boolean cv;
-    private static long value_a;
-    private static Long value_b;
-    private static Long value_c;
-    private static Tools Tools;
+    private String ax;
+    private String bx;
+    private String cx;
+    private SDF SDF;
+    private Boolean av;
+    private Boolean bv;
+    private Boolean cv;
+    private long value_a;
+    private Long value_b;
+    private Long value_c;
+    private Tools Tools;
 
     private void initialize()
     {

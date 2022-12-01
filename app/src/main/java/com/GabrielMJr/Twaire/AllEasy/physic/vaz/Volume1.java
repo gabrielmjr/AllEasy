@@ -15,19 +15,19 @@ import android.widget.Button;
 public class Volume1 extends MyActivity {
 
     // Atributos
-    private static EditText tempo;
-    private static EditText vaz;
-    private static TextView vol;
-    private static TextView res;
-    private static Toolbar toolbar;
-    private static Button clear;
+    private EditText tempo;
+    private EditText vaz;
+    private TextView vol;
+    private TextView res;
+    private Toolbar toolbar;
+    private Button clear;
     
-    private static int verifyTime;
-    private static int verifyVaz;
-    private static Double vazao;
-    private static Double time;
-    private static FluidFlow FF;
-    private static Tools Tools;
+    private Boolean verifyTime;
+    private Boolean verifyVaz;
+    private Double vazao;
+    private Double time;
+    private FluidFlow FF;
+    private Tools Tools;
     
     private void initialize() {
         setToolBar((Toolbar) findViewById(R.id.toolbar));
@@ -53,31 +53,31 @@ public class Volume1 extends MyActivity {
             new OnClickListener() {
                 public void onClick(View view) {
 
-                    if (Volume1.Tools.isNull(tempo.getText().toString())) {
+                    if (Tools.isNull(tempo.getText().toString())) {
                         tempo.setError(getText(R.string.null_field));
-                        verifyTime = 0;
+                        verifyTime = false;
                     } else if (Tools.isDot(tempo.getText().toString())) {
                         tempo.setError(getText(R.string.dot_value));
-                        verifyTime = 0;
+                        verifyTime = false;
                     } else {
                         time = Double.valueOf(tempo.getText().toString());
-                        verifyTime = 1;
+                        verifyTime = true;
                     }
 
 
                     if (Tools.isNull(vaz.getText().toString())) {
                         vaz.setError(getText(R.string.null_field));
-                        verifyVaz = 0;
+                        verifyVaz = false;
                     } else if (Tools.isDot(vaz.getText().toString())) {
                         vaz.setError(getText(R.string.dot_value));
-                        verifyVaz = 0;
+                        verifyVaz = false;
                     } else {
                         vazao = Double.valueOf(vaz.getText().toString());
-                        verifyVaz = 1;
+                        verifyVaz = true;
                     }
 
                     
-                    if (verifyTime == 1 && verifyVaz == 1) {                    
+                    if (verifyTime && verifyVaz) {                    
                         res.setText(getText(R.string.volumep)
                                     + " "
                                     + time

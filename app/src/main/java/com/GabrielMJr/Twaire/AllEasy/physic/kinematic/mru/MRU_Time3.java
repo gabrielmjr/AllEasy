@@ -15,22 +15,22 @@ import android.widget.Button;
 
 public class MRU_Time3 extends MyActivity {
 
-    private static EditText initial_displacement;
-    private static EditText final_displacement;
-    private static EditText media_speed;
-    private static TextView delta_time;
-    private static TextView res;
-    private static Button clear;
+    private EditText initial_displacement;
+    private EditText final_displacement;
+    private EditText media_speed;
+    private TextView delta_time;
+    private TextView res;
+    private Button clear;
     
-    private static Boolean verify_initialDisplacement;
-    private static Boolean verify_finalDisplacement;
-    private static Boolean verify_mediaSpeed;
-    private static double initialDisplacement;
-    private static double finalDisplacement;
-    private static double mediaSpeed;
-    private static Tools tools;
-    private static MRU mru;
-    private static Physic physic;
+    private Boolean verify_initialDisplacement;
+    private Boolean verify_finalDisplacement;
+    private Boolean verify_mediaSpeed;
+    private double initialDisplacement;
+    private double finalDisplacement;
+    private double mediaSpeed;
+    private Tools tools;
+    private MRU mru;
+    private Physic physic;
 
 
     private void initialize () {

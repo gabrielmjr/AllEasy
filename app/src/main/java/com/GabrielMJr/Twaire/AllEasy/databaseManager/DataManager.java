@@ -12,14 +12,14 @@ import com.GabrielMJr.Twaire.AllEasy.tools.DialogAlertData;
 public class DataManager extends SQLiteOpenHelper {
 
 	// Atributos
-	private static String TB_NAME;
-	private static final String COL_1 = "ID";
-	private static final String COL_2 = "data";
-	private static final String COL_2_MAIN = "version_code";
-	private static final String COL_3 = "result";
-	private static final String COL_3_MAIN = "installation_id";
-	private static final String COL_4 = "schedule";
-    private static final DateNormalizer DN = new DateNormalizer();
+	private String TB_NAME;
+	private final String COL_1 = "ID";
+	private final String COL_2 = "data";
+	private final String COL_2_MAIN = "version_code";
+	private final String COL_3 = "result";
+	private final String COL_3_MAIN = "installation_id";
+	private final String COL_4 = "schedule";
+    private final DateNormalizer DN = new DateNormalizer();
 
 	// Construtor
 	public DataManager(Context context, String DB_NAME, String TB_NAME) {
@@ -129,19 +129,19 @@ public class DataManager extends SQLiteOpenHelper {
 		return this.TB_NAME;
 	}
 
-	public static String getCOL_1() {
+	public String getCOL_1() {
 		return COL_1;
 	}
 
-	private static String getCOL_2() {
+	private String getCOL_2() {
 		return COL_2;
 	}
 
-	private static String getCOL_2_MAIN() {
+	private String getCOL_2_MAIN() {
 		return COL_2_MAIN;
 	}
 
-	private static String getCOL_3() {
+	private String getCOL_3() {
 		return COL_3;
 	}
 
@@ -149,7 +149,7 @@ public class DataManager extends SQLiteOpenHelper {
 		return COL_3_MAIN;
 	}
 
-	private static String getCOL_4() {
+	private String getCOL_4() {
 		return COL_4;
     }
 }

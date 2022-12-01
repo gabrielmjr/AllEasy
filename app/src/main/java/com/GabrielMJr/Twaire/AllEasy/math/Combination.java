@@ -17,19 +17,19 @@ public class Combination extends MyActivity
 {
 
     // Atributes
-    private static EditText n;
-    private static EditText p;
-    private static TextView c;
-    private static TextView result;
-    private static Button clear;
+    private EditText n;
+    private EditText p;
+    private TextView c;
+    private TextView result;
+    private Button clear;
 
-    private static String[] res = new String[4];
-    private static Tools Tools;
-    private static Arranjo Arranjo;
-    private static Boolean verifyN;
-    private static Boolean verifyP;
-    private static Boolean verifyNfat;
-    private static Boolean verifyPfat;
+    private String[] res = new String[4];
+    private Tools Tools;
+    private Arranjo Arranjo;
+    private Boolean verifyN;
+    private Boolean verifyP;
+    private Boolean verifyNfat;
+    private Boolean verifyPfat;
 
     private void initialize()
     {
@@ -174,7 +174,7 @@ public class Combination extends MyActivity
 
 
     // Setters e getters
-    private static void setRes(String nfat, String pfat, String nmpfat, String resfat)
+    private void setRes(String nfat, String pfat, String nmpfat, String resfat)
     {
         res[0] = nfat;
         res[1] = pfat;
@@ -184,7 +184,7 @@ public class Combination extends MyActivity
         return;
     }
 
-    private static String[] getRes()
+    private String[] getRes()
     {
         return res;
     }

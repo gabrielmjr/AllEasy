@@ -14,18 +14,18 @@ import android.widget.Button;
 
 public class MRU_Initial_Displacement extends MyActivity {
 
-    private static EditText delta_displacement;
-    private static EditText final_displacement;
-    private static TextView displacement;
-    private static TextView res;
-    private static Button clear;
+    private EditText delta_displacement;
+    private EditText final_displacement;
+    private TextView displacement;
+    private TextView res;
+    private Button clear;
     
-    private static Boolean verify_delta_displacement;
-    private static Boolean verify_final_displacement;
-    private static double deltaDisplacement;
-    private static double finalDisplacement;
-    private static Tools tools;
-    private static MRU mru;
+    private Boolean verify_delta_displacement;
+    private Boolean verify_final_displacement;
+    private double deltaDisplacement;
+    private double finalDisplacement;
+    private Tools tools;
+    private MRU mru;
 
     private void initialize () {
         setToolBar((Toolbar) findViewById(R.id.toolbar));

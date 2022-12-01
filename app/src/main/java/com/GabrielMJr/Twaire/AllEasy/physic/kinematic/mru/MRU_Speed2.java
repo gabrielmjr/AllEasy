@@ -15,25 +15,25 @@ import android.widget.Button;
 
 public class MRU_Speed2 extends MyActivity {
     
-    private static EditText initial_displacement;
-    private static EditText final_displacement;
-    private static EditText initial_time;
-    private static EditText final_time;
-    private static TextView speed;
-    private static TextView res;
-    private static Button clear;
+    private EditText initial_displacement;
+    private EditText final_displacement;
+    private EditText initial_time;
+    private EditText final_time;
+    private TextView speed;
+    private TextView res;
+    private Button clear;
     
-    private static Boolean verify_initialDisplacement;
-    private static boolean verify_finalDisplacement;
-    private static Boolean verify_initialTime;
-    private static Boolean verify_finalTime;
-    private static double initialDisplacement;
-    private static double finalDisplacement;
-    private static double initialTime;
-    private static double finalTime;
-    private static Tools tools;
-    private static MRU mru;
-    private static Physic physic;
+    private Boolean verify_initialDisplacement;
+    private boolean verify_finalDisplacement;
+    private Boolean verify_initialTime;
+    private Boolean verify_finalTime;
+    private double initialDisplacement;
+    private double finalDisplacement;
+    private double initialTime;
+    private double finalTime;
+    private Tools tools;
+    private MRU mru;
+    private Physic physic;
     
     private void initialize() {
         setToolBar((Toolbar) findViewById(R.id.toolbar));

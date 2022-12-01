@@ -14,18 +14,18 @@ import com.gabrielMJr.twaire.tools.Tools;
 
 public class MRU_Displacement1 extends MyActivity {
 
-    private static EditText sf;
-    private static EditText si;
-    private static TextView displacement;
-    private static TextView res;
-    private static Button clear;
+    private EditText sf;
+    private EditText si;
+    private TextView displacement;
+    private TextView res;
+    private Button clear;
     
-    private static double initialDisplacement;
-    private static double finalDisplacement;
-    private static Boolean verify_ID;
-    private static Boolean verify_FD;
-    private static Tools tools;
-    private static MRU mru;
+    private double initialDisplacement;
+    private double finalDisplacement;
+    private Boolean verify_ID;
+    private Boolean verify_FD;
+    private Tools tools;
+    private MRU mru;
 
     private void initialize() {
         setToolBar((Toolbar) findViewById(R.id.toolbar));

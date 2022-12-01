@@ -15,22 +15,22 @@ import android.widget.Button;
 
 public class MRU_Displacement_Law extends MyActivity {
 
-    private static EditText initial_displacement;
-    private static EditText speed;
-    private static EditText delta_time;
-    private static TextView displacement;
-    private static TextView res;
-    private static Button clear;
+    private EditText initial_displacement;
+    private EditText speed;
+    private EditText delta_time;
+    private TextView displacement;
+    private TextView res;
+    private Button clear;
     
-    private static Boolean verifyInitialDisplacement;
-    private static Boolean verifySpeed;
-    private static Boolean verifyDeltaTime;
-    private static double initialDisplacement;
-    private static double speedValue;
-    private static double deltaTime;
-    private static Tools tools;
-    private static MRU mru;
-    private static Physic physic;
+    private Boolean verifyInitialDisplacement;
+    private Boolean verifySpeed;
+    private Boolean verifyDeltaTime;
+    private double initialDisplacement;
+    private double speedValue;
+    private double deltaTime;
+    private Tools tools;
+    private MRU mru;
+    private Physic physic;
 
     private void initialize () {
         setToolBar((Toolbar) findViewById(R.id.toolbar));
