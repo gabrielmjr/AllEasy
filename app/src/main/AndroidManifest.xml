@@ -3,10 +3,14 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.GabrielMJr.Twaire.AllEasy"
     android:versionName="1.2.3-Beta_4">
-    
-    <!--Used to ckech online updates-->
+
+    <!--have full network access-->
     <uses-permission android:name="android.permission.INTERNET"/>
-    
+
+    <!--write the contents of your SD card-->
+        <!--used to download the app updates-->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -29,8 +33,6 @@
 
         </activity>
 
-
-        <!--Settings-->
         <activity
             android:name=".app.Settings"
             android:label="@string/app_name">
@@ -73,8 +75,6 @@
 
         </activity>
 
-
-        <!--Math-->
         <activity
             android:name=".math.Fatorial"
             android:label="@string/fatS">
@@ -131,8 +131,6 @@
 
         </activity>
 
-
-        <!--Physic-->
         <activity
             android:name=".physic.vaz.FluidFlow_ActivityMain"
             android:label="@string/vazS">
@@ -147,8 +145,6 @@
 
         </activity>
 
-
-        <!--Fluid flow-->
         <activity
             android:name=".physic.vaz.FlowRate1"
             android:label="@string/vazoS">
@@ -275,8 +271,6 @@
 
         </activity>
 
-
-        <!--Kinematic-->
         <activity
             android:name=".physic.kinematic.Kinematic_ActivityMain"
             android:label="@string/kinematicS">
@@ -291,7 +285,6 @@
 
         </activity>
 
-        <!--MRU-->
         <activity
             android:name=".physic.kinematic.mru.MRU_Displacement1"
             android:label="@string/displacementS">
@@ -474,9 +467,6 @@
 
         </activity>
 
-
-
-        <!--MUV-->
         <activity
             android:name=".physic.kinematic.muv.MUV_Acceleration1"
             android:label="@string/accelerationS">
@@ -532,7 +522,7 @@
             </intent-filter>
 
         </activity>
-        
+
         <activity
             android:name=".physic.kinematic.muv.MUV_Speed1"
             android:label="@string/velocityS">
@@ -546,7 +536,7 @@
             </intent-filter>
 
         </activity>
-        
+
         <activity
             android:name=".physic.kinematic.muv.MUV_Speed2"
             android:label="@string/velocityS">
@@ -560,7 +550,7 @@
             </intent-filter>
 
         </activity>
-        
+
         <activity
             android:name=".physic.kinematic.muv.MUV_Speed3"
             android:label="@string/velocityS">
@@ -574,7 +564,7 @@
             </intent-filter>
 
         </activity>
-        
+
         <activity
             android:name=".physic.kinematic.muv.MUV_Speed4"
             android:label="@string/velocityS">
@@ -588,7 +578,7 @@
             </intent-filter>
 
         </activity>
-        
+
         <activity
             android:name="physic.kinematic.muv.MUV_Time1"
             android:label="@string/timeS">
@@ -602,7 +592,7 @@
             </intent-filter>
 
         </activity>
-        
+
         <activity
             android:name="physic.kinematic.muv.MUV_Time2"
             android:label="@string/timeS">
@@ -616,7 +606,7 @@
             </intent-filter>
 
         </activity>
-        
+
         <activity
             android:name="physic.kinematic.muv.MUV_Time3"
             android:label="@string/timeS">
@@ -630,7 +620,7 @@
             </intent-filter>
 
         </activity>
-        
+
         <activity
             android:name="physic.kinematic.muv.MUV_Time4"
             android:label="@string/timeS">
@@ -644,7 +634,7 @@
             </intent-filter>
 
         </activity>
-        
+
         <activity
             android:name="physic.kinematic.muv.MUV_Time5"
             android:label="@string/timeS">
@@ -658,7 +648,7 @@
             </intent-filter>
 
         </activity>
-        
+
         <activity
             android:name="physic.kinematic.muv.MUV_Time6"
             android:label="@string/timeS">
@@ -672,7 +662,6 @@
             </intent-filter>
 
         </activity>
- 
 
         <meta-data
             android:name="android.max_aspect"

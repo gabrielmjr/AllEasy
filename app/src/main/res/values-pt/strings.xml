@@ -126,6 +126,7 @@
         <item>Revisão</item>
     </string-array>
     
+    <string name="downloading">Baixando</string>
     <string name="updated">Actualizado</string>
     <string name="unable_to_check_update">Não foi possível verificar</string>
     <string name="update_available">Disponível</string>

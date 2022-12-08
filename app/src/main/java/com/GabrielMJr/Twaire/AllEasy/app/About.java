@@ -1,10 +1,14 @@
 package com.GabrielMJr.Twaire.AllEasy.app;
 
+import android.Manifest;
+import android.content.pm.PackageManager;
+import android.os.Build;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 import com.GabrielMJr.Twaire.AllEasy.R;
@@ -24,11 +28,16 @@ public class About extends MyActivity implements ResponseIF
     private TextView app_version;
     private TextView updater_status;
     private TextView copyright;
+    private TextView app_download_name;
 
     private Button license;
     private Button update_checker;
+    
+    private LinearLayout download_button;
 
+    // Update checker object
     private UpdateChecker updateChecker;
+    private UpdateChecker.DownloadApp downloadApp;
 
     private AppInfo appInfo;
     private int versionCode;
@@ -75,8 +84,13 @@ public class About extends MyActivity implements ResponseIF
         updater_status = findViewById(R.id.updater_status);
         copyright = findViewById(R.id.copyright);
         license = findViewById(R.id.license);
+        download_button = findViewById(R.id.download_button);
+        app_download_name = findViewById(R.id.app_download_name);
+        
         appInfo = new AppInfo(getApplicationContext());
         updateChecker = new UpdateChecker(getApplicationContext(), this);
+        downloadApp = updateChecker.getDownloadApp();
+        
         setAppInfo();
         setCopyright();
     }
@@ -93,6 +107,47 @@ public class About extends MyActivity implements ResponseIF
         {
             updater_status.setBackground(getDrawable(R.drawable.ic_edge_button_blue));
             updater_status.setText(R.string.update_available);
+            
+            // Show the download button
+            download_button.setVisibility(View.VISIBLE);
+            
+            // Show the name of file
+            app_download_name.setText(updateChecker.getReleaseName());
+            
+            // Set on click and download the app if clicker
+            download_button.setOnClickListener(
+    
+                new OnClickListener()
+                {
+                    @Override
+                    public void onClick(View view)
+                    {
+                         // Check write external storage permission for api >= M
+                         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M)
+                         {
+                             // Check if permission was granted
+                             if (getPackageManager().checkPermission(Manifest.permission.WRITE_EXTERNAL_STORAGE, getPackageName()) == PackageManager.PERMISSION_GRANTED)
+                             {
+                                 // Permission granted
+                                 downloadApp.start();
+                             }
+                             
+                             else
+                             {
+                                 // Not granted
+                                 // Request permission
+                                 requestPermissions(new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE}, Constants.WRITE_EXTERNAL_SD);
+                             }
+                         }
+                         // Sdk < M
+                         else
+                         {
+                             // Start download
+                             downloadApp.start();
+                         }
+                         
+                    }
+                });
         }
 
         // Already updated
@@ -100,6 +155,9 @@ public class About extends MyActivity implements ResponseIF
         {
             updater_status.setBackground(getDrawable(R.drawable.ic_edge_button_green));
             updater_status.setText(R.string.updated);
+            
+            // Take out download button
+            download_button.setVisibility(View.GONE);
         }
     }
 
@@ -110,6 +168,9 @@ public class About extends MyActivity implements ResponseIF
         // Unable to verify
         updater_status.setBackground(getDrawable(R.drawable.ic_edge_button_red));
         updater_status.setText(R.string.unable_to_check_update);
+        
+        // Take out download button
+        download_button.setVisibility(View.GONE);
     }
     
     // Problems with json

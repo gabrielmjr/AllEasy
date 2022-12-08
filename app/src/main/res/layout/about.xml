@@ -105,6 +105,32 @@
 			android:background="@drawable/background_2"
 			android:padding="@dimen/dp10"/>
 
+		<LinearLayout
+			android:id="@+id/download_button"
+			android:layout_width="wrap_content"
+			style="?android:attr/buttonStyleSmall"
+			android:layout_height="wrap_content"
+			android:background="@drawable/background_2"
+			android:layout_below="@id/license"
+			android:layout_centerHorizontal="true"
+			android:layout_marginTop="@dimen/dp25"
+			android:visibility="gone"
+			android:orientation="horizontal"
+			android:padding="14dp">
+
+			<ImageView
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:src="@drawable/ic_cloud_download_outline"/>
+
+			<TextView
+                android:id="@+id/app_download_name"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:textColor="@color/textColor"/>
+
+		</LinearLayout>
+
 	</RelativeLayout>
 
 </LinearLayout>

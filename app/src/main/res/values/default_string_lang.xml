@@ -131,6 +131,7 @@
         <item>Review</item>
     </string-array>
     
+    <string name="downloading">Downloading</string>
     <string name="updated">Updated</string>
     <string name="unable_to_check_update">Unable to check</string>
     <string name="update_available">Available</string>
