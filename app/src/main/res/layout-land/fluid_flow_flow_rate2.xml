@@ -3,7 +3,7 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context=".physic.vaz.FlowRate1"
+    tools:context=".physic.vaz.FlowRate2"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:background="@color/main_background">
@@ -47,17 +47,18 @@
             <LinearLayout
                 android:orientation="horizontal"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp10">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/volumep"
+                    android:text="@string/areap"
                     android:textColor="@color/textColor"
                     android:textSize="19sp"/>
 
                 <EditText
-                    android:id="@+id/ff1_vol"
+                    android:id="@+id/ar"
                     android:layout_width="wrap_content"
                     android:inputType="numberDecimal"
                     android:layout_height="wrap_content"
@@ -68,7 +69,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/vmc"
+                    android:text="@string/amq"
                     android:textColor="@color/textColor"
                     android:textSize="18sp"/>
 
@@ -83,12 +84,12 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/dtp"
+                    android:text="@string/volumep"
                     android:textColor="@color/textColor"
                     android:textSize="19sp"/>
 
                 <EditText
-                    android:id="@+id/ff1_dt"
+                    android:id="@+id/vel"
                     android:layout_width="wrap_content"
                     android:inputType="numberDecimal"
                     android:layout_height="wrap_content"
@@ -99,7 +100,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/second"
+                    android:text="@string/speedmps"
                     android:textColor="@color/textColor"
                     android:textSize="18sp"/>
 
@@ -149,18 +150,19 @@
                 android:layout_gravity="center"/>
 
             <TextView
-                android:id="@+id/ff1_vaz"
+                android:id="@+id/vaz"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/fluid_flow_flowRate1_formula"
+                android:text="@string/fluid_flow_flowRate2_formula"
                 android:textSize="19sp"
-                android:layout_gravity="center_horizontal"
+                android:layout_gravity="center"
                 android:background="@drawable/edge_btn_1"
                 android:ems="5"
                 android:textColor="@color/textColor"
                 android:gravity="center"/>
 
         </LinearLayout>
+
 
         <LinearLayout
             android:id="@+id/resulucao"
@@ -185,10 +187,10 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
-                android:layout_gravity="center">
+                android:layout_gravity="center_horizontal">
 
                 <TextView
-                    android:id="@+id/ff1_res"
+                    android:id="@+id/res"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textColor="@color/textColor"
