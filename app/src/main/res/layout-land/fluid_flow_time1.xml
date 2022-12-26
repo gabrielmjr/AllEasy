@@ -11,8 +11,8 @@
     <include
         layout="@layout/action_bar"/>
 
-        <include
-            layout="@layout/clear_button"/>
+    <include
+        layout="@layout/clear_button"/>
 
     <android.support.constraint.ConstraintLayout
         android:layout_width="match_parent"
@@ -36,99 +36,99 @@
             app:layout_constraintEnd_toStartOf="@+id/formula"
             app:layout_constraintVertical_bias=".0">
 
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/dd"
+                android:textSize="20sp"
+                android:textColor="@color/textColor"
+                android:layout_gravity="center"/>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp10">
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/dd"
-                    android:textSize="20sp"
+                    android:text="@string/volumep"
                     android:textColor="@color/textColor"
-                    android:layout_gravity="center"/>
+                    android:textSize="19sp"/>
 
-                <LinearLayout
-                    android:orientation="horizontal"
+                <EditText
+                    android:id="@+id/vol"
+                    android:layout_width="wrap_content"
+                    android:inputType="numberDecimal"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/textColor"
+                    android:hint="@string/nullDouble"
+                    android:ems="3"/>
+
+                <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/dp10">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/volumep"
-                        android:textColor="@color/textColor"
-                        android:textSize="19sp"/>
-
-                    <EditText
-                        android:id="@+id/vol"
-                        android:layout_width="wrap_content"
-                        android:inputType="numberDecimal"
-                        android:layout_height="wrap_content"
-                        android:textColor="@color/textColor"
-                        android:hint="@string/nullDouble"
-                        android:ems="3"/>
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/vmc"
-                        android:textColor="@color/textColor"
-                        android:textSize="18sp"/>
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:orientation="horizontal"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/dp10">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/flowRatep"
-                        android:textColor="@color/textColor"
-                        android:textSize="19sp"/>
-
-                    <EditText
-                        android:id="@+id/vaz"
-                        android:layout_width="wrap_content"
-                        android:inputType="numberDecimal"
-                        android:layout_height="wrap_content"
-                        android:textColor="@color/textColor"
-                        android:hint="@string/nullDouble"
-                        android:ems="3"/>
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/speedmcps"
-                        android:textColor="@color/textColor"
-                        android:textSize="18sp"/>
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:orientation="horizontal"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/dp10">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/delta_time"
-                        android:textColor="@color/textColor"
-                        android:textSize="19sp"/>
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/wht"
-                        android:textColor="@color/textColor"
-                        android:textSize="18sp"/>
-
-                </LinearLayout>
+                    android:text="@string/vmc"
+                    android:textColor="@color/textColor"
+                    android:textSize="18sp"/>
 
             </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp10">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/flowRatep"
+                    android:textColor="@color/textColor"
+                    android:textSize="19sp"/>
+
+                <EditText
+                    android:id="@+id/vaz"
+                    android:layout_width="wrap_content"
+                    android:inputType="numberDecimal"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/textColor"
+                    android:hint="@string/nullDouble"
+                    android:ems="3"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/speedmcps"
+                    android:textColor="@color/textColor"
+                    android:textSize="18sp"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp10">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/delta_time"
+                    android:textColor="@color/textColor"
+                    android:textSize="19sp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/wht"
+                    android:textColor="@color/textColor"
+                    android:textSize="18sp"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
 
         <LinearLayout
             android:id="@+id/formula"
@@ -141,27 +141,27 @@
             app:layout_constraintEnd_toStartOf="@+id/resulucao"
             app:layout_constraintVertical_bias=".0">
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/fm"
-                    android:textSize="20sp"
-                    android:textColor="@color/textColor"
-                    android:layout_gravity="center"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/fm"
+                android:textSize="20sp"
+                android:textColor="@color/textColor"
+                android:layout_gravity="center"/>
 
-                <TextView
-                    android:id="@+id/tempo"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/fluid_flow_time1_formula"
-                    android:textSize="19sp"
-                    android:layout_gravity="center"
-                    android:background="@drawable/edge_btn_1"
-                    android:ems="5"
-                    android:textColor="@color/textColor"
-                    android:gravity="center"/>
+            <TextView
+                android:id="@+id/tempo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/fluid_flow_time1_formula"
+                android:textSize="19sp"
+                android:layout_gravity="center"
+                android:background="@drawable/edge_btn_1"
+                android:ems="5"
+                android:textColor="@color/textColor"
+                android:gravity="center"/>
 
-            </LinearLayout>
+        </LinearLayout>
 
         <LinearLayout
             android:id="@+id/resulucao"
@@ -199,5 +199,5 @@
         </LinearLayout>
 
     </android.support.constraint.ConstraintLayout>
-    
+
 </android.support.constraint.ConstraintLayout>
