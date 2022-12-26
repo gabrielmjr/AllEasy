@@ -3,13 +3,14 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context=".physic.vaz.Speed1"
+    tools:context=".physic.vaz.FlowRate1"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:background="@color/main_background">
 
     <include
         layout="@layout/action_bar"/>
+
 
     <include
         layout="@layout/clear_button"/>
@@ -40,7 +41,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/dd"
-                android:textSize="20sp"
+                android:textSize="18sp"
                 android:textColor="@color/textColor"
                 android:layout_gravity="center"/>
 
@@ -54,17 +55,17 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/flowRatep"
-                    android:textColor="@color/textColor"
-                    android:textSize="19sp"/>
+                    android:textSize="18sp"
+                    android:textColor="@color/textColor"/>
 
                 <EditText
                     android:id="@+id/vaz"
                     android:layout_width="wrap_content"
                     android:inputType="numberDecimal"
-                    android:layout_height="wrap_content"
                     android:textColor="@color/textColor"
-                    android:ems="3"
-                    android:hint="@string/nullDouble"/>
+                    android:hint="@string/nullDouble"
+                    android:layout_height="wrap_content"
+                    android:ems="3"/>
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -75,21 +76,23 @@
 
             </LinearLayout>
 
+
             <LinearLayout
                 android:orientation="horizontal"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/dp10">
+                android:layout_marginTop="@dimen/dp10"
+                android:layout_gravity="top|left">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/areap"
+                    android:text="@string/speedp"
                     android:textColor="@color/textColor"
-                    android:textSize="19sp"/>
+                    android:textSize="18sp"/>
 
                 <EditText
-                    android:id="@+id/ar"
+                    android:id="@+id/vel"
                     android:layout_width="wrap_content"
                     android:inputType="numberDecimal"
                     android:layout_height="wrap_content"
@@ -100,7 +103,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/amq"
+                    android:text="@string/speedmps"
                     android:textColor="@color/textColor"
                     android:textSize="18sp"/>
 
@@ -115,9 +118,9 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/speed"
+                    android:text="@string/area"
                     android:textColor="@color/textColor"
-                    android:textSize="19sp"/>
+                    android:textSize="18sp"/>
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -144,22 +147,24 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center"
                 android:text="@string/fm"
+                android:textSize="20sp"
                 android:textColor="@color/textColor"
-                android:textSize="20sp"/>
+                android:layout_gravity="center"/>
 
             <TextView
-                android:id="@+id/vel"
+                android:id="@+id/area"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:text="@string/fluid_flow_speed1_formula"
+                android:text="@string/fluid_flow_area1_formula"
                 android:textSize="19sp"
+                android:layout_gravity="center"
                 android:background="@drawable/edge_btn_1"
-                android:ems="5"
+                android:ems="4"
+                android:gravity="center"
+                android:paddingStart="@dimen/dp5"
                 android:textColor="@color/textColor"
-                android:gravity="center"/>
+                android:paddingEnd="@dimen/dp5"/>
 
         </LinearLayout>
 
@@ -178,7 +183,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/res"
-                android:textSize="19sp"
+                android:textSize="18sp"
                 android:textColor="@color/textColor"
                 android:layout_gravity="center"/>
 
@@ -192,7 +197,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textColor="@color/textColor"
-                    android:textSize="19sp"/>
+                    android:textSize="18sp"/>
 
             </HorizontalScrollView>
 
@@ -201,4 +206,3 @@
     </android.support.constraint.ConstraintLayout>
 
 </android.support.constraint.ConstraintLayout>
-
