@@ -2,7 +2,7 @@
 <LinearLayout
 	xmlns:android="http://schemas.android.com/apk/res/android"
 	xmlns:tools="http://schemas.android.com/tools"
-	tools:context=".physic.kinematic.mru.Displacement1"
+	tools:context=".physic.kinematic.mru.Displacement"
 	android:layout_width="match_parent"
 	android:layout_height="match_parent"
     android:background="@color/main_background"
