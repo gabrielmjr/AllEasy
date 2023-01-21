@@ -1,17 +1,17 @@
 package com.GabrielMJr.Twaire.AllEasy.physic.kinematic.muv;
 
 import android.os.Bundle;
+import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.view.View.OnClickListener;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import com.GabrielMJr.Twaire.AllEasy.R;
 import com.GabrielMJr.Twaire.AllEasy.app.MyActivity;
-import com.gabrielMJr.twaire.physic.MUV;
 import com.gabrielMJr.twaire.physic.Physic;
+import com.gabrielMJr.twaire.physic.kinematics.muv.MUV;
 import com.gabrielMJr.twaire.tools.Tools;
-import android.support.v7.widget.Toolbar;
-import android.widget.Button;
 
 public class MUV_Speed4 extends MyActivity
 {
@@ -118,7 +118,7 @@ public class MUV_Speed4 extends MyActivity
                 
                 if (verify_initialSpeed && verify_deltaTime && verify_acceleration)
                 {
-                    res.setText(muv.finalSpeed(initialSpeed, deltaTime, accelerationV, physic.GET_STEP));
+                    res.setText(muv.speed4(initialSpeed, deltaTime, accelerationV, physic.GET_STEP));
                     
                     return;
                 } 

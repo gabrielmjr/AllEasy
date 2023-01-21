@@ -4,13 +4,13 @@ import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.view.View.OnClickListener;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import com.GabrielMJr.Twaire.AllEasy.R;
 import com.GabrielMJr.Twaire.AllEasy.app.MyActivity;
-import com.gabrielMJr.twaire.physic.MUV;
+import com.gabrielMJr.twaire.physic.kinematics.muv.MUV;
 import com.gabrielMJr.twaire.tools.Tools;
-import android.widget.Button;
 
 public class MUV_Speed1 extends MyActivity
 {
@@ -109,7 +109,7 @@ public class MUV_Speed1 extends MyActivity
                                     + "\n"
                                     + getText(R.string.dvp)
                                     + " "
-                                    + muv.fVSpeed(deltaTime, accelerationV)
+                                    + muv.speed1(deltaTime, accelerationV)
                                     + getText(R.string.speedmps));
 
                                     return;

@@ -4,14 +4,14 @@ import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.view.View.OnClickListener;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import com.GabrielMJr.Twaire.AllEasy.R;
 import com.GabrielMJr.Twaire.AllEasy.app.MyActivity;
-import com.gabrielMJr.twaire.physic.MUV;
-import com.gabrielMJr.twaire.tools.Tools;
 import com.gabrielMJr.twaire.physic.Physic;
-import android.widget.Button;
+import com.gabrielMJr.twaire.physic.kinematics.muv.MUV;
+import com.gabrielMJr.twaire.tools.Tools;
 
 public class MUV_Speed2 extends MyActivity
 {
@@ -121,7 +121,7 @@ public class MUV_Speed2 extends MyActivity
                     if (verify_initialTime && verify_finalTime && verify_acceleration)
                     {
 
-                        res.setText(muv.sVSpeed(initialTime, finalTime, accelerationV, physic.GET_STEP));
+                        res.setText(muv.speed2(initialTime, finalTime, accelerationV, physic.GET_STEP));
                         
                         return;
                     }
