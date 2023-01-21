@@ -4,11 +4,11 @@ import android.Manifest;
 import android.content.pm.PackageManager;
 import android.os.Build;
 import android.os.Bundle;
+import android.support.constraint.ConstraintLayout;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
-import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 import com.GabrielMJr.Twaire.AllEasy.R;
@@ -33,7 +33,7 @@ public class About extends MyActivity implements ResponseIF
     private Button license;
     private Button update_checker;
     
-    private LinearLayout download_button;
+    private ConstraintLayout download_button;
 
     // Update checker object
     private UpdateChecker updateChecker;

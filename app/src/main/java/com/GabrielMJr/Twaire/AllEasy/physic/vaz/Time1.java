@@ -1,16 +1,16 @@
 package com.GabrielMJr.Twaire.AllEasy.physic.vaz;
 
 import android.os.Bundle;
-import com.GabrielMJr.Twaire.AllEasy.app.MyActivity;
-import com.GabrielMJr.Twaire.AllEasy.R;
-import android.widget.TextView;
-import android.widget.EditText;
+import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.view.View.OnClickListener;
-import com.gabrielMJr.twaire.tools.Tools;
-import com.gabrielMJr.twaire.physic.FluidFlow;
-import android.support.v7.widget.Toolbar;
 import android.widget.Button;
+import android.widget.EditText;
+import android.widget.TextView;
+import com.GabrielMJr.Twaire.AllEasy.R;
+import com.GabrielMJr.Twaire.AllEasy.app.MyActivity;
+import com.gabrielMJr.twaire.physic.hydrodynamics.fluidflow.FluidFlow;
+import com.gabrielMJr.twaire.tools.Tools;
 
 public class Time1 extends MyActivity {
     

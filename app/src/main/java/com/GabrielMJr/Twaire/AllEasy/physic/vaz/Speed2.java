@@ -1,17 +1,17 @@
 package com.GabrielMJr.Twaire.AllEasy.physic.vaz;
 
-import com.GabrielMJr.Twaire.AllEasy.app.MyActivity;
 import android.os.Bundle;
-import com.GabrielMJr.Twaire.AllEasy.R;
+import android.support.v7.widget.Toolbar;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
-import android.view.View.OnClickListener;
-import android.view.View;
-import com.gabrielMJr.twaire.tools.Tools;
-import com.gabrielMJr.twaire.physic.FluidFlow;
-import android.support.v7.widget.Toolbar;
+import com.GabrielMJr.Twaire.AllEasy.R;
+import com.GabrielMJr.Twaire.AllEasy.app.MyActivity;
 import com.gabrielMJr.twaire.physic.Physic;
-import android.widget.Button;
+import com.gabrielMJr.twaire.physic.hydrodynamics.fluidflow.FluidFlow;
+import com.gabrielMJr.twaire.tools.Tools;
 
 public class Speed2 extends MyActivity {
     
@@ -77,7 +77,7 @@ public class Speed2 extends MyActivity {
 
 
                     if (verifyVaz && verifyRay) {
-                        res.setText((CharSequence) FF.sSpeed(fluidFlow, raio, physic.GET_STEP));
+                        res.setText((CharSequence) FF.speed2(fluidFlow, raio, physic.GET_STEP));
                         
                         return;
                     } else {

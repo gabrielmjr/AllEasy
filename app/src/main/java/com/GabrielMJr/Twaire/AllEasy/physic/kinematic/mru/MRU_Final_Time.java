@@ -1,16 +1,16 @@
 package com.GabrielMJr.Twaire.AllEasy.physic.kinematic.mru;
 
-import com.GabrielMJr.Twaire.AllEasy.app.MyActivity;
 import android.os.Bundle;
-import com.GabrielMJr.Twaire.AllEasy.R;
-import com.gabrielMJr.twaire.tools.Tools;
+import android.support.v7.widget.Toolbar;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
-import android.support.v7.widget.Toolbar;
-import com.gabrielMJr.twaire.physic.MRU;
-import android.view.View.OnClickListener;
-import android.view.View;
-import android.widget.Button;
+import com.GabrielMJr.Twaire.AllEasy.R;
+import com.GabrielMJr.Twaire.AllEasy.app.MyActivity;
+import com.gabrielMJr.twaire.physic.kinematics.mru.MRU;
+import com.gabrielMJr.twaire.tools.Tools;
 
 public class MRU_Final_Time extends MyActivity {
 
@@ -95,7 +95,7 @@ public class MRU_Final_Time extends MyActivity {
                                     + getText(R.string.newLine)
                                     + getText(R.string.final_timep)
                                     + " "
-                                    + mru.final_time(initialTime ,deltaTime)
+                                    + mru.time5(initialTime ,deltaTime)
                                     + getText(R.string.second));
                            
                                     return;
