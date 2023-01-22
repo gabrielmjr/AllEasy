@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    tools:context=".app.SendMailActivity"
+    android:background="@color/main_background">
+
+    <include
+        layout="@layout/action_bar"/>
+
+    <TextView
+        android:id="@+id/send_email_note"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="?attr/actionBarSize"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="@string/send_mail_note"
+        android:textColor="@color/textColor"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/mail_message"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintVertical_bias=".1"/>
+
+    <EditText
+        android:id="@+id/mail_message"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:inputType="textMultiLine"
+        android:hint="@string/send_mail_hint_note"
+        android:textColor="@color/textColor"
+        android:background="@drawable/ic_send_mail_field"
+        android:gravity="center"
+        app:layout_constraintTop_toBottomOf="@id/send_email_note"
+        app:layout_constraintBottom_toTopOf="@+id/send_mail"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <Button
+        android:id="@+id/send_mail"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:text="@string/send_mail"
+        android:textColor="@color/hintColor"
+        android:background="@drawable/background_2"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintVertical_bias=".9"
+        app:layout_constraintHorizontal_bias=".9"/>
+
+</android.support.constraint.ConstraintLayout>
+
