@@ -3,7 +3,7 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context=".physic.kinematic.muv.MUV_Acceleration1"
+    tools:context=".physic.kinematic.muv.MUV_Acceleration3"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:background="@color/main_background">
@@ -53,18 +53,52 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/dvp"
+                    android:text="@string/vip"
                     android:textColor="@color/textColor"
-                    android:textSize="18sp"/>
+                    android:textSize="19sp"/>
 
                 <EditText
-                    android:id="@+id/delta_speed"
+                    android:id="@+id/initial_speed"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="18sp"
+                    android:ems="3"
+                    android:imeOptions="actionNext"
+                    android:textColor="@color/textColor"
+                    android:hint="@string/nullDouble"
+                    android:inputType="numberDecimal"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="18sp"
+                    android:textColor="@color/textColor"
+                    android:text="@string/speedmps"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="@dimen/dp10">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/vfp"
+                    android:textColor="@color/textColor"
+                    android:textSize="19sp"/>
+
+                <EditText
+                    android:id="@+id/final_speed"
                     android:layout_width="wrap_content"
                     android:inputType="numberDecimal"
                     android:layout_height="wrap_content"
+                    android:ems="3"
                     android:textColor="@color/textColor"
                     android:hint="@string/nullDouble"
-                    android:ems="3"/>
+                    android:imeOptions="actionNext"/>
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -85,25 +119,26 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/dtp"
-                    android:textSize="19sp"
                     android:textColor="@color/textColor"
-                    android:textStyle="normal"/>
+                    android:textSize="19sp"/>
 
                 <EditText
                     android:id="@+id/delta_time"
                     android:layout_width="wrap_content"
-                    android:inputType="numberDecimal"
                     android:layout_height="wrap_content"
+                    android:textSize="18sp"
+                    android:ems="3"
+                    android:imeOptions="actionDone"
                     android:textColor="@color/textColor"
                     android:hint="@string/nullDouble"
-                    android:ems="3"/>
+                    android:inputType="numberDecimal"/>
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/second"
+                    android:textSize="18sp"
                     android:textColor="@color/textColor"
-                    android:textSize="18sp"/>
+                    android:text="@string/second"/>
 
             </LinearLayout>
 
@@ -155,10 +190,10 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:text="@string/kinematic_muv_acceleration1_formula"
+                android:text="@string/kinematic_muv_acceleration3_formula"
                 android:textSize="19sp"
                 android:background="@drawable/edge_btn_1"
-                android:ems="6"
+                android:ems="8"
                 android:textColor="@color/textColor"
                 android:gravity="center"/>
 
@@ -193,7 +228,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textColor="@color/textColor"
-                    android:textSize="19sp"/>
+                    android:textSize="18sp"/>
 
             </HorizontalScrollView>
 
@@ -202,4 +237,5 @@
     </android.support.constraint.ConstraintLayout>
 
 </android.support.constraint.ConstraintLayout>
+
 
