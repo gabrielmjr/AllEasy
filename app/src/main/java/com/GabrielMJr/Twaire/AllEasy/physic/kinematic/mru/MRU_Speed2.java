@@ -1,17 +1,17 @@
 package com.GabrielMJr.Twaire.AllEasy.physic.kinematic.mru;
 
-import com.GabrielMJr.Twaire.AllEasy.app.MyActivity;
 import android.os.Bundle;
-import com.GabrielMJr.Twaire.AllEasy.R;
+import android.support.v7.widget.Toolbar;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
-import android.support.v7.widget.Toolbar;
-import com.gabrielMJr.twaire.tools.Tools;
-import com.gabrielMJr.twaire.physic.MRU;
-import android.view.View.OnClickListener;
-import android.view.View;
+import com.GabrielMJr.Twaire.AllEasy.R;
+import com.GabrielMJr.Twaire.AllEasy.app.MyActivity;
 import com.gabrielMJr.twaire.physic.Physic;
-import android.widget.Button;
+import com.gabrielMJr.twaire.physic.kinematics.mru.MRU;
+import com.gabrielMJr.twaire.tools.Tools;
 
 public class MRU_Speed2 extends MyActivity {
     
@@ -121,7 +121,7 @@ public class MRU_Speed2 extends MyActivity {
                         &&
                         verify_finalTime) {
                             
-                            res.setText(mru.speedLaw2(initialDisplacement,
+                            res.setText(mru.speed2(initialDisplacement,
                                                       finalDisplacement,
                                                       initialTime, finalTime,
                                                       physic.GET_STEP));

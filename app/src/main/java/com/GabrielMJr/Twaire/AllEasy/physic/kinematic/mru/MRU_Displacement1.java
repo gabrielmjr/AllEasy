@@ -9,7 +9,7 @@ import android.widget.EditText;
 import android.widget.TextView;
 import com.GabrielMJr.Twaire.AllEasy.R;
 import com.GabrielMJr.Twaire.AllEasy.app.MyActivity;
-import com.gabrielMJr.twaire.physic.MRU;
+import com.gabrielMJr.twaire.physic.kinematics.mru.MRU;
 import com.gabrielMJr.twaire.tools.Tools;
 
 public class MRU_Displacement1 extends MyActivity {
@@ -87,7 +87,7 @@ public class MRU_Displacement1 extends MyActivity {
                                     + "\n"
                                     + getText(R.string.dsp)
                                     + " "
-                                    + mru.fVDisplacement(initialDisplacement, finalDisplacement)
+                                    + mru.displacement1(initialDisplacement, finalDisplacement)
                                     + getText(R.string.dm));
                                     
                                     return;
