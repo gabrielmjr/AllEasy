@@ -48,7 +48,7 @@
                 android:orientation="horizontal"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:paddingTop="@dimen/dp10">
+                android:paddingTop="10dp">
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -80,7 +80,7 @@
                 android:orientation="horizontal"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/dp10">
+                android:layout_marginTop="10dp">
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -113,7 +113,7 @@
                 android:orientation="horizontal"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:paddingTop="@dimen/dp10">
+                android:paddingTop="10dp">
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -145,56 +145,55 @@
                 android:orientation="horizontal"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/dp10">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/final_timep"
-                    android:textColor="@color/textColor"
-                    android:textSize="19sp"/>
-
-                <EditText
-                    android:id="@+id/final_time"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textSize="18sp"
-                    android:ems="3"
-                    android:imeOptions="actionDone"
-                    android:textColor="@color/textColor"
-                    android:hint="@string/nullDouble"
-                    android:inputType="numberDecimal"/>
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textSize="18sp"
-                    android:textColor="@color/textColor"
-                    android:text="@string/second"/>
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:orientation="horizontal"
+                android:layout_marginTop="10dp">
+            <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/dp10">
+                android:text="@string/final_timep"
+                android:textColor="@color/textColor"
+                android:textSize="19sp"/>
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/acceleration"
-                    android:textColor="@color/textColor"
-                    android:textSize="19sp"/>
+            <EditText
+                android:id="@+id/final_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:ems="3"
+                android:imeOptions="actionDone"
+                android:textColor="@color/textColor"
+                android:hint="@string/nullDouble"
+                android:inputType="numberDecimal"/>
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/wht"
-                    android:textColor="@color/textColor"
-                    android:textSize="18sp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:textColor="@color/textColor"
+                android:text="@string/second"/>
 
-            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/acceleration"
+                android:textColor="@color/textColor"
+                android:textSize="19sp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/wht"
+                android:textColor="@color/textColor"
+                android:textSize="18sp"/>
+
+        </LinearLayout>
 
         </LinearLayout>
 

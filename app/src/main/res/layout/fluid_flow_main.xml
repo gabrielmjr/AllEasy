@@ -38,7 +38,7 @@
 					android:layout_height="wrap_content"
 					android:gravity="center"
 					android:background="@drawable/background_2"
-					android:layout_marginTop="@dimen/dp10">
+					android:layout_marginTop="10dp">
 
 					<TextView
 						android:layout_width="wrap_content"
@@ -56,7 +56,7 @@
 					android:layout_height="wrap_content"
 					android:gravity="center"
 					android:background="@drawable/background_2"
-					android:layout_marginTop="@dimen/dp10">
+					android:layout_marginTop="10dp">
 
 					<TextView
 						android:layout_width="wrap_content"
@@ -74,7 +74,7 @@
 					android:layout_height="wrap_content"
 					android:gravity="center"
 					android:background="@drawable/background_2"
-					android:layout_marginTop="@dimen/dp10">
+					android:layout_marginTop="10dp">
 
 					<TextView
 						android:layout_width="wrap_content"
@@ -89,13 +89,13 @@
 				<View
 					android:background="?android:attr/dividerVertical"
 					android:layout_width="match_parent"
-					android:layout_height="@dimen/dp1"/>
+					android:layout_height="1dp"/>
 
 				<TextView
 					android:layout_width="wrap_content"
 					android:layout_height="wrap_content"
 					android:textSize="16sp"
-					android:layout_marginTop="@dimen/dp25"
+					android:layout_marginTop="25dp"
 					android:textColor="@color/textColor"
 					android:text="@string/timeS"/>
 
@@ -105,7 +105,7 @@
 					android:layout_height="wrap_content"
 					android:gravity="center"
 					android:background="@drawable/background_2"
-					android:layout_marginTop="@dimen/dp10">
+					android:layout_marginTop="10dp">
 
 					<TextView
 						android:layout_width="wrap_content"
@@ -120,13 +120,13 @@
 				<View
 					android:background="?android:attr/dividerVertical"
 					android:layout_width="match_parent"
-					android:layout_height="@dimen/dp1"/>
+					android:layout_height="1dp"/>
 
 				<TextView
 					android:layout_width="wrap_content"
 					android:layout_height="wrap_content"
 					android:textSize="16sp"
-					android:layout_marginTop="@dimen/dp25"
+					android:layout_marginTop="25dp"
 					android:textColor="@color/textColor"
 					android:text="@string/volumeS"/>
 
@@ -136,7 +136,7 @@
 					android:layout_height="wrap_content"
 					android:gravity="center"
 					android:background="@drawable/background_2"
-					android:layout_marginTop="@dimen/dp10">
+					android:layout_marginTop="10dp">
 
 					<TextView
 						android:layout_width="wrap_content"
@@ -151,13 +151,13 @@
 				<View
 					android:background="?android:attr/dividerVertical"
 					android:layout_width="match_parent"
-					android:layout_height="@dimen/dp1"/>
+					android:layout_height="1dp"/>
 
 				<TextView
 					android:layout_width="wrap_content"
 					android:layout_height="wrap_content"
 					android:textSize="16sp"
-					android:layout_marginTop="@dimen/dp25"
+					android:layout_marginTop="25dp"
 					android:textColor="@color/textColor"
 					android:text="@string/velocityS"/>
 
@@ -167,7 +167,7 @@
 					android:layout_height="wrap_content"
 					android:gravity="center"
 					android:background="@drawable/background_2"
-					android:layout_marginTop="@dimen/dp10">
+					android:layout_marginTop="10dp">
 
 					<TextView
 						android:layout_width="wrap_content"
@@ -185,7 +185,7 @@
 					android:layout_height="wrap_content"
 					android:gravity="center"
 					android:background="@drawable/background_2"
-					android:layout_marginTop="@dimen/dp10">
+					android:layout_marginTop="10dp">
 
 					<TextView
 						android:layout_width="wrap_content"
@@ -200,13 +200,13 @@
 				<View
 					android:background="?android:attr/dividerVertical"
 					android:layout_width="match_parent"
-					android:layout_height="@dimen/dp1"/>
+					android:layout_height="1dp"/>
 
 				<TextView
 					android:layout_width="wrap_content"
 					android:layout_height="wrap_content"
 					android:textSize="16sp"
-					android:layout_marginTop="@dimen/dp25"
+					android:layout_marginTop="25dp"
 					android:textColor="@color/textColor"
 					android:text="@string/areaS"/>
 
@@ -216,7 +216,7 @@
 					android:layout_height="wrap_content"
 					android:gravity="center"
 					android:background="@drawable/background_2"
-					android:layout_marginTop="@dimen/dp10">
+					android:layout_marginTop="10dp">
 
 					<TextView
 						android:layout_width="wrap_content"
@@ -231,13 +231,13 @@
 				<View
 					android:background="?android:attr/dividerVertical"
 					android:layout_width="match_parent"
-					android:layout_height="@dimen/dp1"/>
+					android:layout_height="1dp"/>
 
 				<TextView
 					android:layout_width="wrap_content"
 					android:layout_height="wrap_content"
 					android:textSize="16sp"
-					android:layout_marginTop="@dimen/dp25"
+					android:layout_marginTop="25dp"
 					android:textColor="@color/textColor"
 					android:text="@string/raioS"/>
 
@@ -247,7 +247,7 @@
 					android:layout_height="wrap_content"
 					android:gravity="center"
 					android:background="@drawable/background_2"
-					android:layout_marginTop="@dimen/dp10">
+					android:layout_marginTop="10dp">
 
 					<TextView
 						android:layout_width="wrap_content"
@@ -264,7 +264,7 @@
 			<View
 				android:background="?android:attr/dividerVertical"
 				android:layout_width="match_parent"
-				android:layout_height="@dimen/dp1"/>
+				android:layout_height="1dp"/>
 
 			<LinearLayout
 				android:layout_width="wrap_content"
@@ -280,7 +280,7 @@
 					android:layout_width="wrap_content"
 					android:layout_height="wrap_content"
 					android:text="@string/nvQ"
-					android:layout_marginRight="@dimen/dp15"
+					android:layout_marginRight="15dp"
 					android:textColor="@color/textColor"
 					android:textSize="15sp"/>
 
@@ -290,7 +290,7 @@
 				android:layout_width="wrap_content"
 				android:layout_height="wrap_content"
 				android:text="@string/nvV"
-				android:layout_marginRight="@dimen/dp15"
+				android:layout_marginRight="15dp"
 				android:textColor="@color/textColor"
 				android:textSize="15sp"/>
 
@@ -298,7 +298,7 @@
 				android:layout_width="wrap_content"
 				android:layout_height="wrap_content"
 				android:text="@string/nvt"
-				android:layout_marginRight="@dimen/dp15"
+				android:layout_marginRight="15dp"
 				android:textColor="@color/textColor"
 				android:textSize="15sp"/>
 
@@ -306,7 +306,7 @@
 				android:layout_width="wrap_content"
 				android:layout_height="wrap_content"
 				android:text="@string/nvA"
-				android:layout_marginRight="@dimen/dp15"
+				android:layout_marginRight="15dp"
 				android:textColor="@color/textColor"
 				android:textSize="15sp"/>
 
@@ -314,7 +314,7 @@
 				android:layout_width="wrap_content"
 				android:layout_height="wrap_content"
 				android:text="@string/nvv"
-				android:layout_marginRight="@dimen/dp15"
+				android:layout_marginRight="15dp"
 				android:textColor="@color/textColor"
 				android:textSize="15sp"/>
 
@@ -322,7 +322,7 @@
 				android:layout_width="wrap_content"
 				android:layout_height="wrap_content"
 				android:text="@string/nvp"
-				android:layout_marginRight="@dimen/dp15"
+				android:layout_marginRight="15dp"
 				android:textColor="@color/textColor"
 				android:textSize="15sp"/>
 
@@ -330,7 +330,7 @@
 				android:layout_width="wrap_content"
 				android:layout_height="wrap_content"
 				android:text="@string/nvr"
-				android:layout_marginRight="@dimen/dp15"
+				android:layout_marginRight="15dp"
 				android:textColor="@color/textColor"
 				android:textSize="15sp"/>
 
@@ -338,7 +338,7 @@
 				android:layout_width="wrap_content"
 				android:layout_height="wrap_content"
 				android:text="@string/nvd"
-				android:layout_marginRight="@dimen/dp15"
+				android:layout_marginRight="15dp"
 				android:textColor="@color/textColor"
 				android:textSize="15sp"/>
 

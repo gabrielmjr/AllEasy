@@ -24,11 +24,11 @@
 
 				<RelativeLayout
 					android:layout_width="match_parent"
-					android:layout_height="@dimen/dp250"
+					android:layout_height="250dp"
 					android:background="@drawable/background_1"
 					android:orientation="horizontal"
 					android:gravity="top"
-					android:layout_marginTop="@dimen/dp_40">
+					android:layout_marginTop="-40dp">
 
 					<LinearLayout
 						android:id="@+id/dados"
@@ -36,7 +36,7 @@
 						android:layout_width="wrap_content"
 						android:layout_height="wrap_content"
 						android:layout_alignParentLeft="true"
-						android:layout_marginTop="@dimen/dp40"
+						android:layout_marginTop="40dp"
 						android:layout_gravity="left">
 
 						<TextView
@@ -51,7 +51,7 @@
 							android:orientation="horizontal"
 							android:layout_width="wrap_content"
 							android:layout_height="wrap_content"
-							android:layout_marginTop="@dimen/dp10">
+							android:layout_marginTop="10dp">
 
 							<TextView
 								android:layout_width="wrap_content"
@@ -83,7 +83,7 @@
 							android:orientation="horizontal"
 							android:layout_width="wrap_content"
 							android:layout_height="wrap_content"
-							android:layout_marginTop="@dimen/dp10"
+							android:layout_marginTop="10dp"
 							android:layout_gravity="top|left">
 
 							<TextView
@@ -115,7 +115,7 @@
 							android:orientation="horizontal"
 							android:layout_width="wrap_content"
 							android:layout_height="wrap_content"
-							android:layout_marginTop="@dimen/dp10">
+							android:layout_marginTop="10dp">
 
 							<TextView
 								android:layout_width="wrap_content"
@@ -140,10 +140,10 @@
 						android:orientation="vertical"
 						android:layout_width="wrap_content"
 						android:layout_height="wrap_content"
-						android:layout_marginTop="@dimen/dp40"
+						android:layout_marginTop="40dp"
 						android:layout_alignParentEnd="true"
 						android:layout_gravity="right"
-						android:layout_marginEnd="@dimen/dp20">
+						android:layout_marginEnd="20dp">
 
 						<TextView
 							android:layout_width="wrap_content"
@@ -163,9 +163,9 @@
 							android:background="@drawable/edge_btn_1"
 							android:ems="4"
 							android:gravity="center"
-							android:paddingStart="@dimen/dp5"
+							android:paddingStart="5dp"
 							android:textColor="@color/textColor"
-							android:paddingEnd="@dimen/dp5"/>
+							android:paddingEnd="5dp"/>
 
 					</LinearLayout>
 
@@ -177,12 +177,12 @@
 				android:id="@+id/resulucao"
 				android:orientation="vertical"
 				android:layout_width="wrap_content"
-				android:layout_height="@dimen/dp75"
+				android:layout_height="75dp"
 				android:layout_centerHorizontal="true"
 				android:background="@drawable/background_1"
-				android:paddingLeft="@dimen/dp10"
-				android:paddingRight="@dimen/dp10"
-				android:layout_marginTop="@dimen/dp192">
+				android:paddingLeft="10dp"
+				android:paddingRight="10dp"
+				android:layout_marginTop="192dp">
 
 				<TextView
 					android:layout_width="wrap_content"

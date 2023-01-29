@@ -48,10 +48,10 @@
         android:textColor="@color/textColor"
         android:text="@string/cancel"
         android:textSize="18sp"
-        android:layout_marginTop="@dimen/dp5"
+        android:layout_marginTop="5dp"
         android:textAppearance="?android:attr/textAppearanceSmall"
         android:layout_alignParentEnd="true"
-        android:padding="@dimen/dp10"
+        android:padding="10dp"
 		android:background="@drawable/circle_button"/>
 
 </RelativeLayout>
