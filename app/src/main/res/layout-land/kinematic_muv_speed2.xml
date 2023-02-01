@@ -139,7 +139,7 @@
                     android:layout_height="wrap_content"
                     android:textSize="18sp"
                     android:textColor="@color/textColor"
-                    android:text="@string/mpsq"/>
+                    android:text="m/s²"/>
 
             </LinearLayout>
 

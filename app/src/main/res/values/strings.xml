@@ -101,24 +101,42 @@
     <string name="area">A </string>
 	<string name="speed">v </string>
     <string name="temperature">T</string>
-    <string name="volume">V</string>
     <string name="volumeLitre">L</string> 
     <string name="acceleration">a</string>
     <string name="ds">∆S</string>
     <string name="q">Q</string>
     
-    <string name="vmc">m³ </string>
-    <string name="amq">m² </string>
-    <string name="dm">m </string>
-    <string name="speedmps">m/s </string>
+    <string name="dm">m</string>
+    <string name="speedmps">m/s</string>
+    <string name="amq">m/s²</string>
     <string name="mpsq">m/s²</string>
+    <string name="vmc">m³</string>
+  
     <string name="speedmcps">m³/s</string>
+    
+    <string name="volume_unit_symbol_cube_meter">m³</string>
+    
+    <string name="area_unit_symbol_square_meter">m²</string>
+   
+    
+    <string name="distance_unit_symbol_meter">m</string>
+    
+    <string name="velocity_unit_symbol_meter_per_second">m/s</string>
+
+    <string name="flow_rate_unit_symbol_cube_meter_per_second">m³/s</string>
+    
+    <string name="acceleration_unit_symbol_meter_per_square_second">m/s²</string>
+    
+    <string name="volume_symbol_equals">V = </string>
+    <string name="time_symbol_equals">t = </string>
+    <string name="flow_rate_symbol_equals">V = </string>
     
     <string name="newLine">\n</string>
     <string name="multiplication">×</string>
     <string name="division">/</string>
     <string name="plus">+</string>
     <string name="minus">-</string>
+    <string name="equals">=</string>
     <string name="openParenthesis">(</string>
     <string name="closeParenthesis">)</string>
 </resources>

@@ -73,7 +73,7 @@
                     android:layout_height="wrap_content"
                     android:textSize="18sp"
                     android:textColor="@color/textColor"
-                    android:text="@string/speedmps"/>
+                    android:text="m/s"/>
 
             </LinearLayout>
 
@@ -103,7 +103,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/speedmps"
+                    android:text="m/s"
                     android:textColor="@color/textColor"
                     android:textSize="18sp"/>
 

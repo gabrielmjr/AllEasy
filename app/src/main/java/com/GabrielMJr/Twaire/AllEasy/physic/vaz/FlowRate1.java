@@ -3,54 +3,47 @@ package com.GabrielMJr.Twaire.AllEasy.physic.vaz;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
-import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import com.GabrielMJr.Twaire.AllEasy.R;
 import com.GabrielMJr.Twaire.AllEasy.app.MyActivity;
-import com.gabrielMJr.twaire.physic.hydrodynamics.fluidflow.FluidFlow;
 import com.gabrielMJr.twaire.tools.Tools;
 
-public class FlowRate1 extends MyActivity {
+public class FlowRate1 extends MyActivity 
+{
     
-	private EditText vol;
-    private TextView res;
-	private EditText dt;
-	private TextView vaz;
+    private TextView volume_symbol;
+    private TextView delta_time_symbol;
+    private TextView flow_rate_symbol;
+    
+    private TextView volume_unit;
+    private TextView delta_time_unit;
+    
+	private EditText volume_value;
+    private EditText delta_time_value;
+   
+    private TextView formula;
+    private TextView result;
+    
     private Button clear;
     
-	private Double volume;
-	private Double time;
-	private Tools Tools;
-	private Boolean verifyVolume;
-	private Boolean verifyTime;
-    private FluidFlow FF;
-  
-    private void initialize() {
-        setToolBar((Toolbar) findViewById(R.id.toolbar));
-        
-        this.vol = findViewById(R.id.ff1_vol);
-        this.dt = findViewById(R.id.ff1_dt);
-        this.vaz = findViewById(R.id.ff1_vaz);
-        this.res = findViewById(R.id.ff1_res);
-        this.clear = findViewById(R.id.clear);
-        this.FF = new FluidFlow();
-		this.Tools = new Tools();
-    }
-
+    private Tools tools;
+    
+    
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.fluid_flow_flow_rate1);
-        this.initialize();
+		setContentView(R.layout.activity_physic_calculations);
+        getViews();
+        initializeActivity();
         
-		this.vaz.setOnClickListener(
+		/*this.vaz.setOnClickListener(
 			new OnClickListener() {
 				public void onClick(View view) {				
 
                     // Verificar se volume é nulo ou ponto através do método Tools
-                    if (Tools.isNull(vol.getText().toString())) {
+                   /* if (Tools.isNull(vol.getText().toString())) {
                         vol.setError(getText(R.string.null_field));
                         verifyVolume = false;
 
@@ -119,6 +112,48 @@ public class FlowRate1 extends MyActivity {
                     
                     return;
                 }
-            });
+            });*/
+    }
+    
+    
+    private void getViews()
+    {
+        setToolBar((Toolbar) findViewById(R.id.toolbar));
+        
+        volume_symbol = findViewById(R.id.param_0_symbol);
+        delta_time_symbol = findViewById(R.id.param_1_symbol);
+        flow_rate_symbol = findViewById(R.id.result_symbol);
+        
+        volume_value = findViewById(R.id.param_0_value);
+        delta_time_value = findViewById(R.id.param_1_value);
+        
+        volume_unit = findViewById(R.id.param_0_unit);
+        delta_time_unit = findViewById(R.id.param_1_unit);
+        
+        formula = findViewById(R.id.formula);
+        result = findViewById(R.id.result);
+        
+        findViewById(R.id.param_2_symbol).setVisibility(View.GONE);
+        findViewById(R.id.param_2_value).setVisibility(View.GONE);
+        findViewById(R.id.param_2_unit).setVisibility(View.GONE);
+        
+        findViewById(R.id.param_3_symbol).setVisibility(View.GONE);
+        findViewById(R.id.param_3_value).setVisibility(View.GONE);
+        findViewById(R.id.param_3_unit).setVisibility(View.GONE);
+    }
+    
+    
+    private void initializeActivity() {
+        volume_symbol.setText((String)getText(R.string.volume_symbol_equals)
+             + " ");           
+        delta_time_symbol.setText((String)getText(R.string.time_symbol_equals) 
+             + " ");
+        flow_rate_symbol.setText(getText(R.string.flow_rate_symbol_equals)
+             + " ?");
+                     
+        volume_unit.setText("m³");
+        delta_time_unit.setText("s");
+             
+        formula.setText(R.string.fluid_flow_flowRate1_formula);
     }
 }
