@@ -120,7 +120,8 @@ public class FlowRate3 extends MyActivity
     }
 
 
-    private void initializeActivity() {
+    private void initializeActivity()
+    {
         ray_symbol.setText("r = ");   
         velocity_symbol.setText("v = ");
         flow_rate_symbol.setText(getText(R.string.flow_rate_symbol_equals)

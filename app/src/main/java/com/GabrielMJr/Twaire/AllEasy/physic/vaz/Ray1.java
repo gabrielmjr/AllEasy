@@ -117,7 +117,7 @@ public class Ray1 extends MyActivity
     {
         flow_rate_symbol.setText("Q = ");
         velocity_symbol.setText("v = ");
-        ray_symbol.setText("r = ");
+        ray_symbol.setText("r = ?");
         
         pi_symbol.setText("π = ");
         pi_value.setText("3.14");
