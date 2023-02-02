@@ -1,55 +1,36 @@
 package com.GabrielMJr.Twaire.AllEasy.physic.vaz;
 
 import android.os.Bundle;
-import android.support.v7.widget.Toolbar;
 import android.view.View;
-import android.view.View.OnClickListener;
-import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import com.GabrielMJr.Twaire.AllEasy.R;
 import com.GabrielMJr.Twaire.AllEasy.app.MyActivity;
-import com.gabrielMJr.twaire.physic.hydrodynamics.fluidflow.FluidFlow;
-import com.gabrielMJr.twaire.tools.Tools;
 
-public class Volume1 extends MyActivity {
-
-    // Atributos
-    private EditText tempo;
-    private EditText vaz;
-    private TextView vol;
-    private TextView res;
-    private Toolbar toolbar;
-    private Button clear;
+public class Volume1 extends MyActivity
+{
+    private TextView time_symbol;
+    private TextView flow_rate_symbol;
+    private TextView volume_symbol;
     
-    private Boolean verifyTime;
-    private Boolean verifyVaz;
-    private Double vazao;
-    private Double time;
-    private FluidFlow FF;
-    private Tools Tools;
+    private TextView time_unit;
+    private TextView flow_rate_unit;
     
-    private void initialize() {
-        setToolBar((Toolbar) findViewById(R.id.toolbar));
-        
-        this.tempo = findViewById(R.id.time);
-        this.vaz = findViewById(R.id.vaz);
-        this.vol = findViewById(R.id.vol);
-        this.res = findViewById(R.id.res);
-        this.toolbar = findViewById(R.id.toolbar);
-        this.clear = findViewById(R.id.clear);
-        this.FF = new FluidFlow();
-        this.Tools = new Tools();
-        
-    }
+    private EditText time_value;
+    private EditText flow_rate_value;
+    
+    private TextView formula;
+    private TextView result;
+    
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.fluid_flow_volume1);
-        this.initialize();
+        setContentView(R.layout.activity_physic_calculations);
+        getViews();
+        initializeActivity();
         
-        this.vol.setOnClickListener(
+       /* this.vol.setOnClickListener(
             new OnClickListener() {
                 public void onClick(View view) {
 
@@ -115,6 +96,44 @@ public class Volume1 extends MyActivity {
                     
                     return;
                 }
-            });
+            });*/
+    }
+    
+    
+    private void getViews()
+    {
+        time_symbol = findViewById(R.id.param_0_symbol);
+        flow_rate_symbol = findViewById(R.id.param_1_symbol);
+        volume_symbol = findViewById(R.id.result_symbol);
+        
+        time_value = findViewById(R.id.param_0_value);
+        flow_rate_value = findViewById(R.id.param_1_value);
+        
+        time_unit = findViewById(R.id.param_0_unit);
+        flow_rate_unit = findViewById(R.id.param_1_unit);
+        
+        formula = findViewById(R.id.formula);
+        result = findViewById(R.id.result);
+        
+        findViewById(R.id.param_2_symbol).setVisibility(View.GONE);
+        findViewById(R.id.param_2_value).setVisibility(View.GONE);
+        findViewById(R.id.param_2_unit).setVisibility(View.GONE);
+
+        findViewById(R.id.param_3_symbol).setVisibility(View.GONE);
+        findViewById(R.id.param_3_value).setVisibility(View.GONE);
+        findViewById(R.id.param_3_unit).setVisibility(View.GONE);
+    }
+    
+    
+    private void initializeActivity()
+    {
+        time_symbol.setText("t = ");
+        flow_rate_symbol.setText("Q = ");
+        volume_symbol.setText("V = ?");
+        
+        time_unit.setText("s");
+        flow_rate_unit.setText("m³/s");
+        
+        formula.setText(R.string.fluid_flow_volume1_formula);
     }
 }
