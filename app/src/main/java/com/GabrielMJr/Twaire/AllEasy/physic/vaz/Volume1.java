@@ -1,6 +1,7 @@
 package com.GabrielMJr.Twaire.AllEasy.physic.vaz;
 
 import android.os.Bundle;
+import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -102,6 +103,8 @@ public class Volume1 extends MyActivity
     
     private void getViews()
     {
+        setToolBar((Toolbar) findViewById(R.id.toolbar));
+        
         time_symbol = findViewById(R.id.param_0_symbol);
         flow_rate_symbol = findViewById(R.id.param_1_symbol);
         volume_symbol = findViewById(R.id.result_symbol);
