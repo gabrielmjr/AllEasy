@@ -2,39 +2,39 @@ package com.GabrielMJr.Twaire.AllEasy.physic.kinematic.mru;
 
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
+import android.view.View;
+import android.widget.EditText;
 import android.widget.TextView;
 import com.GabrielMJr.Twaire.AllEasy.R;
 import com.GabrielMJr.Twaire.AllEasy.app.MyActivity;
-import com.gabrielMJr.twaire.physic.Physic;
-import com.gabrielMJr.twaire.physic.kinematics.mru.MRU;
-import com.gabrielMJr.twaire.tools.Tools;
 
 
 public class MRU_Displacement3 extends MyActivity
 {
     private TextView initial_time_symbol;
     private TextView final_time_symbol;
+    private TextView velocity_symbol;
+    private TextView delta_displacement_symbol;
+    
+    private EditText initial_time_value;
+    private EditText final_time_value;
+    private EditText velocity_value;
+    
+    private TextView initial_time_unit;
+    private TextView final_time_unit;
+    private TextView velocity_unit;
+    
+    private TextView formula;
+    private TextView result;
     
     
-    private void initialize() {
-        setToolBar((Toolbar) findViewById(R.id.toolbar));
-        
-        this.initial_time = findViewById(R.id.initial_time);
-        this.final_time = findViewById(R.id.final_time);
-        this.media_speed = findViewById(R.id.media_speed);
-        this.displacement = findViewById(R.id.displacement);
-        this.res = findViewById(R.id.res);
-        this.clear = findViewById(R.id.clear);
-        this.tools= new Tools();
-        this.mru = new MRU();
-        this.physic = new Physic();
-    }
     
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.kinematic_mru_displacement3);
-        initialize();
+        setContentView(R.layout.activity_physic_calculations);
+        getViews();
+        initializsActivity();
         
        /* displacement.setOnClickListener(
             new OnClickListener() {
@@ -114,6 +114,47 @@ public class MRU_Displacement3 extends MyActivity
                     return;
                 }
             });*/
+    }
+
+    
+    private void getViews()
+    {
+        setToolBar((Toolbar) findViewById(R.id.toolbar));
+        
+        initial_time_symbol = findViewById(R.id.param_0_symbol);
+        final_time_symbol = findViewById(R.id.param_1_symbol);
+        velocity_symbol = findViewById(R.id.param_2_symbol);
+        delta_displacement_symbol = findViewById(R.id.result_symbol);
+        
+        initial_time_value = findViewById(R.id.param_0_value);
+        final_time_value = findViewById(R.id.param_1_value);
+        velocity_value = findViewById(R.id.param_2_value);
+        
+        initial_time_unit = findViewById(R.id.param_0_unit);
+        final_time_unit = findViewById(R.id.param_1_unit);
+        velocity_unit = findViewById(R.id.param_2_unit);
+        
+        formula = findViewById(R.id.formula);
+        result = findViewById(R.id.result);
+        
+        findViewById(R.id.param_3_symbol).setVisibility(View.GONE);
+        findViewById(R.id.param_3_value).setVisibility(View.GONE);
+        findViewById(R.id.param_3_unit).setVisibility(View.GONE);
+    }
+    
+
+    private void initializsActivity() 
+    {
+        initial_time_symbol.setText("ti = ");
+        final_time_symbol.setText("t = ");
+        velocity_symbol.setText("v = ");
+        delta_displacement_symbol.setText("∆S = ?");
+        
+        initial_time_unit.setText("s");
+        final_time_unit.setText("s");
+        velocity_unit.setText("m/s");
+        
+        formula.setText(R.string.kinematic_mru_displacement3_formula);
     }
     
 }

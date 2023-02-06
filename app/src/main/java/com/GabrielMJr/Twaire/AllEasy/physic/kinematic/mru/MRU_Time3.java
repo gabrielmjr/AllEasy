@@ -126,6 +126,8 @@ public class MRU_Time3 extends MyActivity
     
     private void getViews()
     {
+        setToolBar((Toolbar) findViewById(R.id.toolbar));
+        
         initial_displacement_symbol = findViewById(R.id.param_0_symbol);
         final_displacement_symbol = findViewById(R.id.param_1_symbol);
         velocity_symbol = findViewById(R.id.param_2_symbol);
@@ -138,6 +140,9 @@ public class MRU_Time3 extends MyActivity
         initial_displacement_unit = findViewById(R.id.param_0_unit);
         final_displacement_unit = findViewById(R.id.param_1_unit);
         velocity_unit = findViewById(R.id.param_2_unit);
+        
+        formula = findViewById(R.id.formula);
+        result = findViewById(R.id.result);
         
         findViewById(R.id.param_3_symbol).setVisibility(View.GONE);
         findViewById(R.id.param_3_value).setVisibility(View.GONE);
