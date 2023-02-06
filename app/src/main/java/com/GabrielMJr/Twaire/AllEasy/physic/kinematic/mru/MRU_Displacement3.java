@@ -2,10 +2,6 @@ package com.GabrielMJr.Twaire.AllEasy.physic.kinematic.mru;
 
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
-import android.view.View;
-import android.view.View.OnClickListener;
-import android.widget.Button;
-import android.widget.EditText;
 import android.widget.TextView;
 import com.GabrielMJr.Twaire.AllEasy.R;
 import com.GabrielMJr.Twaire.AllEasy.app.MyActivity;
@@ -14,24 +10,11 @@ import com.gabrielMJr.twaire.physic.kinematics.mru.MRU;
 import com.gabrielMJr.twaire.tools.Tools;
 
 
-public class MRU_Displacement3 extends MyActivity {
+public class MRU_Displacement3 extends MyActivity
+{
+    private TextView initial_time_symbol;
+    private TextView final_time_symbol;
     
-    private EditText initial_time;
-    private EditText final_time;
-    private EditText media_speed;
-    private TextView displacement;
-    private TextView res;
-    private Button clear;
-    
-    private double initialTime;
-    private double finalTime;
-    private double mediaSpeed;
-    private Boolean verify_initial_time;
-    private Boolean verify_final_time;
-    private Boolean verify_media_speed;
-    private Tools tools;
-    private MRU mru;
-    private Physic physic;
     
     private void initialize() {
         setToolBar((Toolbar) findViewById(R.id.toolbar));
@@ -53,7 +36,7 @@ public class MRU_Displacement3 extends MyActivity {
         setContentView(R.layout.kinematic_mru_displacement3);
         initialize();
         
-        displacement.setOnClickListener(
+       /* displacement.setOnClickListener(
             new OnClickListener() {
                 @Override
                 public void onClick(View view) {
@@ -130,7 +113,7 @@ public class MRU_Displacement3 extends MyActivity {
                     
                     return;
                 }
-            });
+            });*/
     }
     
 }
