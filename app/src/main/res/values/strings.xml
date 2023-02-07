@@ -31,9 +31,9 @@
     <string name="kinematic_mru_displacement1_formula">∆S = Sf - Si</string>
     <string name="kinematic_mru_displacement2_formula">∆S = ∆t × vm</string>
     <string name="kinematic_mru_displacement3_formula">∆S = (tf - ti) × vm</string>
-    <string name="kinematic_mru_finalDisplacement_formula">Sf = Si + ∆S</string>
-    <string name="kinematic_mru_initialDisplacement_formula">Si = Sf - ∆S</string>
-    <string name="kinematic_mru_displacementLaw_formula">S = Si + v × ∆t</string>
+    <string name="kinematic_mru_final_displacement_formula">Sf = Si + ∆S</string>
+    <string name="kinematic_mru_initial_displacement_formula">Si = Sf - ∆S</string>
+    <string name="kinematic_mru_displacement_law_formula">S = Si + v × ∆t</string>
     <string name="kinematic_mru_speed_law1_formula">v = ∆S / ∆t</string>
     <string name="kinematic_mru_speed_law2_formula">v = (Sf - Si) / (tf - ti)</string>
     <string name="kinematic_mru_time1_formula">∆t = tf - ti</string>

@@ -159,7 +159,7 @@ public class MRU_Time3 extends MyActivity
         
         initial_displacement_unit.setText("m");
         final_displacement_unit.setText("m");
-        velocity_unit.setText("m");
+        velocity_unit.setText("m/s");
         
         formula.setText(R.string.kinematic_mru_displacement3_formula);
     }
