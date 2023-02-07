@@ -11,15 +11,15 @@
     <string name="nvd">d → diametro (m)</string>
 
     <!--Vazão volumétrica-->
-    <string name="v1">Calcular usando:\n Q = V/∆t</string>
-    <string name="v2">Calcular usando:\n Q = A × v</string>
-    <string name="v3">Calcular usando:\n Q = π × r² × v</string>
-    <string name="t1">Calcular usando:\n ∆t = V/Q</string>
-    <string name="V1">Calcular usando:\n V = ∆t × Q</string>
-    <string name="vel1">Calcular usando:\n v = Q/A</string>
-    <string name="vel2">Calcular usando:\n v = Q / (π × r²)</string>
-    <string name="area1">Calcular usando:\n A = Q/v</string>
-    <string name="raio1">Calcular usando:\n r = √[Q / (π × v)]</string>
+    <string name="fluid_flow_flow_rate1">Calcular usando:\n Q = V/∆t</string>
+    <string name="fluid_flow_flow_rate2">Calcular usando:\n Q = A × v</string>
+    <string name="fluid_flow_flow_rate3">Calcular usando:\n Q = π × r² × v</string>
+    <string name="fluid_flow_time">Calcular usando:\n ∆t = V/Q</string>
+    <string name="fluid_flow_volume">Calcular usando:\n V = ∆t × Q</string>
+    <string name="fluid_flow_velocity1">Calcular usando:\n v = Q/A</string>
+    <string name="fluid_flow_velocity2">Calcular usando:\n v = Q / (π × r²)</string>
+    <string name="fluid_flow_area">Calcular usando:\n A = Q/v</string>
+    <string name="fluid_flow_ray">Calcular usando:\n r = √[Q / (π × v)]</string>
 
     <!--Cinemática MRU-->
     <string name="kinematic_mru_displacement1">Calcular usando:\n ∆S = Sf - Si</string>
