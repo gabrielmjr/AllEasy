@@ -132,14 +132,6 @@ public class FlowRate1 extends MyActivity
         
         formula = findViewById(R.id.formula);
         result = findViewById(R.id.result);
-        
-        findViewById(R.id.param_2_symbol).setVisibility(View.GONE);
-        findViewById(R.id.param_2_value).setVisibility(View.GONE);
-        findViewById(R.id.param_2_unit).setVisibility(View.GONE);
-        
-        findViewById(R.id.param_3_symbol).setVisibility(View.GONE);
-        findViewById(R.id.param_3_value).setVisibility(View.GONE);
-        findViewById(R.id.param_3_unit).setVisibility(View.GONE);
     }
     
     
@@ -155,5 +147,18 @@ public class FlowRate1 extends MyActivity
         delta_time_unit.setText("s");
              
         formula.setText(R.string.fluid_flow_flowRate1_formula);
+        
+        volume_symbol.setVisibility(View.VISIBLE);
+        delta_time_symbol.setVisibility(View.VISIBLE);
+        flow_rate_symbol.setVisibility(View.VISIBLE);
+        
+        volume_value.setVisibility(View.VISIBLE);
+        delta_time_value.setVisibility(View.VISIBLE);
+        
+        volume_unit.setVisibility(View.VISIBLE);
+        delta_time_unit.setVisibility(View.VISIBLE);
+        
+        formula.setVisibility(View.VISIBLE);
+        result.setVisibility(View.VISIBLE);
     }
 }
