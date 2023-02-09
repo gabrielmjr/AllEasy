@@ -4,7 +4,7 @@
 ### Based on school studies
 
 **Note:**
-This project is in maintenance mode, until I and the maintenance mode, I may take long time to release big features.
+This project is in maintenance mode, until the project left from maintenance mode, I may take long time to release big features.
 
 AllEasy is an open source Android application made in Java that aims to automate calculations and results in Physics and Mathematics.
 
