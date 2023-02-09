@@ -54,7 +54,8 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textColor="@color/textColor"
-                        android:textSize="19sp"/>
+                        android:textSize="19sp"
+                        android:visibility="gone"/>
 
                     <EditText
                         android:id="@+id/param_0_value"
@@ -63,14 +64,16 @@
                         android:layout_height="wrap_content"
                         android:textColor="@color/textColor"
                         android:ems="3"
-                        android:hint="@string/nullDouble"/>
+                        android:hint="@string/nullDouble"
+                        android:visibility="gone"/>
 
                     <TextView
                         android:id="@+id/param_0_unit"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textColor="@color/textColor"
-                        android:textSize="18sp"/>
+                        android:textSize="18sp"
+                        android:visibility="gone"/>
 
                 </LinearLayout>
 
@@ -85,7 +88,8 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textColor="@color/textColor"
-                        android:textSize="19sp"/>
+                        android:textSize="19sp"
+                        android:visibility="gone"/>
 
                     <EditText
                         android:id="@+id/param_1_value"
@@ -94,14 +98,16 @@
                         android:layout_height="wrap_content"
                         android:textColor="@color/textColor"
                         android:ems="3"
-                        android:hint="@string/nullDouble"/>
+                        android:hint="@string/nullDouble"
+                        android:visibility="gone"/>
 
                     <TextView
                         android:id="@+id/param_1_unit"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textColor="@color/textColor"
-                        android:textSize="18sp"/>
+                        android:textSize="18sp"
+                        android:visibility="gone"/>
 
                 </LinearLayout>
                 
@@ -116,7 +122,8 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textColor="@color/textColor"
-                        android:textSize="19sp"/>
+                        android:textSize="19sp"
+                        android:visibility="gone"/>
 
                     <EditText
                         android:id="@+id/param_2_value"
@@ -125,14 +132,16 @@
                         android:layout_height="wrap_content"
                         android:textColor="@color/textColor"
                         android:ems="3"
-                        android:hint="@string/nullDouble"/>
+                        android:hint="@string/nullDouble"
+                        android:visibility="gone"/>
 
                     <TextView
                         android:id="@+id/param_2_unit"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textColor="@color/textColor"
-                        android:textSize="18sp"/>
+                        android:textSize="18sp"
+                        android:visibility="gone"/>
 
                 </LinearLayout>
                 
@@ -147,7 +156,8 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textColor="@color/textColor"
-                        android:textSize="19sp"/>
+                        android:textSize="19sp"
+                        android:visibility="gone"/>
 
                     <EditText
                         android:id="@+id/param_3_value"
@@ -156,14 +166,16 @@
                         android:layout_height="wrap_content"
                         android:textColor="@color/textColor"
                         android:ems="3"
-                        android:hint="@string/nullDouble"/>
+                        android:hint="@string/nullDouble"
+                        android:visibility="gone"/>
 
                     <TextView
                         android:id="@+id/param_3_unit"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textColor="@color/textColor"
-                        android:textSize="18sp"/>
+                        android:textSize="18sp"
+                        android:visibility="gone"/>
 
                 </LinearLayout>
 
@@ -178,7 +190,8 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textColor="@color/textColor"
-                        android:textSize="19sp"/>
+                        android:textSize="19sp"
+                        android:visibility="gone"/>
                     
                 </LinearLayout>
 
@@ -211,7 +224,8 @@
                     android:background="@drawable/edge_btn_1"
                     android:ems="5"
                     android:textColor="@color/textColor"
-                    android:gravity="center"/>
+                    android:gravity="center"
+                    android:visibility="gone"/>
 
             </LinearLayout>
 
@@ -247,7 +261,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textColor="@color/textColor"
-                    android:textSize="19sp"/>
+                    android:textSize="19sp"
+                    android:visibility="gone"/>
 
             </HorizontalScrollView>
 
