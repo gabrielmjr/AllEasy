@@ -136,10 +136,6 @@ public class MRU_Displacement3 extends MyActivity
         
         formula = findViewById(R.id.formula);
         result = findViewById(R.id.result);
-        
-        findViewById(R.id.param_3_symbol).setVisibility(View.GONE);
-        findViewById(R.id.param_3_value).setVisibility(View.GONE);
-        findViewById(R.id.param_3_unit).setVisibility(View.GONE);
     }
     
 
@@ -155,6 +151,22 @@ public class MRU_Displacement3 extends MyActivity
         velocity_unit.setText("m/s");
         
         formula.setText(R.string.kinematic_mru_displacement3_formula);
+        
+        initial_time_symbol.setVisibility(View.VISIBLE);
+        final_time_symbol.setVisibility(View.VISIBLE);
+        velocity_symbol.setVisibility(View.VISIBLE);
+        delta_displacement_symbol.setVisibility(View.VISIBLE);
+        
+        initial_time_value.setVisibility(View.VISIBLE);
+        final_time_value.setVisibility(View.VISIBLE);
+        velocity_value.setVisibility(View.VISIBLE);
+        
+        initial_time_unit.setVisibility(View.VISIBLE);
+        final_time_unit.setVisibility(View.VISIBLE);
+        velocity_unit.setVisibility(View.VISIBLE);
+        
+        formula.setVisibility(View.VISIBLE);
+        result.setVisibility(View.VISIBLE);
     }
     
 }

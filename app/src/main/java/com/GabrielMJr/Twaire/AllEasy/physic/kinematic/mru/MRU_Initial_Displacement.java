@@ -121,14 +121,6 @@ public class MRU_Initial_Displacement extends MyActivity
        
         formula = findViewById(R.id.formula);
         result = findViewById(R.id.result);
-        
-        findViewById(R.id.param_2_symbol).setVisibility(View.GONE);
-        findViewById(R.id.param_2_value).setVisibility(View.GONE);
-        findViewById(R.id.param_2_unit).setVisibility(View.GONE);
-
-        findViewById(R.id.param_3_symbol).setVisibility(View.GONE);
-        findViewById(R.id.param_3_value).setVisibility(View.GONE);
-        findViewById(R.id.param_3_unit).setVisibility(View.GONE);
     }
     
    private void initializeActivity()
@@ -141,5 +133,18 @@ public class MRU_Initial_Displacement extends MyActivity
        final_displacement_unit.setText("m");
        
        formula.setText(R.string.kinematic_mru_initial_displacement_formula);
+       
+       initial_displacement_symbol.setVisibility(View.VISIBLE);
+       delta_displacement_symbol.setVisibility(View.VISIBLE);
+       final_displacement_symbol.setVisibility(View.VISIBLE);
+       
+       delta_displacement_value.setVisibility(View.VISIBLE);
+       final_displacement_value.setVisibility(View.VISIBLE);
+       
+       delta_displacement_unit.setVisibility(View.VISIBLE);
+       final_displacement_unit.setVisibility(View.VISIBLE);
+       
+       formula.setVisibility(View.VISIBLE);
+       result.setVisibility(View.VISIBLE);
    }
 }

@@ -127,5 +127,18 @@ public class MRU_Final_Displacement extends MyActivity
         delta_displacement_unit.setText("m");
         
         formula.setText(R.string.kinematic_mru_final_displacement_formula);
+        
+        initial_displacement_symbol.setVisibility(View.VISIBLE);
+        delta_displacement_symbol.setVisibility(View.VISIBLE);
+        final_displacement_symbol.setVisibility(View.VISIBLE);
+        
+        initial_displacement_value.setVisibility(View.VISIBLE);
+        delta_displacement_value.setVisibility(View.VISIBLE);
+        
+        initial_displacement_unit.setVisibility(View.VISIBLE);
+        delta_displacement_unit.setVisibility(View.VISIBLE);
+        
+        formula.setVisibility(View.VISIBLE);
+        result.setVisibility(View.VISIBLE);
     }
 }

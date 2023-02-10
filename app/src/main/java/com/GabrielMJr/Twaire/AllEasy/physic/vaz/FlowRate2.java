@@ -125,7 +125,7 @@ public class FlowRate2 extends MyActivity
 
     private void initializeActivity() {
         area_symbol.setText("a = ");   
-        velocity_symbol.setText("m/s = ");
+        velocity_symbol.setText("v = ");
         flow_rate_symbol.setText(getText(R.string.flow_rate_symbol_equals)
                                  + " ?");
 
