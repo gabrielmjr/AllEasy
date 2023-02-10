@@ -117,14 +117,6 @@ public class Volume1 extends MyActivity
         
         formula = findViewById(R.id.formula);
         result = findViewById(R.id.result);
-        
-        findViewById(R.id.param_2_symbol).setVisibility(View.GONE);
-        findViewById(R.id.param_2_value).setVisibility(View.GONE);
-        findViewById(R.id.param_2_unit).setVisibility(View.GONE);
-
-        findViewById(R.id.param_3_symbol).setVisibility(View.GONE);
-        findViewById(R.id.param_3_value).setVisibility(View.GONE);
-        findViewById(R.id.param_3_unit).setVisibility(View.GONE);
     }
     
     
@@ -138,5 +130,18 @@ public class Volume1 extends MyActivity
         flow_rate_unit.setText("m³/s");
         
         formula.setText(R.string.fluid_flow_volume1_formula);
+        
+        time_symbol.setVisibility(View.VISIBLE);
+        flow_rate_symbol.setVisibility(View.VISIBLE);
+        volume_symbol.setVisibility(View.VISIBLE);
+        
+        time_value.setVisibility(View.VISIBLE);
+        flow_rate_value.setVisibility(View.VISIBLE);
+        
+        time_unit.setVisibility(View.VISIBLE);
+        flow_rate_unit.setVisibility(View.VISIBLE);
+        
+        formula.setVisibility(View.VISIBLE);
+        result.setVisibility(View.VISIBLE);
     }
 }

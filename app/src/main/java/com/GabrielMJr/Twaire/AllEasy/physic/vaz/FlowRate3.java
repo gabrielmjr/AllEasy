@@ -111,12 +111,6 @@ public class FlowRate3 extends MyActivity
 
         formula = findViewById(R.id.formula);
         result = findViewById(R.id.result);
-
-        findViewById(R.id.param_2_value).setVisibility(View.GONE);
-
-        findViewById(R.id.param_3_symbol).setVisibility(View.GONE);
-        findViewById(R.id.param_3_value).setVisibility(View.GONE);
-        findViewById(R.id.param_3_unit).setVisibility(View.GONE);
     }
 
 
@@ -133,5 +127,21 @@ public class FlowRate3 extends MyActivity
         velocity_unit.setText("m/s");
 
         formula.setText(R.string.fluid_flow_flowRate3_formula);
+        
+        ray_symbol.setVisibility(View.VISIBLE);
+        velocity_symbol.setVisibility(View.VISIBLE);
+        flow_rate_symbol.setVisibility(View.VISIBLE);
+        
+        pi_symbol.setVisibility(View.VISIBLE);
+        pi_value.setVisibility(View.VISIBLE);
+        
+        ray_value.setVisibility(View.VISIBLE);
+        velocity_value.setVisibility(View.VISIBLE);
+        
+        ray_unit.setVisibility(View.VISIBLE);
+        velocity_unit.setVisibility(View.VISIBLE);
+        
+        formula.setVisibility(View.VISIBLE);
+        result.setVisibility(View.VISIBLE);
     }
 }

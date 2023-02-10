@@ -21,7 +21,7 @@ public class FlowRate2 extends MyActivity
     private TextView area_unit;
     private TextView velocity_unit;
 
-    private EditText area;
+    private EditText area_value;
     private EditText velocity_value;
 
     private TextView formula;
@@ -112,7 +112,7 @@ public class FlowRate2 extends MyActivity
         velocity_symbol = findViewById(R.id.param_1_symbol);
         flow_rate_symbol = findViewById(R.id.result_symbol);
 
-        area = findViewById(R.id.param_0_value);
+        area_value = findViewById(R.id.param_0_value);
         velocity_value = findViewById(R.id.param_1_value);
 
         area_unit = findViewById(R.id.param_0_unit);
@@ -120,20 +120,12 @@ public class FlowRate2 extends MyActivity
 
         formula = findViewById(R.id.formula);
         result = findViewById(R.id.result);
-        
-        findViewById(R.id.param_2_symbol).setVisibility(View.GONE);
-        findViewById(R.id.param_2_value).setVisibility(View.GONE);
-        findViewById(R.id.param_2_unit).setVisibility(View.GONE);
-
-        findViewById(R.id.param_3_symbol).setVisibility(View.GONE);
-        findViewById(R.id.param_3_value).setVisibility(View.GONE);
-        findViewById(R.id.param_3_unit).setVisibility(View.GONE);
     }
 
 
     private void initializeActivity() {
         area_symbol.setText("a = ");   
-        velocity_symbol.setText("m/s = ");
+        velocity_symbol.setText("v = ");
         flow_rate_symbol.setText(getText(R.string.flow_rate_symbol_equals)
                                  + " ?");
 
@@ -141,5 +133,17 @@ public class FlowRate2 extends MyActivity
         velocity_unit.setText("m/s");
 
         formula.setText(R.string.fluid_flow_flowRate2_formula);
+        
+        area_symbol.setVisibility(View.VISIBLE);
+        velocity_symbol.setVisibility(View.VISIBLE);
+        
+        area_value.setVisibility(View.VISIBLE);
+        velocity_value.setVisibility(View.VISIBLE);
+        
+        area_unit.setVisibility(View.VISIBLE);
+        velocity_unit.setVisibility(View.VISIBLE);
+        
+        formula.setVisibility(View.VISIBLE);
+        result.setVisibility(View.VISIBLE);
     }
 }
