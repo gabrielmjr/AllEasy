@@ -26,10 +26,6 @@ public class FlowRate1 extends MyActivity
     private TextView formula;
     private TextView result;
     
-    private Button clear;
-    
-    private Tools tools;
-    
     
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
