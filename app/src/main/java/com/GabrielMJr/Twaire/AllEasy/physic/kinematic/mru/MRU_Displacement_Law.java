@@ -1,6 +1,8 @@
 package com.GabrielMJr.Twaire.AllEasy.physic.kinematic.mru;
 
 import android.os.Bundle;
+import android.support.v7.widget.Toolbar;
+import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
 import com.GabrielMJr.Twaire.AllEasy.R;
@@ -28,7 +30,7 @@ public class MRU_Displacement_Law extends MyActivity
     @Override
     protected void onCreate (Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.kinematic_mru_displacement_law);
+        setContentView(R.layout.activity_physic_calculations);
         getViews();
         initializeActivity();
         
@@ -117,9 +119,11 @@ public class MRU_Displacement_Law extends MyActivity
     
     private void getViews()
     {
+        setToolBar((Toolbar) findViewById(R.id.toolbar));
+        
         initial_displacement_symbol = findViewById(R.id.param_0_symbol);
         velocity_symbol = findViewById(R.id.param_1_symbol);
-        delta_time_symbol = findViewById(R.id.param_2_value);
+        delta_time_symbol = findViewById(R.id.param_2_symbol);
         displacement_symbol = findViewById(R.id.result_symbol);
         
         initial_displacement_value = findViewById(R.id.param_0_value);
@@ -132,14 +136,37 @@ public class MRU_Displacement_Law extends MyActivity
         
         formula = findViewById(R.id.formula);
         result = findViewById(R.id.result);
-        
-        
     }
     
     
     private void initializeActivity()
     {
+        initial_displacement_symbol.setText("Si = ");
+        velocity_symbol.setText("v = ");
+        delta_time_symbol.setText("∆t = ");
+        displacement_symbol.setText("S = ?");
         
+        initial_displacement_unit.setText("m");
+        velocity_unit.setText("m/s");
+        delta_time_unit.setText("s");
+        
+        formula.setText(R.string.kinematic_mru_displacement_law_formula);
+        
+        initial_displacement_symbol.setVisibility(View.VISIBLE);
+        velocity_symbol.setVisibility(View.VISIBLE);
+        delta_time_symbol.setVisibility(View.VISIBLE);
+        displacement_symbol.setVisibility(View.VISIBLE);
+        
+        initial_displacement_value.setVisibility(View.VISIBLE);
+        velocity_value.setVisibility(View.VISIBLE);
+        delta_time_value.setVisibility(View.VISIBLE);
+        
+        initial_displacement_unit.setVisibility(View.VISIBLE);
+        velocity_unit.setVisibility(View.VISIBLE);
+        delta_time_unit.setVisibility(View.VISIBLE);
+        
+        formula.setVisibility(View.VISIBLE);
+        result.setVisibility(View.VISIBLE);
     }
 
 }
