@@ -133,6 +133,8 @@ public class MRU_Speed1 extends MyActivity
         delta_displacement_unit.setText("m");
         delta_time_unit.setText("s");
         
+        formula.setText(R.string.kinematic_mru_speed_law1_formula);
+        
         delta_displacement_symbol.setVisibility(View.VISIBLE);
         delta_time_symbol.setVisibility(View.VISIBLE);
         velocity_symbol.setVisibility(View.VISIBLE);
@@ -142,8 +144,6 @@ public class MRU_Speed1 extends MyActivity
         
         delta_time_unit.setVisibility(View.VISIBLE);
         delta_time_unit.setVisibility(View.VISIBLE);
-        
-        formula.setText(R.string.kinematic_mru_speed_law1_formula);
         
         formula.setVisibility(View.VISIBLE);
         result.setVisibility(View.VISIBLE);
