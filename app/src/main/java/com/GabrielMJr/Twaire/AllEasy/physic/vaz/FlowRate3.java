@@ -13,43 +13,33 @@ import com.gabrielMJr.twaire.physic.Physic;
 import com.gabrielMJr.twaire.physic.hydrodynamics.fluidflow.FluidFlow;
 import com.gabrielMJr.twaire.tools.Tools;
 
-public class FlowRate3 extends MyActivity {
+public class FlowRate3 extends MyActivity 
+{
+    private TextView ray_symbol;
+    private TextView velocity_symbol;
+    private TextView pi_symbol;
+    private TextView flow_rate_symbol;
 
-	// Atrubutos
-	private EditText ra;
-	private EditText vel;
-	private TextView vaz;
-	private TextView res;
-    private Button clear;
+    private TextView ray_unit;
+    private TextView velocity_unit;
+
+    private EditText ray_value;
+    private EditText velocity_value;
+    private TextView pi_value;
+
+    private TextView formula;
+    private TextView result;
     
-	private Tools Tools;
-	private Double velocidade;
-	private Double raio;
-	private Boolean verifyRaio;
-	private Boolean verifyVelocity;
-	private FluidFlow FF;
-    private Physic physic;
     
-    private void initialize() {
-        setToolBar((Toolbar) findViewById(R.id.toolbar));
-        
-        this.ra = findViewById(R.id.ra);
-        this.vel = findViewById(R.id.vel);
-        this.vaz = findViewById(R.id.vaz);
-        this.res = findViewById(R.id.res);
-        this.clear = findViewById(R.id.clear);
-        this.Tools = new Tools();
-		this.FF = new FluidFlow();
-        this.physic = new Physic();
-    }
 
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.fluid_flow_flow_rate3);
-		this.initialize();
+		setContentView(R.layout.activity_physic_calculations);
+        getViews();
+        initializeActivity();
         
-		this.vaz.setOnClickListener(
+		/*this.vaz.setOnClickListener(
             new OnClickListener() {
 				public void onClick(View view) {
 
@@ -99,6 +89,59 @@ public class FlowRate3 extends MyActivity {
                     
                     return;
                 }
-            });
+            });*/
 	}
+    
+    
+    private void getViews()
+    {
+        setToolBar((Toolbar) findViewById(R.id.toolbar));
+
+        ray_symbol = findViewById(R.id.param_0_symbol);
+        velocity_symbol = findViewById(R.id.param_1_symbol);
+        pi_symbol = findViewById(R.id.param_2_symbol);
+        flow_rate_symbol = findViewById(R.id.result_symbol);
+
+        ray_value = findViewById(R.id.param_0_value);
+        velocity_value = findViewById(R.id.param_1_value);
+        pi_value = findViewById(R.id.param_2_unit);
+
+        ray_unit = findViewById(R.id.param_0_unit);
+        velocity_unit = findViewById(R.id.param_1_unit);
+
+        formula = findViewById(R.id.formula);
+        result = findViewById(R.id.result);
+    }
+
+
+    private void initializeActivity()
+    {
+        ray_symbol.setText("r = ");   
+        velocity_symbol.setText("v = ");
+        flow_rate_symbol.setText(getText(R.string.flow_rate_symbol_equals)
+                                 + " ?");
+        pi_symbol.setText("π = ");
+        pi_value.setText("3.14");
+        
+        ray_unit.setText("m");
+        velocity_unit.setText("m/s");
+
+        formula.setText(R.string.fluid_flow_flowRate3_formula);
+        
+        ray_symbol.setVisibility(View.VISIBLE);
+        velocity_symbol.setVisibility(View.VISIBLE);
+        flow_rate_symbol.setVisibility(View.VISIBLE);
+        
+        pi_symbol.setVisibility(View.VISIBLE);
+        pi_value.setVisibility(View.VISIBLE);
+        
+        ray_value.setVisibility(View.VISIBLE);
+        velocity_value.setVisibility(View.VISIBLE);
+        
+        ray_unit.setVisibility(View.VISIBLE);
+        velocity_unit.setVisibility(View.VISIBLE);
+        
+        formula.setVisibility(View.VISIBLE);
+        result.setVisibility(View.VISIBLE);
+    }
 }

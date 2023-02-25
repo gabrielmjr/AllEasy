@@ -12,41 +12,30 @@ import com.GabrielMJr.Twaire.AllEasy.app.MyActivity;
 import com.gabrielMJr.twaire.physic.hydrodynamics.fluidflow.FluidFlow;
 import com.gabrielMJr.twaire.tools.Tools;
 
-public class FlowRate2 extends MyActivity {
+public class FlowRate2 extends MyActivity 
+{
+    private TextView area_symbol;
+    private TextView velocity_symbol;
+    private TextView flow_rate_symbol;
 
-	// Atributos
-	private EditText vel;
-	private TextView vaz;
-	private EditText ar;
-	private TextView res;
-    private Button clear;
-    
-	private Tools Tools;
-	private Boolean verifyVelocity;
-	private Boolean verifyArea;
-	private Double velocidade;
-	private Double area;
-	private FluidFlow FF;
-    
-    private void initialize() {
-        setToolBar((Toolbar) findViewById(R.id.toolbar));
-        
-        this.vel = findViewById(R.id.vel);
-        this.vaz = findViewById(R.id.vaz);
-        this.ar = findViewById(R.id.ar);
-        this.res = findViewById(R.id.res);
-        this.clear = findViewById(R.id.clear);
-        this.Tools = new Tools();
-		this.FF = new FluidFlow();
-    }
+    private TextView area_unit;
+    private TextView velocity_unit;
 
+    private EditText area_value;
+    private EditText velocity_value;
+
+    private TextView formula;
+    private TextView result;
+    
+    
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.fluid_flow_flow_rate2);
-		this.initialize();
+		setContentView(R.layout.activity_physic_calculations);
+		getViews();
+        initializeActivity();
         
-		this.vaz.setOnClickListener(
+		/*this.vaz.setOnClickListener(
             new OnClickListener() {
 				public void onClick(View view) {
 
@@ -111,6 +100,50 @@ public class FlowRate2 extends MyActivity {
                     
                     return;
                 }
-            });
+            });*/
 	}
+    
+    
+    private void getViews()
+    {
+        setToolBar((Toolbar) findViewById(R.id.toolbar));
+
+        area_symbol = findViewById(R.id.param_0_symbol);
+        velocity_symbol = findViewById(R.id.param_1_symbol);
+        flow_rate_symbol = findViewById(R.id.result_symbol);
+
+        area_value = findViewById(R.id.param_0_value);
+        velocity_value = findViewById(R.id.param_1_value);
+
+        area_unit = findViewById(R.id.param_0_unit);
+        velocity_unit = findViewById(R.id.param_1_unit);
+
+        formula = findViewById(R.id.formula);
+        result = findViewById(R.id.result);
+    }
+
+
+    private void initializeActivity() {
+        area_symbol.setText("a = ");   
+        velocity_symbol.setText("v = ");
+        flow_rate_symbol.setText(getText(R.string.flow_rate_symbol_equals)
+                                 + " ?");
+
+        area_unit.setText("m²");
+        velocity_unit.setText("m/s");
+
+        formula.setText(R.string.fluid_flow_flowRate2_formula);
+        
+        area_symbol.setVisibility(View.VISIBLE);
+        velocity_symbol.setVisibility(View.VISIBLE);
+        
+        area_value.setVisibility(View.VISIBLE);
+        velocity_value.setVisibility(View.VISIBLE);
+        
+        area_unit.setVisibility(View.VISIBLE);
+        velocity_unit.setVisibility(View.VISIBLE);
+        
+        formula.setVisibility(View.VISIBLE);
+        result.setVisibility(View.VISIBLE);
+    }
 }

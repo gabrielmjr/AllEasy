@@ -12,15 +12,15 @@
     <string name="nullDouble">0.0</string>
 
     <!--Fluidflow-->
-    <string name="v1">Calculate using:\n Q = V/∆t</string>
-    <string name="v2">Calculate using:\n Q = A × v</string>
-    <string name="v3">Calculate using:\n Q = π × r² × v</string>
-    <string name="t1">Calculate using:\n ∆t = V/Q</string>
-    <string name="V1">Calculate using:\n V = ∆t × Q</string>
-    <string name="vel1">Calculate using:\n v = Q/A</string>
-    <string name="vel2">Calculate using:\n v = Q / (π × r²)</string>
-    <string name="area1">Calculate using:\n A = Q/v</string>
-    <string name="raio1">Calculate using:\n r = √[Q / (π × v)]</string>
+    <string name="fluid_flow_flow_rate1">Calculate using:\n Q = V/∆t</string>
+    <string name="fluid_flow_flow_rate2">Calculate using:\n Q = A × v</string>
+    <string name="fluid_flow_flow_rate3">Calculate using:\n Q = π × r² × v</string>
+    <string name="fluid_flow_time">Calculate using:\n ∆t = V/Q</string>
+    <string name="fluid_flow_volume">Calculate using:\n V = ∆t × Q</string>
+    <string name="fluid_flow_velocity1">Calculate using:\n v = Q/A</string>
+    <string name="fluid_flow_velocity2">Calculate using:\n v = Q / (π × r²)</string>
+    <string name="fluid_flow_area">Calculate using:\n A = Q/v</string>
+    <string name="fluid_flow_ray">Calculate using:\n r = √[Q / (π × v)]</string>
 
     <!--Kinematic MRU-->
     <string name="kinematic_mru_displacement1">Calculate using:\n ∆S = Sf - Si</string>
