@@ -21,19 +21,19 @@
 		<EditText
 			android:id="@+id/n"
 			android:layout_width="wrap_content"
-			android:layout_height="@dimen/dp80"
+			android:layout_height="80dp"
 			android:textSize="40sp"
 			android:textColor="@color/textColor"
 			android:inputType="number"
 			android:hint="@string/n"
 			android:layout_centerVertical="true"
 			android:layout_alignParentLeft="true"
-			android:layout_margin="@dimen/dp10"/>
+			android:layout_margin="10dp"/>
 
 		<TextView
 			android:id="@+id/fat"
 			android:layout_width="wrap_content"
-			android:layout_height="@dimen/dp80"
+			android:layout_height="80dp"
 			android:textSize="60sp"
 			android:textColor="@color/textColor"
 			android:text="@string/fatp"
@@ -46,7 +46,7 @@
 			android:layout_width="wrap_content"
 			android:textSize="25sp"
 			android:textColor="@color/textColor"
-			android:layout_marginLeft="@dimen/dp10"
+			android:layout_marginLeft="10dp"
 			android:focusable="true"
 			android:typeface="normal"
 			android:textIsSelectable="true"

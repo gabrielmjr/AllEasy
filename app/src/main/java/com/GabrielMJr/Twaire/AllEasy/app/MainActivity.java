@@ -28,6 +28,7 @@ import com.GabrielMJr.Twaire.AllEasy.physic.kinematic.Kinematic_ActivityMain;
 import com.GabrielMJr.Twaire.AllEasy.physic.vaz.FluidFlow_ActivityMain;
 import com.GabrielMJr.Twaire.AllEasy.tools.DialogAlertData;
 import java.util.Locale;
+import android.content.pm.PackageManager.NameNotFoundException;
 //import android.app.AlertDialog;
 
 
@@ -108,15 +109,14 @@ public class MainActivity extends MyMainActivity
                     }
 
                     setContentView(R.layout.splash_screen);
-
-
+                    
                     try
                     {
                         packageInfo = getApplicationContext().getPackageManager().getPackageInfo(getApplicationContext().getPackageName(), 0);
-                        versionCode = packageInfo.versionCode;
                     }
                     catch (PackageManager.NameNotFoundException e)
                     {}
+                    versionCode = packageInfo.versionCode;
 
                     DM = new DataManager(getApplicationContext(), DB_NAME, TB_NAME);
                     updaterStatus = DM.initialize(versionCode);

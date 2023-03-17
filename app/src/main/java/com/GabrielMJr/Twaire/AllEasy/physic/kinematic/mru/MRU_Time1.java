@@ -1,52 +1,37 @@
 package com.GabrielMJr.Twaire.AllEasy.physic.kinematic.mru;
 
-import com.GabrielMJr.Twaire.AllEasy.app.MyActivity;
 import android.os.Bundle;
-import com.GabrielMJr.Twaire.AllEasy.R;
+import android.support.v7.widget.Toolbar;
+import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
-import android.support.v7.widget.Toolbar;
-import com.gabrielMJr.twaire.tools.Tools;
-import com.gabrielMJr.twaire.physic.MRU;
-import android.view.View.OnClickListener;
-import android.view.View;
-import android.widget.Button;
+import com.GabrielMJr.Twaire.AllEasy.R;
+import com.GabrielMJr.Twaire.AllEasy.app.MyActivity;
 
 public class MRU_Time1 extends MyActivity {
     
-    private EditText initial_time;
-    private EditText final_time;
-    private TextView delta_time;
-    private TextView res;
-    private Button clear;
+    private TextView initial_time_symbol;
+    private TextView delta_time_symbol;
+    private TextView final_time_symbol;
     
-    private Boolean verify_initialTime;
-    private Boolean verify_finalTime;
-    private double initialTime;
-    private double finalTime;
-    private Tools tools;
-    private MRU mru;
+    private EditText initial_time_value;
+    private EditText final_time_value;
     
-    public void initialize() {
-        setToolBar((Toolbar) findViewById(R.id.toolbar));
-        
-        initial_time = findViewById(R.id.initial_time);
-        final_time = findViewById(R.id.final_time);
-        delta_time = findViewById(R.id.delta_time);
-        res = findViewById(R.id.res);
-        clear = findViewById(R.id.clear);
-        
-        tools = new Tools();
-        mru = new MRU();
-    }
+    private TextView initial_time_unit;
+    private TextView final_time_unit;
+    
+    private TextView formula;
+    private TextView result;
+    
     
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.kinematic_mru_time1);
-        initialize();
+        setContentView(R.layout.activity_physic_calculations);
+        getViews();
+        initializeActivity();
         
-        delta_time.setOnClickListener (
+        /*delta_time.setOnClickListener (
             new OnClickListener () {
                 @Override
                 public void onClick(View view) {
@@ -90,7 +75,7 @@ public class MRU_Time1 extends MyActivity {
                                    + getText(R.string.newLine)
                                    + getText(R.string.dtp)
                                    + " "
-                                   + mru.fVTime(initialTime, finalTime)
+                                   + mru.time1(initialTime, finalTime)
                                    + getText(R.string.second));
                                    
                                    return;
@@ -115,7 +100,52 @@ public class MRU_Time1 extends MyActivity {
                     
                     return;
                 }
-            });
+            });*/
+    }
+    
+    
+    private void getViews()
+    {
+        setToolBar((Toolbar) findViewById(R.id.toolbar));
+        
+        initial_time_symbol = findViewById(R.id.param_0_symbol);
+        delta_time_symbol = findViewById(R.id.result_symbol);
+        final_time_symbol = findViewById(R.id.param_1_symbol);
+        
+        initial_time_value = findViewById(R.id.param_0_value);
+        final_time_value = findViewById(R.id.param_1_value);
+        
+        initial_time_unit = findViewById(R.id.param_0_unit);
+        final_time_unit = findViewById(R.id.param_1_unit);
+        
+        formula = findViewById(R.id.formula);
+        result = findViewById(R.id.result);
+    }
+    
+    
+    private void initializeActivity()
+    {
+        initial_time_symbol.setText("ti = ");
+        delta_time_symbol.setText("∆t = ?");
+        final_time_symbol.setText("t = ");
+        
+        initial_time_unit.setText("s");
+        final_time_unit.setText("s");
+        
+        formula.setText(R.string.kinematic_mru_time1_formula);
+        
+        initial_time_symbol.setVisibility(View.VISIBLE);
+        delta_time_symbol.setVisibility(View.VISIBLE);
+        final_time_symbol.setVisibility(View.VISIBLE);
+        
+        initial_time_value.setVisibility(View.VISIBLE);
+        final_time_value.setVisibility(View.VISIBLE);
+        
+        initial_time_unit.setVisibility(View.VISIBLE);
+        final_time_unit.setVisibility(View.VISIBLE);
+        
+        formula.setVisibility(View.VISIBLE);
+        result.setVisibility(View.VISIBLE);
     }
     
 }

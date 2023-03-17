@@ -2,61 +2,46 @@ package com.GabrielMJr.Twaire.AllEasy.physic.kinematic.muv;
 
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
+import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
 import com.GabrielMJr.Twaire.AllEasy.R;
 import com.GabrielMJr.Twaire.AllEasy.app.MyActivity;
-import com.gabrielMJr.twaire.physic.MUV;
+import com.GabrielMJr.Twaire.AllEasy.R;
+import com.GabrielMJr.Twaire.AllEasy.app.MyActivity;
 import com.gabrielMJr.twaire.physic.Physic;
+import com.gabrielMJr.twaire.physic.kinematics.muv.MUV;
 import com.gabrielMJr.twaire.tools.Tools;
-import android.view.View.OnClickListener;
-import android.view.View;
-import android.widget.Button;
 
 public class MUV_Speed3 extends MyActivity
 {
     
     // Attributes
-    private EditText final_speed;
-    private EditText delta_time;
-    private EditText acceleration;
-    private TextView speed;
-    private TextView res;
-    private Button clear;
-
-    private Boolean verify_finalSpeed;;
-    private Boolean verify_deltaTime;
-    private Boolean verify_acceleration;
-    private double finalSpeed;
-    private double deltaTime;
-    private double accelerationV;
-    private Tools tools;
-    private MUV muv;
-    private Physic physic;
+	private TextView initial_velocity_symbol;
+	private TextView final_velocity_symbol;
+	private TextView delta_time_symbol;
+	private TextView acceleration_symbol;
+	
+	private EditText final_velocity_value;
+	private EditText delta_time_value;
+	private EditText acceleration_value;
+	
+	private TextView final_velocity_unit;
+	private TextView delta_time_unit;
+	private TextView acceleration_unit;
     
-    private void initialize()
-    {
-        setToolBar((Toolbar) findViewById(R.id.toolbar));
-
-        final_speed = findViewById(R.id.final_speed);
-        delta_time = findViewById(R.id.delta_time);
-        acceleration =  findViewById(R.id.acceleration);
-        speed = findViewById(R.id.speed);
-        res = findViewById(R.id.res);
-        clear = findViewById(R.id.clear);
-
-        tools = new Tools();
-        muv = new MUV();
-        physic = new Physic();
-    }
+	private TextView formula;
+	private TextView result;
+	
       
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.kinematic_muv_speed3);
-        initialize();
+        setContentView(R.layout.activity_physic_calculations);
+        getViews();
+		initializeActivity();
         
-        speed.setOnClickListener(new OnClickListener()
+       /* speed.setOnClickListener(new OnClickListener()
         {
             @Override
             public void onClick(View view)
@@ -117,7 +102,7 @@ public class MUV_Speed3 extends MyActivity
                 
                 if (verify_finalSpeed && verify_deltaTime && verify_acceleration)
                 {
-                    res.setText(muv.initialSpeed(finalSpeed, deltaTime, accelerationV, physic.GET_STEP));
+                    res.setText(muv.speed3(finalSpeed, deltaTime, accelerationV, physic.GET_STEP));
                     
                     return;
                 } 
@@ -141,7 +126,59 @@ public class MUV_Speed3 extends MyActivity
                     
                     return;
                 }
-            });
+            });*/
     }
-    
+	
+	
+	private void getViews()
+	{
+		setToolBar((Toolbar) findViewById(R.id.toolbar));
+		
+		final_velocity_symbol = findViewById(R.id.param_0_symbol);
+		delta_time_symbol = findViewById(R.id.param_1_symbol);
+		acceleration_symbol = findViewById(R.id.param_2_symbol);
+		initial_velocity_symbol = findViewById(R.id.result_symbol);
+		
+		final_velocity_value = findViewById(R.id.param_0_value);
+		delta_time_value = findViewById(R.id.param_1_value);
+		acceleration_value = findViewById(R.id.param_2_value);
+		
+		final_velocity_unit = findViewById(R.id.param_0_unit);
+		delta_time_unit = findViewById(R.id.param_1_unit);
+		acceleration_unit = findViewById(R.id.param_2_unit);
+		
+		formula = findViewById(R.id.formula);
+		result = findViewById(R.id.result);
+	}
+	
+	
+	private void initializeActivity()
+	{
+		initial_velocity_symbol.setText("vi = ?");
+		final_velocity_symbol.setText("vf = ");
+		delta_time_symbol.setText("∆t =");
+		acceleration_symbol.setText("a = ");
+		
+		final_velocity_unit.setText("m/s");
+		delta_time_unit.setText("s");
+		acceleration_unit.setText("m/s²");
+		
+		formula.setText(R.string.kinematic_muv_speed3_formula);
+		
+		initial_velocity_symbol.setVisibility(View.VISIBLE);
+		final_velocity_symbol.setVisibility(View.VISIBLE);
+		delta_time_symbol.setVisibility(View.VISIBLE);
+		acceleration_symbol.setVisibility(View.VISIBLE);
+		
+		final_velocity_value.setVisibility(View.VISIBLE);
+		delta_time_value.setVisibility(View.VISIBLE);
+		acceleration_value.setVisibility(View.VISIBLE);
+		
+		final_velocity_unit.setVisibility(View.VISIBLE);
+		delta_time_unit.setVisibility(View.VISIBLE);
+		acceleration_unit.setVisibility(View.VISIBLE);
+		
+		formula.setVisibility(View.VISIBLE);
+		result.setVisibility(View.VISIBLE);
+	}
 }

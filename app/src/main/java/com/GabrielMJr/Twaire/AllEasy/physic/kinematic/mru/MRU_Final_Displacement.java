@@ -1,49 +1,37 @@
 package com.GabrielMJr.Twaire.AllEasy.physic.kinematic.mru;
 
-import com.GabrielMJr.Twaire.AllEasy.app.MyActivity;
 import android.os.Bundle;
-import com.GabrielMJr.Twaire.AllEasy.R;
+import android.support.v7.widget.Toolbar;
+import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
-import android.support.v7.widget.Toolbar;
-import com.gabrielMJr.twaire.tools.Tools;
-import com.gabrielMJr.twaire.physic.MRU;
-import android.view.View.OnClickListener;
-import android.view.View;
+import com.GabrielMJr.Twaire.AllEasy.R;
+import com.GabrielMJr.Twaire.AllEasy.app.MyActivity;
 
-public class MRU_Final_Displacement extends MyActivity {
-
-    private EditText initial_displacement;
-    private EditText delta_displacement;
-    private TextView displacement;
-    private TextView res;
+public class MRU_Final_Displacement extends MyActivity
+{
+    private TextView initial_displacement_symbol;
+    private TextView delta_displacement_symbol;
+    private TextView final_displacement_symbol;
     
-    private double initialDisplacement;
-    private double deltaDisplacement;
-    private Boolean verifyInitialDisplacement;
-    private Boolean verifyDeltaDisplacement;
-    private Tools tools;
-    private MRU mru;
-
-    private void initialize () {
-        setToolBar((Toolbar) findViewById(R.id.toolbar));
-        
-        this.initial_displacement = findViewById(R.id.initial_displacement);
-        this.delta_displacement = findViewById(R.id.delta_displacement);
-        this.displacement = findViewById(R.id.displacement);
-        this.res = findViewById(R.id.res);
-        
-        this.tools = new Tools();
-        this.mru = new MRU();
-    }
-
+    private TextView initial_displacement_unit;
+    private TextView delta_displacement_unit;
+    
+    private EditText initial_displacement_value;
+    private EditText delta_displacement_value;
+    
+    private TextView formula;
+    private TextView result;
+    
+    
     @Override
     protected void onCreate (Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.kinematic_mru_final_displacement);
-        initialize();
+        setContentView(R.layout.activity_physic_calculations);
+        getViews();
+        initializeActivity();
         
-        displacement.setOnClickListener(
+        /*displacement.setOnClickListener(
             new OnClickListener() {
                 @Override
                 public void onClick (View view) {
@@ -92,13 +80,65 @@ public class MRU_Final_Displacement extends MyActivity {
                                     + "\n"
                                     + getText(R.string.final_displacement)      
                                     + " = "
-                                    + mru.final_displacement(deltaDisplacement, initialDisplacement)
+                                    + mru.displacement5(initialDisplacement, deltaDisplacement)
                                     + getText (R.string.dm));
                     }
 
                 }
-            });
+            });*/
 
     }
 
+    
+    private void getViews()
+    {
+        setToolBar((Toolbar) findViewById(R.id.toolbar));
+        
+        initial_displacement_symbol = findViewById(R.id.param_0_symbol);
+        delta_displacement_symbol = findViewById(R.id.param_1_symbol);
+        final_displacement_symbol = findViewById(R.id.result_symbol);
+        
+        initial_displacement_value = findViewById(R.id.param_0_value);
+        delta_displacement_value = findViewById(R.id.param_1_value);
+        
+        initial_displacement_unit = findViewById(R.id.param_0_unit);
+        delta_displacement_unit = findViewById(R.id.param_1_unit);
+        
+        formula = findViewById(R.id.formula);
+        result = findViewById(R.id.result);
+        
+        findViewById(R.id.param_2_symbol).setVisibility(View.GONE);
+        findViewById(R.id.param_2_value).setVisibility(View.GONE);
+        findViewById(R.id.param_2_unit).setVisibility(View.GONE);
+
+        findViewById(R.id.param_3_symbol).setVisibility(View.GONE);
+        findViewById(R.id.param_3_value).setVisibility(View.GONE);
+        findViewById(R.id.param_3_unit).setVisibility(View.GONE);
+    }
+    
+    
+    private void initializeActivity()
+    {
+        initial_displacement_symbol.setText("Si = ");
+        delta_displacement_symbol.setText("∆S = ");
+        final_displacement_symbol.setText("S = ?");
+
+        initial_displacement_unit.setText("m");
+        delta_displacement_unit.setText("m");
+        
+        formula.setText(R.string.kinematic_mru_final_displacement_formula);
+        
+        initial_displacement_symbol.setVisibility(View.VISIBLE);
+        delta_displacement_symbol.setVisibility(View.VISIBLE);
+        final_displacement_symbol.setVisibility(View.VISIBLE);
+        
+        initial_displacement_value.setVisibility(View.VISIBLE);
+        delta_displacement_value.setVisibility(View.VISIBLE);
+        
+        initial_displacement_unit.setVisibility(View.VISIBLE);
+        delta_displacement_unit.setVisibility(View.VISIBLE);
+        
+        formula.setVisibility(View.VISIBLE);
+        result.setVisibility(View.VISIBLE);
+    }
 }

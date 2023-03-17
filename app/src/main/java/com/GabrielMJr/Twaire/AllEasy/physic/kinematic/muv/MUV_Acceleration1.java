@@ -3,56 +3,37 @@ package com.GabrielMJr.Twaire.AllEasy.physic.kinematic.muv;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
-import android.view.View.OnClickListener;
 import android.widget.EditText;
 import android.widget.TextView;
 import com.GabrielMJr.Twaire.AllEasy.R;
 import com.GabrielMJr.Twaire.AllEasy.app.MyActivity;
-import com.gabrielMJr.twaire.physic.MUV;
-import com.gabrielMJr.twaire.tools.Tools;
-import android.widget.Button;
 
 public class MUV_Acceleration1 extends MyActivity
 {
 
-    // Attributes
-    private EditText delta_speed;
-    private EditText delta_time;
-    private TextView acceleration;
-    private TextView res;
-    private Button clear;
-
-    private Boolean verify_deltaSpeed;
-    private Boolean verify_deltaTime;
-    private double deltaSpeed;
-    private double deltaTime;
-    private Tools tools;
-    private MUV muv;
-    
-    private void initialize()
-    {
-        setToolBar((Toolbar) findViewById(R.id.toolbar));
-
-        delta_speed = findViewById(R.id.delta_speed);
-        delta_time =  findViewById(R.id.delta_time);
-        acceleration = findViewById(R.id.acceleration);
-        res = findViewById(R.id.res);
-        clear = findViewById(R.id.clear);
-
-        tools = new Tools();
-        muv = new MUV();
-    }
+    private TextView delta_speed_symbol;
+	private TextView delta_time_symbol;
+	private TextView acceleration_symbol;
+	
+	private EditText delta_speed_value;
+	private EditText delta_time_value;
+	
+	private TextView delta_speed_unit;
+	private TextView delta_time_unit;
+	
+	private TextView formula;
+	private TextView result;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.kinematic_muv_acceleration1);
+        setContentView(R.layout.activity_physic_calculations);
+	    getViews();
+		initializeActivity();
 
-        initialize();
-
-        acceleration.setOnClickListener(
+        /*acceleration.setOnClickListener(
             new OnClickListener() {
                 @Override
                 public void onClick(View view)
@@ -110,7 +91,7 @@ public class MUV_Acceleration1 extends MyActivity
                                     + "\n"
                                     + getText(R.string.accelerationp)
                                     + " "
-                                    + muv.fAcceleration(deltaSpeed, deltaTime)
+                                    + muv.acceleration1(deltaSpeed, deltaTime)
                                     + getText(R.string.dm));
 
                                     return;
@@ -134,7 +115,52 @@ public class MUV_Acceleration1 extends MyActivity
                     
                     return;
                 }
-            });
+            });*/
     }
+	
+	
+	private void getViews()
+	{
+		setToolBar((Toolbar) findViewById(R.id.toolbar));
+		
+		delta_speed_symbol = findViewById(R.id.param_0_symbol);
+		delta_time_symbol = findViewById(R.id.param_1_symbol);
+		acceleration_symbol = findViewById(R.id.result_symbol);
+		
+		delta_speed_value = findViewById(R.id.param_0_value);
+		delta_time_value = findViewById(R.id.param_1_value);
+		
+		delta_speed_unit = findViewById(R.id.param_0_unit);
+		delta_time_unit = findViewById(R.id.param_1_unit);
+		
+		formula = findViewById(R.id.formula);
+		result = findViewById(R.id.result);
+	}
+	
+	
+	private void initializeActivity()
+	{
+		delta_speed_symbol.setText("∆v = ");
+		delta_time_symbol.setText("∆t = ");
+		acceleration_symbol.setText("a = ?");
+		
+		delta_speed_unit.setText("m/s");
+		delta_time_unit.setText("s");
+		
+		formula.setText(R.string.kinematic_muv_acceleration1_formula);
+		
+		delta_speed_symbol.setVisibility(View.VISIBLE);
+		delta_time_symbol.setVisibility(View.VISIBLE);
+		acceleration_symbol.setVisibility(View.VISIBLE);
+		
+		delta_speed_value.setVisibility(View.VISIBLE);
+		delta_time_value.setVisibility(View.VISIBLE);
+		
+		delta_speed_unit.setVisibility(View.VISIBLE);
+		delta_time_unit.setVisibility(View.VISIBLE);
+		
+		formula.setVisibility(View.VISIBLE);
+		result.setVisibility(View.VISIBLE);
+	}
 
 }

@@ -1,52 +1,41 @@
 package com.GabrielMJr.Twaire.AllEasy.physic.vaz;
 
 import android.os.Bundle;
-import com.GabrielMJr.Twaire.AllEasy.app.MyActivity;
-import com.GabrielMJr.Twaire.AllEasy.R;
-import com.gabrielMJr.twaire.physic.FluidFlow;
-import android.widget.TextView;
-import android.widget.EditText;
+import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.view.View.OnClickListener;
-import com.gabrielMJr.twaire.tools.Tools;
-import android.support.v7.widget.Toolbar;
 import android.widget.Button;
+import android.widget.EditText;
+import android.widget.TextView;
+import com.GabrielMJr.Twaire.AllEasy.R;
+import com.GabrielMJr.Twaire.AllEasy.app.MyActivity;
+import com.gabrielMJr.twaire.physic.hydrodynamics.fluidflow.FluidFlow;
+import com.gabrielMJr.twaire.tools.Tools;
 
-public class Area1 extends MyActivity {
-
-    // Atrubutos
-    private static EditText vaz;
-    private static EditText vel;
-    private static TextView area;
-    private static TextView res;
-    private static Button clear;
+public class Area1 extends MyActivity
+{
+    private TextView flow_rate_symbol;
+    private TextView velocity_symbol;
+    private TextView area_symbol;
     
-    private static int verifyVaz;
-    private static int verifyVel;
-    private static FluidFlow FF;
-    private static Double vazao;
-    private static Double velocidade;
-    private static Tools Tools;
+    private EditText flow_rate_value;
+    private EditText velocity_value;
     
-    private void initialize() {
-        setToolBar((Toolbar) findViewById(R.id.toolbar));
-        
-        this.vel = findViewById(R.id.vel);
-        this.vaz = findViewById(R.id.vaz);
-        this.area = findViewById(R.id.area);
-        this.res = findViewById(R.id.res);
-        this.clear = findViewById(R.id.clear);
-        this.FF = new FluidFlow();
-        this.Tools = new Tools();
-    }
-
+    private TextView flow_rate_unit;
+    private TextView velocity_unit;
+    
+    private TextView formula;
+    private TextView result;
+    
+   
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.fluid_flow_area1);
-        this.initialize();
+        setContentView(R.layout.activity_physic_calculations);
+        getViews();
+        initializeActivity();
         
-        this.area.setOnClickListener(
+       /*this.area.setOnClickListener(
             new OnClickListener() {
                 public void onClick(View view) {
 
@@ -112,6 +101,51 @@ public class Area1 extends MyActivity {
                         
                         return;
                     }
-                });
+                });*/
+    }
+    
+
+    private void getViews()
+    {
+        setToolBar((Toolbar) findViewById(R.id.toolbar));
+        
+        flow_rate_symbol = findViewById(R.id.param_0_symbol);
+        velocity_symbol = findViewById(R.id.param_1_symbol);
+        area_symbol = findViewById(R.id.result_symbol);
+        
+        flow_rate_value = findViewById(R.id.param_0_value);
+        velocity_value = findViewById(R.id.param_1_value);
+        
+        flow_rate_unit = findViewById(R.id.param_0_unit);
+        velocity_unit = findViewById(R.id.param_1_unit);
+        
+        formula = findViewById(R.id.formula);
+        result = findViewById(R.id.result);
+    }
+    
+
+    private void initializeActivity()
+    {
+        flow_rate_symbol.setText("Q = ");
+        velocity_symbol.setText("v = ");
+        area_symbol.setText("A = ?");
+        
+        flow_rate_unit.setText("m³/s");
+        velocity_unit.setText("m/s");
+        
+        formula.setText(R.string.fluid_flow_area1_formula);
+        
+        flow_rate_symbol.setVisibility(View.VISIBLE);
+        velocity_symbol.setVisibility(View.VISIBLE);
+        area_symbol.setVisibility(View.VISIBLE);
+        
+        flow_rate_unit.setVisibility(View.VISIBLE);
+        velocity_unit.setVisibility(View.VISIBLE);
+        
+        flow_rate_value.setVisibility(View.VISIBLE);
+        velocity_value.setVisibility(View.VISIBLE);
+        
+        formula.setVisibility(View.VISIBLE);
+        result.setVisibility(View.VISIBLE);
     }
 }

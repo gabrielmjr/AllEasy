@@ -1,16 +1,16 @@
 package com.GabrielMJr.Twaire.AllEasy.math;
 
 import android.os.Bundle;
-import android.widget.EditText;
-import android.widget.TextView;
+import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.view.View.OnClickListener;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.TextView;
+import com.GabrielMJr.Twaire.AllEasy.R;
+import com.GabrielMJr.Twaire.AllEasy.app.MyActivity;
 import com.GabrielMJr.Twaire.Math.Arranjo;
 import com.gabrielMJr.twaire.tools.Tools;
-import com.GabrielMJr.Twaire.AllEasy.app.MyActivity;
-import com.GabrielMJr.Twaire.AllEasy.R;
-import android.support.v7.widget.Toolbar;
-import android.widget.Button;
 
 public class Fatorial extends MyActivity
 {
