@@ -3,35 +3,35 @@
 	xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
 	xmlns:tools="http://schemas.android.com/tools"
-	tools:context=".MainActivity"
-	android:layout_width="fill_parent"
-	android:layout_height="fill_parent"
-	android:orientation="vertical"
-	android:background="@color/splash_background"
-    android:colorPrimaryDark="#F00000">
+	android:layout_width="match_parent"
+	android:layout_height="match_parent">
     
 	<TextView
 		android:id="@+id/welcome"
 		android:layout_height="0dp"
-		android:layout_width="0dp"
+		android:layout_width="wrap_content"
+		android:text="@string/welcome"
 		android:textSize="20sp"
-		android:textColor="@color/white"
 		android:textStyle="bold"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toTopOf="@+id/splash_icon"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintVertical_bias=".2"/>
+        app:layout_constraintVertical_bias=".15"
+		app:layout_constraintHorizontal_bias=".5"/>
     
     <ImageView
         android:id="@+id/splash_icon"
         android:layout_width="0dp"
         android:layout_height="0dp"
 		android:src="@drawable/alleasy"
-        app:layout_constraintTop_toBottomOf="@id/welcome"
+        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintVertical_bias=".2"/>
+        app:layout_constraintVertical_bias=".5"
+		app:layout_constraintHorizontal_bias=".5"
+		app:layout_constraintWidth_percent=".8"
+		app:layout_constraintDimensionRatio="W, 16:9"/>
 
 </android.support.constraint.ConstraintLayout>
