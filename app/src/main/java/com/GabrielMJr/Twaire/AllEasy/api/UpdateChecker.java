@@ -5,7 +5,7 @@ import android.app.DownloadManager;
 import android.content.Context;
 import android.net.Uri;
 import com.GabrielMJr.Twaire.AllEasy.R;
-import com.GabrielMJr.Twaire.AllEasy.api.Constants;
+import com.GabrielMJr.Twaire.AllEasy.util.Constants;
 import com.GabrielMJr.Twaire.AllEasy.api.JARequest;
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;

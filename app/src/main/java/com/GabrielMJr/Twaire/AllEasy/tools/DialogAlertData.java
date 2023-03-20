@@ -4,7 +4,7 @@ import android.app.AlertDialog;
 import com.GabrielMJr.Twaire.AllEasy.R;
 import android.content.Context;
 import android.content.DialogInterface;
-import com.GabrielMJr.Twaire.AllEasy.app.MainActivity;
+import com.GabrielMJr.Twaire.AllEasy.MainActivity;
 import android.graphics.drawable.Drawable;
 
 public class DialogAlertData {

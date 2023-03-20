@@ -4,7 +4,6 @@
 	xmlns:tools="http://schemas.android.com/tools"
 	android:layout_width="fill_parent"
 	android:layout_height="fill_parent"
-	tools:context=".app.SendMailActivity"
 	android:orientation="vertical"
 	android:background="@color/main_background">
 

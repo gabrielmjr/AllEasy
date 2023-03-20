@@ -5,7 +5,7 @@ import android.database.sqlite.SQLiteOpenHelper;
 import android.content.Context;
 import android.content.ContentValues;
 import android.database.Cursor;
-import com.GabrielMJr.Twaire.AllEasy.databaseManager.DateNormalizer;
+import com.GabrielMJr.Twaire.AllEasy.util.DateNormalizer;
 import com.GabrielMJr.Twaire.AllEasy.tools.DialogAlertData;
 
 // Base de dados usando SQLiteOpenHelper
