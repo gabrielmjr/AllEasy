@@ -5,7 +5,7 @@
 
     <stroke
         android:width="3dp"
-        android:color="@color/green"/>
+        android:color="@color/colorGreen"/>
 
         <solid
             android:color="@color/transparent"/>

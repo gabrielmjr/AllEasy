@@ -5,8 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    tools:context=".app.SendMailActivity"
-    android:background="@color/main_background">
+    tools:context=".app.SendMailActivity">
 
     <include
         layout="@layout/action_bar"/>
@@ -18,7 +17,6 @@
         android:layout_marginTop="?attr/actionBarSize"
         android:textAppearance="?android:attr/textAppearanceSmall"
         android:text="@string/send_mail_note"
-        android:textColor="@color/textColor"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toTopOf="@+id/mail_message"
         app:layout_constraintStart_toStartOf="parent"
@@ -31,7 +29,6 @@
         android:layout_height="0dp"
         android:inputType="textMultiLine"
         android:hint="@string/send_mail_hint_note"
-        android:textColor="@color/textColor"
         android:background="@drawable/ic_send_mail_field"
         android:gravity="center"
         app:layout_constraintTop_toBottomOf="@id/send_email_note"
@@ -45,7 +42,6 @@
         android:layout_height="wrap_content"
         android:layout_width="wrap_content"
         android:text="@string/send_mail"
-        android:textColor="@color/hintColor"
         android:background="@drawable/background_2"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"

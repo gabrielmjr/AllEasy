@@ -4,8 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:background="@color/main_background">
+    android:orientation="vertical">
 
     <include
         layout="@layout/action_bar"/>
@@ -40,7 +39,6 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textSize="20sp"
-                    android:textColor="@color/textColor"
                     android:layout_gravity="center"/>
 
                 <LinearLayout
@@ -53,7 +51,6 @@
                         android:id="@+id/param_0_symbol"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textColor="@color/textColor"
                         android:textSize="19sp"
                         android:visibility="gone"/>
 
@@ -62,7 +59,6 @@
                         android:layout_width="wrap_content"
                         android:inputType="numberDecimal"
                         android:layout_height="wrap_content"
-                        android:textColor="@color/textColor"
                         android:ems="3"
                         android:hint="@string/nullDouble"
                         android:visibility="gone"/>
@@ -71,7 +67,6 @@
                         android:id="@+id/param_0_unit"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textColor="@color/textColor"
                         android:textSize="18sp"
                         android:visibility="gone"/>
 
@@ -87,7 +82,6 @@
                         android:id="@+id/param_1_symbol"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textColor="@color/textColor"
                         android:textSize="19sp"
                         android:visibility="gone"/>
 
@@ -96,7 +90,6 @@
                         android:layout_width="wrap_content"
                         android:inputType="numberDecimal"
                         android:layout_height="wrap_content"
-                        android:textColor="@color/textColor"
                         android:ems="3"
                         android:hint="@string/nullDouble"
                         android:visibility="gone"/>
@@ -105,7 +98,6 @@
                         android:id="@+id/param_1_unit"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textColor="@color/textColor"
                         android:textSize="18sp"
                         android:visibility="gone"/>
 
@@ -121,7 +113,6 @@
                         android:id="@+id/param_2_symbol"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textColor="@color/textColor"
                         android:textSize="19sp"
                         android:visibility="gone"/>
 
@@ -130,7 +121,6 @@
                         android:layout_width="wrap_content"
                         android:inputType="numberDecimal"
                         android:layout_height="wrap_content"
-                        android:textColor="@color/textColor"
                         android:ems="3"
                         android:hint="@string/nullDouble"
                         android:visibility="gone"/>
@@ -139,7 +129,6 @@
                         android:id="@+id/param_2_unit"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textColor="@color/textColor"
                         android:textSize="18sp"
                         android:visibility="gone"/>
 
@@ -155,7 +144,6 @@
                         android:id="@+id/param_3_symbol"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textColor="@color/textColor"
                         android:textSize="19sp"
                         android:visibility="gone"/>
 
@@ -164,7 +152,6 @@
                         android:layout_width="wrap_content"
                         android:inputType="numberDecimal"
                         android:layout_height="wrap_content"
-                        android:textColor="@color/textColor"
                         android:ems="3"
                         android:hint="@string/nullDouble"
                         android:visibility="gone"/>
@@ -173,7 +160,6 @@
                         android:id="@+id/param_3_unit"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textColor="@color/textColor"
                         android:textSize="18sp"
                         android:visibility="gone"/>
 
@@ -189,7 +175,6 @@
                         android:id="@+id/result_symbol"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textColor="@color/textColor"
                         android:textSize="19sp"
                         android:visibility="gone"/>
                     
@@ -212,7 +197,6 @@
                     android:layout_height="wrap_content"
                     android:text="@string/fm"
                     android:textSize="20sp"
-                    android:textColor="@color/textColor"
                     android:layout_gravity="center"/>
 
                 <TextView
@@ -223,7 +207,6 @@
                     android:layout_gravity="center"
                     android:background="@drawable/edge_btn_1"
                     android:ems="5"
-                    android:textColor="@color/textColor"
                     android:gravity="center"
                     android:visibility="gone"/>
 
@@ -237,7 +220,6 @@
             android:layout_width="wrap_content"
             android:layout_height="105dp"
             android:layout_centerHorizontal="true"
-            android:background="@drawable/background_1"
             android:paddingLeft="10dp"
             android:paddingRight="10dp"
             android:layout_marginTop="192dp">
@@ -247,7 +229,6 @@
                 android:layout_height="wrap_content"
                 android:text="@string/res"
                 android:textSize="20sp"
-                android:textColor="@color/textColor"
                 android:layout_gravity="center"/>
 
             <HorizontalScrollView
@@ -260,7 +241,6 @@
                     android:id="@+id/result"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textColor="@color/textColor"
                     android:textSize="19sp"
                     android:visibility="gone"/>
 

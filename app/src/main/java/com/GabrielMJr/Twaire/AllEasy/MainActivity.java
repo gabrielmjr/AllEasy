@@ -76,13 +76,11 @@ public class MainActivity extends BaseActivity implements Runnable {
 	}
 	
 	private void buildRecyclerView () {
-		optionsItems.add(getText(R.string.arranjments));
-		optionsItems.add(getText(R.string.combination));
-		optionsItems.add(getText(R.string.factorial));
-		optionsItems.add(getText(R.string.fluid_flow));
-		optionsItems.add(getText(R.string.second_degree_function));
-		optionsItems.add(getText(R.string.kinematic));
-		recyclerView.setLayoutManager(new GridLayoutManager(getApplicationContext(), 2));
+		optionsItems.add(getText(R.string.combinatorial_analysis));
+		optionsItems.add(getText(R.string.kinematics));
+		optionsItems.add(getText(R.string.functions));
+		optionsItems.add(getText(R.string.hydrodynamics));
+		recyclerView.setLayoutManager(new GridLayoutManager(getApplicationContext(), 3));
 		recyclerView.setAdapter(mainAdapter);
 	}
 

@@ -4,7 +4,7 @@
     android:shape="rectangle">
 
     <stroke android:width="2dp"
-        android:color="@color/trasparent"/>
+        android:color="@color/transparent"/>
 
     <corners
 		android:topLeftRadius="100dp"
@@ -12,8 +12,8 @@
         android:radius="-20dp"/>
     
     <gradient
-		android:startColor="@color/bkg_red"
-		android:endColor="@color/bkg_orange"
+		android:startColor="@color/colorRed"
+		android:endColor="@color/colorOrange"
 		android:angle="360"/>
 
 </shape>

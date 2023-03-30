@@ -4,7 +4,6 @@
 	xmlns:tools="http://schemas.android.com/tools"
 	android:layout_width="match_parent"
 	android:layout_height="match_parent"
-	android:background="@color/main_background"
 	android:orientation="vertical">
 
 	<include
@@ -28,8 +27,7 @@
 					android:layout_width="wrap_content"
 					android:layout_height="wrap_content"
 					android:textSize="16sp"
-					android:textColor="@color/textColor"
-					android:text="@string/vazoS"/>
+					android:text="@string/flow_rate"/>
 
 				<LinearLayout
 					android:id="@+id/v1"
@@ -44,7 +42,6 @@
 						android:layout_height="wrap_content"
 						android:text="@string/fluid_flow_flow_rate1"
 						android:textSize="18sp"
-						android:textColor="@color/textColor"
 						android:layout_gravity="center"/>
 
 				</LinearLayout>
@@ -62,7 +59,6 @@
 						android:layout_height="wrap_content"
 						android:text="@string/fluid_flow_flow_rate2"
 						android:textSize="18sp"
-						android:textColor="@color/textColor"
 						android:layout_gravity="center"/>
 
 				</LinearLayout>
@@ -80,7 +76,6 @@
 						android:layout_height="wrap_content"
 						android:text="@string/fluid_flow_flow_rate3"
 						android:textSize="18sp"
-						android:textColor="@color/textColor"
 						android:layout_gravity="center"/>
 
 				</LinearLayout>
@@ -95,8 +90,7 @@
 					android:layout_height="wrap_content"
 					android:textSize="16sp"
 					android:layout_marginTop="25dp"
-					android:textColor="@color/textColor"
-					android:text="@string/timeS"/>
+					android:text="@string/time"/>
 
 				<LinearLayout
 					android:id="@+id/t1"
@@ -110,7 +104,6 @@
 						android:layout_width="wrap_content"
 						android:layout_height="wrap_content"
 						android:textSize="18sp"
-						android:textColor="@color/textColor"
 						android:text="@string/fluid_flow_time"
 						android:layout_gravity="center"/>
 
@@ -126,8 +119,7 @@
 					android:layout_height="wrap_content"
 					android:textSize="16sp"
 					android:layout_marginTop="25dp"
-					android:textColor="@color/textColor"
-					android:text="@string/volumeS"/>
+					android:text="@string/volume"/>
 
 				<LinearLayout
 					android:id="@+id/V1"
@@ -141,7 +133,6 @@
 						android:layout_width="wrap_content"
 						android:layout_height="wrap_content"
 						android:textSize="18sp"
-						android:textColor="@color/textColor"
 						android:text="@string/fluid_flow_volume"
 						android:layout_gravity="center"/>
 
@@ -157,8 +148,7 @@
 					android:layout_height="wrap_content"
 					android:textSize="16sp"
 					android:layout_marginTop="25dp"
-					android:textColor="@color/textColor"
-					android:text="@string/velocityS"/>
+					android:text="@string/velocity"/>
 
 				<LinearLayout
 					android:id="@+id/vel1"
@@ -172,7 +162,6 @@
 						android:layout_width="wrap_content"
 						android:layout_height="wrap_content"
 						android:textSize="18sp"
-						android:textColor="@color/choices_1"
 						android:text="@string/fluid_flow_velocity1"
 						android:layout_gravity="center"/>
 
@@ -190,7 +179,6 @@
 						android:layout_width="wrap_content"
 						android:layout_height="wrap_content"
 						android:textSize="18sp"
-						android:textColor="@color/choices_1"
 						android:text="@string/fluid_flow_velocity2"
 						android:layout_gravity="center"/>
 
@@ -206,8 +194,7 @@
 					android:layout_height="wrap_content"
 					android:textSize="16sp"
 					android:layout_marginTop="25dp"
-					android:textColor="@color/textColor"
-					android:text="@string/areaS"/>
+					android:text="@string/area"/>
 
 				<LinearLayout
 					android:id="@+id/area"
@@ -221,7 +208,6 @@
 						android:layout_width="wrap_content"
 						android:layout_height="wrap_content"
 						android:textSize="18sp"
-						android:textColor="@color/textColor"
 						android:text="@string/fluid_flow_area"
 						android:layout_gravity="center"/>
 
@@ -237,8 +223,7 @@
 					android:layout_height="wrap_content"
 					android:textSize="16sp"
 					android:layout_marginTop="25dp"
-					android:textColor="@color/textColor"
-					android:text="@string/raioS"/>
+					android:text="@string/ray"/>
 
 				<LinearLayout
 					android:id="@+id/raio1"
@@ -252,7 +237,6 @@
 						android:layout_width="wrap_content"
 						android:layout_height="wrap_content"
 						android:textSize="18sp"
-						android:textColor="@color/textColor"
 						android:text="@string/fluid_flow_ray"
 						android:layout_gravity="center"/>
 
@@ -280,7 +264,6 @@
 					android:layout_height="wrap_content"
 					android:text="@string/nvQ"
 					android:layout_marginRight="15dp"
-					android:textColor="@color/textColor"
 					android:textSize="15sp"/>
 
 			</LinearLayout>
@@ -290,7 +273,6 @@
 				android:layout_height="wrap_content"
 				android:text="@string/nvV"
 				android:layout_marginRight="15dp"
-				android:textColor="@color/textColor"
 				android:textSize="15sp"/>
 
 			<TextView
@@ -298,7 +280,6 @@
 				android:layout_height="wrap_content"
 				android:text="@string/nvt"
 				android:layout_marginRight="15dp"
-				android:textColor="@color/textColor"
 				android:textSize="15sp"/>
 
 			<TextView
@@ -306,7 +287,6 @@
 				android:layout_height="wrap_content"
 				android:text="@string/nvA"
 				android:layout_marginRight="15dp"
-				android:textColor="@color/textColor"
 				android:textSize="15sp"/>
 
 			<TextView
@@ -314,7 +294,6 @@
 				android:layout_height="wrap_content"
 				android:text="@string/nvv"
 				android:layout_marginRight="15dp"
-				android:textColor="@color/textColor"
 				android:textSize="15sp"/>
 
 			<TextView
@@ -322,7 +301,6 @@
 				android:layout_height="wrap_content"
 				android:text="@string/nvp"
 				android:layout_marginRight="15dp"
-				android:textColor="@color/textColor"
 				android:textSize="15sp"/>
 
 			<TextView
@@ -330,7 +308,6 @@
 				android:layout_height="wrap_content"
 				android:text="@string/nvr"
 				android:layout_marginRight="15dp"
-				android:textColor="@color/textColor"
 				android:textSize="15sp"/>
 
 			<TextView
@@ -338,7 +315,6 @@
 				android:layout_height="wrap_content"
 				android:text="@string/nvd"
 				android:layout_marginRight="15dp"
-				android:textColor="@color/textColor"
 				android:textSize="15sp"/>
 
 		</LinearLayout>

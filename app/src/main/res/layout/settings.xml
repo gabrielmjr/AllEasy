@@ -4,8 +4,7 @@
 	xmlns:tools="http://schemas.android.com/tools"
 	android:layout_width="match_parent"
 	android:layout_height="match_parent"
-	android:orientation="vertical"
-	android:background="@color/main_background">
+	android:orientation="vertical">
 
 	<include
 		layout="@layout/action_bar"/>
@@ -24,12 +23,11 @@
 				android:layout_width="wrap_content">
 
 				<TextView
+					android:id="@+id/settingsTextView1"
 					android:layout_height="wrap_content"
 					android:textAppearance="?android:attr/textAppearanceSmall"
 					android:layout_width="wrap_content"
 					android:text="@string/theme"
-					android:textColor="@color/textColor"
-					android:id="@+id/settingsTextView1"
 					android:layout_alignParentLeft="true"
 					android:layout_marginTop="5dp"
 					android:layout_marginStart="10dp"/>
@@ -55,7 +53,6 @@
 						android:textAppearance="?android:attr/textAppearanceMedium"
 						android:layout_width="wrap_content"
 						android:text="@string/choose_theme"
-						android:textColor="@color/textColor"
 						android:layout_centerHorizontal="true"
 						android:layout_gravity="center_vertical"
 						android:layout_marginStart="10dp"/>
@@ -66,8 +63,7 @@
 					android:id="@+id/lg"
 					android:layout_width="wrap_content"
 					android:layout_height="wrap_content"
-                    android:textColor="@color/textColor"
-					android:text="@string/language"
+                    android:text="@string/language"
 					android:layout_below="@id/theme_changer"
 					android:layout_margin="10dp"/>
 
@@ -91,7 +87,6 @@
 						android:layout_height="wrap_content"
 						android:textAppearance="?android:attr/textAppearanceMedium"
 						android:text="@string/choose_language"
-						android:textColor="@color/textColor"
 						android:layout_marginStart="10dp"
 						android:layout_gravity="center_vertical"/>
 
@@ -123,7 +118,6 @@
 							android:layout_height="wrap_content"
 							android:textAppearance="?android:attr/textAppearanceMedium"
 							android:text="@string/contact"
-							android:textColor="@color/textColor"
 							android:layout_marginStart="10dp"
 							android:layout_gravity="center_vertical"/>
 
@@ -151,7 +145,6 @@
 							android:textAppearance="?android:attr/textAppearanceMedium"
 							android:text="Medium Text"
 							android:layout_gravity="center_vertical"
-							android:textColor="@color/textColor"
 							android:layout_marginStart="10dp"/>
 
 					</LinearLayout>

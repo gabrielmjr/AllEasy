@@ -5,7 +5,6 @@
 	xmlns:tools="http://schemas.android.com/tools"
 	android:layout_width="fill_parent"
 	android:layout_height="fill_parent"
-	android:background="@color/main_background"
 	android:orientation="vertical">
 
 	<include
@@ -26,19 +25,17 @@
 				android:layout_width="wrap_content"
 				android:text="@string/uniform_rectilinear_movement"
 				android:layout_alignParentTop="true"
-				android:textColor="@color/textColor"
 				android:textAppearance="?android:attr/textAppearanceMedium"/>
 
 			<TextView
 				android:id="@+id/tv1"
 				android:layout_height="wrap_content"
 				android:layout_width="wrap_content"
-				android:text="@string/displacementS"
+				android:text="@string/displacement"
 				android:layout_below="@id/kinematic_main_tv1"
 				app:autoSizeTextType="uniform"
 				android:layout_marginTop="10dp"
 				android:textSize="16sp"
-				android:textColor="@color/textColor"
 				android:layout_alignParentStart="true"/>
 
 			<LinearLayout
@@ -55,8 +52,7 @@
 					android:layout_height="wrap_content"
 					android:layout_width="wrap_content"
 					android:text="@string/kinematic_mru_displacement1"
-					android:textSize="18sp"
-					android:textColor="@color/textColor"/>
+					android:textSize="18sp"/>
 
 			</LinearLayout>
 
@@ -74,8 +70,7 @@
 					android:layout_height="wrap_content"
 					android:layout_width="wrap_content"
 					android:text="@string/kinematic_mru_displacement2"
-					android:textSize="18sp"
-					android:textColor="@color/textColor"/>
+					android:textSize="18sp"/>
 
 			</LinearLayout>
 
@@ -93,8 +88,7 @@
 					android:layout_height="wrap_content"
 					android:layout_width="wrap_content"
 					android:text="@string/kinematic_mru_displacement3"
-					android:textSize="18sp"
-					android:textColor="@color/textColor"/>
+					android:textSize="18sp"/>
 
 			</LinearLayout>
 
@@ -112,8 +106,7 @@
 					android:layout_height="wrap_content"
 					android:layout_width="wrap_content"
 					android:text="@string/kinematic_mru_initial_displacement"
-					android:textSize="18sp"
-					android:textColor="@color/textColor"/>
+					android:textSize="18sp"/>
 
 			</LinearLayout>
 
@@ -132,7 +125,7 @@
 					android:layout_width="wrap_content"
 					android:text="@string/kinematic_mru_final_displacement"
 					android:textSize="18sp"
-					android:textColor="@color/textColor"/>
+			/>
 
 			</LinearLayout>
 
@@ -150,8 +143,7 @@
 					android:layout_height="wrap_content"
 					android:layout_width="wrap_content"
 					android:text="@string/kinematic_mru_displacement_law"
-					android:textSize="18sp"
-					android:textColor="@color/textColor"/>
+					android:textSize="18sp"/>
 
 			</LinearLayout>
 
@@ -166,12 +158,11 @@
 				android:id="@+id/tv2"
 				android:layout_height="wrap_content"
 				android:layout_width="wrap_content"
-				android:text="@string/velocityS"
+				android:text="@string/velocity"
 				android:layout_below="@id/view1"
 				app:autoSizeTextType="uniform"
 				android:layout_marginTop="20dp"
 				android:textSize="16sp"
-				android:textColor="@color/textColor"
 				android:layout_alignParentStart="true"/>
 
 			<LinearLayout
@@ -181,15 +172,13 @@
 				android:orientation="vertical"
 				android:layout_below="@id/tv2"
 				android:layout_marginTop="10dp"
-				android:gravity="center"
-				android:background="@drawable/background_2">
+				android:gravity="center">
 
 				<TextView
 					android:layout_height="wrap_content"
 					android:layout_width="wrap_content"
 					android:text="@string/kinematic_mru_speed1"
-					android:textSize="18sp"
-					android:textColor="@color/textColor"/>
+					android:textSize="18sp"/>
 
 			</LinearLayout>
 
@@ -200,15 +189,13 @@
 				android:orientation="vertical"
 				android:layout_below="@id/mru_speed_law1"
 				android:layout_marginTop="10dp"
-				android:gravity="center"
-				android:background="@drawable/background_2">
+				android:gravity="center">
 
 				<TextView
 					android:layout_height="wrap_content"
 					android:layout_width="wrap_content"
 					android:text="@string/kinematic_mru_speed2"
-					android:textSize="18sp"
-					android:textColor="@color/textColor"/>
+					android:textSize="18sp"/>
 
 			</LinearLayout>
 
@@ -223,12 +210,11 @@
 				android:id="@+id/tv3"
 				android:layout_height="wrap_content"
 				android:layout_width="wrap_content"
-				android:text="@string/timeS"
+				android:text="@string/time"
 				android:layout_below="@id/view2"
 				app:autoSizeTextType="uniform"
 				android:layout_marginTop="20dp"
 				android:textSize="16sp"
-				android:textColor="@color/textColor"
 				android:layout_alignParentStart="true"/>
 
 			<LinearLayout
@@ -245,8 +231,7 @@
 					android:layout_height="wrap_content"
 					android:layout_width="wrap_content"
 					android:text="@string/kinematic_mru_time1"
-					android:textSize="18sp"
-					android:textColor="@color/textColor"/>
+					android:textSize="18sp"/>
 
 			</LinearLayout>
 
@@ -265,7 +250,6 @@
 					android:layout_width="wrap_content"
 					android:text="@string/kinematic_mru_time2"
 					android:textSize="18sp"
-					android:textColor="@color/textColor"
 					android:id="@+id/time2"/>
 
 			</LinearLayout>
@@ -284,9 +268,8 @@
 					android:layout_height="wrap_content"
 					android:layout_width="wrap_content"
 					android:text="@string/kinematic_mru_time3"
-					android:textSize="18sp"
-					android:textColor="@color/textColor"/>
-
+					android:textSize="18sp"/>
+	
 			</LinearLayout>
 
 			<LinearLayout
@@ -303,8 +286,7 @@
 					android:layout_height="wrap_content"
 					android:layout_width="wrap_content"
 					android:text="@string/kinematic_mru_initial_time"
-					android:textSize="18sp"
-					android:textColor="@color/textColor"/>
+					android:textSize="18sp"/>
 
 			</LinearLayout>
 
@@ -322,8 +304,7 @@
 					android:layout_height="wrap_content"
 					android:layout_width="wrap_content"
 					android:text="@string/kinematic_mru_final_time"
-					android:textSize="18sp"
-					android:textColor="@color/textColor"/>
+					android:textSize="18sp"/>
 
 			</LinearLayout>
 
@@ -334,16 +315,14 @@
 				android:textAppearance="?android:attr/textAppearanceMedium"
 				android:layout_below="@id/mru_final_time"
 				android:layout_marginTop="30dp"
-				android:text="@string/variated_uniform_movementS"
-				android:textColor="@color/textColor"/>
+				android:text="@string/variated_uniform_movement"/>
 
 			<TextView
 				android:id="@+id/tv5"
 				android:layout_width="wrap_content"
 				android:layout_height="wrap_content"
 				android:textAppearance="?android:attr/textAppearanceSmall"
-				android:text="@string/accelerationS"
-				android:textColor="@color/textColor"
+				android:text="@string/acceleration"
 				android:layout_below="@id/tv4"
 				android:textSize="16sp"
 				android:layout_marginTop="10dp"/>
@@ -362,8 +341,7 @@
 					android:layout_height="wrap_content"
 					android:layout_width="wrap_content"
 					android:text="@string/kinematic_muv_acceleration1"
-					android:textSize="18sp"
-					android:textColor="@color/textColor"/>
+					android:textSize="18sp"/>
 
 			</LinearLayout>
 
@@ -381,8 +359,7 @@
 					android:layout_height="wrap_content"
 					android:layout_width="wrap_content"
 					android:text="@string/kinematic_muv_acceleration2"
-					android:textSize="18sp"
-					android:textColor="@color/textColor"/>
+					android:textSize="18sp"/>
 
 			</LinearLayout>
 
@@ -400,8 +377,7 @@
 					android:layout_height="wrap_content"
 					android:layout_width="wrap_content"
 					android:text="@string/kinematic_muv_acceleration3"
-					android:textSize="18sp"
-					android:textColor="@color/textColor"/>
+					android:textSize="18sp"/>
 
 			</LinearLayout>
 
@@ -419,8 +395,7 @@
 					android:layout_height="wrap_content"
 					android:layout_width="wrap_content"
 					android:text="@string/kinematic_muv_acceleration4"
-					android:textSize="18sp"
-					android:textColor="@color/textColor"/>
+					android:textSize="18sp"/>
 
 			</LinearLayout>
 
@@ -429,8 +404,7 @@
 				android:layout_width="wrap_content"
 				android:layout_height="wrap_content"
 				android:textAppearance="?android:attr/textAppearanceSmall"
-				android:text="@string/velocityS"
-				android:textColor="@color/textColor"
+				android:text="@string/velocity"
 				android:layout_below="@id/muv_acceleration4"
 				android:textSize="16sp"
 				android:layout_marginTop="20dp"/>
@@ -449,8 +423,7 @@
 					android:layout_height="wrap_content"
 					android:layout_width="wrap_content"
 					android:text="@string/kinematic_muv_speed1"
-					android:textSize="18sp"
-					android:textColor="@color/textColor"/>
+					android:textSize="18sp"/>
 
 			</LinearLayout>
 
@@ -468,8 +441,7 @@
 					android:layout_height="wrap_content"
 					android:layout_width="wrap_content"
 					android:text="@string/kinematic_muv_speed2"
-					android:textSize="18sp"
-					android:textColor="@color/textColor"/>
+					android:textSize="18sp"/>
 
 			</LinearLayout>
 
@@ -487,8 +459,7 @@
 					android:layout_height="wrap_content"
 					android:layout_width="wrap_content"
 					android:text="@string/kinematic_muv_speed3"
-					android:textSize="18sp"
-					android:textColor="@color/textColor"/>
+					android:textSize="18sp"/>
 
 			</LinearLayout>
 
@@ -506,8 +477,7 @@
 					android:layout_height="wrap_content"
 					android:layout_width="wrap_content"
 					android:text="@string/kinematic_muv_speed4"
-					android:textSize="18sp"
-					android:textColor="@color/textColor"/>
+					android:textSize="18sp"/>
 
 			</LinearLayout>
 
@@ -516,8 +486,7 @@
 				android:layout_width="wrap_content"
 				android:layout_height="wrap_content"
 				android:textAppearance="?android:attr/textAppearanceSmall"
-				android:text="@string/timeS"
-				android:textColor="@color/textColor"
+				android:text="@string/time"
 				android:layout_below="@id/muv_speed4"
 				android:textSize="16sp"
 				android:layout_marginTop="20dp"/>
@@ -536,8 +505,7 @@
 					android:layout_height="wrap_content"
 					android:layout_width="wrap_content"
 					android:text="@string/kinematic_muv_time1"
-					android:textSize="18sp"
-					android:textColor="@color/textColor"/>
+					android:textSize="18sp"/>
 
 			</LinearLayout>
 
@@ -555,8 +523,7 @@
 					android:layout_height="wrap_content"
 					android:layout_width="wrap_content"
 					android:text="@string/kinematic_muv_time2"
-					android:textSize="18sp"
-					android:textColor="@color/textColor"/>
+					android:textSize="18sp"/>
 
 			</LinearLayout>
 
@@ -574,8 +541,7 @@
 					android:layout_height="wrap_content"
 					android:layout_width="wrap_content"
 					android:text="@string/kinematic_muv_time3"
-					android:textSize="18sp"
-					android:textColor="@color/textColor"/>
+					android:textSize="18sp"/>
 
 			</LinearLayout>
 
@@ -593,8 +559,7 @@
 					android:layout_height="wrap_content"
 					android:layout_width="wrap_content"
 					android:text="@string/kinematic_muv_time4"
-					android:textSize="18sp"
-					android:textColor="@color/textColor"/>
+					android:textSize="18sp"/>
 
 			</LinearLayout>
 
@@ -612,8 +577,7 @@
 					android:layout_height="wrap_content"
 					android:layout_width="wrap_content"
 					android:text="@string/kinematic_muv_time5"
-					android:textSize="18sp"
-					android:textColor="@color/textColor"/>
+					android:textSize="18sp"/>
 
 			</LinearLayout>
 
@@ -631,8 +595,7 @@
 					android:layout_height="wrap_content"
 					android:layout_width="wrap_content"
 					android:text="@string/kinematic_muv_time6"
-					android:textSize="18sp"
-					android:textColor="@color/textColor"/>
+					android:textSize="18sp"/>
 
 			</LinearLayout>
 

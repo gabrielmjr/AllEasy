@@ -4,7 +4,6 @@
 	xmlns:tools="http://schemas.com.android.com/tools"
 	android:layout_width="match_parent"
 	android:layout_height="match_parent"
-	android:background="@color/white"
 	android:orientation="vertical">
 
 	<include
@@ -32,7 +31,6 @@
 					android:textSize="20sp"
 					android:layout_marginTop="105dp"
 					android:text="@string/y"
-					android:textColor="@color/textColor"
 					android:layout_alignParentStart="true"/>
 
 				<EditText
@@ -45,7 +43,6 @@
 					android:inputType="phone"
 					android:layout_marginTop="100dp"
 					android:ems="2"
-					android:textColor="@color/textColor"
 					android:layout_toEndOf="@id/yx"
 					android:layout_marginLeft="10dp"
 					android:gravity="right"/>
@@ -57,7 +54,6 @@
 					android:textSize="20sp"
 					android:layout_marginTop="110dp"
 					android:text="@string/ax"
-					android:textColor="@color/textColor"
 					android:layout_toEndOf="@id/a"/>
 
 				<EditText
@@ -71,7 +67,6 @@
 					android:layout_marginTop="100dp"
 					android:ems="2"
 					android:layout_toEndOf="@id/var_a_x"
-					android:textColor="@color/textColor"
 					android:layout_marginLeft="5dp"
 					android:gravity="right"/>
 
@@ -82,7 +77,6 @@
 					android:textSize="20sp"
 					android:layout_marginTop="110dp"
 					android:text="@string/bx"
-					android:textColor="@color/textColor"
 					android:layout_toEndOf="@id/b"/>
 
 				<EditText
@@ -96,7 +90,6 @@
 					android:layout_marginTop="110dp"
 					android:layout_toEndOf="@id/var_b_x"
 					android:layout_marginLeft="5dp"
-					android:textColor="@color/textColor"
 					android:ems="2"
 					android:gravity="center"/>
 
@@ -105,12 +98,11 @@
 					android:layout_width="wrap_content"
 					android:layout_height="wrap_content"
 					android:textSize="15sp"
-					android:text="@string/detS"
+					android:text="@string/determine"
 					android:typeface="normal"
 					android:background="@drawable/circle_button"
 					android:ems="8"
 					android:layout_below="@id/a"
-					android:textColor="@color/textColor"
 					android:layout_marginTop="10dp"/>
 
 				<TextView
@@ -121,7 +113,6 @@
 					android:layout_marginRight="20dp"
 					android:textSize="18sp"
 					android:textIsSelectable="true"
-					android:textColor="@color/textColor"
 					android:layout_below="@id/calculate"/>
 
 			</RelativeLayout>

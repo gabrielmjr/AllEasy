@@ -10,6 +10,11 @@
     <string name="nvr">r → ray (m)</string>
     <string name="nvd">d → diameter (m)</string>
     <string name="nullDouble">0.0</string>
+	
+	<!--Titles-->
+	<string name="combinatorial_analysis">Combinatorial Analisys</string>
+	<string name="functions">Functions</string>
+	<string name="hydrodynamics">Hydrodynamics</string>
 
     <!--Fluidflow-->
     <string name="fluid_flow_flow_rate1">Calculate using:\n Q = V/∆t</string>
@@ -22,7 +27,7 @@
     <string name="fluid_flow_area">Calculate using:\n A = Q/v</string>
     <string name="fluid_flow_ray">Calculate using:\n r = √[Q / (π × v)]</string>
 
-    <!--Kinematic MRU-->
+    <string name="kinematics">Kinematics</string>
     <string name="kinematic_mru_displacement1">Calculate using:\n ∆S = Sf - Si</string>
     <string name="kinematic_mru_displacement2">Calculate using:\n ∆S = ∆t × vm</string>
     <string name="kinematic_mru_displacement3">Calculate using:\n ∆S = (tf - ti) × vm</string>
@@ -36,8 +41,6 @@
     <string name="kinematic_mru_time3">Calculate using:\n ∆t = (Sf - Si) / v</string>
     <string name="kinematic_mru_initial_time">Calculate using:\n ti = tf - ∆t</string>
     <string name="kinematic_mru_final_time">Calculate using:\n tf = ti + ∆t</string>
-
-    <!--Kinematic MUV-->
     <string name="kinematic_muv_acceleration1">Calculate using:\n a = ∆v / ∆t</string>
     <string name="kinematic_muv_acceleration2">Calculate using:\n a = (∆v) / (tf - ti)</string>
     <string name="kinematic_muv_acceleration3">Calculate using:\n a = (vf - vi) / ∆t</string>
@@ -67,7 +70,7 @@
     <string name="second_degree_function">Second-Degree Function</string>
     <string name="determine">Determine</string>
     <string name="fluid_flow">Fluid Flow</string>
-    <string name="flow_raye">Flow rate</string>
+    <string name="flow_rate">Flow rate</string>
     <string name="volume">Volume</string>
     <string name="velocity">Velocity</string>
 	<string name="speed">Speed</string>

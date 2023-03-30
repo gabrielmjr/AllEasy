@@ -3,9 +3,13 @@
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
-        <item name="android:textColorHint">@color/hintColor</item>
+        <item name="android:textColorHint">@color/colorHint</item>
+		<item name="android:background">@color/colorBackground</item>
+		<item name="android:textColor">@color/colorBlack</item>
     </style>
     
-    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar"/>
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar">
+		<item name="android:background">?attr/colorAccent</item>
+	</style>
     <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Dark"/>
 </resources>

@@ -10,14 +10,13 @@
 		android:id="@+id/choose_theme"
 		android:layout_width="match_parent"
 		android:layout_height="wrap_content"
-		android:background="@color/blue_background_1">
+		android:background="@color/colorMidBlue1">
 
 		<RadioButton
 			android:id="@+id/light_mode"
 			android:layout_height="wrap_content"
 			android:layout_width="match_parent"
             android:layout_margin="5dp"
-			android:textColor="@color/black"
 			android:text="@string/light_mode"
 			android:textAppearance="?android:attr/textAppearanceMedium"/>
 
@@ -26,7 +25,6 @@
 			android:layout_height="wrap_content"
 			android:layout_width="match_parent"
             android:layout_margin="5dp"
-			android:textColor="@color/black"
 			android:text="@string/dark_mode"
 			android:textAppearance="?android:attr/textAppearanceMedium"/>
 
@@ -35,7 +33,6 @@
 			android:layout_height="wrap_content"
 			android:layout_width="match_parent"
             android:layout_margin="5dp"
-			android:textColor="@color/black"
 			android:text="@string/system_auto_theme"
 			android:textAppearance="?android:attr/textAppearanceMedium"/>
 
@@ -46,7 +43,6 @@
 		android:layout_width="wrap_content"
 		android:layout_height="wrap_content"
 		android:layout_below="@id/choose_theme"
-		android:textColor="@color/textColor"
 		android:text="@string/cancel"
 		android:textSize="18sp"
 		android:layout_marginTop="5dp"

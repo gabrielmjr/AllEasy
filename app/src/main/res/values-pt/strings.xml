@@ -58,23 +58,23 @@
     <string name="res">Resolução</string>     
 
     <!--Lições-->
-    <string name="kinematicS">Cinemática</string>
-    <string name="displacementS">Deslocamento</string>
-    <string name="variated_uniform_movementS">Movimento Uniformemente Variado</string>
-    <string name="arrjS">Arranjos</string>
-    <string name="fatS">Fatorial</string>
-    <string name="combS">Combinação</string>
-    <string name="fsgS">Função de Segundo Grau</string>
-    <string name="fsgSs">Função de Segundo\nGrau</string>
-    <string name="detS">Determinar</string>
-    <string name="vazS">Vazão volumétrica</string>
-    <string name="vazoS">Fluxo da vazão</string>
-    <string name="volumeS">Volume</string>
-    <string name="velocityS">Velocidade</string>
-    <string name="raioS">Raio</string>
-    <string name="areaS">Área</string>
-    <string name="accelerationS">Aceleração</string>     
-    <string name="timeS">Tempo</string> 
+    <string name="kinematic">Cinemática</string>
+    <string name="displacement">Deslocamento</string>
+    <string name="variated_uniform_movement">Movomento uniformemente variado</string>
+    <string name="arranjments">Arranjos</string>
+    <string name="factorial">Fatorial</string>
+    <string name="combination">Combinação</string>
+    <string name="second_degree_function">Função do Segundo Grau</string>
+    <string name="determine">Determinar</string>
+    <string name="fluid_flow">Vazãp Volumétrica</string>
+    <string name="flow_rate">Fluxo da vazão</string>
+    <string name="volume">Volume</string>
+    <string name="velocity">Velocidade</string>
+	<string name="speed">@string/velocity</string>
+    <string name="ray">Raio</string>
+    <string name="area">Área</string>
+    <string name="acceleration">Aceleração</string>     
+    <string name="time">Tempo</string>     
 
     <!---->
     <string name="null_field">Este espaço não pode estar vazio!</string>

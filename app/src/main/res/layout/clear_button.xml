@@ -12,7 +12,6 @@
         android:layout_alignParentRight="true"
         android:layout_alignParentBottom="true"
         android:layout_margin="30dp"
-        android:textColor="@color/textColor"
         android:background="@drawable/circle_button"/>
     
 </RelativeLayout>

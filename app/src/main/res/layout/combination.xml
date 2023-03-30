@@ -4,8 +4,7 @@
 	xmlns:tools="http://schemas.android.com/tools"
 	android:layout_width="match_parent"
 	android:orientation="horizontal"
-	android:layout_height="match_parent"
-	android:background="@color/white">
+	android:layout_height="match_parent">
 
 	<include
 		layout="@layout/action_bar"/>
@@ -18,7 +17,6 @@
 		android:layout_width="wrap_content"
 		android:layout_height="wrap_content"
 		android:textSize="70sp"
-		android:textColor="@color/textColor"
 		android:text="@string/c"
 		android:layout_centerHorizontal="true"
 		android:layout_centerInParent="true"/>
@@ -28,8 +26,7 @@
 		android:layout_width="40dp"
 		android:layout_height="wrap_content"
 		android:textSize="17sp"
-		android:textColor="@color/textColor"
-        android:imeOptions="actionNext"
+	    android:imeOptions="actionNext"
 		android:inputType="number"
 		android:hint="@string/n"
 		android:text=""
@@ -41,8 +38,7 @@
 		android:layout_width="wrap_content"
 		android:layout_height="wrap_content"
 		android:textSize="17sp"
-		android:textColor="@color/textColor"
-        android:imeOptions="actionNext"
+		android:imeOptions="actionNext"
 		android:inputType="number"
 		android:hint="@string/p"
 		android:text=""
@@ -55,7 +51,6 @@
 		android:layout_height="wrap_content"
 		android:layout_width="wrap_content"
 		android:textSize="25sp"
-		android:textColor="@color/textColor"
 		android:focusable="true"
 		android:typeface="normal"
 		android:textIsSelectable="true"
