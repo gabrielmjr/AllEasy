@@ -1,4 +1,4 @@
-package com.GabrielMJr.Twaire.AllEasy.activity.math;
+package com.GabrielMJr.Twaire.AllEasy.activity.math.combinatorial_analysis;
 
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;

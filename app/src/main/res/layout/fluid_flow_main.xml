@@ -34,7 +34,7 @@
 					android:layout_width="match_parent"
 					android:layout_height="wrap_content"
 					android:gravity="center"
-					android:background="@drawable/background_2"
+					android:background="@drawable/bg_round_blue_button"
 					android:layout_marginTop="10dp">
 
 					<TextView
@@ -51,7 +51,7 @@
 					android:layout_width="match_parent"
 					android:layout_height="wrap_content"
 					android:gravity="center"
-					android:background="@drawable/background_2"
+					android:background="@drawable/bg_round_blue_button"
 					android:layout_marginTop="10dp">
 
 					<TextView
@@ -68,7 +68,7 @@
 					android:layout_width="match_parent"
 					android:layout_height="wrap_content"
 					android:gravity="center"
-					android:background="@drawable/background_2"
+					android:background="@drawable/bg_round_blue_button"
 					android:layout_marginTop="10dp">
 
 					<TextView
@@ -97,7 +97,7 @@
 					android:layout_width="match_parent"
 					android:layout_height="wrap_content"
 					android:gravity="center"
-					android:background="@drawable/background_2"
+					android:background="@drawable/bg_round_blue_button"
 					android:layout_marginTop="10dp">
 
 					<TextView
@@ -126,7 +126,7 @@
 					android:layout_width="match_parent"
 					android:layout_height="wrap_content"
 					android:gravity="center"
-					android:background="@drawable/background_2"
+					android:background="@drawable/bg_round_blue_button"
 					android:layout_marginTop="10dp">
 
 					<TextView
@@ -155,7 +155,7 @@
 					android:layout_width="match_parent"
 					android:layout_height="wrap_content"
 					android:gravity="center"
-					android:background="@drawable/background_2"
+					android:background="@drawable/bg_round_blue_button"
 					android:layout_marginTop="10dp">
 
 					<TextView
@@ -172,7 +172,7 @@
 					android:layout_width="match_parent"
 					android:layout_height="wrap_content"
 					android:gravity="center"
-					android:background="@drawable/background_2"
+					android:background="@drawable/bg_round_blue_button"
 					android:layout_marginTop="10dp">
 
 					<TextView
@@ -201,7 +201,7 @@
 					android:layout_width="match_parent"
 					android:layout_height="wrap_content"
 					android:gravity="center"
-					android:background="@drawable/background_2"
+					android:background="@drawable/bg_round_blue_button"
 					android:layout_marginTop="10dp">
 
 					<TextView
@@ -230,7 +230,7 @@
 					android:layout_width="match_parent"
 					android:layout_height="wrap_content"
 					android:gravity="center"
-					android:background="@drawable/background_2"
+					android:background="@drawable/bg_round_blue_button"
 					android:layout_marginTop="10dp">
 
 					<TextView

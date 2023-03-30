@@ -1,5 +1,6 @@
 package com.GabrielMJr.Twaire.AllEasy;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.v7.widget.GridLayoutManager;
@@ -7,17 +8,23 @@ import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import com.GabrielMJr.Twaire.AllEasy.R;
 import com.GabrielMJr.Twaire.AllEasy.activity.BaseActivity;
+import com.GabrielMJr.Twaire.AllEasy.activity.math.combinatorial_analysis.CombinatorialAnalysisActivityMain;
+import com.GabrielMJr.Twaire.AllEasy.activity.math.function.FunctionActivityMain;
+import com.GabrielMJr.Twaire.AllEasy.activity.physic.kinematic.Kinematic_ActivityMain;
 import com.GabrielMJr.Twaire.AllEasy.adapter.MainAdapter;
+import com.GabrielMJr.Twaire.AllEasy.adapter.MainAdapter.OnOptionsClickListener;
+import com.GabrielMJr.Twaire.AllEasy.model.Activity;
 import java.util.ArrayList;
 import java.util.List;
 
-public class MainActivity extends BaseActivity implements Runnable {
+public class MainActivity extends BaseActivity implements Runnable,
+OnOptionsClickListener {
 	private Toolbar toolbar;
-	
+
 	private RecyclerView recyclerView;
 	private MainAdapter mainAdapter;
-	
-	private List<CharSequence> optionsItems;
+
+	private List<Activity> optionsItems;
 
 	private Handler handler;
 	/* 
@@ -36,7 +43,7 @@ public class MainActivity extends BaseActivity implements Runnable {
 	 private PackageInfo packageInfo;
 	 private Handler handler;
 	 private final Context context = this;
-	 
+
 	 private Settings settings;
 	 private SharedPreferences sharedPreferences;
 	 */
@@ -46,42 +53,47 @@ public class MainActivity extends BaseActivity implements Runnable {
         setContentView(R.layout.splash_screen);
 		closeSplashScreen();
     }
-	
-	private void closeSplashScreen () {
+
+	private void closeSplashScreen() {
 		handler = new Handler();
 		handler.postDelayed(this, 2500);
 	}
 
 	@Override
-	public void run () {
+	public void run() {
 		setContentView(R.layout.activity_main);
 		getViews();
 		setSupportActionBar();
 		initializeAttributes();
 		buildRecyclerView();
 	}
-	
+
 	private void getViews() {
 		toolbar = findViewById(R.id.toolbar);
 		recyclerView = findViewById(R.id.main_recycler_view);
 	}
-	
+
 	private void setSupportActionBar() {
 		setSupportActionBar(toolbar);
 	}
-	
-	private void initializeAttributes () {
+
+	private void initializeAttributes() {
 		optionsItems = new ArrayList<>();
-		mainAdapter = new MainAdapter(getApplicationContext(), optionsItems);
+		mainAdapter = new MainAdapter(getApplicationContext(), optionsItems, this);
 	}
-	
-	private void buildRecyclerView () {
-		optionsItems.add(getText(R.string.combinatorial_analysis));
-		optionsItems.add(getText(R.string.kinematics));
-		optionsItems.add(getText(R.string.functions));
-		optionsItems.add(getText(R.string.hydrodynamics));
+
+	private void buildRecyclerView() {
+		optionsItems.add(new Activity(getText(R.string.combinatorial_analysis), CombinatorialAnalysisActivityMain.class));
+		optionsItems.add(new Activity(getText(R.string.kinematics), Kinematic_ActivityMain.class));
+		optionsItems.add(new Activity(getText(R.string.functions), FunctionActivityMain.class));
+		//optionsItems.add(new Activity(getText(R.string.hydrodynamics), HydrodynamicsActivityMain.class));
 		recyclerView.setLayoutManager(new GridLayoutManager(getApplicationContext(), 3));
 		recyclerView.setAdapter(mainAdapter);
+	}
+
+	@Override
+	public void onOptionsClick(int position) {
+		startActivity(new Intent(getApplicationContext(), optionsItems.get(position).getClassId()));
 	}
 
 	/*handler = new Handler();

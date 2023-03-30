@@ -48,7 +48,7 @@
         android:textAppearance="?android:attr/textAppearanceSmall"
         android:layout_alignParentEnd="true"
         android:padding="10dp"
-		android:background="@drawable/circle_button"/>
+		android:background="@drawable/bg_round_blue_button"/>
 
 </RelativeLayout>
 

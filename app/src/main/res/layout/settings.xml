@@ -38,7 +38,7 @@
 					android:layout_width="match_parent"
 					android:layout_marginTop="10dp"
 					android:layout_below="@id/settingsTextView1"
-					android:background="@drawable/background_2"
+					android:background="@drawable/bg_round_blue_button"
 					android:orientation="horizontal">
 
 					<ImageView
@@ -73,7 +73,7 @@
 					android:layout_width="match_parent"
 					android:layout_height="35dp"
 					android:layout_below="@id/lg"
-					android:background="@drawable/background_2">
+					android:background="@drawable/bg_round_blue_button">
 
 					<ImageView
 						android:layout_width="wrap_content"
@@ -97,7 +97,7 @@
 					android:layout_width="match_parent"
 					android:orientation="vertical"
 					android:layout_below="@id/language_changer"
-					android:background="@drawable/background_2"
+					android:background="@drawable/bg_round_blue_button"
 					android:layout_marginTop="15dp">
 
 					<LinearLayout

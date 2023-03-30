@@ -100,7 +100,7 @@
 					android:textSize="15sp"
 					android:text="@string/determine"
 					android:typeface="normal"
-					android:background="@drawable/circle_button"
+					android:background="@drawable/bg_round_blue_button"
 					android:ems="8"
 					android:layout_below="@id/a"
 					android:layout_marginTop="10dp"/>

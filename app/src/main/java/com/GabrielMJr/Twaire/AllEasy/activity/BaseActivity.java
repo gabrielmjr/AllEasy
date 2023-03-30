@@ -6,8 +6,6 @@ import android.view.View.OnClickListener;
 import android.view.View;
 import android.os.Build;
 
-
-// Extends app compat activity and and set the back button on toolbar
 public class BaseActivity extends AppCompatActivity {
 	private Toolbar setNavigationOnToolbar(Toolbar toolbar) {
 		setSupportActionBar(toolbar);
@@ -25,16 +23,4 @@ public class BaseActivity extends AppCompatActivity {
 	protected Toolbar setToolBar(Toolbar toolbar) {
 		return setNavigationOnToolbar(toolbar);
 	}
-
-
-	// Checker of sdk int
-	protected boolean isCompatible() {
-		if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) {
-			return false;
-		} else {
-			return true;
-		}
-	}
-
-
 }
