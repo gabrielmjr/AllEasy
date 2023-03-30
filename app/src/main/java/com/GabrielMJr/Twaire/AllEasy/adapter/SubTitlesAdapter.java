@@ -2,9 +2,12 @@ package com.GabrielMJr.Twaire.AllEasy.adapter;
 
 import android.content.Context;
 import android.support.v7.widget.RecyclerView;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.ViewGroup;
+import android.widget.TextView;
+import com.GabrielMJr.Twaire.AllEasy.R;
 import java.util.List;
 
 public class SubTitlesAdapter extends RecyclerView.Adapter<SubTitlesAdapter.ViewHolder> {
@@ -21,23 +24,31 @@ public class SubTitlesAdapter extends RecyclerView.Adapter<SubTitlesAdapter.View
 	}
 
 	@Override
-	public SubTitlesAdapter.ViewHolder onCreateViewHolder(ViewGroup p1, int p2) {
-		return null;
+	public ViewHolder onCreateViewHolder(ViewGroup parent, int p2) {
+		return new ViewHolder(LayoutInflater.from(context).inflate(R.layout.card_subtitles, parent, false));
 	}
 
 	@Override
-    public    void onBindViewHolder(SubTitlesAdapter.ViewHolder p1, int p2) {
+    public void onBindViewHolder(ViewHolder holder, int position) {
+		holder.label.setText(subTitles.get(position));
 	}
 
 	@Override
 	public int getItemCount() {
-		return 0;
+		return subTitles.size();
 	}
 
     public class ViewHolder extends RecyclerView.ViewHolder implements OnClickListener {
+		private TextView label;
+		
 		public ViewHolder(View itemView) {
 			super(itemView);
+			getViews(itemView);
 			setListeners(itemView);
+		}
+		
+		private void getViews (View itemView) {
+			label = itemView.findViewById(R.id.label);
 		}
 		
 		private void setListeners(View itemView) {
