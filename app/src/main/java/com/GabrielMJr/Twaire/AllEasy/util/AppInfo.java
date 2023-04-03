@@ -2,7 +2,7 @@ package com.GabrielMJr.Twaire.AllEasy.util;
 
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
-import android.support.v7.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatActivity;
 import android.content.pm.PackageManager.NameNotFoundException;
 import android.content.Context;
 

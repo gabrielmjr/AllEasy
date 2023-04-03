@@ -3,9 +3,9 @@ package com.GabrielMJr.Twaire.AllEasy;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
-import android.support.v7.widget.GridLayoutManager;
-import android.support.v7.widget.RecyclerView;
-import android.support.v7.widget.Toolbar;
+import androidx.recyclerview.widget.GridLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+import androidx.appcompat.widget.Toolbar;
 import com.GabrielMJr.Twaire.AllEasy.R;
 import com.GabrielMJr.Twaire.AllEasy.activity.BaseActivity;
 import com.GabrielMJr.Twaire.AllEasy.activity.math.combinatorial_analysis.CombinatorialAnalysisActivityMain;
@@ -55,7 +55,7 @@ OnOptionsClickListener {
     }
 
 	private void closeSplashScreen() {
-		handler = new Handler();
+        handler = new Handler();
 		handler.postDelayed(this, 2500);
 	}
 
