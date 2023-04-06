@@ -30,7 +30,7 @@ import com.GabrielMJr.Twaire.AllEasy.activity.physic.kinematic.muv.MUV_Accelerat
 import com.GabrielMJr.Twaire.AllEasy.activity.physic.kinematic.muv.MUV_Acceleration4;
 import com.GabrielMJr.Twaire.AllEasy.activity.physic.kinematic.muv.MUV_Speed2;
 
-public class Kinematic_ActivityMain extends BaseActivity {
+public class KinematicActivityMain extends BaseActivity {
 
     // MRU
     // Displacement

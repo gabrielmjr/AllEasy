@@ -10,7 +10,7 @@ import com.GabrielMJr.Twaire.AllEasy.R;
 import com.GabrielMJr.Twaire.AllEasy.activity.BaseActivity;
 import com.GabrielMJr.Twaire.AllEasy.activity.math.combinatorial_analysis.CombinatorialAnalysisActivityMain;
 import com.GabrielMJr.Twaire.AllEasy.activity.math.function.FunctionActivityMain;
-import com.GabrielMJr.Twaire.AllEasy.activity.physic.kinematic.Kinematic_ActivityMain;
+import com.GabrielMJr.Twaire.AllEasy.activity.physic.kinematic.KinematicActivityMain;
 import com.GabrielMJr.Twaire.AllEasy.adapter.MainAdapter;
 import com.GabrielMJr.Twaire.AllEasy.adapter.MainAdapter.OnOptionsClickListener;
 import com.GabrielMJr.Twaire.AllEasy.model.Activity;
@@ -84,7 +84,7 @@ OnOptionsClickListener {
 
 	private void buildRecyclerView() {
 		optionsItems.add(new Activity(getText(R.string.combinatorial_analysis), CombinatorialAnalysisActivityMain.class));
-		optionsItems.add(new Activity(getText(R.string.kinematics), Kinematic_ActivityMain.class));
+		optionsItems.add(new Activity(getText(R.string.kinematics), KinematicActivityMain.class));
 		optionsItems.add(new Activity(getText(R.string.functions), FunctionActivityMain.class));
 		//optionsItems.add(new Activity(getText(R.string.hydrodynamics), HydrodynamicsActivityMain.class));
 		recyclerView.setLayoutManager(new GridLayoutManager(getApplicationContext(), 3));

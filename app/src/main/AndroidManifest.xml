@@ -105,7 +105,7 @@
             </intent-filter>
         </activity>
 
-        <!--<activity
+        <activity
             android:name=".activity.physic.vaz.FluidFlow_ActivityMain"
             android:label="@string/fluid_flow">
             <intent-filter>
@@ -196,7 +196,7 @@
         </activity>
 
         <activity
-            android:name=".activity.physic.kinematic.Kinematic_ActivityMain"
+            android:name=".activity.physic.kinematic.KinematicActivityMain"
             android:label="@string/kinematic">
             <intent-filter>
                 <action android:name="android.intent.action.PARENT"/>
@@ -446,7 +446,7 @@
                 <action android:name="android.intent.action.PARENT"/>
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
-        </activity>-->
+        </activity>
 
         <meta-data
             android:name="android.max_aspect"
