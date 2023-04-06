@@ -86,7 +86,6 @@ OnOptionsClickListener {
 		optionsItems.add(new Activity(getText(R.string.combinatorial_analysis), CombinatorialAnalysisActivityMain.class));
 		optionsItems.add(new Activity(getText(R.string.kinematics), KinematicActivityMain.class));
 		optionsItems.add(new Activity(getText(R.string.functions), FunctionActivityMain.class));
-		//optionsItems.add(new Activity(getText(R.string.hydrodynamics), HydrodynamicsActivityMain.class));
 		recyclerView.setLayoutManager(new GridLayoutManager(getApplicationContext(), 3));
 		recyclerView.setAdapter(mainAdapter);
 	}

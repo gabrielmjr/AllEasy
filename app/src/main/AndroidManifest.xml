@@ -53,7 +53,7 @@
 		
 		<activity
             android:name=".activity.math.combinatorial_analysis.CombinatorialAnalysisActivityMain"
-            android:label="@string/factorial">
+            android:label="@string/combinatorial_analysis">
             <intent-filter>
                 <action android:name="android.intent.action.PARENT"/>
                 <category android:name="android.intent.category.LAUNCHER"/>

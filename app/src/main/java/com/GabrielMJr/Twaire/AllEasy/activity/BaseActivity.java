@@ -7,6 +7,8 @@ import android.view.View;
 import android.os.Build;
 
 public class BaseActivity extends AppCompatActivity {
+    private void onNavigationClickListener (View view) {}
+    
 	private Toolbar setNavigationOnToolbar(Toolbar toolbar) {
 		setSupportActionBar(toolbar);
 		getSupportActionBar().setDisplayHomeAsUpEnabled(true);
@@ -14,7 +16,7 @@ public class BaseActivity extends AppCompatActivity {
 		toolbar.setNavigationOnClickListener(new OnClickListener() {
 				@Override
 				public void onClick(View view) {
-					onBackPressed();
+					onNavigationClickListener(view);
 				}
 			});
 		return toolbar;

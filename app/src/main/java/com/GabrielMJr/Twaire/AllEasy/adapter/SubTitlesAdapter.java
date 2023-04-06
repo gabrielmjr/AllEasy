@@ -1,22 +1,23 @@
 package com.GabrielMJr.Twaire.AllEasy.adapter;
 
 import android.content.Context;
-import androidx.recyclerview.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.widget.TextView;
+import androidx.recyclerview.widget.RecyclerView;
 import com.GabrielMJr.Twaire.AllEasy.R;
+import com.GabrielMJr.Twaire.AllEasy.model.Activity;
 import java.util.List;
 
 public class SubTitlesAdapter extends RecyclerView.Adapter<SubTitlesAdapter.ViewHolder> {
 	private Context context;
-	private List<String> subTitles;
+	private List<Activity> subTitles;
 	private OnSubtitleClickListener subTitleClickListener;
 	
 	public SubTitlesAdapter(Context context,
-							List<String> subTitles,
+							List<Activity> subTitles,
 							OnSubtitleClickListener subTitleClickListener) {
 		this.context = context;
 		this.subTitles = subTitles;
@@ -30,7 +31,7 @@ public class SubTitlesAdapter extends RecyclerView.Adapter<SubTitlesAdapter.View
 
 	@Override
     public void onBindViewHolder(ViewHolder holder, int position) {
-		holder.label.setText(subTitles.get(position));
+		holder.label.setText(subTitles.get(position).getLabel());
 	}
 
 	@Override
@@ -59,11 +60,11 @@ public class SubTitlesAdapter extends RecyclerView.Adapter<SubTitlesAdapter.View
 		public void onClick(View view) {
 			if (getAdapterPosition() == RecyclerView.NO_POSITION) 
 				return;
-			subTitleClickListener.onItemClickListener(getAdapterPosition());
+			subTitleClickListener.onSubTitleClick((getAdapterPosition()));
 		}
 	}
 	
 	public static interface OnSubtitleClickListener {
-		public void onItemClickListener(int position)
+		public void onSubTitleClick(int position)
 	}
 }
