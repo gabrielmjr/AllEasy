@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='utf-8'?>
 <manifest
     xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.GabrielMJr.Twaire.AllEasy"
+    package="com.gabrielmjr.alleasy"
     android:versionName="1.2.3-Beta_4">
 
     <uses-permission android:name="android.permission.INTERNET"/>
