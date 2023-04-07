@@ -19,7 +19,6 @@ Runnable {
     private Toolbar toolbar;
     private RecyclerView subTitleRecycler;
     private SubTitlesAdapter subtitlesAdapter;
-    
     private List<Activity> subTitles;
     
 	@Override
@@ -28,22 +27,22 @@ Runnable {
 		initializeActivity();
         getViews();
         Handler handler = new Handler();
-        handler.postDelayed(this, 300);
+        handler.postDelayed(this, 150);
 	}
 	
 	private void initializeActivity () {
-		setContentView(R.layout.activity_subtitle);
+		setContentView(R.layout.activity_subtitles);
 	}
+    
+    private void getViews() {
+        toolbar = findViewById(R.id.toolbar);
+        subTitleRecycler = findViewById(R.id.subtitles_recycler_view);
+    }
     
     @Override
     public void run() {
         initializeAttributes();
         buildRecyclerView();
-    }
-    
-    private void getViews() {
-        toolbar = findViewById(R.id.toolbar);
-        subTitleRecycler = findViewById(R.id.subtitle_recycler_view);
     }
     
     private void initializeAttributes() {
@@ -58,7 +57,6 @@ Runnable {
         subTitles.add(new Activity(getText(R.string.factorial), Fatorial.class));
         subTitleRecycler.setLayoutManager(new LinearLayoutManager(getApplicationContext()));
         subTitleRecycler.setAdapter(subtitlesAdapter);
-        subtitlesAdapter.notifyDataSetChanged();
     }
 
     @Override

@@ -203,6 +203,15 @@
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
+        
+        <activity
+            android:name=".activity.physic.kinematic.mru.UniformRectilinearMovementActivity"
+            android:label="URM">
+            <intent-filter>
+                <action android:name="android.intent.action.PARENT"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
 
         <activity
             android:name=".activity.physic.kinematic.mru.MRU_Displacement1"
@@ -315,6 +324,15 @@
         <activity
             android:name=".activity.physic.kinematic.mru.MRU_Final_Time"
             android:label="@string/time">
+            <intent-filter>
+                <action android:name="android.intent.action.PARENT"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        
+        <activity
+            android:name=".activity.physic.kinematic.muv.VariatedUniformMovementActivity"
+            android:label="MUV">
             <intent-filter>
                 <action android:name="android.intent.action.PARENT"/>
                 <category android:name="android.intent.category.LAUNCHER"/>
