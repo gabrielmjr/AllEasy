@@ -3,8 +3,8 @@
 	xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
 	xmlns:tools="http://schemas.android.com/tools"
-	android:layout_width="match_parent"
-	android:layout_height="match_parent">
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent">
     
 	<TextView
 		android:id="@+id/welcome"
@@ -31,7 +31,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintVertical_bias=".5"
 		app:layout_constraintHorizontal_bias=".5"
-		app:layout_constraintWidth_percent=".8"
-		app:layout_constraintDimensionRatio="W, 16:9"/>
+		app:layout_constraintWidth_percent=".75"
+		app:layout_constraintDimensionRatio="W, 18:9"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
