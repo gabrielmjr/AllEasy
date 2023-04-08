@@ -3,11 +3,14 @@ package com.gabrielmjr.alleasy;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
+import android.view.Menu;
+import android.view.MenuItem;
+import androidx.appcompat.widget.Toolbar;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-import androidx.appcompat.widget.Toolbar;
 import com.gabrielmjr.alleasy.R;
 import com.gabrielmjr.alleasy.activity.BaseActivity;
+import com.gabrielmjr.alleasy.activity.Settings;
 import com.gabrielmjr.alleasy.activity.math.combinatorial_analysis.CombinatorialAnalysisActivityMain;
 import com.gabrielmjr.alleasy.activity.math.function.FunctionActivityMain;
 import com.gabrielmjr.alleasy.activity.physic.kinematic.KinematicActivityMain;
@@ -94,6 +97,22 @@ OnOptionsClickListener {
 	public void onOptionsClick(int position) {
 		startActivity(new Intent(getApplicationContext(), optionsItems.get(position).getClassId()));
 	}
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.menu, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case R.id.settings:
+                startActivity(new Intent(getApplicationContext(), Settings.class));
+                return true;
+        }
+        return false;
+    }
 
 	/*handler = new Handler();
 	 handler.postDelayed(new Runnable() {
@@ -188,61 +207,7 @@ OnOptionsClickListener {
 	 dialogAlertData.alertDialog(title, message, icon).show();
 	 }
 
-	 // Abrir aba de "Arranjos" caso o botão arranjos for clicado
-	 arranjos.setOnClickListener(
-	 new OnClickListener() {
-	 public void onClick(View view)
-	 {
-	 startActivity(new Intent(getApplicationContext(), Arranjos.class));
-	 }
-	 });
-
-	 // Abrir aba de "combinação" caso o botão comb for clicado
-	 comb.setOnClickListener(
-	 new OnClickListener() {
-	 public void onClick(View view)
-	 {
-	 startActivity(new Intent(getApplicationContext(), Combination.class));
-	 }
-	 });
-
-	 // Abrir aba de "fatorial" caso o botão fat for clicado
-	 fat.setOnClickListener(
-	 new OnClickListener() {
-	 public void onClick(View view)
-	 {
-	 startActivity(new Intent(getApplicationContext(), Fatorial.class));
-	 }
-	 });
-
-	 // Abrir aba de "Função de segundo grau" caso o botão fsg for clicado
-	 fsg.setOnClickListener(
-	 new OnClickListener() {
-	 public void onClick(View view)
-	 {
-	 startActivity(new Intent(getApplicationContext(), FSG.class));
-	 }
-	 });
-
-	 // Abrir aba de "Vazão" caso  botão vaz for clicado;
-	 vaz.setOnClickListener(
-	 new OnClickListener(){
-	 public void onClick(View view)
-	 {
-	 startActivity(new Intent(getApplicationContext(), FluidFlow_ActivityMain.class));
-	 }
-	 });
-
-	 // Abrir aba de "Cinemática" caso o botão kinematic for clicado
-	 kinematic.setOnClickListener( 
-	 new OnClickListener() {
-	 @Override
-	 public void onClick(View view)
-	 {
-	 startActivity(new Intent(getApplicationContext(), Kinematic_ActivityMain.class));
-	 }
-	 });
-
-	 }
-	 }, 2500);*/
+	*/
+     
+     
 }
