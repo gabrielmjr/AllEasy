@@ -50,6 +50,7 @@ OnSubtitleClickListener {
     private void initializeAttributes() {
         subTitles = new ArrayList<>();
         subTitlesAdapter = new SubTitlesAdapter(getApplicationContext(), subTitles, this);
+        setToolBar(toolbar);
     }
     
     private void buildRecyclerView() {
