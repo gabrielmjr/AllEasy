@@ -14,6 +14,7 @@ import com.gabrielmjr.alleasy.activity.Settings;
 import com.gabrielmjr.alleasy.activity.math.combinatorial_analysis.CombinatorialAnalysisActivityMain;
 import com.gabrielmjr.alleasy.activity.math.function.FunctionActivityMain;
 import com.gabrielmjr.alleasy.activity.physic.kinematic.KinematicActivityMain;
+import com.gabrielmjr.alleasy.activity.physic.vaz.FluidFlow_ActivityMain;
 import com.gabrielmjr.alleasy.adapter.MainAdapter;
 import com.gabrielmjr.alleasy.adapter.MainAdapter.OnOptionsClickListener;
 import com.gabrielmjr.alleasy.model.Activity;
@@ -89,6 +90,7 @@ OnOptionsClickListener {
 		optionsItems.add(new Activity(getText(R.string.combinatorial_analysis), CombinatorialAnalysisActivityMain.class));
 		optionsItems.add(new Activity(getText(R.string.kinematics), KinematicActivityMain.class));
 		optionsItems.add(new Activity(getText(R.string.functions), FunctionActivityMain.class));
+        optionsItems.add(new Activity(getText(R.string.fluid_flow), FluidFlow_ActivityMain.class));
 		recyclerView.setLayoutManager(new GridLayoutManager(getApplicationContext(), 3));
 		recyclerView.setAdapter(mainAdapter);
 	}
