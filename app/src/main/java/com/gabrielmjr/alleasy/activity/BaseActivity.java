@@ -5,6 +5,7 @@ import androidx.appcompat.widget.Toolbar;
 import android.view.View.OnClickListener;
 import android.view.View;
 import android.os.Build;
+import android.view.MenuItem;
 
 public class BaseActivity extends AppCompatActivity {
     private void onNavigationClickListener (View view) {}
@@ -13,14 +14,16 @@ public class BaseActivity extends AppCompatActivity {
 		setSupportActionBar(toolbar);
 		getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 		getSupportActionBar().setHomeButtonEnabled(true);
-		toolbar.setNavigationOnClickListener(new OnClickListener() {
-				@Override
-				public void onClick(View view) {
-					onNavigationClickListener(view);
-				}
-			});
-		return toolbar;
+        return toolbar;
 	}
+    
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        onBackPressed();
+        return true;
+    }
+    
+    
 
 	protected Toolbar setToolBar(Toolbar toolbar) {
 		return setNavigationOnToolbar(toolbar);
