@@ -4,201 +4,154 @@ import android.Manifest;
 import android.content.pm.PackageManager;
 import android.os.Build;
 import android.os.Bundle;
-import androidx.constraintlayout.widget.ConstraintLayout;
-import androidx.appcompat.widget.Toolbar;
+import android.os.Handler;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
+import androidx.appcompat.widget.Toolbar;
+import androidx.constraintlayout.widget.ConstraintLayout;
 import com.gabrielmjr.alleasy.R;
-import com.gabrielmjr.alleasy.util.Constants;
 import com.gabrielmjr.alleasy.api.ResponseIF;
 import com.gabrielmjr.alleasy.api.UpdateChecker;
-import com.gabrielmjr.alleasy.util.DateNormalizer;
 import com.gabrielmjr.alleasy.util.AppInfo;
+import com.gabrielmjr.alleasy.util.Constants;
+import com.gabrielmjr.alleasy.util.DateNormalizer;
 import java.util.HashMap;
 
-public class About extends BaseActivity implements ResponseIF {
-
-    // Attributes
-    private TextView app_name;
-    private TextView app_version;
-    private TextView updater_status;
+public class About extends BaseActivity implements Runnable,
+ResponseIF, OnClickListener {
+    private TextView appName;
+    private TextView appVersion;
+    private TextView updaterStatus;
     private TextView copyright;
-    private TextView app_download_name;
-
+    private TextView appDownloadName;
     private Button license;
-    private Button update_checker;
+    private Button updateCheckerButton;
+    private ConstraintLayout downloadButton;
 
-    private ConstraintLayout download_button;
-
-    // Update checker object
     private UpdateChecker updateChecker;
     private UpdateChecker.DownloadApp downloadApp;
 
     private AppInfo appInfo;
     private int versionCode;
 
-    // About the app activity
     @Override
     protected void onCreate(Bundle savedInstanceStatus) {
         super.onCreate(savedInstanceStatus);
-        setContentView(R.layout.about);
-        setToolBar((Toolbar)findViewById(R.id.toolbar));
-
-        initialize();
-
-        // Check for updates
-        update_checker.setOnClickListener(
-            new OnClickListener()
-            {
-                @Override
-                public void onClick(View view) {
-                    // Start checking from updates
-                    updateChecker.checkUpdate();
-                }
-            });
-
-        license.setOnClickListener(
-            new OnClickListener()
-            {
-                @Override
-                public void onClick(View view) {
-                    Toast.makeText(getApplicationContext(), getString(R.string.illselicense), Toast.LENGTH_LONG).show();
-                }
-            });
+        initializeActivity();
+        getViews();
+        Handler handler = new Handler();
+        handler.postDelayed(this, 150);
     }
 
-    // Initialize
-    private void initialize() {
-        app_name = findViewById(R.id.app_name);
-        app_version = findViewById(R.id.app_version);
-        update_checker = findViewById(R.id.check_update);
-        updater_status = findViewById(R.id.updater_status);
+    private void initializeActivity() {
+        setContentView(R.layout.about);
+    }
+
+    private void getViews() {
+        appName = findViewById(R.id.app_name);
+        appVersion = findViewById(R.id.app_version);
+        updateCheckerButton = findViewById(R.id.check_update);
+        updaterStatus = findViewById(R.id.updater_status);
         copyright = findViewById(R.id.copyright);
         license = findViewById(R.id.license);
-        download_button = findViewById(R.id.download_button);
-        app_download_name = findViewById(R.id.app_download_name);
+        downloadButton = findViewById(R.id.download_button);
+        appDownloadName = findViewById(R.id.app_download_name);
+    }
 
+    @Override
+    public void run() {
+        initializeAttributes();
+        setListeners();
+    }
+
+    private void initializeAttributes() {
         appInfo = new AppInfo(getApplicationContext());
         updateChecker = new UpdateChecker(getApplicationContext(), this);
         downloadApp = updateChecker.getDownloadApp();
-
+        setToolBar((Toolbar)findViewById(R.id.toolbar));
         setAppInfo();
         setCopyright();
     }
 
-    // If the request returns successful response
+    private void setListeners() {
+        updateCheckerButton.setOnClickListener(this);
+        downloadButton.setOnClickListener(this);
+        license.setOnClickListener(this);
+    }
+
+    @Override
+    public void onClick(View view) {
+        switch (view.getId()) {
+            case R.id.check_update:
+                updateChecker.checkUpdate();
+                break;
+            case R.id.download_button:
+                downloadApp();
+                break;
+            case R.id.license:
+                showLicense();
+                break;
+        }
+    }
+
+    private void downloadApp() {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+            if (getPackageManager().checkPermission(Manifest.permission.WRITE_EXTERNAL_STORAGE, getPackageName()) == PackageManager.PERMISSION_GRANTED)
+                downloadApp.start();
+            else
+                requestPermissions(new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE}, Constants.WRITE_EXTERNAL_SD);
+        } else
+            downloadApp.start();
+    }
+
+    private void showLicense() {
+        Toast.makeText(getApplicationContext(), getString(R.string.illselicense), Toast.LENGTH_LONG).show();
+    }
+
     @Override
     public void onResponse(HashMap api_info) {
-        // Response code of connection
-        versionCode = (Integer)api_info.get(Constants.TAG);
-
-        // Update available
+        versionCode = api_info.get(Constants.TAG);
         if (versionCode > appInfo.getVersionCode()) {
-            updater_status.setBackground(getDrawable(R.drawable.ic_edge_button_blue));
-            updater_status.setText(R.string.update_available);
-
-            // Show the download button
-            download_button.setVisibility(View.VISIBLE);
-
-            // Show the name of file
-            app_download_name.setText(updateChecker.getReleaseName());
-
-            // Set on click and download the app if clicker
-            download_button.setOnClickListener(
-
-                new OnClickListener()
-                {
-                    @Override
-                    public void onClick(View view) {
-						// Check write external storage permission for api >= M
-						if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-							// Check if permission was granted
-							if (getPackageManager().checkPermission(Manifest.permission.WRITE_EXTERNAL_STORAGE, getPackageName()) == PackageManager.PERMISSION_GRANTED) {
-								// Permission granted
-								downloadApp.start();
-							} else {
-								// Not granted
-								// Request permission
-								requestPermissions(new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE}, Constants.WRITE_EXTERNAL_SD);
-							}
-						} else {
-							// Start download
-							downloadApp.start();
-						}
-
-                    }
-                });
+            updaterStatus.setBackgroundResource(R.drawable.ic_edge_button_blue);
+            updaterStatus.setText(R.string.update_available);
+            downloadButton.setVisibility(View.VISIBLE);
+            appDownloadName.setText(updateChecker.getReleaseName());
         } else if (versionCode == appInfo.getVersionCode()) {
-            updater_status.setBackground(getDrawable(R.drawable.ic_edge_button_green));
-            updater_status.setText(R.string.updated);
-
-            // Take out download button
-            download_button.setVisibility(View.GONE);
+            updaterStatus.setBackgroundResource(R.drawable.ic_edge_button_green);
+            updaterStatus.setText(R.string.updated);
+            downloadButton.setVisibility(View.GONE);
         }
     }
 
-    // If the api returns bad response
     @Override
     public void onErrorResponse() {
-        // Unable to verify
-        updater_status.setBackground(getDrawable(R.drawable.ic_edge_button_red));
-        updater_status.setText(R.string.unable_to_check_update);
-
-        // Take out download button
-        download_button.setVisibility(View.GONE);
+        updaterStatus.setBackgroundResource(R.drawable.ic_edge_button_red);
+        updaterStatus.setText(R.string.unable_to_check_update);
+        downloadButton.setVisibility(View.GONE);
     }
 
-    // Problems with json
     @Override
-    public void onJSONError() {
+    public void onJSONError() {}
 
-    }
-
-    // Show license method
-    /*private void showLicense()
-     {
-     setContentView(R.layout.app_license);
-     getSupportActionBar().hide();
-     }*/
-
-
-
-    // Getters and setters
-    // Setting app name
     private void setAppInfo() {
-        // Getting texts with the default app string + app info
-        String name = app_name.getText().toString();
-        String version = app_version.getText().toString();
-        String appVersion = appInfo.getAppVersion() + " ("
-            + appInfo.getVersionCode()
-            + ")";
-
-        // Setting app name and version into text views
-        app_name.setText(name + " " + getText(R.string.app_name));
-        app_version.setText((CharSequence) version + " " + appVersion);
+        appName.setText(appName.getText().toString() + " " + getText(R.string.app_name));
+        this.appVersion.setText(appVersion.getText().toString() + " " + appInfo.getAppVersion()
+                                + " (" + appInfo.getVersionCode() + ")");
     }
 
-    // Adding copyright
     private void setCopyright() {
-        // Get actual year from datenormalizer and created year from integers xml 
         int actualYear = DateNormalizer.getYear();
-        int createdYear =  Integer.valueOf((String) getText(R.integer.creation_year));
-        String finalYear = null;
-        String CR = null;
-
-        // Year to show on about screen
-        if (actualYear == createdYear) {
+        int createdYear = Integer.valueOf(getText(R.integer.creation_year).toString());
+        String finalYear;
+        String copyright;
+        if (actualYear == createdYear)
             finalYear = String.valueOf(createdYear);
-        } else {
+        else
             finalYear = createdYear + "-" + actualYear;
-        }
-
-        CR = getText(R.string.copyright) + " " + finalYear + " " + getText(R.string.owner);
-
-        // Setting the copyright into textview
-        copyright.setText((CharSequence) CR);
+        copyright = getText(R.string.copyright) + " " + finalYear + " " + getText(R.string.owner);
+        this.copyright.setText(copyright);
     }
 }
