@@ -22,7 +22,7 @@ import com.gabrielmjr.alleasy.activity.BaseActivity;
 import com.gabrielmjr.alleasy.activity.SendMailActivity;
 import java.util.Locale;
 
-public class Settings extends BaseActivity {
+public class SettingsActivity extends BaseActivity {
     private SharedPreferences themeSharedPreferences = null;
     private SharedPreferences langSharedPreferences = null;
    

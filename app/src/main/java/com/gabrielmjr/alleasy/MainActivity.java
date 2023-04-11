@@ -10,7 +10,7 @@ import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import com.gabrielmjr.alleasy.R;
 import com.gabrielmjr.alleasy.activity.BaseActivity;
-import com.gabrielmjr.alleasy.activity.Settings;
+import com.gabrielmjr.alleasy.activity.SettingsActivity;
 import com.gabrielmjr.alleasy.activity.math.combinatorial_analysis.CombinatorialAnalysisActivityMain;
 import com.gabrielmjr.alleasy.activity.math.function.FunctionActivityMain;
 import com.gabrielmjr.alleasy.activity.physic.kinematic.KinematicActivityMain;
@@ -110,7 +110,7 @@ OnOptionsClickListener {
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
             case R.id.settings:
-                startActivity(new Intent(getApplicationContext(), Settings.class));
+                startActivity(new Intent(getApplicationContext(), SettingsActivity.class));
                 return true;
         }
         return false;
