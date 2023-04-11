@@ -20,7 +20,7 @@ import com.gabrielmjr.alleasy.util.Constants;
 import com.gabrielmjr.alleasy.util.DateNormalizer;
 import java.util.HashMap;
 
-public class About extends BaseActivity implements Runnable,
+public class AboutAppActivity extends BaseActivity implements Runnable,
 ResponseIF, OnClickListener {
     private TextView appName;
     private TextView appVersion;

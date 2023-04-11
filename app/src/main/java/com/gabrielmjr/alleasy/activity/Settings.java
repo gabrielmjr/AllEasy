@@ -17,7 +17,7 @@ import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
 import com.gabrielmjr.alleasy.R;
-import com.gabrielmjr.alleasy.activity.About;
+import com.gabrielmjr.alleasy.activity.AboutAppActivity;
 import com.gabrielmjr.alleasy.activity.BaseActivity;
 import com.gabrielmjr.alleasy.activity.SendMailActivity;
 import java.util.Locale;
@@ -153,7 +153,7 @@ public class Settings extends BaseActivity {
                 @Override
                 public void onClick(View vjew)
                 {
-                    startActivity(new Intent(getApplicationContext(), About.class));
+                    startActivity(new Intent(getApplicationContext(), AboutAppActivity.class));
                 }
             });
     }
