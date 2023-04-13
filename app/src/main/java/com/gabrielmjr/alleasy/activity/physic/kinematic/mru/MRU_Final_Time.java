@@ -26,10 +26,7 @@ public class MRU_Final_Time extends BaseActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_physic_calculations);
-        getViews();
-        initializeActivity();
-
+        
         /*final_time.setOnClickListener(
 		 new OnClickListener() {
 		 @Override
@@ -106,8 +103,13 @@ public class MRU_Final_Time extends BaseActivity {
 		 });*/
     }
 
-
-    private void getViews() {
+    @Override
+    protected void initializeActivity() {
+        setContentView(R.layout.activity_physic_calculations);
+    }
+    
+    @Override
+    protected void getViews() {
         setToolBar((Toolbar) findViewById(R.id.toolbar));
 
         initial_time_symbol = findViewById(R.id.param_0_symbol);
@@ -124,8 +126,8 @@ public class MRU_Final_Time extends BaseActivity {
         result = findViewById(R.id.result);
     }
 
-
-    private void initializeActivity() {
+    @Override
+    protected void initializeAttributes() {
         initial_time_symbol.setText("ti = ");
         delta_time_symbol.setText("∆t = ");
         final_time_symbol.setText("t = ?");
@@ -148,5 +150,4 @@ public class MRU_Final_Time extends BaseActivity {
         formula.setVisibility(View.VISIBLE);
         result.setVisibility(View.VISIBLE);
     }
-
 }

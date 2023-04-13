@@ -25,16 +25,11 @@ public class MRU_Displacement3 extends BaseActivity {
 
     private TextView formula;
     private TextView result;
-
-
-
+    
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_physic_calculations);
-        getViews();
-        initializsActivity();
-
+        
 		/* displacement.setOnClickListener(
 		 new OnClickListener() {
 		 @Override
@@ -115,8 +110,13 @@ public class MRU_Displacement3 extends BaseActivity {
 		 });*/
     }
 
+    @Override
+    protected void initializeActivity() {
+        setContentView(R.layout.activity_physic_calculations);
+    }
 
-    private void getViews() {
+    @Override
+    protected void getViews() {
         setToolBar((Toolbar) findViewById(R.id.toolbar));
 
         initial_time_symbol = findViewById(R.id.param_0_symbol);
@@ -136,8 +136,8 @@ public class MRU_Displacement3 extends BaseActivity {
         result = findViewById(R.id.result);
     }
 
-
-    private void initializsActivity() {
+    @Override
+    protected void initializeAttributes() {
         initial_time_symbol.setText("ti = ");
         final_time_symbol.setText("t = ");
         velocity_symbol.setText("v = ");
@@ -165,5 +165,4 @@ public class MRU_Displacement3 extends BaseActivity {
         formula.setVisibility(View.VISIBLE);
         result.setVisibility(View.VISIBLE);
     }
-
 }

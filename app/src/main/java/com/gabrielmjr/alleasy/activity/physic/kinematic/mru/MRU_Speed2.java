@@ -28,14 +28,10 @@ public class MRU_Speed2 extends BaseActivity {
     private TextView formula;
     private TextView result;
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_physic_calculations);
-        getViews();
-        initializeActivity();
-
+        
         /*speed.setOnClickListener(
 		 new OnClickListener() {
 		 @Override
@@ -153,8 +149,13 @@ public class MRU_Speed2 extends BaseActivity {
 		 });*/
     }
 
+    @Override
+    protected void initializeActivity() {
+        setContentView(R.layout.activity_physic_calculations);
+    }
 
-    private void getViews() {
+    @Override
+    protected void getViews() {
         setToolBar((Toolbar) findViewById(R.id.toolbar));
 
         initial_displacement_symbol = findViewById(R.id.param_0_symbol);
@@ -177,8 +178,8 @@ public class MRU_Speed2 extends BaseActivity {
         result = findViewById(R.id.result);
     }
 
-
-    private void initializeActivity() {
+    @Override
+    protected void initializeAttributes() {
         initial_displacement_symbol.setText("Si = ");
         final_displacement_symbol.setText("S = ");
         initial_time_symbol.setText("ti = ");

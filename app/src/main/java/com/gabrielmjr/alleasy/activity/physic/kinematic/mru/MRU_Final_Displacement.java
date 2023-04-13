@@ -26,10 +26,7 @@ public class MRU_Final_Displacement extends BaseActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_physic_calculations);
-        getViews();
-        initializeActivity();
-
+        
         /*displacement.setOnClickListener(
 		 new OnClickListener() {
 		 @Override
@@ -88,8 +85,13 @@ public class MRU_Final_Displacement extends BaseActivity {
 
     }
 
+    @Override
+    protected void initializeActivity() {
+        setContentView(R.layout.activity_physic_calculations);
+    }
 
-    private void getViews() {
+    @Override
+    protected void getViews() {
         setToolBar((Toolbar) findViewById(R.id.toolbar));
 
         initial_displacement_symbol = findViewById(R.id.param_0_symbol);
@@ -114,8 +116,8 @@ public class MRU_Final_Displacement extends BaseActivity {
         findViewById(R.id.param_3_unit).setVisibility(View.GONE);
     }
 
-
-    private void initializeActivity() {
+    @Override
+    protected void initializeAttributes() {
         initial_displacement_symbol.setText("Si = ");
         delta_displacement_symbol.setText("∆S = ");
         final_displacement_symbol.setText("S = ?");

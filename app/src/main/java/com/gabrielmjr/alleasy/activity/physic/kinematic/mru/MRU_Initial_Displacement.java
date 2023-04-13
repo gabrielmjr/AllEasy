@@ -22,14 +22,10 @@ public class MRU_Initial_Displacement extends BaseActivity {
     private TextView formula;
     private TextView result;
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_physic_calculations);
-        getViews();
-        initializeActivity();
-
+        
         /*displacement.setOnClickListener(
 		 new OnClickListener() {
 		 @Override
@@ -103,8 +99,13 @@ public class MRU_Initial_Displacement extends BaseActivity {
 		 });*/
     }
 
+    @Override
+    protected void initializeActivity() {
+        setContentView(R.layout.activity_physic_calculations);
+	}
 
-    private void getViews() {
+    @Override
+    protected void getViews() {
         setToolBar((Toolbar) findViewById(R.id.toolbar));
 
         initial_displacement_symbol = findViewById(R.id.result_symbol);
@@ -121,27 +122,28 @@ public class MRU_Initial_Displacement extends BaseActivity {
         result = findViewById(R.id.result);
     }
 
-	private void initializeActivity() {
-		initial_displacement_symbol.setText("Si = ?");
-		delta_displacement_symbol.setText("∆S = ");
-		final_displacement_symbol.setText("S = ");
+    @Override
+    protected void initializeAttributes() {
+        initial_displacement_symbol.setText("Si = ?");
+        delta_displacement_symbol.setText("∆S = ");
+        final_displacement_symbol.setText("S = ");
 
-		delta_displacement_unit.setText("m");
-		final_displacement_unit.setText("m");
+        delta_displacement_unit.setText("m");
+        final_displacement_unit.setText("m");
 
-		formula.setText(R.string.kinematic_mru_initial_displacement_formula);
+        formula.setText(R.string.kinematic_mru_initial_displacement_formula);
 
-		initial_displacement_symbol.setVisibility(View.VISIBLE);
-		delta_displacement_symbol.setVisibility(View.VISIBLE);
-		final_displacement_symbol.setVisibility(View.VISIBLE);
+        initial_displacement_symbol.setVisibility(View.VISIBLE);
+        delta_displacement_symbol.setVisibility(View.VISIBLE);
+        final_displacement_symbol.setVisibility(View.VISIBLE);
 
-		delta_displacement_value.setVisibility(View.VISIBLE);
-		final_displacement_value.setVisibility(View.VISIBLE);
+        delta_displacement_value.setVisibility(View.VISIBLE);
+        final_displacement_value.setVisibility(View.VISIBLE);
 
-		delta_displacement_unit.setVisibility(View.VISIBLE);
-		final_displacement_unit.setVisibility(View.VISIBLE);
+        delta_displacement_unit.setVisibility(View.VISIBLE);
+        final_displacement_unit.setVisibility(View.VISIBLE);
 
-		formula.setVisibility(View.VISIBLE);
-		result.setVisibility(View.VISIBLE);
-	}
+        formula.setVisibility(View.VISIBLE);
+        result.setVisibility(View.VISIBLE);
+    }
 }

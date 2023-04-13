@@ -29,10 +29,7 @@ public class MRU_Displacement_Law extends BaseActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_physic_calculations);
-        getViews();
-        initializeActivity();
-
+     
 		/* displacement.setOnClickListener(
 		 new OnClickListener() {
 		 @Override
@@ -114,9 +111,14 @@ public class MRU_Displacement_Law extends BaseActivity {
 		 }
 		 });*/
     }
+    
+    @Override
+    protected void initializeActivity() {
+        setContentView(R.layout.activity_physic_calculations);
+    }
 
-
-    private void getViews() {
+    @Override
+    protected void getViews() {
         setToolBar((Toolbar) findViewById(R.id.toolbar));
 
         initial_displacement_symbol = findViewById(R.id.param_0_symbol);
@@ -136,8 +138,8 @@ public class MRU_Displacement_Law extends BaseActivity {
         result = findViewById(R.id.result);
     }
 
-
-    private void initializeActivity() {
+    @Override
+    protected void initializeAttributes() {
         initial_displacement_symbol.setText("Si = ");
         velocity_symbol.setText("v = ");
         delta_time_symbol.setText("∆t = ");
@@ -165,5 +167,4 @@ public class MRU_Displacement_Law extends BaseActivity {
         formula.setVisibility(View.VISIBLE);
         result.setVisibility(View.VISIBLE);
     }
-
 }

@@ -26,10 +26,7 @@ public class MRU_Displacement2 extends BaseActivity {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_physic_calculations);
-        getViews();
-        initializeActivity();
-
+            
         /*this.displacement.setOnClickListener(
 		 new OnClickListener() {
 		 @Override
@@ -99,7 +96,13 @@ public class MRU_Displacement2 extends BaseActivity {
     }
 
 
-    private void getViews() {
+    @Override
+    protected void initializeActivity() {
+        setContentView(R.layout.activity_physic_calculations);
+    }
+    
+    @Override
+    protected void getViews() {
         setToolBar((Toolbar) findViewById(R.id.toolbar));
 
         delta_time_symbol = findViewById(R.id.param_0_symbol);
@@ -116,8 +119,8 @@ public class MRU_Displacement2 extends BaseActivity {
         result = findViewById(R.id.result);
     }
 
-
-    private void initializeActivity() {
+    @Override
+    protected void initializeAttributes() {
         delta_time_symbol.setText("∆t = ");
         velocity_symbol.setText("v = ");
         delta_displacement_symbol.setText("∆S = ?");
