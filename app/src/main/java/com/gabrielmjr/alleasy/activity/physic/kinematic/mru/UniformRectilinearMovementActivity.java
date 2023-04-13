@@ -2,7 +2,6 @@ package com.gabrielmjr.alleasy.activity.physic.kinematic.mru;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.os.Handler;
 import androidx.appcompat.widget.Toolbar;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -14,8 +13,7 @@ import com.gabrielmjr.alleasy.model.Activity;
 import java.util.ArrayList;
 import java.util.List;
 
-public class UniformRectilinearMovementActivity extends BaseActivity implements Runnable,
-OnSubtitleClickListener {
+public class UniformRectilinearMovementActivity extends BaseActivity implements OnSubtitleClickListener {
     private Toolbar toolbar;
     private RecyclerView subTitlesRecycler;
     private SubTitlesAdapter subTitlesAdapter;
@@ -24,31 +22,25 @@ OnSubtitleClickListener {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        initializeActivity();
-        getViews();
-        Handler handler = new Handler();
-        handler.postDelayed(this, 150);
     }
     
-    private void initializeActivity() {
+    @Override
+    protected void initializeActivity() {
         setContentView(R.layout.activity_subtitles);
     }
     
-    private void getViews() {
+    @Override
+    protected void getViews() {
         toolbar = findViewById(R.id.toolbar);
         subTitlesRecycler = findViewById(R.id.subtitles_recycler_view);
     }
-
-    @Override
-    public void run() {
-        initializeAttributes();
-        buildRecyclerView();
-    }
     
-    private void initializeAttributes() {
+    @Override
+    protected void initializeAttributes() {
         subTitles = new ArrayList<>();
         setToolBar(toolbar);
         subTitlesAdapter = new SubTitlesAdapter(getApplicationContext(), subTitles, this);
+        buildRecyclerView();
     }
     
     private void buildRecyclerView() {
