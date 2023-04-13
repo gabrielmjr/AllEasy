@@ -30,10 +30,7 @@ public class MRU_Time3 extends BaseActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_physic_calculations);
-        getViews();
-        initializeActivity();
-
+        
 		/* delta_time.setOnClickListener(
 		 new OnClickListener() {
 		 @Override
@@ -117,8 +114,13 @@ public class MRU_Time3 extends BaseActivity {
 		 });*/
     }
 
-
-    private void getViews() {
+    @Override
+    protected void initializeActivity() {
+        setContentView(R.layout.activity_physic_calculations);
+    }
+    
+    @Override
+    protected void getViews() {
         setToolBar((Toolbar) findViewById(R.id.toolbar));
 
         initial_displacement_symbol = findViewById(R.id.param_0_symbol);
@@ -138,8 +140,12 @@ public class MRU_Time3 extends BaseActivity {
         result = findViewById(R.id.result);
     }
 
-
-    private void initializeActivity() {
+    @Override
+    protected void initializeAttributes() {
+        showNecessaryViews();
+    }
+    
+    private void showNecessaryViews() {
         initial_displacement_symbol.setText("Si = ");
         final_displacement_symbol.setText("S = ");
         velocity_symbol.setText("v = ");

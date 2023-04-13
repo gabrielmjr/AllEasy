@@ -1,14 +1,37 @@
 package com.gabrielmjr.alleasy.activity;
 
+import android.os.Bundle;
+import android.os.Handler;
+import android.view.MenuItem;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
-import android.view.View.OnClickListener;
-import android.view.View;
-import android.os.Build;
-import android.view.MenuItem;
 
-public class BaseActivity extends AppCompatActivity {
-    private void onNavigationClickListener (View view) {}
+public abstract class BaseActivity extends AppCompatActivity implements Runnable {
+    protected Handler handler;
+    
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        initializeThisAttributes();
+        initializeActivity();
+        getHandler().postDelayed(this, 150);
+    }
+    
+    private void initializeThisAttributes() {
+        handler = new Handler();
+    }
+    
+    protected abstract void initializeActivity();
+    
+    protected abstract void getViews();
+    
+    protected abstract void initializeAttributes();
+    
+    @Override
+    public void run() {
+        getViews();
+        initializeAttributes();
+    }
     
 	private Toolbar setNavigationOnToolbar(Toolbar toolbar) {
 		setSupportActionBar(toolbar);
@@ -23,9 +46,11 @@ public class BaseActivity extends AppCompatActivity {
         return true;
     }
     
-    
-
 	protected Toolbar setToolBar(Toolbar toolbar) {
 		return setNavigationOnToolbar(toolbar);
 	}
+    
+    protected Handler getHandler() {
+        return handler;
+    }
 }
