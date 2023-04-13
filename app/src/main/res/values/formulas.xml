@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="fluid_flow_flowRate1_formula">Q = V / ∆t </string> <!--Formula of /fluid_flow/first_fluid_fluw_formula-->
+    <string name="fluid_flow_flowRate2_formula">Q = A × v </string> <!--Formula of /fluid_flow/second_fluid_flow_formula-->
+    <string name="fluid_flow_flowRate3_formula">Q = π × r² × v</string> <!--Formula of /fluid_flow/third_fluid_flow_formula-->
+    <string name="fluid_flow_time1_formula">∆t = V / Q</string> <!--Formula of /fluid_flow/time-->
+    <string name="fluid_flow_volume1_formula">V = ∆t × Q</string> <!--Forma of /fluid_flow/volume-->
+    <string name="fluid_flow_speed1_formula">v = Q / A</string> <!--Formula of /fluid_flow/speed1-->
+    <string name="fluid_flow_speed2_formula">v = Q / (π × r²)</string> <!--Formula of /fluid_flow/speed2-->
+    <string name="fluid_flow_area1_formula">A = Q / v</string> <!--Formula of /fluid_flow/area-->
+    <string name="fluid_flow_ray1_formula">r = √[Q ÷ (π × v)]</string> <!--Formula of /fluid_flow/ray-->
+
+    <string name="kinematic_mru_displacement1_formula">∆S = Sf - Si</string>
+    <string name="kinematic_mru_displacement2_formula">∆S = ∆t × vm</string>
+    <string name="kinematic_mru_displacement3_formula">∆S = (tf - ti) × vm</string>
+    <string name="kinematic_mru_final_displacement_formula">Sf = Si + ∆S</string>
+    <string name="kinematic_mru_initial_displacement_formula">Si = Sf - ∆S</string>
+    <string name="kinematic_mru_displacement_law_formula">S = Si + v × ∆t</string>
+    <string name="kinematic_mru_speed_law1_formula">v = ∆S / ∆t</string>
+    <string name="kinematic_mru_speed_law2_formula">v = (Sf - Si) / (tf - ti)</string>
+    <string name="kinematic_mru_time1_formula">∆t = tf - ti</string>
+    <string name="kinematic_mru_time2_formula">∆t = ∆S / v</string>
+    <string name="kinematic_mru_time3_formula">∆t=  (Sf - Si) / v</string>
+    <string name="kinematic_mru_initial_time_formula">ti = tf - ∆t</string>
+    <string name="kinematic_mru_final_time_formula">tf = ti + ∆t</string>
+
+    <string name="kinematic_muv_acceleration1_formula">a = ∆v ÷ ∆t</string>
+    <string name="kinematic_muv_acceleration2_formula">a = (∆v) ÷ (tf - ti)</string>
+    <string name="kinematic_muv_acceleration3_formula">a = (vf - vi) ÷ (∆t)</string>
+    <string name="kinematic_muv_acceleration4_formula">a = (vf - vi) ÷ (tf - ti)</string>
+    <string name="kinematic_muv_speed1_formula">∆v = ∆t × a</string>
+    <string name="kinematic_muv_speed2_formula">∆v = (tf - ti) × a</string>
+    <string name="kinematic_muv_speed3_formula">vi = vf - ∆t × a</string>
+    <string name="kinematic_muv_speed4_formula">vf = ∆t × a + vi</string>
+    <string name="kinematic_muv_time1_formula">∆t = ∆v ÷ a</string>
+    <string name="kinematic_muv_time2_formula">∆t = (vf - vi) ÷ a</string>
+    <string name="kinematic_muv_time3_formula">ti = tf - ∆v ÷ a</string>
+    <string name="kinematic_muv_time4_formula">ti = tf - (vf - vi) ÷ a</string>
+    <string name="kinematic_muv_time5_formula">tf = ti + ∆v ÷ a</string>
+    <string name="kinematic_muv_time6_formula">tf = ti + (vf - vi) ÷ a</string>
+</resources>

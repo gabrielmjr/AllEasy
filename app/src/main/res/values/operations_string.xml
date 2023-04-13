@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>            
+    <!--"Where"-->
+    <string name="nvQ">Where: Q → flow rate</string>
+    <string name="nvV">V → volume (m3)</string>
+    <string name="nvt">∆t → time variation (s)</string>
+    <string name="nvA">A → area (m²)</string>
+    <string name="nvv">v → speed (m/s)</string>
+    <string name="nvp">π → pi = 3,14</string>
+    <string name="nvr">r → ray (m)</string>
+    <string name="nvd">d → diameter (m)</string>
+    <string name="nullDouble">0.0</string>
+	
+	<!--Titles-->
+	<string name="combinatorial_analysis">Combinatorial Analisys</string>
+	<string name="functions">Functions</string>
+	<string name="hydrodynamics">Hydrodynamics</string>
+
+    <!--Fluidflow-->
+    <string name="fluid_flow_flow_rate1">Calculate using:\n Q = V/∆t</string>
+    <string name="fluid_flow_flow_rate2">Calculate using:\n Q = A × v</string>
+    <string name="fluid_flow_flow_rate3">Calculate using:\n Q = π × r² × v</string>
+    <string name="fluid_flow_time">Calculate using:\n ∆t = V/Q</string>
+    <string name="fluid_flow_volume">Calculate using:\n V = ∆t × Q</string>
+    <string name="fluid_flow_velocity1">Calculate using:\n v = Q/A</string>
+    <string name="fluid_flow_velocity2">Calculate using:\n v = Q / (π × r²)</string>
+    <string name="fluid_flow_area">Calculate using:\n A = Q/v</string>
+    <string name="fluid_flow_ray">Calculate using:\n r = √[Q / (π × v)]</string>
+
+    <string name="kinematics">Kinematics</string>
+    <string name="kinematic_mru_displacement1">Calculate using:\n ∆S = Sf - Si</string>
+    <string name="kinematic_mru_displacement2">Calculate using:\n ∆S = ∆t × vm</string>
+    <string name="kinematic_mru_displacement3">Calculate using:\n ∆S = (tf - ti) × vm</string>
+    <string name="kinematic_mru_initial_displacement">Calculate using:\n Si = Sf - ∆S</string>
+    <string name="kinematic_mru_final_displacement">Calculate using:\n Sf = Si + ∆S</string>
+    <string name="kinematic_mru_displacement_law">Calculate using:\n S = Si + v × ∆t</string>
+    <string name="kinematic_mru_speed1">Calculate using:\n v = ∆S / ∆t</string>
+    <string name="kinematic_mru_speed2">Calculate using:\n v = (sf - si) × (tf - ti)</string>
+    <string name="kinematic_mru_time1">Calculate using:\n ∆t = tf - ti</string>
+    <string name="kinematic_mru_time2">Calculate using:\n ∆t = ∆S / v</string>
+    <string name="kinematic_mru_time3">Calculate using:\n ∆t = (Sf - Si) / v</string>
+    <string name="kinematic_mru_initial_time">Calculate using:\n ti = tf - ∆t</string>
+    <string name="kinematic_mru_final_time">Calculate using:\n tf = ti + ∆t</string>
+    <string name="kinematic_muv_acceleration1">Calculate using:\n a = ∆v / ∆t</string>
+    <string name="kinematic_muv_acceleration2">Calculate using:\n a = (∆v) / (tf - ti)</string>
+    <string name="kinematic_muv_acceleration3">Calculate using:\n a = (vf - vi) / ∆t</string>
+    <string name="kinematic_muv_acceleration4">Calculate using:\n a = (vf - vi) / (tf - ti)</string>
+    <string name="kinematic_muv_speed1">Calculate using:\n ∆v = ∆t × a</string>
+    <string name="kinematic_muv_speed2">Calculate using:\n ∆v = (tf - ti) × a</string>
+    <string name="kinematic_muv_speed3">Calculate using:\n vi = vf - ∆t × a</string>
+    <string name="kinematic_muv_speed4">Calculate using:\n vf = vi + ∆t × a</string>
+    <string name="kinematic_muv_time1">Calculate using:\n ∆t = ∆v ÷ a</string>
+    <string name="kinematic_muv_time2">Calculate using:\n ∆t = (vf - vi) ÷ a</string>
+    <string name="kinematic_muv_time3">Calculate using:\n ti = tf - ∆v ÷ a</string>
+    <string name="kinematic_muv_time4">Calculate using:\n ti = tf - (vf - vi) ÷ a</string>
+    <string name="kinematic_muv_time5">Calculate using:\n tf = ti + ∆v ÷ a</string>
+    <string name="kinematic_muv_time6">Calculate using:\n tf = ti + (vf - vi) ÷ a</string>
+
+    <string name="dd">Data</string>
+    <string name="fm">Formula</string>
+    <string name="res">Resolution</string>
+    
+    <!--Lessons-->
+    <string name="kinematic">Kinematic</string>
+    <string name="displacement">Displacement</string>
+    <string name="variated_uniform_movement">Variated Uniform Movement</string>
+    <string name="arranjments">Arrangments</string>
+    <string name="factorial">Factorial</string>
+    <string name="combination">Combination</string>
+    <string name="second_degree_function">Second-Degree Function</string>
+    <string name="determine">Determine</string>
+    <string name="fluid_flow">Fluid Flow</string>
+    <string name="flow_rate">Flow rate</string>
+    <string name="volume">Volume</string>
+    <string name="velocity">Velocity</string>
+	<string name="speed">Speed</string>
+    <string name="ray">Ray</string>
+    <string name="area">Area</string>
+    <string name="acceleration">Acceleration</string>     
+    <string name="time">Time</string>     
+    
+    <!---->
+    <string name="null_field">This field can`t be empty!</string>
+    <string name="p_big_than_n">It`s not possible to determine with «p» greater than 《n》!</string>
+    <string name="big_value">Very high value!</string>
+    <string name="big_values">Very high values!</string>
+    <string name="invalid_value">Enter the value correctly!</string>
+    <string name="ooig_fsg">Ordered in origin = </string>
+    <string name="dot_value">This field can`t be a dot!</string>
+    <string name="cont">Continue</string>
+    <string name="close">Close</string>    
+    <string name="resultp">Result = </string>
+    <string name="uniform_rectilinear_movement">Uniform Rectilinear Movement</string>
+   
+    <string name="name">Name: </string>
+    <string name="version">Version: </string>
+    <string name="license">License</string>
+    
+    <string name="settings">Settings</string>
+    
+    <string name="choose_theme">Choose theme</string>
+    <string name="choose_language">Choose language</string>
+    
+    <string name="light_mode">Light</string>
+    <string name="dark_mode">Dark</string>
+    <string name="system_auto_theme">Set by system</string>
+    
+    <string name="system_lang_en">English</string>
+    <string name="system_lang_pt">Português</string>
+    <string name="system_lang_follow">Follow system</string>
+    
+    <string name="cancel">Cancel</string>
+    <string name="theme">Theme</string>
+    <string name="language">Language</string>
+    
+    <string name="contact">Contact us</string>
+    <string name="about">About</string>
+    <string name="check_update">Check update</string>
+    
+    <string name="send_mail_note">Here you can report an issue or comment about the app directly to me.</string>
+    <string name="send_mail_hint_note">Enter your mail here.</string>
+    <string name="send_mail">Send</string>
+    <string name="null_field_mail">This field cannot be empty!</string>
+    <string name="choose_category">Please, select one category</string>
+    
+    <string name="illselicense">App license is not available on the app yet, to see it visit the oficial repository on github.</string>
+    
+    <string-array name="message_category">
+        <item>Category</item>
+        <item>Report issue</item>
+        <item>Review</item>
+    </string-array>
+    
+    <string name="downloading">Downloading</string>
+    <string name="updated">Updated</string>
+    <string name="unable_to_check_update">Unable to check</string>
+    <string name="update_available">Available</string>
+    <string name="not_verified">Not verified</string>
+    
+    <string name="something_went_wrong">Something went wrong</string>
+    <string name="try_later">Request failed, please try again later</string>
+</resources>
