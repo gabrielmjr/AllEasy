@@ -14,9 +14,7 @@ import com.gabrielmjr.alleasy.model.Activity;
 import java.util.ArrayList;
 import java.util.List;
 
-public class FunctionActivityMain extends BaseActivity implements Runnable,
-OnSubtitleClickListener {
-    private Toolbar toolbar;
+public class FunctionActivityMain extends BaseActivity implements OnSubtitleClickListener {
     private RecyclerView subTitleRecycler;
     private SubTitlesAdapter subtitlesAdapter;
     private List<Activity> subTitles;
@@ -24,31 +22,24 @@ OnSubtitleClickListener {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		initializeActivity();
-        getViews();
-        Handler handler = new Handler();
-        handler.postDelayed(this, 150);
-    }
-
-    private void initializeActivity () {
-        setContentView(R.layout.activity_subtitles);
-    }
-
-    private void getViews() {
-        toolbar = findViewById(R.id.toolbar);
-        subTitleRecycler = findViewById(R.id.subtitles_recycler_view);
     }
 
     @Override
-    public void run() {
-        initializeAttributes();
-        buildRecyclerView();
+    protected void initializeActivity () {
+        setContentView(R.layout.activity_subtitles);
     }
 
-    private void initializeAttributes() {
-        setToolBar(toolbar);
+    @Override
+    protected void getViews() {
+        setToolBar((Toolbar)findViewById(R.id.toolbar));
+        subTitleRecycler = findViewById(R.id.subtitles_recycler_view);
+    }
+
+    @Override 
+    protected void initializeAttributes() {
         subTitles = new ArrayList<>();
         subtitlesAdapter = new SubTitlesAdapter(getApplicationContext(), subTitles, this);
+        buildRecyclerView();
     }
 
     private void buildRecyclerView() {

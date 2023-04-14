@@ -13,7 +13,6 @@ import com.GabrielMJr.Twaire.Math.SDF;
 import com.gabrielMJr.twaire.tools.Tools;
 
 public class FSG extends BaseActivity {
-    // Atrubutos
     private Button calculate;
     private EditText a;
     private EditText b;
@@ -35,39 +34,16 @@ public class FSG extends BaseActivity {
     private Long value_c;
     private Tools Tools;
 
-    private void initialize() {
-        setToolBar((Toolbar) findViewById(R.id.toolbar));
-
-        this.a = findViewById(R.id.a);
-        this.b = findViewById(R.id.b);   
-        this.c = findViewById(R.id.c);
-        this.var_a_x = findViewById(R.id.var_a_x);
-        this.var_b_x = findViewById(R.id.var_b_x);
-        this.calculate = findViewById(R.id.calculate);
-        this.result = findViewById(R.id.result);
-        this.clear = findViewById(R.id.clear);
-        this.SDF = new SDF();
-        this.Tools = new Tools();
-    }
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.fsg);
-
-        initialize();
-
-        // Onclick do botão "determinar"
         this.calculate.setOnClickListener(
             new OnClickListener() {
                 public void onClick(View view) {
-
-                    // Armazenar valores de a, b e c em suas variavéis+"x"
                     ax = a.getText().toString();
                     bx = b.getText().toString();
                     cx = c.getText().toString();
 
-                    // Verificar se valor de <a> é nulo, inválido ou válido
                     if (Tools.isNull(ax)) {
                         a.setError(getText(R.string.null_field));
                         av = false;
@@ -81,7 +57,6 @@ public class FSG extends BaseActivity {
                         }
                     }
 
-                    // Verificar se valor de <b> é nulo, invàlido ou válido
                     if (Tools.isNull(bx)) {
                         b.setError(getText(R.string.null_field));
                         bv = false;
@@ -94,7 +69,6 @@ public class FSG extends BaseActivity {
                         }
                     }
 
-                    // Verificar se valor de <c> é nulo, inválido ou válido
                     if (Tools.isNull(cx)) {
                         c.setError(getText(R.string.null_field));
                         cv = false;
@@ -106,8 +80,7 @@ public class FSG extends BaseActivity {
                             cv = false;
                         }
                     }
-
-                    // Se os valores forem inseridos correctamente, prossiga normalmente
+                    
                     if (av && bv && cv) {
                         if (value_b >= 0) {
                             var_a_x.setText("");
@@ -162,20 +135,13 @@ public class FSG extends BaseActivity {
                                        + "\nEquação do eixo de simetria = "
                                        + SDF.getEES()
                                        + "\n\nConcavidade virada para"
-                                       + SDF.getConcavidade());
-
-                        return;
-
-                        // Senão, retorna um vazio
-                    } else {
-                        return;
-                    }
+                                       + SDF.getConcavidade());               
+                   }
                 }
             });
 
         this.clear.setOnClickListener(
-            new OnClickListener()
-            {
+            new OnClickListener() {
                 @Override
                 public void onClick(View view) {
                     a.setText(null);
@@ -188,5 +154,29 @@ public class FSG extends BaseActivity {
                     return;
                 }
             });
+    }
+    
+    @Override
+    protected void initializeActivity() {
+        setContentView(R.layout.fsg);
+    }
+
+    @Override
+    protected void getViews() {
+        setToolBar((Toolbar) findViewById(R.id.toolbar));
+        a = findViewById(R.id.a);
+        b = findViewById(R.id.b);   
+        c = findViewById(R.id.c);
+        var_a_x = findViewById(R.id.var_a_x);
+        var_b_x = findViewById(R.id.var_b_x);
+        calculate = findViewById(R.id.calculate);
+        result = findViewById(R.id.result);
+        clear = findViewById(R.id.clear);
+        SDF = new SDF();
+        Tools = new Tools();
+    }
+
+    @Override
+    protected void initializeAttributes() {
     }
 }
