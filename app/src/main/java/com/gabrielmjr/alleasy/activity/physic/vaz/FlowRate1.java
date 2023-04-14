@@ -26,10 +26,7 @@ public class FlowRate1 extends BaseActivity {
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_physic_calculations);
-        getViews();
-        initializeActivity();
-
+        
 		/*this.vaz.setOnClickListener(
 		 new OnClickListener() {
 		 public void onClick(View view) {				
@@ -107,8 +104,13 @@ public class FlowRate1 extends BaseActivity {
 		 });*/
     }
 
+    @Override
+    protected void initializeActivity() {
+        setContentView(R.layout.activity_physic_calculations);
+    }
 
-    private void getViews() {
+    @Override
+    protected void getViews() {
         setToolBar((Toolbar) findViewById(R.id.toolbar));
 
         volume_symbol = findViewById(R.id.param_0_symbol);
@@ -125,14 +127,11 @@ public class FlowRate1 extends BaseActivity {
         result = findViewById(R.id.result);
     }
 
-
-    private void initializeActivity() {
-        volume_symbol.setText((String)getText(R.string.volume_symbol_equals)
-							  + " ");           
-        delta_time_symbol.setText((String)getText(R.string.time_symbol_equals) 
-								  + " ");
-        flow_rate_symbol.setText(getText(R.string.flow_rate_symbol_equals)
-								 + " ?");
+    @Override
+    protected void initializeAttributes() {
+        volume_symbol.setText((String)getText(R.string.volume_symbol_equals) + " ");           
+        delta_time_symbol.setText((String)getText(R.string.time_symbol_equals) + " ");
+        flow_rate_symbol.setText(getText(R.string.flow_rate_symbol_equals) + " ?");
 
         volume_unit.setText("m³");
         delta_time_unit.setText("s");

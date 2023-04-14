@@ -9,7 +9,6 @@ import com.gabrielmjr.alleasy.R;
 import com.gabrielmjr.alleasy.activity.BaseActivity;
 
 public class MRU_Speed1 extends BaseActivity {
-
     private TextView delta_displacement_symbol;
     private TextView delta_time_symbol;
     private TextView velocity_symbol;

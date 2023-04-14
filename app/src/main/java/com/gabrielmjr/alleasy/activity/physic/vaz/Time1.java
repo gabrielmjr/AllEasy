@@ -22,15 +22,10 @@ public class Time1 extends BaseActivity {
     private TextView formula;
     private TextView result;
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_physic_calculations);
-        getViews();
-        initializeAttributes();
-
-
+      
 		/* this.tempo.setOnClickListener(
 		 new OnClickListener() {
 		 public void onClick(View view) {
@@ -99,8 +94,13 @@ public class Time1 extends BaseActivity {
 		 });*/
     }
 
-
-    private void getViews() {
+    @Override
+    protected void initializeAttributes() {
+        setContentView(R.layout.activity_physic_calculations);
+    }
+    
+    @Override
+    protected void getViews() {
         setToolBar((Toolbar) findViewById(R.id.toolbar));
 
         volume_symbol = findViewById(R.id.param_0_symbol);
@@ -117,8 +117,8 @@ public class Time1 extends BaseActivity {
         result = findViewById(R.id.result);
     }
 
-
-    private void initializeAttributes() {
+    @Override
+    protected void initializeActivity() {
         volume_symbol.setText("V = ");
         flow_rate_symbol.setText("Q = ");
         time_symbol.setText("t = ?");

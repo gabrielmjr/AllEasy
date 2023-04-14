@@ -22,14 +22,10 @@ public class Area1 extends BaseActivity {
     private TextView formula;
     private TextView result;
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_physic_calculations);
-        getViews();
-        initializeActivity();
-
+        
 		/*this.area.setOnClickListener(
 		 new OnClickListener() {
 		 public void onClick(View view) {
@@ -99,8 +95,13 @@ public class Area1 extends BaseActivity {
 		 });*/
     }
 
+    @Override
+    protected void initializeActivity() {
+        setContentView(R.layout.activity_physic_calculations);
+    }
 
-    private void getViews() {
+    @Override
+    protected void getViews() {
         setToolBar((Toolbar) findViewById(R.id.toolbar));
 
         flow_rate_symbol = findViewById(R.id.param_0_symbol);
@@ -117,8 +118,8 @@ public class Area1 extends BaseActivity {
         result = findViewById(R.id.result);
     }
 
-
-    private void initializeActivity() {
+    @Override
+    protected void initializeAttributes() {
         flow_rate_symbol.setText("Q = ");
         velocity_symbol.setText("v = ");
         area_symbol.setText("A = ?");

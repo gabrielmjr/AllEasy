@@ -27,11 +27,7 @@ public class Speed2 extends BaseActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_physic_calculations);
-		getViews();
-        initializeActivity();
-
-
+		
 		/*this.speed.setOnClickListener(
 		 new OnClickListener() {
 		 public void onClick(View view) {
@@ -85,8 +81,13 @@ public class Speed2 extends BaseActivity {
 		 });*/
     }
 
+    @Override
+    protected void initializeActivity() {
+        setContentView(R.layout.activity_physic_calculations);
+    }
 
-    private void getViews() {
+    @Override
+    protected void getViews() {
         setToolBar((Toolbar) findViewById(R.id.toolbar));
 
         flow_rate_symbol = findViewById(R.id.param_0_symbol);
@@ -105,8 +106,8 @@ public class Speed2 extends BaseActivity {
         result = findViewById(R.id.result);
     }
 
-
-    private void initializeActivity() {
+    @Override
+    protected void initializeAttributes() {
         flow_rate_symbol.setText("Q = ");
         ray_symbol.setText("r = ");
         pi_symbol.setText("π = ");
@@ -134,5 +135,4 @@ public class Speed2 extends BaseActivity {
         formula.setVisibility(View.VISIBLE);
         result.setVisibility(View.VISIBLE);
     }
-
 }

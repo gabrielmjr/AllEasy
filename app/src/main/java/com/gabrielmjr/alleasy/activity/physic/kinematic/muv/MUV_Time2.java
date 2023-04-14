@@ -7,7 +7,6 @@ import com.gabrielmjr.alleasy.activity.BaseActivity;
 
 public class MUV_Time2 extends BaseActivity {
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);  

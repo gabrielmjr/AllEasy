@@ -9,7 +9,6 @@ import com.gabrielmjr.alleasy.R;
 import com.gabrielmjr.alleasy.activity.BaseActivity;
 
 public class MUV_Speed3 extends BaseActivity {
-
 	private TextView initial_velocity_symbol;
 	private TextView final_velocity_symbol;
 	private TextView delta_time_symbol;

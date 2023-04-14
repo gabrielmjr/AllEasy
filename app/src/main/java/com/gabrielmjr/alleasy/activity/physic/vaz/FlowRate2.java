@@ -22,14 +22,10 @@ public class FlowRate2 extends BaseActivity {
     private TextView formula;
     private TextView result;
 
-
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_physic_calculations);
-		getViews();
-        initializeActivity();
-
+		
 		/*this.vaz.setOnClickListener(
 		 new OnClickListener() {
 		 public void onClick(View view) {
@@ -97,9 +93,14 @@ public class FlowRate2 extends BaseActivity {
 		 }
 		 });*/
 	}
+    
+    @Override
+    protected void initializeActivity() {
+        setContentView(R.layout.activity_physic_calculations);
+    }
 
-
-    private void getViews() {
+    @Override
+    protected void getViews() {
         setToolBar((Toolbar) findViewById(R.id.toolbar));
 
         area_symbol = findViewById(R.id.param_0_symbol);
@@ -116,12 +117,11 @@ public class FlowRate2 extends BaseActivity {
         result = findViewById(R.id.result);
     }
 
-
-    private void initializeActivity() {
+    @Override
+    protected void initializeAttributes() {
         area_symbol.setText("a = ");   
         velocity_symbol.setText("v = ");
-        flow_rate_symbol.setText(getText(R.string.flow_rate_symbol_equals)
-                                 + " ?");
+        flow_rate_symbol.setText(getText(R.string.flow_rate_symbol_equals) + " ?");
 
         area_unit.setText("m²");
         velocity_unit.setText("m/s");

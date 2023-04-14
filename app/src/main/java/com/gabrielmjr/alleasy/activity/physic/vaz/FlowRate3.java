@@ -24,15 +24,10 @@ public class FlowRate3 extends BaseActivity {
     private TextView formula;
     private TextView result;
 
-
-
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_physic_calculations);
-        getViews();
-        initializeActivity();
-
+        
 		/*this.vaz.setOnClickListener(
 		 new OnClickListener() {
 		 public void onClick(View view) {
@@ -86,8 +81,13 @@ public class FlowRate3 extends BaseActivity {
 		 });*/
 	}
 
-
-    private void getViews() {
+    @Override
+    protected void initializeActivity() {
+        setContentView(R.layout.activity_physic_calculations);
+    }
+    
+    @Override
+    protected void getViews() {
         setToolBar((Toolbar) findViewById(R.id.toolbar));
 
         ray_symbol = findViewById(R.id.param_0_symbol);
@@ -106,8 +106,8 @@ public class FlowRate3 extends BaseActivity {
         result = findViewById(R.id.result);
     }
 
-
-    private void initializeActivity() {
+    @Override
+    protected void initializeAttributes() {
         ray_symbol.setText("r = ");   
         velocity_symbol.setText("v = ");
         flow_rate_symbol.setText(getText(R.string.flow_rate_symbol_equals)

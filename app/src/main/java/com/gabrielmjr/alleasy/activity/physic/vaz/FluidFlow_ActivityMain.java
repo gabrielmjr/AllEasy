@@ -16,9 +16,7 @@ import com.gabrielmjr.alleasy.model.Activity;
 import java.util.ArrayList;
 import java.util.List;
 
-public class FluidFlow_ActivityMain extends BaseActivity implements Runnable,
-OnSubtitleClickListener {
-    private Toolbar toolbar;
+public class FluidFlow_ActivityMain extends BaseActivity implements OnSubtitleClickListener {
     private RecyclerView subTitlesRecycler;
     private SubTitlesAdapter subTitlesAdapter;
     private List<Activity> subTitles;
@@ -26,31 +24,24 @@ OnSubtitleClickListener {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        initializeActivity();
-        getViews();
-        Handler handler = new Handler();
-        handler.postDelayed(this, 150);
     }
     
-    private void initializeActivity() {
+    @Override
+    protected void initializeActivity() {
         setContentView(R.layout.activity_subtitles);
     }
 
-    private void getViews() {
-        toolbar = findViewById(R.id.toolbar);
+    @Override
+    protected void getViews() {
+        setToolBar((Toolbar)findViewById(R.id.toolbar));
         subTitlesRecycler = findViewById(R.id.subtitles_recycler_view);
     }
 
     @Override
-    public void run() {
-        initializeAttributes();
-        buildRecyclerView();
-    }
-
-    private void initializeAttributes() {
+    protected void initializeAttributes() {
         subTitles = new ArrayList<>();
         subTitlesAdapter = new SubTitlesAdapter(getApplicationContext(), subTitles, this);
-        setToolBar(toolbar);
+        buildRecyclerView();
     }
 
     private void buildRecyclerView() {

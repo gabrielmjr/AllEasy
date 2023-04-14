@@ -9,7 +9,6 @@ import com.gabrielmjr.alleasy.R;
 import com.gabrielmjr.alleasy.activity.BaseActivity;
 
 public class MRU_Time3 extends BaseActivity {
-
     private TextView initial_displacement_symbol;
     private TextView final_displacement_symbol;
     private TextView velocity_symbol;

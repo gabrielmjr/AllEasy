@@ -9,7 +9,6 @@ import com.gabrielmjr.alleasy.R;
 import com.gabrielmjr.alleasy.activity.BaseActivity;
 
 public class MRU_Time1 extends BaseActivity {
-
     private TextView initial_time_symbol;
     private TextView delta_time_symbol;
     private TextView final_time_symbol;

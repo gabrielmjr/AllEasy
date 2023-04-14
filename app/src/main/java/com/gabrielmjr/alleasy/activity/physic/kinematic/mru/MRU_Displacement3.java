@@ -8,7 +8,6 @@ import android.widget.TextView;
 import com.gabrielmjr.alleasy.R;
 import com.gabrielmjr.alleasy.activity.BaseActivity;
 
-
 public class MRU_Displacement3 extends BaseActivity {
     private TextView initial_time_symbol;
     private TextView final_time_symbol;
