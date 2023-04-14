@@ -12,25 +12,17 @@ import com.gabrielmjr.alleasy.R;
 import com.gabrielmjr.alleasy.activity.BaseActivity;
 
 public class SendMailActivity extends BaseActivity {
-
-    // Attributes
     private EditText mail_message;
     private Button send_mail;
     private Intent intent;
 
-    // This is mail of AllEasy support
     private static final String[] ALLEASY_SUPPORT_MAIL = {"alleasy@myself.com"};
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.send_mail);
-        initialize();
-
         send_mail.setOnClickListener(
-            new OnClickListener()
-            {
+            new OnClickListener() {
                 @Override
                 public void onClick(View p1) {
                     if (mail_message.getText().toString().isEmpty()) {
@@ -39,27 +31,34 @@ public class SendMailActivity extends BaseActivity {
                         sendMail(mail_message.getText().toString());
                     }
                 }   
-
-                // Send mail method
-                private void sendMail(String message) {
-                    intent.setData(Uri.parse("mailto:"));
-                    intent.putExtra(Intent.EXTRA_EMAIL, ALLEASY_SUPPORT_MAIL);
-                    intent.putExtra(Intent.EXTRA_SUBJECT, "im testing");
-                    intent.putExtra(Intent.EXTRA_TEXT, "im message");
-                    if (intent.resolveActivity(getPackageManager()) != null) {
-                        startActivity(intent);
-                    }
-                }     
-            });
-
+            }
+        );
+    }
+    
+    @Override
+    protected void initializeActivity() {
+        setContentView(R.layout.send_mail);
     }
 
-    //Initializing the activity
-    private void initialize() {
+    @Override
+    protected void getViews() {
         setToolBar((Toolbar)findViewById(R.id.toolbar));
         mail_message = findViewById(R.id.mail_message);
         send_mail = findViewById(R.id.send_mail);
-        intent = new Intent(Intent.ACTION_SENDTO);
     }
 
+    @Override
+    protected void initializeAttributes() {
+        intent = new Intent(Intent.ACTION_SENDTO);
+    }
+    
+    private void sendMail(String message) {
+        intent.setData(Uri.parse("mailto:"));
+        intent.putExtra(Intent.EXTRA_EMAIL, ALLEASY_SUPPORT_MAIL);
+        intent.putExtra(Intent.EXTRA_SUBJECT, "im testing");
+        intent.putExtra(Intent.EXTRA_TEXT, "im message");
+        if (intent.resolveActivity(getPackageManager()) != null) {
+            startActivity(intent);
+        }
+    }     
 }

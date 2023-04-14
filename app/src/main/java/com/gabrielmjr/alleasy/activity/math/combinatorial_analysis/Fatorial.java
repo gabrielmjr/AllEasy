@@ -13,40 +13,24 @@ import com.GabrielMJr.Twaire.Math.Arranjo;
 import com.gabrielMJr.twaire.tools.Tools;
 
 public class Fatorial extends BaseActivity {
-
-    // Atributes
     private EditText n;
     private TextView fat;
     private TextView result;
     private Button clear;
 
-    private Tools Tools;
-    private Arranjo Arranjo;
-
-    private void initialize() {
-        setToolBar((Toolbar) findViewById(R.id.toolbar));
-
-        this.n = findViewById(R.id.n);
-        this.fat = findViewById(R.id.fat);
-        this.result = findViewById(R.id.result);
-        this.clear = findViewById(R.id.clear);
-        this.Tools = new Tools();
-        this.Arranjo = new Arranjo();
-    }
+    private Tools tools;
+    private Arranjo arranjo;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.fatorial);
-
-        this.initialize();
-
+        
         this.fat.setOnClickListener(
             new OnClickListener() {
                 public void onClick(View view) {
 
                     // Verifica se n é nulo
-                    if (Tools.isNull(n.getText().toString())) {
+                    if (tools.isNull(n.getText().toString())) {
                         n.setError(getText(R.string.null_field));
                     } else {
 
@@ -60,7 +44,7 @@ public class Fatorial extends BaseActivity {
 
                             // Senão, calcule normalmente
                             // Mandar n e p para OpEngeneer.Math
-                            Long res = Arranjo.valueOf(
+                            Long res = arranjo.valueOf(
                                 Integer.valueOf(n.getText().toString()), Integer.valueOf(n.getText().toString()));
 
                             // Pegar a String[] result
@@ -83,5 +67,25 @@ public class Fatorial extends BaseActivity {
                     return;
                 }
             });
+    }
+    
+    @Override
+    protected void initializeActivity() {
+        setContentView(R.layout.fatorial);
+    }
+
+    @Override
+    protected void getViews() {
+        setToolBar((Toolbar) findViewById(R.id.toolbar));
+        n = findViewById(R.id.n);
+        fat = findViewById(R.id.fat);
+        result = findViewById(R.id.result);
+        clear = findViewById(R.id.clear);
+    }
+
+    @Override
+    protected void initializeAttributes() {
+        tools = new Tools();
+        arranjo = new Arranjo();
     }
 }

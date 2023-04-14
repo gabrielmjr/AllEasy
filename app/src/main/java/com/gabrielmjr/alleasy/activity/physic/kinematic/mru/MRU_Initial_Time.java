@@ -115,7 +115,8 @@ public class MRU_Initial_Time extends BaseActivity {
         setContentView(R.layout.activity_physic_calculations);
     }
 
-    private void getViews() {
+    @Override
+    protected void getViews() {
         setToolBar((Toolbar) findViewById(R.id.toolbar));
 
         initial_time_symbol = findViewById(R.id.result_symbol);

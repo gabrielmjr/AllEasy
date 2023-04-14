@@ -116,7 +116,8 @@ public class MUV_Acceleration1 extends BaseActivity {
         setContentView(R.layout.activity_physic_calculations);
 	}
 
-	private void getViews() {
+	@Override
+    protected void getViews() {
 		setToolBar((Toolbar) findViewById(R.id.toolbar));
 
 		delta_speed_symbol = findViewById(R.id.param_0_symbol);

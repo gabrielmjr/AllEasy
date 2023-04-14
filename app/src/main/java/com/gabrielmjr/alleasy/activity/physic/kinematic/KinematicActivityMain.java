@@ -2,7 +2,6 @@ package com.gabrielmjr.alleasy.activity.physic.kinematic;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.os.Handler;
 import androidx.appcompat.widget.Toolbar;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -16,9 +15,7 @@ import com.gabrielmjr.alleasy.model.Activity;
 import java.util.ArrayList;
 import java.util.List;
 
-public class KinematicActivityMain extends BaseActivity implements Runnable,
-OnSubtitleClickListener {
-    private Toolbar toolbar;
+public class KinematicActivityMain extends BaseActivity implements OnSubtitleClickListener {
     private RecyclerView subTitlesRecycler;
     private SubTitlesAdapter subTitlesAdapter;
     private List<Activity> subTitles;
@@ -26,31 +23,24 @@ OnSubtitleClickListener {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        initializeActivity();
-        getViews();
-        Handler handler = new Handler();
-        handler.postDelayed(this, 150);
-    }
-    
-    private void initializeActivity() {
-        setContentView(R.layout.activity_subtitles);
-    }
-    
-    private void getViews() {
-        toolbar = findViewById(R.id.toolbar);
-        subTitlesRecycler = findViewById(R.id.subtitles_recycler_view);
     }
     
     @Override
-    public void run() {
-        initializeAttributes();
-        buildRecyclerView();
+    protected void initializeActivity() {
+        setContentView(R.layout.activity_subtitles);
     }
     
-    private void initializeAttributes() {
+    @Override
+    protected void getViews() {
+        setToolBar((Toolbar)findViewById(R.id.toolbar));
+        subTitlesRecycler = findViewById(R.id.subtitles_recycler_view);
+    }
+ 
+    @Override
+    protected void initializeAttributes() {
         subTitles = new ArrayList<>();
         subTitlesAdapter = new SubTitlesAdapter(getApplicationContext(), subTitles, this);
-        setToolBar(toolbar);
+        buildRecyclerView();
     }
     
     private void buildRecyclerView() {

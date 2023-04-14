@@ -14,8 +14,6 @@ import com.GabrielMJr.Twaire.Math.Arranjo;
 import com.gabrielMJr.twaire.tools.Tools;
 
 public class Combination extends BaseActivity {
-
-    // Atributes
     private EditText n;
     private EditText p;
     private TextView c;
@@ -30,25 +28,9 @@ public class Combination extends BaseActivity {
     private Boolean verifyNfat;
     private Boolean verifyPfat;
 
-    private void initialize() {
-        setToolBar((Toolbar) findViewById(R.id.toolbar));
-
-        this.n = findViewById(R.id.n);
-        this.p = findViewById(R.id.p);
-        this.c = findViewById(R.id.c);
-        this.result = findViewById(R.id.result);
-        this.clear = findViewById(R.id.clear);
-        this.Tools = new Tools();
-        this.Arranjo = new Arranjo();
-    }
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.combination);
-
-        this.initialize();
-
         this.c.setOnClickListener(
             new OnClickListener() {
                 public void onClick(View view) {
@@ -127,9 +109,7 @@ public class Combination extends BaseActivity {
                                     + getText(R.string.resultp)
                                     + " "
                                     + String.valueOf(getRes()[3]));
-
                             }
-
                         }    
                     }
                     return;
@@ -150,6 +130,26 @@ public class Combination extends BaseActivity {
             });
     }
 
+    @Override
+    protected void initializeActivity() {
+        setContentView(R.layout.combination);
+    }
+
+    @Override
+    protected void getViews() {
+        setToolBar((Toolbar) findViewById(R.id.toolbar));
+        n = findViewById(R.id.n);
+        p = findViewById(R.id.p);
+        c = findViewById(R.id.c);
+        result = findViewById(R.id.result);
+        clear = findViewById(R.id.clear);
+    }
+
+    @Override
+    protected void initializeAttributes() {
+        Tools = new Tools();
+        Arranjo = new Arranjo();
+    }
 
     // Setters e getters
     private void setRes(String nfat, String pfat, String nmpfat, String resfat) {

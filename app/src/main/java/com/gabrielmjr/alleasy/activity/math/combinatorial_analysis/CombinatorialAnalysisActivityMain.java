@@ -14,8 +14,7 @@ import com.gabrielmjr.alleasy.model.Activity;
 import java.util.ArrayList;
 import java.util.List;
 
-public class CombinatorialAnalysisActivityMain extends BaseActivity implements OnSubtitleClickListener,
-Runnable {
+public class CombinatorialAnalysisActivityMain extends BaseActivity implements OnSubtitleClickListener {
     private Toolbar toolbar;
     private RecyclerView subTitleRecycler;
     private SubTitlesAdapter subtitlesAdapter;
@@ -24,31 +23,25 @@ Runnable {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		initializeActivity();
-        getViews();
-        Handler handler = new Handler();
-        handler.postDelayed(this, 150);
 	}
 	
-	private void initializeActivity () {
+	@Override
+    protected void initializeActivity () {
 		setContentView(R.layout.activity_subtitles);
 	}
     
-    private void getViews() {
+    @Override
+    protected void getViews() {
         toolbar = findViewById(R.id.toolbar);
         subTitleRecycler = findViewById(R.id.subtitles_recycler_view);
     }
-    
+   
     @Override
-    public void run() {
-        initializeAttributes();
-        buildRecyclerView();
-    }
-    
-    private void initializeAttributes() {
+    protected void initializeAttributes() {
         setToolBar(toolbar);
         subTitles = new ArrayList<>();
         subtitlesAdapter = new SubTitlesAdapter(getApplicationContext(), subTitles, this);
+        buildRecyclerView();
     }
     
     private void buildRecyclerView() {

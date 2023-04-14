@@ -40,17 +40,15 @@ ResponseIF, OnClickListener {
     @Override
     protected void onCreate(Bundle savedInstanceStatus) {
         super.onCreate(savedInstanceStatus);
-        initializeActivity();
-        getViews();
-        Handler handler = new Handler();
-        handler.postDelayed(this, 150);
     }
 
-    private void initializeActivity() {
+    @Override
+    protected void initializeActivity() {
         setContentView(R.layout.about);
     }
 
-    private void getViews() {
+    @Override 
+    protected void getViews() {
         appName = findViewById(R.id.app_name);
         appVersion = findViewById(R.id.app_version);
         updateCheckerButton = findViewById(R.id.check_update);
@@ -62,18 +60,14 @@ ResponseIF, OnClickListener {
     }
 
     @Override
-    public void run() {
-        initializeAttributes();
-        setListeners();
-    }
-
-    private void initializeAttributes() {
+    protected void initializeAttributes() {
         appInfo = new AppInfo(getApplicationContext());
         updateChecker = new UpdateChecker(getApplicationContext(), this);
         downloadApp = updateChecker.getDownloadApp();
         setToolBar((Toolbar)findViewById(R.id.toolbar));
         setAppInfo();
         setCopyright();
+        setListeners();
     }
 
     private void setListeners() {

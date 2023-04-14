@@ -21,8 +21,14 @@ import com.gabrielmjr.alleasy.model.Activity;
 import java.util.ArrayList;
 import java.util.List;
 
-public class MainActivity extends BaseActivity implements Runnable,
-OnOptionsClickListener {
+public class MainActivity extends BaseActivity implements OnOptionsClickListener {
+
+    @Override
+    protected void initializeActivity() {
+        setContentView(R.layout.splash_screen);
+        closeSplashScreen();
+    }
+
 	private Toolbar toolbar;
 
 	private RecyclerView recyclerView;
@@ -30,7 +36,6 @@ OnOptionsClickListener {
 
 	private List<Activity> optionsItems;
 
-	private Handler handler;
 	/* 
 	 private String title;
 	 private String message;
@@ -53,9 +58,8 @@ OnOptionsClickListener {
 	 */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.splash_screen);
-		closeSplashScreen();
+        super.onCreate(savedInstanceState);   
+		getHandler().postDelayed(this, 2500);
     }
 
 	private void closeSplashScreen() {
@@ -65,14 +69,15 @@ OnOptionsClickListener {
 
 	@Override
 	public void run() {
-		setContentView(R.layout.activity_main);
-		getViews();
-		setSupportActionBar();
-		initializeAttributes();
-		buildRecyclerView();
+		setContentView(R.layout.activity_main);  
+        getViews();                       
+        setSupportActionBar();
+        initializeAttributes();
+        buildRecyclerView();
 	}
 
-	private void getViews() {
+	@Override
+    protected void getViews() {
 		toolbar = findViewById(R.id.toolbar);
 		recyclerView = findViewById(R.id.main_recycler_view);
 	}
@@ -81,7 +86,8 @@ OnOptionsClickListener {
 		setSupportActionBar(toolbar);
 	}
 
-	private void initializeAttributes() {
+	@Override
+    protected void initializeAttributes() {
 		optionsItems = new ArrayList<>();
 		mainAdapter = new MainAdapter(getApplicationContext(), optionsItems, this);
 	}

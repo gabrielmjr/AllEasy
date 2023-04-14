@@ -14,8 +14,6 @@ import com.GabrielMJr.Twaire.Math.Arranjo;
 import com.gabrielMJr.twaire.tools.Tools;
 
 public class Arranjos extends BaseActivity {
-
-    // Atrubutes
     private EditText n;
     private EditText p;
     private TextView a;
@@ -29,27 +27,10 @@ public class Arranjos extends BaseActivity {
     private int vn;
     private int vp;
 
-
-    private void initialize() {
-        setToolBar((Toolbar) findViewById(R.id.toolbar));
-
-        this.n = findViewById(R.id.n);
-        this.p = findViewById(R.id.p);
-        this.a = findViewById(R.id.a);
-        this.result = findViewById(R.id.result);
-        this.clear = findViewById(R.id.clear);
-        this.Arranjo = new Arranjo();
-        this.Tools = new Tools();
-    }
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.arranjos);
-
-        this.initialize();
-
+        
         this.a.setOnClickListener(
             new OnClickListener() {
                 public void onClick(View view) {
@@ -103,5 +84,26 @@ public class Arranjos extends BaseActivity {
                     return;
                 }
             });
+    }
+    
+    @Override
+    protected void initializeActivity() {
+        setContentView(R.layout.arranjos);
+    }
+
+    @Override
+    protected void getViews() {
+        setToolBar((Toolbar) findViewById(R.id.toolbar));
+        n = findViewById(R.id.n);
+        p = findViewById(R.id.p);
+        a = findViewById(R.id.a);
+        result = findViewById(R.id.result);
+        clear = findViewById(R.id.clear);
+        Arranjo = new Arranjo();
+    }
+
+    @Override
+    protected void initializeAttributes() {
+        Tools = new Tools();
     }
 }
