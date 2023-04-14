@@ -10,14 +10,20 @@ public class MUV_Time2 extends BaseActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_physic_calculations);
-        getViews();
+        super.onCreate(savedInstanceState);  
     }
 
+    @Override
+    protected void initializeActivity() {
+        setContentView(R.layout.activity_physic_calculations);
+    }
 
-	private void getViews() {
+	@Override
+    protected void getViews() {
 		setSupportActionBar((Toolbar)findViewById(R.id.toolbar));
 	}
 
+    @Override
+    protected void initializeAttributes() {
+    }
 }

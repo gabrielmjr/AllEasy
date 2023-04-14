@@ -23,14 +23,10 @@ public class MUV_Acceleration1 extends BaseActivity {
 	private TextView formula;
 	private TextView result;
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_physic_calculations);
-	    getViews();
-		initializeActivity();
-
+        
         /*acceleration.setOnClickListener(
 		 new OnClickListener() {
 		 @Override
@@ -115,7 +111,11 @@ public class MUV_Acceleration1 extends BaseActivity {
 		 }
 		 });*/
     }
-
+    
+    @Override
+    protected void initializeActivity() {
+        setContentView(R.layout.activity_physic_calculations);
+	}
 
 	private void getViews() {
 		setToolBar((Toolbar) findViewById(R.id.toolbar));
@@ -134,29 +134,28 @@ public class MUV_Acceleration1 extends BaseActivity {
 		result = findViewById(R.id.result);
 	}
 
+    @Override
+    protected void initializeAttributes() {
+        delta_speed_symbol.setText("∆v = ");
+        delta_time_symbol.setText("∆t = ");
+        acceleration_symbol.setText("a = ?");
 
-	private void initializeActivity() {
-		delta_speed_symbol.setText("∆v = ");
-		delta_time_symbol.setText("∆t = ");
-		acceleration_symbol.setText("a = ?");
+        delta_speed_unit.setText("m/s");
+        delta_time_unit.setText("s");
 
-		delta_speed_unit.setText("m/s");
-		delta_time_unit.setText("s");
+        formula.setText(R.string.kinematic_muv_acceleration1_formula);
 
-		formula.setText(R.string.kinematic_muv_acceleration1_formula);
+        delta_speed_symbol.setVisibility(View.VISIBLE);
+        delta_time_symbol.setVisibility(View.VISIBLE);
+        acceleration_symbol.setVisibility(View.VISIBLE);
 
-		delta_speed_symbol.setVisibility(View.VISIBLE);
-		delta_time_symbol.setVisibility(View.VISIBLE);
-		acceleration_symbol.setVisibility(View.VISIBLE);
+        delta_speed_value.setVisibility(View.VISIBLE);
+        delta_time_value.setVisibility(View.VISIBLE);
 
-		delta_speed_value.setVisibility(View.VISIBLE);
-		delta_time_value.setVisibility(View.VISIBLE);
+        delta_speed_unit.setVisibility(View.VISIBLE);
+        delta_time_unit.setVisibility(View.VISIBLE);
 
-		delta_speed_unit.setVisibility(View.VISIBLE);
-		delta_time_unit.setVisibility(View.VISIBLE);
-
-		formula.setVisibility(View.VISIBLE);
-		result.setVisibility(View.VISIBLE);
-	}
-
+        formula.setVisibility(View.VISIBLE);
+        result.setVisibility(View.VISIBLE);
+    }
 }

@@ -6,17 +6,23 @@ import com.gabrielmjr.alleasy.R;
 import com.gabrielmjr.alleasy.activity.BaseActivity;
 
 public class MUV_Time1 extends BaseActivity {
-
-
+    
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_physic_calculations);
-        getViews();
     }
 
+    @Override
+    protected void initializeActivity() {
+        setContentView(R.layout.activity_physic_calculations);
+    }
 
-	private void getViews() {
+	@Override
+    protected void getViews() {
 		setSupportActionBar((Toolbar)findViewById(R.id.toolbar));
 	}
+
+    @Override
+    protected void initializeAttributes() {
+    }
 }

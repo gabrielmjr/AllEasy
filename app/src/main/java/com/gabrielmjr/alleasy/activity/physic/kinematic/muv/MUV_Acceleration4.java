@@ -32,10 +32,7 @@ public class MUV_Acceleration4 extends BaseActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_physic_calculations);
-		getViews();
-        initializeActivity();
-
+		
         /*acceleration.setOnClickListener(
 		 new OnClickListener() {
 		 @Override
@@ -151,8 +148,13 @@ public class MUV_Acceleration4 extends BaseActivity {
 		 });*/
     }
 
+    @Override
+    protected void initializeActivity() {
+        setContentView(R.layout.activity_physic_calculations);
+	}
 
-	private void getViews() {
+	@Override
+    protected void getViews() {
 		setToolBar((Toolbar) findViewById(R.id.toolbar));
 
 		initial_velocity_symbol = findViewById(R.id.param_0_symbol);
@@ -175,38 +177,38 @@ public class MUV_Acceleration4 extends BaseActivity {
 		result = findViewById(R.id.result);
 	}
 
+    @Override
+    protected void initializeAttributes() {
+        initial_velocity_symbol.setText("vi = ");
+        final_velocity_symbol.setText("vf = ");
+        initial_time_symbol.setText("ti = ");
+        final_time_symbol.setText("tf = ");
+        acceleration_symbol.setText("a = ?");
 
-	private void initializeActivity() {
-		initial_velocity_symbol.setText("vi = ");
-		final_velocity_symbol.setText("vf = ");
-		initial_time_symbol.setText("ti = ");
-		final_time_symbol.setText("tf = ");
-		acceleration_symbol.setText("a = ?");
+        initial_velocity_unit.setText("m/s");
+        final_velocity_unit.setText("m/s");
+        initial_time_unit.setText("s");
+        final_time_unit.setText("s");
 
-		initial_velocity_unit.setText("m/s");
-		final_velocity_unit.setText("m/s");
-		initial_time_unit.setText("s");
-		final_time_unit.setText("s");
+        formula.setText(R.string.kinematic_muv_acceleration4_formula);
 
-		formula.setText(R.string.kinematic_muv_acceleration4_formula);
+        initial_velocity_symbol.setVisibility(View.VISIBLE);
+        final_velocity_symbol.setVisibility(View.VISIBLE);
+        initial_time_symbol.setVisibility(View.VISIBLE);
+        final_time_symbol.setVisibility(View.VISIBLE);
+        acceleration_symbol.setVisibility(View.VISIBLE);
 
-		initial_velocity_symbol.setVisibility(View.VISIBLE);
-		final_velocity_symbol.setVisibility(View.VISIBLE);
-		initial_time_symbol.setVisibility(View.VISIBLE);
-		final_time_symbol.setVisibility(View.VISIBLE);
-		acceleration_symbol.setVisibility(View.VISIBLE);
+        initial_velocity_value.setVisibility(View.VISIBLE);
+        final_velocity_value.setVisibility(View.VISIBLE);
+        initial_time_value.setVisibility(View.VISIBLE);
+        final_time_value.setVisibility(View.VISIBLE);
 
-		initial_velocity_value.setVisibility(View.VISIBLE);
-		final_velocity_value.setVisibility(View.VISIBLE);
-		initial_time_value.setVisibility(View.VISIBLE);
-		final_time_value.setVisibility(View.VISIBLE);
+        initial_velocity_unit.setVisibility(View.VISIBLE);
+        final_velocity_unit.setVisibility(View.VISIBLE);
+        initial_time_unit.setVisibility(View.VISIBLE);
+        final_time_unit.setVisibility(View.VISIBLE);
 
-		initial_velocity_unit.setVisibility(View.VISIBLE);
-		final_velocity_unit.setVisibility(View.VISIBLE);
-		initial_time_unit.setVisibility(View.VISIBLE);
-		final_time_unit.setVisibility(View.VISIBLE);
-
-		formula.setVisibility(View.VISIBLE);
-		result.setVisibility(View.VISIBLE);
-	}
+        formula.setVisibility(View.VISIBLE);
+        result.setVisibility(View.VISIBLE);
+    }
 }
