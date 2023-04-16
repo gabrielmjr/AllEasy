@@ -58,12 +58,8 @@
     <string name="initial_displacement">Si</string>
 	<string name="displacementSigle">S</string>
     <string name="second">s</string>
-	<string name="ray">r </string>
-    <string name="area">A </string>
-	<string name="speed">v </string>
     <string name="temperature">T</string>
     <string name="volumeLitre">L</string> 
-    <string name="acceleration">a</string>
     <string name="ds">∆S</string>
     <string name="q">Q</string>
     
