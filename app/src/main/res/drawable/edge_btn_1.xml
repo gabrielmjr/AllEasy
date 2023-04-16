@@ -12,8 +12,8 @@
         android:radius="-20dp"/>
     
     <gradient
-		android:startColor="@color/colorRed"
-		android:endColor="@color/colorOrange"
+		android:startColor="@color/red"
+		android:endColor="@color/orange"
 		android:angle="360"/>
 
 </shape>

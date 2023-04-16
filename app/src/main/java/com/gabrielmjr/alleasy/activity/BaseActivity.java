@@ -40,6 +40,9 @@ public abstract class BaseActivity extends AppCompatActivity implements Runnable
         return toolbar;
 	}
     
+    protected void setListeners() {
+    }
+    
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         onBackPressed();

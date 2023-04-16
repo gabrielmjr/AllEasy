@@ -70,7 +70,8 @@ ResponseIF, OnClickListener {
         setListeners();
     }
 
-    private void setListeners() {
+    @Override
+    protected void setListeners() {
         updateCheckerButton.setOnClickListener(this);
         downloadButton.setOnClickListener(this);
         license.setOnClickListener(this);
@@ -107,7 +108,7 @@ ResponseIF, OnClickListener {
 
     @Override
     public void onResponse(HashMap api_info) {
-        versionCode = api_info.get(Constants.TAG);
+        versionCode = (Integer)api_info.get(Constants.TAG);
         if (versionCode > appInfo.getVersionCode()) {
             updaterStatus.setBackgroundResource(R.drawable.ic_edge_button_blue);
             updaterStatus.setText(R.string.update_available);

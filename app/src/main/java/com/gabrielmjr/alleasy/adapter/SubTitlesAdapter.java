@@ -65,6 +65,6 @@ public class SubTitlesAdapter extends RecyclerView.Adapter<SubTitlesAdapter.View
 	}
 	
 	public static interface OnSubtitleClickListener {
-		public void onSubTitleClick(int position)
+		public void onSubTitleClick(int position);
 	}
 }

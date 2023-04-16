@@ -30,60 +30,6 @@ public class Arranjos extends BaseActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        
-        this.a.setOnClickListener(
-            new OnClickListener() {
-                public void onClick(View view) {
-
-                    if (Tools.isNull(n.getText().toString())) {
-                        n.setError(getText(R.string.null_field));
-                        verifyN = false; // Retorna 0 se nulo
-                    } else {
-                        vn = Integer.valueOf(n.getText().toString());
-                        verifyN = true; // Retorna 1 se não nulo
-                    }
-
-                    if (Tools.isNull(p.getText().toString())) {
-                        p.setError(getText(R.string.null_field));
-                        verifyP = false;
-                    } else {
-                        vp = Integer.valueOf(p.getText().toString());
-                        verifyP = true;
-                    }
-
-
-                    if (verifyN && verifyP) {
-
-
-                        if (vn < vp) {
-                            Toast.makeText(getApplicationContext(), R.string.p_big_than_n, Toast.LENGTH_SHORT).show();
-                        } else {
-                            // Mandar n e p para OpEngeneer e pegar a String[] result
-                            Long res = Arranjo.valueOf(vn, vp);
-
-                            if (res < 0) {
-                                Toast.makeText(getApplicationContext(), R.string.big_values, Toast.LENGTH_SHORT).show();
-                            } else {
-                                result.setText("=" + res);
-                            }
-                        }
-                    }
-                    return;
-                }
-            }); 
-
-        this.clear.setOnClickListener(
-            new OnClickListener()
-            {
-                @Override
-                public void onClick(View view) {
-                    n.setText(null);
-                    p.setText(null);
-                    result.setText(null);
-
-                    return;
-                }
-            });
     }
     
     @Override
@@ -105,5 +51,62 @@ public class Arranjos extends BaseActivity {
     @Override
     protected void initializeAttributes() {
         Tools = new Tools();
+        Arranjo = new Arranjo();
+        aClick();
+        clearClick();
+    }
+    
+    private void aClick() {
+        a.setOnClickListener(
+                view -> {
+                    if (Tools.isNull(n.getText().toString())) {
+                        n.setError(getText(R.string.null_field));
+                        verifyN = false; // Retorna 0 se nulo
+                    } else {
+                        vn = Integer.valueOf(n.getText().toString());
+                        verifyN = true; // Retorna 1 se não nulo
+                    }
+
+                    if (Tools.isNull(p.getText().toString())) {
+                        p.setError(getText(R.string.null_field));
+                        verifyP = false;
+                    } else {
+                        vp = Integer.valueOf(p.getText().toString());
+                        verifyP = true;
+                    }
+
+                    if (verifyN && verifyP) {
+
+                        if (vn < vp) {
+                            Toast.makeText(
+                                            getApplicationContext(),
+                                            R.string.p_big_than_n,
+                                            Toast.LENGTH_SHORT)
+                                    .show();
+                        } else {
+                            // Mandar n e p para OpEngeneer e pegar a String[] result
+                            Long res = Arranjo.valueOf(vn, vp);
+
+                            if (res < 0) {
+                                Toast.makeText(
+                                                getApplicationContext(),
+                                                R.string.big_values,
+                                                Toast.LENGTH_SHORT)
+                                        .show();
+                            } else {
+                                result.setText("=" + res);
+                            }
+                        }
+                    }
+                });
+    }
+    
+    private void clearClick() {
+        clear.setOnClickListener(
+                view -> {
+                    n.setText(null);
+                    p.setText(null);
+                    result.setText(null);
+                });
     }
 }
