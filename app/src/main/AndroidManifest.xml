@@ -14,14 +14,14 @@
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
         
         <activity
             android:name=".activity.SettingsActivity"
-            android:label="@string/app_name">
+            android:label="@string/app_name"
+            android:exported="false">
             <intent-filter>
                 <action android:name="android.intent.action.PARENT"/>
                 <category android:name="android.intent.category.LAUNCHER"/>
@@ -30,7 +30,8 @@
 
         <activity
             android:name=".activity.SendMailActivity"
-            android:label="@string/contact">
+            android:label="@string/contact"
+            android:exported="false">
             <intent-filter>
                 <action android:name="android.intent.action.PARENT"/>
                 <category android:name="android.intent.category.LAUNCHER"/>
@@ -39,7 +40,8 @@
 
         <activity
             android:name=".activity.AboutAppActivity"
-            android:label="@string/about">
+            android:label="@string/about"
+            android:exported="false">
             <intent-filter>
                 <action android:name="android.intent.action.PARENT"/>
                 <category android:name="android.intent.category.LAUNCHER"/>
@@ -48,7 +50,8 @@
 		
 		<activity
             android:name=".activity.math.combinatorial_analysis.CombinatorialAnalysisActivityMain"
-            android:label="@string/combinatorial_analysis">
+            android:label="@string/combinatorial_analysis"
+            android:exported="false">
             <intent-filter>
                 <action android:name="android.intent.action.PARENT"/>
                 <category android:name="android.intent.category.LAUNCHER"/>
@@ -57,7 +60,8 @@
 
         <activity
             android:name=".activity.math.combinatorial_analysis.Fatorial"
-            android:label="@string/factorial">
+            android:label="@string/factorial"
+            android:exported="false">
             <intent-filter>
                 <action android:name="android.intent.action.PARENT"/>
                 <category android:name="android.intent.category.LAUNCHER"/>
@@ -66,7 +70,8 @@
 
         <activity
             android:name=".activity.math.combinatorial_analysis.Arranjos"
-            android:label="@string/arranjments">
+            android:label="@string/arranjments"
+            android:exported="false">
             <intent-filter>
                 <action android:name="android.intent.action.PARENT"/>
                 <category android:name="android.intent.category.LAUNCHER"/>
@@ -75,7 +80,8 @@
 
         <activity
             android:name=".activity.math.combinatorial_analysis.Combination"
-            android:label="@string/combination">
+            android:label="@string/combination"
+            android:exported="false">
             <intent-filter>
                 <action android:name="android.intent.action.PARENT"/>
                 <category android:name="android.intent.category.LAUNCHER"/>
@@ -84,7 +90,8 @@
 		
 		<activity
             android:name=".activity.math.function.FunctionActivityMain"
-            android:label="@string/second_degree_function">
+            android:label="@string/second_degree_function"
+            android:exported="false">
             <intent-filter>
                 <action android:name="android.intent.action.PARENT"/>
                 <category android:name="android.intent.category.LAUNCHER"/>
@@ -93,7 +100,8 @@
 
         <activity
             android:name=".activity.math.function.FSG"
-            android:label="@string/second_degree_function">
+            android:label="@string/second_degree_function"
+            android:exported="false">
             <intent-filter>
                 <action android:name="android.intent.action.PARENT"/>
                 <category android:name="android.intent.category.LAUNCHER"/>
@@ -102,7 +110,8 @@
 
         <activity
             android:name=".activity.physic.vaz.FluidFlow_ActivityMain"
-            android:label="@string/fluid_flow">
+            android:label="@string/fluid_flow"
+            android:exported="false">
             <intent-filter>
                 <action android:name="android.intent.action.PARENT"/>
                 <category android:name="android.intent.category.LAUNCHER"/>
@@ -111,7 +120,8 @@
 
         <activity
             android:name=".activity.physic.vaz.FlowRate1"
-            android:label="@string/flow_rate">
+            android:label="@string/flow_rate"
+            android:exported="false">
             <intent-filter>
                 <action android:name="android.intent.action.PARENT"/>
                 <category android:name="android.intent.category.LAUNCHER"/>
@@ -120,7 +130,8 @@
 
         <activity
             android:name=".activity.physic.vaz.FlowRate2"
-            android:label="@string/flow_rate">
+            android:label="@string/flow_rate"
+            android:exported="false">
             <intent-filter>
                 <action android:name="android.intent.action.PARENT"/>
                 <category android:name="android.intent.category.LAUNCHER"/>
@@ -129,7 +140,8 @@
 
         <activity
             android:name=".activity.physic.vaz.FlowRate3"
-            android:label="@string/flow_rate">
+            android:label="@string/flow_rate"
+            android:exported="false">
             <intent-filter>
                 <action android:name="android.intent.action.PARENT"/>
                 <category android:name="android.intent.category.LAUNCHER"/>
@@ -138,7 +150,8 @@
 
         <activity
             android:name=".activity.physic.vaz.Time1"
-            android:label="@string/time">
+            android:label="@string/time"
+            android:exported="false">
             <intent-filter>
                 <action android:name="android.intent.action.PARENT"/>
                 <category android:name="android.intent.category.LAUNCHER"/>
@@ -147,7 +160,8 @@
 		
         <activity
             android:name=".activity.physic.vaz.Volume1"
-            android:label="@string/volume">
+            android:label="@string/volume"
+            android:exported="false">
             <intent-filter>
                 <action android:name="android.intent.action.PARENT"/>
                 <category android:name="android.intent.category.LAUNCHERr"/>
@@ -156,7 +170,8 @@
 
         <activity
             android:name=".activity.physic.vaz.Speed1"
-            android:label="@string/velocity">
+            android:label="@string/velocity"
+            android:exported="false">
             <intent-filter>
                 <action android:name="android.intent.action.PARENT"/>
                 <category android:name="android.intent.category.LAUNCHER"/>
@@ -165,7 +180,8 @@
 
         <activity
             android:name=".activity.physic.vaz.Speed2"
-            android:label="@string/velocity">
+            android:label="@string/velocity"
+            android:exported="false">
             <intent-filter>
                 <action android:name="android.intent.action.PARENT"/>
                 <category android:name="android.intent.category.LAUNCHER"/>
@@ -174,7 +190,8 @@
 
         <activity
             android:name=".activity.physic.vaz.Area1"
-            android:label="@string/area">
+            android:label="@string/area"
+            android:exported="false">
             <intent-filter>
                 <action android:name="android.intent.action.PARENT"/>
                 <category android:name="android.intent.category.LAUNCHER"/>
@@ -183,7 +200,8 @@
 
         <activity
             android:name=".activity.physic.vaz.Ray1"
-            android:label="@string/ray">
+            android:label="@string/ray"
+            android:exported="false">
             <intent-filter>
                 <action android:name="android.intent.action.PARENT"/>
                 <category android:name="android.intent.category.LAUNCHER"/>
@@ -192,7 +210,8 @@
 
         <activity
             android:name=".activity.physic.kinematic.KinematicActivityMain"
-            android:label="@string/kinematic">
+            android:label="@string/kinematic"
+            android:exported="false">
             <intent-filter>
                 <action android:name="android.intent.action.PARENT"/>
                 <category android:name="android.intent.category.LAUNCHER"/>
@@ -201,7 +220,8 @@
         
         <activity
             android:name=".activity.physic.kinematic.mru.UniformRectilinearMovementActivity"
-            android:label="URM">
+            android:label="URM"
+            android:exported="false">
             <intent-filter>
                 <action android:name="android.intent.action.PARENT"/>
                 <category android:name="android.intent.category.LAUNCHER"/>
@@ -210,7 +230,8 @@
 
         <activity
             android:name=".activity.physic.kinematic.mru.MRU_Displacement1"
-            android:label="@string/displacement">
+            android:label="@string/displacement"
+            android:exported="false">
             <intent-filter>
                 <action android:name="android.intent.action.PARENT"/>
                 <category android:name="android.intent.category.LAUNCHER"/>
@@ -219,7 +240,8 @@
 
         <activity
             android:name=".activity.physic.kinematic.mru.MRU_Displacement2"
-            android:label="@string/displacement">
+            android:label="@string/displacement"
+            android:exported="false">
             <intent-filter>
                 <action android:name="android.intent.action.PARENT"/>
                 <category android:name="android.intent.category.LAUNCHER"/>
@@ -228,7 +250,8 @@
 
         <activity
             android:name=".activity.physic.kinematic.mru.MRU_Displacement3"
-            android:label="@string/displacement">
+            android:label="@string/displacement"
+            android:exported="false">
             <intent-filter>
                 <action android:name="android.intent.action.PARENT"/>
                 <category android:name="android.intent.category.LAUNCHER"/>
@@ -237,7 +260,8 @@
 
         <activity
             android:name=".activity.physic.kinematic.mru.MRU_Initial_Displacement"
-            android:label="@string/displacement">
+            android:label="@string/displacement"
+            android:exported="false">
             <intent-filter>
                 <action android:name="android.intent.action.PARENT"/>
                 <category android:name="android.intent.category.LAUNCHER"/>
@@ -246,7 +270,8 @@
 
         <activity
             android:name=".activity.physic.kinematic.mru.MRU_Final_Displacement"
-            android:label="@string/displacement">
+            android:label="@string/displacement"
+            android:exported="false">
             <intent-filter>
                 <action android:name="android.intent.action.PARENT"/>
                 <category android:name="android.intent.category.LAUNCHER"/>
@@ -255,7 +280,8 @@
 
         <activity
             android:name=".activity.physic.kinematic.mru.MRU_Displacement_Law"
-            android:label="@string/displacement">
+            android:label="@string/displacement"
+            android:exported="false">
             <intent-filter>
                 <action android:name="android.intent.action.PARENT"/>
                 <category android:name="android.intent.category.LAUNCHER"/>
@@ -264,7 +290,8 @@
 
         <activity
             android:name=".activity.physic.kinematic.mru.MRU_Speed1"
-            android:label="@string/velocity">
+            android:label="@string/velocity"
+            android:exported="false">
             <intent-filter>
                 <action android:name="android.intent.action.PARENT"/>
                 <category android:name="android.intent.category.LAUNCHER"/>
@@ -273,7 +300,8 @@
 
         <activity
             android:name=".activity.physic.kinematic.mru.MRU_Speed2"
-            android:label="@string/velocity">
+            android:label="@string/velocity"
+            android:exported="false">
             <intent-filter>
                 <action android:name="android.intent.action.PARENT"/>
                 <category android:name="android.intent.category.LAUNCHER"/>
@@ -282,7 +310,8 @@
 
         <activity
             android:name=".activity.physic.kinematic.mru.MRU_Time1"
-            android:label="@string/time">
+            android:label="@string/time"
+            android:exported="false">
             <intent-filter>
                 <action android:name="android.intent.action.PARENT"/>
                 <category android:name="android.intent.category.LAUNCHER"/>
@@ -291,7 +320,8 @@
 
         <activity
             android:name=".activity.physic.kinematic.mru.MRU_Time2"
-            android:label="@string/time">
+            android:label="@string/time"
+            android:exported="false">
             <intent-filter>
                 <action android:name="android.intent.action.PARENT"/>
                 <category android:name="android.intent.category.LAUNCHER"/>
@@ -300,7 +330,8 @@
 
         <activity
             android:name=".activity.physic.kinematic.mru.MRU_Time3"
-            android:label="@string/time">
+            android:label="@string/time"
+            android:exported="false">
             <intent-filter>
                 <action android:name="android.intent.action.PARENT"/>
                 <category android:name="android.intent.category.LAUNCHER"/>
@@ -309,7 +340,8 @@
 
         <activity
             android:name=".activity.physic.kinematic.mru.MRU_Initial_Time"
-            android:label="@string/time">
+            android:label="@string/time"
+            android:exported="false">
             <intent-filter>
                 <action android:name="android.intent.action.PARENT"/>
                 <category android:name="android.intent.category.LAUNCHER"/>
@@ -318,7 +350,8 @@
 
         <activity
             android:name=".activity.physic.kinematic.mru.MRU_Final_Time"
-            android:label="@string/time">
+            android:label="@string/time"
+            android:exported="false">
             <intent-filter>
                 <action android:name="android.intent.action.PARENT"/>
                 <category android:name="android.intent.category.LAUNCHER"/>
@@ -327,7 +360,8 @@
         
         <activity
             android:name=".activity.physic.kinematic.muv.VariatedUniformMovementActivity"
-            android:label="MUV">
+            android:label="MUV"
+            android:exported="false">
             <intent-filter>
                 <action android:name="android.intent.action.PARENT"/>
                 <category android:name="android.intent.category.LAUNCHER"/>
@@ -336,7 +370,8 @@
 
         <activity
             android:name=".activity.physic.kinematic.muv.MUV_Acceleration1"
-            android:label="@string/acceleration">
+            android:label="@string/acceleration"
+            android:exported="false">
             <intent-filter>
                 <action android:name="android.intent.action.PARENT"/>
                 <category android:name="android.intent.category.LAUNCHER"/>
@@ -345,7 +380,8 @@
 
         <activity
             android:name=".activity.physic.kinematic.muv.MUV_Acceleration2"
-            android:label="@string/acceleration">
+            android:label="@string/acceleration"
+            android:exported="false">
             <intent-filter>
                 <action android:name="android.intent.action.PARENT"/>
                 <category android:name="android.intent.category.LAUNCHER"/>
@@ -354,8 +390,8 @@
 
         <activity
             android:name=".activity.physic.kinematic.muv.MUV_Acceleration3"
-            android:label="@string/acceleration">
-
+            android:label="@string/acceleration"
+            android:exported="false">
             <intent-filter>
                 <action android:name="android.intent.action.PARENT"/>
                 <category android:name="android.intent.category.LAUNCHER"/>
@@ -364,7 +400,8 @@
 
         <activity
             android:name=".activity.physic.kinematic.muv.MUV_Acceleration4"
-            android:label="@string/acceleration">
+            android:label="@string/acceleration"
+            android:exported="false">
             <intent-filter>
                 <action android:name="android.intent.action.PARENT"/>
                 <category android:name="android.intent.category.LAUNCHER"/>
@@ -373,7 +410,8 @@
 
         <activity
             android:name=".activity.physic.kinematic.muv.MUV_Speed1"
-            android:label="@string/velocity">
+            android:label="@string/velocity"
+            android:exported="false">
             <intent-filter>
                 <action android:name="android.intent.action.PARENT"/>
                 <category android:name="android.intent.category.LAUNCHER"/>
@@ -382,7 +420,8 @@
 
         <activity
             android:name=".activity.physic.kinematic.muv.MUV_Speed2"
-            android:label="@string/velocity">
+            android:label="@string/velocity"
+            android:exported="false">
             <intent-filter>
                 <action android:name="android.intent.action.PARENT"/>
                 <category android:name="android.intent.category.LAUNCHER"/>
@@ -391,7 +430,8 @@
 
         <activity
             android:name=".activity.physic.kinematic.muv.MUV_Speed3"
-            android:label="@string/velocity">
+            android:label="@string/velocity"
+            android:exported="false">
             <intent-filter>
                 <action android:name="android.intent.action.PARENT"/>
                 <category android:name="android.intent.category.LAUNCHER"/>
@@ -400,7 +440,8 @@
 
         <activity
             android:name=".activity.physic.kinematic.muv.MUV_Speed4"
-            android:label="@string/velocity">
+            android:label="@string/velocity"
+            android:exported="false">
             <intent-filter>
                 <action android:name="android.intent.action.PARENT"/>
                 <category android:name="android.intent.category.LAUNCHER"/>
@@ -409,7 +450,8 @@
 
         <activity
             android:name="physic.kinematic.muv.MUV_Time1"
-            android:label="@string/time">
+            android:label="@string/time"
+            android:exported="false">
             <intent-filter>
                 <action android:name="android.intent.action.PARENT"/>
                 <category android:name="android.intent.category.LAUNCHER"/>
@@ -418,7 +460,8 @@
 
         <activity
             android:name="physic.kinematic.muv.MUV_Time2"
-            android:label="@string/time">
+            android:label="@string/time"
+            android:exported="false">
             <intent-filter>
                 <action android:name="android.intent.action.PARENT"/>
                 <category android:name="android.intent.category.LAUNCHER"/>
@@ -427,7 +470,8 @@
 
         <activity
             android:name="physic.kinematic.muv.MUV_Time3"
-            android:label="@string/time">
+            android:label="@string/time"
+            android:exported="false">
             <intent-filter>
                 <action android:name="android.intent.action.PARENT"/>
                 <category android:name="android.intent.category.LAUNCHER"/>
@@ -436,7 +480,8 @@
 
         <activity
             android:name="physic.kinematic.muv.MUV_Time4"
-            android:label="@string/time">
+            android:label="@string/time"
+            android:exported="false">
             <intent-filter>
                 <action android:name="android.intent.action.PARENT"/>
                 <category android:name="android.intent.category.LAUNCHER"/>
@@ -445,7 +490,8 @@
 
         <activity
             android:name="physic.kinematic.muv.MUV_Time5"
-            android:label="@string/time">
+            android:label="@string/time"
+            android:exported="false">
             <intent-filter>
                 <action android:name="android.intent.action.PARENT"/>
                 <category android:name="android.intent.category.LAUNCHER"/>
@@ -454,12 +500,12 @@
 
         <activity
             android:name="physic.kinematic.muv.MUV_Time6"
-            android:label="@string/time">
+            android:label="@string/time"
+        android:exported="false">
             <intent-filter>
                 <action android:name="android.intent.action.PARENT"/>
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
     </application>
-
 </manifest>
