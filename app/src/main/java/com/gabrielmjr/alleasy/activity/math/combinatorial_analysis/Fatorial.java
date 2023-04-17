@@ -24,49 +24,6 @@ public class Fatorial extends BaseActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        
-        this.fat.setOnClickListener(
-            new OnClickListener() {
-                public void onClick(View view) {
-
-                    // Verifica se n é nulo
-                    if (tools.isNull(n.getText().toString())) {
-                        n.setError(getText(R.string.null_field));
-                    } else {
-
-                        // Verifica se o limite de n do .xml é maior que 20 ou não
-                        //Se for maior, não vai calcular, pois o resultado estará incorrecto
-
-                        if (Integer.valueOf(n.getText().toString()) > 20) {
-                            n.setError(getText(R.string.big_value));
-
-                        } else {
-
-                            // Senão, calcule normalmente
-                            // Mandar n e p para OpEngeneer.Math
-                            Long res = arranjo.valueOf(
-                                Integer.valueOf(n.getText().toString()), Integer.valueOf(n.getText().toString()));
-
-                            // Pegar a String[] result
-                            result.setText("=" + String.valueOf(res));
-                        }
-                    }
-
-                    return;
-                }
-            });
-
-        this.clear.setOnClickListener(
-            new OnClickListener()
-            {
-                @Override
-                public void onClick(View view) {
-                    n.setText(null);
-                    result.setText(null);
-
-                    return;
-                }
-            });
     }
     
     @Override
@@ -87,5 +44,49 @@ public class Fatorial extends BaseActivity {
     protected void initializeAttributes() {
         tools = new Tools();
         arranjo = new Arranjo();
+    }
+    
+    @Override
+    protected void setListeners() {
+        fatClick();
+        clearClick();
+    }
+    
+    private void fatClick() {
+        fat.setOnClickListener(
+                view -> {
+                    // Verifica se n é nulo
+                    if (tools.isNull(n.getText().toString())) {
+                        n.setError(getText(R.string.null_field));
+                    } else {
+
+                        // Verifica se o limite de n do .xml é maior que 20 ou não
+                        // Se for maior, não vai calcular, pois o resultado estará incorrecto
+
+                        if (Integer.valueOf(n.getText().toString()) > 20) {
+                            n.setError(getText(R.string.big_value));
+
+                        } else {
+
+                            // Senão, calcule normalmente
+                            // Mandar n e p para OpEngeneer.Math
+                            Long res =
+                                    arranjo.valueOf(
+                                            Integer.valueOf(n.getText().toString()),
+                                            Integer.valueOf(n.getText().toString()));
+
+                            // Pegar a String[] result
+                            result.setText("=" + String.valueOf(res));
+                        }
+                    }
+                });
+    }
+    
+    private void  clearClick() {
+        clear.setOnClickListener(
+                view -> {
+                    n.setText(null);
+                    result.setText(null);
+                });
     }
 }

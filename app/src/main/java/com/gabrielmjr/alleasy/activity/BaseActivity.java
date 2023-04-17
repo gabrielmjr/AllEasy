@@ -31,6 +31,7 @@ public abstract class BaseActivity extends AppCompatActivity implements Runnable
     public void run() {
         getViews();
         initializeAttributes();
+        setListeners();
     }
     
 	private Toolbar setNavigationOnToolbar(Toolbar toolbar) {
