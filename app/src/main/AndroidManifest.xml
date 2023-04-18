@@ -449,7 +449,7 @@
         </activity>
 
         <activity
-            android:name="physic.kinematic.muv.MUV_Time1"
+            android:name=".physic.kinematic.muv.MUV_Time1"
             android:label="@string/time"
             android:exported="false">
             <intent-filter>
