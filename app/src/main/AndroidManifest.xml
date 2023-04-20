@@ -449,7 +449,7 @@
         </activity>
 
         <activity
-            android:name=".physic.kinematic.muv.MUV_Time1"
+            android:name=".activity.physic.kinematic.muv.MUV_Time1"
             android:label="@string/time"
             android:exported="false">
             <intent-filter>
@@ -459,7 +459,7 @@
         </activity>
 
         <activity
-            android:name="physic.kinematic.muv.MUV_Time2"
+            android:name=".activity.physic.kinematic.muv.MUV_Time2"
             android:label="@string/time"
             android:exported="false">
             <intent-filter>
@@ -469,7 +469,7 @@
         </activity>
 
         <activity
-            android:name="physic.kinematic.muv.MUV_Time3"
+            android:name=".activity.physic.kinematic.muv.MUV_Time3"
             android:label="@string/time"
             android:exported="false">
             <intent-filter>
@@ -479,7 +479,7 @@
         </activity>
 
         <activity
-            android:name="physic.kinematic.muv.MUV_Time4"
+            android:name=".activity.physic.kinematic.muv.MUV_Time4"
             android:label="@string/time"
             android:exported="false">
             <intent-filter>
@@ -489,7 +489,7 @@
         </activity>
 
         <activity
-            android:name="physic.kinematic.muv.MUV_Time5"
+            android:name=".activity.physic.kinematic.muv.MUV_Time5"
             android:label="@string/time"
             android:exported="false">
             <intent-filter>
@@ -499,7 +499,7 @@
         </activity>
 
         <activity
-            android:name="physic.kinematic.muv.MUV_Time6"
+            android:name=".activity.physic.kinematic.muv.MUV_Time6"
             android:label="@string/time"
         android:exported="false">
             <intent-filter>
