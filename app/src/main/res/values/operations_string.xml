@@ -56,7 +56,7 @@
     <string name="kinematic_muv_time5">Calculate using:\n tf = ti + ∆v ÷ a</string>
     <string name="kinematic_muv_time6">Calculate using:\n tf = ti + (vf - vi) ÷ a</string>
 
-    <string name="dd">Data</string>
+    <string name="data">Data</string>
     <string name="fm">Formula</string>
     <string name="res">Resolution</string>
     
