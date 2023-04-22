@@ -11,6 +11,12 @@ AllEasy is an open source Android application made in Java that aims to automate
 
 
 # **More info**
+
+***Status***
+
+[![Android CI](https://github.com/gabrielmjr/AllEasy/actions/workflows/android.yml/badge.svg)](https://github.com/gabrielmjr/AllEasy/actions/workflows/android.yml)
+
+
 - Package: com.GabrielMJr.Twaire.AllEasy
 - Name: AllEasy
 - Created by: Gabriel MJr
