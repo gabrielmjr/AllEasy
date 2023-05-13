@@ -2,6 +2,7 @@ package com.gabrielmjr.alleasy.activity;
 
 import android.os.Bundle;
 import android.os.Handler;
+import android.os.Looper;
 import android.view.MenuItem;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
@@ -18,7 +19,7 @@ public abstract class BaseActivity extends AppCompatActivity implements Runnable
     }
     
     private void initializeThisAttributes() {
-        handler = new Handler();
+        handler = new Handler(Looper.getMainLooper());
     }
     
     protected abstract void initializeActivity();
