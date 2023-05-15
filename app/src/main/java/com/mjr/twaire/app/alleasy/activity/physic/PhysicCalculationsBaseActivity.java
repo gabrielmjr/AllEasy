@@ -1,6 +1,7 @@
 package com.mjr.twaire.app.alleasy.activity.physic;
 
 import android.os.Bundle;
+import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import com.mjr.twaire.app.alleasy.R;
 import com.mjr.twaire.app.alleasy.activity.BaseActivity;
@@ -13,14 +14,21 @@ public abstract class PhysicCalculationsBaseActivity extends BaseActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
     }
+    
+    @Override
+    protected void getViews() {
+        dataContainer = findViewById(R.id.data_container);
+    }
+    
     @Override
     protected void initializeAttributes() {
-        dataContainer = findViewById(R.id.data_container);
+        dataContainer.setLayoutManager(new LinearLayoutManager(getApplicationContext()));
         setTemplateAttributes();
     }
     
-    protected void setTemplateAttributes() {
-        
-    }
+    protected abstract void setTemplateAttributes();
     
+    protected RecyclerView getDataContainer() {
+        return dataContainer;
+    }
 }

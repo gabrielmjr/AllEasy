@@ -20,4 +20,8 @@
 	</style>
     
     <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Dark"/>
+    
+    <style name="AppTheme.PhysicCalculationsTemplate" parent="Theme.Application">
+        <item name="android:background">@drawable/bg_physic_calculations</item>
+    </style>
 </resources>

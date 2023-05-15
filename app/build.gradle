@@ -7,7 +7,7 @@ android {
     buildToolsVersion "33.0.0"
 
     defaultConfig {
-        applicationId "com.gabrielmjr.alleasy"
+        applicationId "com.mjr.twaire.app.alleasy"
         minSdk 16
         targetSdk 33
         versionCode 10203

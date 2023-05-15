@@ -26,7 +26,7 @@ public abstract class BaseActivity extends AppCompatActivity implements Runnable
     
     protected abstract void getViews();
     
-    protected abstract void initializeAttributes();
+    protected void initializeAttributes() {}
     
     @Override
     public void run() {
