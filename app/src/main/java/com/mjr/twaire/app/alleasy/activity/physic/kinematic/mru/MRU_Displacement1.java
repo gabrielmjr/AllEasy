@@ -39,10 +39,9 @@ public class MRU_Displacement1 extends PhysicCalculationsBaseActivity {
 
     @Override
     protected void setTemplateAttributes() {
-        //datas.add(new Data(/*First dataata*/));
-        //datas.add(new Data(/*Second data*/));
-        //datas.add(new Data(/*Third dataata*/));
-        //adapter = new PhysicCalculationsTemplateAdapter(getApplicationContext(), datas);
-        //getDataContainer().setAdapter(adapter);
+        datas.add(new Data("Si = ", "m"));
+        datas.add(new Data("S = ", "m"));
+        adapter = new PhysicCalculationsTemplateAdapter(getApplicationContext(), datas);
+        getDataContainer().setAdapter(adapter);
     }
 }
