@@ -37,7 +37,6 @@ public class MRU_Displacement_Law extends PhysicCalculationsBaseActivity {
 
     @Override
     protected void setTemplateAttributes() {
-        //S = Si + v * ∆t
         datas.add(new Data("Si = ", "m"));
         datas.add(new Data("v = ", "m/s"));
         datas.add(new Data("∆t = ", "s"));
