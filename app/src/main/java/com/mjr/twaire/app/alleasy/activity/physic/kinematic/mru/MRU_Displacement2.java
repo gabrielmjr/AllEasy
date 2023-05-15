@@ -31,6 +31,7 @@ public class MRU_Displacement2 extends PhysicCalculationsBaseActivity {
     @Override
     protected void initializeAttributes() {
         datas = new ArrayList<>();
+        adapter = new PhysicCalculationsTemplateAdapter(getApplicationContext(), datas);
         super.initializeAttributes();
     }
 
@@ -38,7 +39,6 @@ public class MRU_Displacement2 extends PhysicCalculationsBaseActivity {
     protected void setTemplateAttributes() {
         datas.add(new Data("∆t = ", "s"));
         datas.add(new Data("v = ", "m/s"));
-        adapter = new PhysicCalculationsTemplateAdapter(getApplicationContext(), datas);
         getDataContainer().setAdapter(adapter);
     }
 }
