@@ -35,7 +35,7 @@ public class MRU_Initial_Time extends PhysicCalculationsBaseActivity {
         super.initializeAttributes();
     }
     
-     @Override
+    @Override
     protected void setTemplateAttributes() {
         datas.add(new Data("∆t = ", "s"));
         datas.add(new Data("t = ", "s"));
