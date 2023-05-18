@@ -10,7 +10,7 @@ import com.mjr.twaire.app.alleasy.R;
 import com.mjr.twaire.app.alleasy.activity.BaseActivity;
 import com.mjr.twaire.app.alleasy.adapter.SubTitlesAdapter;
 import com.mjr.twaire.app.alleasy.adapter.SubTitlesAdapter.OnSubtitleClickListener;
-import com.mjr.twaire.app.alleasy.model.Activity;
+import com.mjr.twaire.app.alleasy.model.Subtitle;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -18,7 +18,7 @@ public class CombinatorialAnalysisActivityMain extends BaseActivity implements O
     private Toolbar toolbar;
     private RecyclerView subTitleRecycler;
     private SubTitlesAdapter subtitlesAdapter;
-    private List<Activity> subTitles;
+    private List<Subtitle> subTitles;
     
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -45,9 +45,9 @@ public class CombinatorialAnalysisActivityMain extends BaseActivity implements O
     }
     
     private void buildRecyclerView() {
-        subTitles.add(new Activity(getText(R.string.arranjments), Arranjos.class));
-        subTitles.add(new Activity(getText(R.string.combinatorial_analysis), Combination.class));
-        subTitles.add(new Activity(getText(R.string.factorial), Fatorial.class));
+        subTitles.add(new Subtitle(getText(R.string.arranjments), Arranjos.class));
+        subTitles.add(new Subtitle(getText(R.string.combinatorial_analysis), Combination.class));
+        subTitles.add(new Subtitle(getText(R.string.factorial), Fatorial.class));
         subTitleRecycler.setLayoutManager(new LinearLayoutManager(getApplicationContext()));
         subTitleRecycler.setAdapter(subtitlesAdapter);
     }

@@ -10,16 +10,16 @@ import com.mjr.twaire.app.alleasy.R;
 import com.mjr.twaire.app.alleasy.activity.BaseActivity;
 import com.mjr.twaire.app.alleasy.activity.physic.kinematic.mru.UniformRectilinearMovementActivity;
 import com.mjr.twaire.app.alleasy.activity.physic.kinematic.muv.VariatedUniformMovementActivity;
-import com.mjr.twaire.app.alleasy.adapter.SubTitlesAdapter;
+import com.mjr.twaire.app.alleasy.adapter.SubtitlesAdapter;
 import com.mjr.twaire.app.alleasy.adapter.SubTitlesAdapter.OnSubtitleClickListener;
-import com.mjr.twaire.app.alleasy.model.Activity;
+import com.mjr.twaire.app.alleasy.model.Subtitle;
 import java.util.ArrayList;
 import java.util.List;
 
 public class FluidFlow_ActivityMain extends BaseActivity implements OnSubtitleClickListener {
     private RecyclerView subTitlesRecycler;
-    private SubTitlesAdapter subTitlesAdapter;
-    private List<Activity> subTitles;
+    private SubtitlesAdapter subTitlesAdapter;
+    private List<Subtitle> subTitles;
     
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,20 +40,20 @@ public class FluidFlow_ActivityMain extends BaseActivity implements OnSubtitleCl
     @Override
     protected void initializeAttributes() {
         subTitles = new ArrayList<>();
-        subTitlesAdapter = new SubTitlesAdapter(getApplicationContext(), subTitles, this);
+        subTitlesAdapter = new SubtitlesAdapter(getApplicationContext(), subTitles, this);
         buildRecyclerView();
     }
 
     private void buildRecyclerView() {
-        subTitles.add(new Activity(getText(R.string.fluid_flow_area), Area1.class));
-        subTitles.add(new Activity(getText(R.string.fluid_flow_flow_rate1), FlowRate1.class));
-        subTitles.add(new Activity(getText(R.string.fluid_flow_flow_rate2), FlowRate2.class));
-        subTitles.add(new Activity(getText(R.string.fluid_flow_flow_rate3), FlowRate3.class));
-        subTitles.add(new Activity(getText(R.string.fluid_flow_ray), Ray1.class));
-        subTitles.add(new Activity(getText(R.string.fluid_flow_velocity1), Speed1.class));
-        subTitles.add(new Activity(getText(R.string.fluid_flow_velocity2), Speed2.class));
-        subTitles.add(new Activity(getText(R.string.fluid_flow_time), Time1.class));
-        subTitles.add(new Activity(getText(R.string.fluid_flow_volume), Volume1.class));
+        subTitles.add(new Subtitle(getText(R.string.fluid_flow_area), Area1.class));
+        subTitles.add(new Subtitle(getText(R.string.fluid_flow_flow_rate1), FlowRate1.class));
+        subTitles.add(new Subtitle(getText(R.string.fluid_flow_flow_rate2), FlowRate2.class));
+        subTitles.add(new Subtitle(getText(R.string.fluid_flow_flow_rate3), FlowRate3.class));
+        subTitles.add(new Subtitle(getText(R.string.fluid_flow_ray), Ray1.class));
+        subTitles.add(new Subtitle(getText(R.string.fluid_flow_velocity1), Speed1.class));
+        subTitles.add(new Subtitle(getText(R.string.fluid_flow_velocity2), Speed2.class));
+        subTitles.add(new Subtitle(getText(R.string.fluid_flow_time), Time1.class));
+        subTitles.add(new Subtitle(getText(R.string.fluid_flow_volume), Volume1.class));
         subTitlesRecycler.setLayoutManager(new LinearLayoutManager(getApplicationContext()));
         subTitlesRecycler.setAdapter(subTitlesAdapter);
     }

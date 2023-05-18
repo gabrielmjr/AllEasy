@@ -10,14 +10,14 @@ import com.mjr.twaire.app.alleasy.R;
 import com.mjr.twaire.app.alleasy.activity.BaseActivity;
 import com.mjr.twaire.app.alleasy.adapter.SubTitlesAdapter;
 import com.mjr.twaire.app.alleasy.adapter.SubTitlesAdapter.OnSubtitleClickListener;
-import com.mjr.twaire.app.alleasy.model.Activity;
+import com.mjr.twaire.app.alleasy.model.Subtitle;
 import java.util.ArrayList;
 import java.util.List;
 
 public class FunctionActivityMain extends BaseActivity implements OnSubtitleClickListener {
     private RecyclerView subTitleRecycler;
     private SubTitlesAdapter subtitlesAdapter;
-    private List<Activity> subTitles;
+    private List<Subtitle> subTitles;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -43,7 +43,7 @@ public class FunctionActivityMain extends BaseActivity implements OnSubtitleClic
     }
 
     private void buildRecyclerView() {
-        subTitles.add(new Activity(getText(R.string.second_degree_function), FSG.class));
+        subTitles.add(new Subtitle(getText(R.string.second_degree_function), FSG.class));
         subTitleRecycler.setLayoutManager(new LinearLayoutManager(getApplicationContext()));
         subTitleRecycler.setAdapter(subtitlesAdapter);
     }
