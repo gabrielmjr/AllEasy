@@ -31,7 +31,7 @@ public class MRU_Initial_Displacement extends PhysicCalculationsBaseActivity {
     @Override
     protected void initializeAttributes() {
         datas = new ArrayList<>();
-        adapter = new PhysicCalculationsTemplateAdapter(getApplicationContext(), datas);s
+        adapter = new PhysicCalculationsTemplateAdapter(getApplicationContext(), datas);
         super.initializeAttributes();
     }
     

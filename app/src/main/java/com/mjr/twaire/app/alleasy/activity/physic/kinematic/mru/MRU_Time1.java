@@ -38,7 +38,7 @@ public class MRU_Time1 extends PhysicCalculationsBaseActivity {
     
     @Override
     protected void setTemplateAttributes() {
-       datas.add(new Data("ti = ", "s"));
+        datas.add(new Data("ti = ", "s"));
         datas.add(new Data("t = ", "s"));
         getDataContainer().setAdapter(adapter);
     }

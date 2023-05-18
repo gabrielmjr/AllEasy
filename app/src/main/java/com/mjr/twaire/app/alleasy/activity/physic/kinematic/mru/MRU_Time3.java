@@ -40,7 +40,7 @@ public class MRU_Time3 extends PhysicCalculationsBaseActivity {
     protected void setTemplateAttributes() {
         datas.add(new Data("Si = ", "s"));
         datas.add(new Data("S = ", "s"));
-        datas.add(new Data("∆v", "m/s"));
+        datas.add(new Data("∆v = ú", "m/s"));
         getDataContainer().setAdapter(adapter);
     }
 }

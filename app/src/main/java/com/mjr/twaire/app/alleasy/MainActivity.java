@@ -17,7 +17,7 @@ import com.mjr.twaire.app.alleasy.activity.physic.kinematic.KinematicActivityMai
 import com.mjr.twaire.app.alleasy.activity.physic.vaz.FluidFlow_ActivityMain;
 import com.mjr.twaire.app.alleasy.adapter.MainAdapter;
 import com.mjr.twaire.app.alleasy.adapter.MainAdapter.OnOptionsClickListener;
-import com.mjr.twaire.app.alleasy.model.Activity;
+import com.mjr.twaire.app.alleasy.model.Subtitle;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -34,7 +34,7 @@ public class MainActivity extends BaseActivity implements OnOptionsClickListener
 	private RecyclerView recyclerView;
 	private MainAdapter mainAdapter;
 
-	private List<Activity> optionsItems;
+	private List<Subtitle> optionsItems;
 
 	/* 
 	 private String title;
@@ -63,7 +63,7 @@ public class MainActivity extends BaseActivity implements OnOptionsClickListener
     }
 
 	private void closeSplashScreen() {
-        handler = new Handler();
+        handler = new Handler(getMainLooper());
 		handler.postDelayed(this, 2500);
 	}
 
@@ -93,10 +93,10 @@ public class MainActivity extends BaseActivity implements OnOptionsClickListener
 	}
 
 	private void buildRecyclerView() {
-		optionsItems.add(new Activity(getText(R.string.combinatorial_analysis), CombinatorialAnalysisActivityMain.class));
-		optionsItems.add(new Activity(getText(R.string.kinematics), KinematicActivityMain.class));
-		optionsItems.add(new Activity(getText(R.string.functions), FunctionActivityMain.class));
-        optionsItems.add(new Activity(getText(R.string.fluid_flow), FluidFlow_ActivityMain.class));
+		optionsItems.add(new Subtitle(getText(R.string.combinatorial_analysis), CombinatorialAnalysisActivityMain.class));
+		optionsItems.add(new Subtitle(getText(R.string.kinematics), KinematicActivityMain.class));
+		optionsItems.add(new Subtitle(getText(R.string.functions), FunctionActivityMain.class));
+        optionsItems.add(new Subtitle(getText(R.string.fluid_flow), FluidFlow_ActivityMain.class));
 		recyclerView.setLayoutManager(new GridLayoutManager(getApplicationContext(), 3));
 		recyclerView.setAdapter(mainAdapter);
 	}

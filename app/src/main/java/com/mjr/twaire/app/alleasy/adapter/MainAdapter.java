@@ -8,17 +8,17 @@ import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.widget.TextView;
 import com.mjr.twaire.app.alleasy.R;
-import com.mjr.twaire.app.alleasy.model.Activity;
+import com.mjr.twaire.app.alleasy.model.Subtitle;
 import java.util.List;
 
 public class MainAdapter extends RecyclerView.Adapter<MainAdapter.ViewHolder> {
 	private Context context;
-	private List<Activity> optionsItems;
+	private List<Subtitle> optionsItems;
 
 	private OnOptionsClickListener optionsClickListener;
 
 	public MainAdapter(Context context,
-					   List<Activity> optionsItems,
+					   List<Subtitle> optionsItems,
 					   OnOptionsClickListener optionsClickListener) {
 		this.context = context;
 		this.optionsItems = optionsItems;

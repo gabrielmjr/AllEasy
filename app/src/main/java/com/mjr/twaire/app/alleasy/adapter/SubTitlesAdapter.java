@@ -8,16 +8,16 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 import androidx.recyclerview.widget.RecyclerView;
 import com.mjr.twaire.app.alleasy.R;
-import com.mjr.twaire.app.alleasy.model.Activity;
+import com.mjr.twaire.app.alleasy.model.Subtitle;
 import java.util.List;
 
-public class SubTitlesAdapter extends RecyclerView.Adapter<SubTitlesAdapter.ViewHolder> {
+public class SubtitlesAdapter extends RecyclerView.Adapter<SubTitlesAdapter.ViewHolder> {
 	private Context context;
-	private List<Activity> subTitles;
+	private List<Subtitle> subTitles;
 	private OnSubtitleClickListener subTitleClickListener;
 	
 	public SubTitlesAdapter(Context context,
-							List<Activity> subTitles,
+							List<Subtitle> subTitles,
 							OnSubtitleClickListener subTitleClickListener) {
 		this.context = context;
 		this.subTitles = subTitles;
