@@ -19,7 +19,7 @@ public class MUV_Acceleration1 extends PhysicCalculationsBaseActivity {
     
     @Override
     protected void initializeActivity() {
-        setContentView(R.layout.activity_physic_calculations);
+        setContentView(R.layout.template_physic_calculation);
 	}
 
 	@Override
@@ -37,8 +37,8 @@ public class MUV_Acceleration1 extends PhysicCalculationsBaseActivity {
     
     @Override
     protected void setTemplateAttributes() {
-        datas.add(new Data("ti = ", "s"));
-        datas.add(new Data("t = ", "s"));
+        datas.add(new Data("∆v = ", "m/s"));
+        datas.add(new Data("∆t = ", "s"));
         getDataContainer().setAdapter(adapter);
     }
 }
