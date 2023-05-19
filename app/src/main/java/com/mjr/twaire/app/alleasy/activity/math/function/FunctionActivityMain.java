@@ -8,15 +8,15 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import com.mjr.twaire.app.alleasy.R;
 import com.mjr.twaire.app.alleasy.activity.BaseActivity;
-import com.mjr.twaire.app.alleasy.adapter.SubTitlesAdapter;
-import com.mjr.twaire.app.alleasy.adapter.SubTitlesAdapter.OnSubtitleClickListener;
+import com.mjr.twaire.app.alleasy.adapter.SubtitlesAdapter;
+import com.mjr.twaire.app.alleasy.adapter.SubtitlesAdapter.OnSubtitleClickListener;
 import com.mjr.twaire.app.alleasy.model.Subtitle;
 import java.util.ArrayList;
 import java.util.List;
 
 public class FunctionActivityMain extends BaseActivity implements OnSubtitleClickListener {
     private RecyclerView subTitleRecycler;
-    private SubTitlesAdapter subtitlesAdapter;
+    private SubtitlesAdapter subtitlesAdapter;
     private List<Subtitle> subTitles;
 
 	@Override
@@ -38,7 +38,7 @@ public class FunctionActivityMain extends BaseActivity implements OnSubtitleClic
     @Override 
     protected void initializeAttributes() {
         subTitles = new ArrayList<>();
-        subtitlesAdapter = new SubTitlesAdapter(getApplicationContext(), subTitles, this);
+        subtitlesAdapter = new SubtitlesAdapter(getApplicationContext(), subTitles, this);
         buildRecyclerView();
     }
 

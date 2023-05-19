@@ -11,12 +11,12 @@ import com.mjr.twaire.app.alleasy.R;
 import com.mjr.twaire.app.alleasy.model.Subtitle;
 import java.util.List;
 
-public class SubtitlesAdapter extends RecyclerView.Adapter<SubTitlesAdapter.ViewHolder> {
+public class SubtitlesAdapter extends RecyclerView.Adapter<SubtitlesAdapter.ViewHolder> {
 	private Context context;
 	private List<Subtitle> subTitles;
 	private OnSubtitleClickListener subTitleClickListener;
 	
-	public SubTitlesAdapter(Context context,
+	public SubtitlesAdapter(Context context,
 							List<Subtitle> subTitles,
 							OnSubtitleClickListener subTitleClickListener) {
 		this.context = context;

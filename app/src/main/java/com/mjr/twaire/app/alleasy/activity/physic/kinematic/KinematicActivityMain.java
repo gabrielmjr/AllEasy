@@ -16,9 +16,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class KinematicActivityMain extends BaseActivity implements OnSubtitleClickListener {
-    private RecyclerView subTitlesRecycler;
-    private SubtitlesAdapter subTitlesAdapter;
-    private List<Subtitle> subTitles;
+    private RecyclerView subtitlesRecycler;
+    private SubtitlesAdapter subtitlesAdapter;
+    private List<Subtitle> subtitles;
     
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,25 +33,25 @@ public class KinematicActivityMain extends BaseActivity implements OnSubtitleCli
     @Override
     protected void getViews() {
         setToolBar((Toolbar)findViewById(R.id.toolbar));
-        subTitlesRecycler = findViewById(R.id.subtitles_recycler_view);
+        subtitlesRecycler = findViewById(R.id.subtitles_recycler_view);
     }
  
     @Override
     protected void initializeAttributes() {
-        subTitles = new ArrayList<>();
-        subTitlesAdapter = new SubtitlesAdapter(getApplicationContext(), subTitles, this);
+        subtitles = new ArrayList<>();
+        subtitlesAdapter = new SubtitlesAdapter(getApplicationContext(), subtitles, this);
         buildRecyclerView();
     }
     
     private void buildRecyclerView() {
-        subTitles.add(new Subtitle(getText(R.string.uniform_rectilinear_movement), UniformRectilinearMovementActivity.class));
-        subTitles.add(new Subtitle(getText(R.string.variated_uniform_movement), VariatedUniformMovementActivity.class));
-        subTitlesRecycler.setLayoutManager(new LinearLayoutManager(getApplicationContext()));
-        subTitlesRecycler.setAdapter(subTitlesAdapter);
+        subtitles.add(new Subtitle(getText(R.string.uniform_rectilinear_movement), UniformRectilinearMovementActivity.class));
+        subtitles.add(new Subtitle(getText(R.string.variated_uniform_movement), VariatedUniformMovementActivity.class));
+        subtitlesRecycler.setLayoutManager(new LinearLayoutManager(getApplicationContext()));
+        subtitlesRecycler.setAdapter(subtitlesAdapter);
     }
     
     @Override
     public void onSubTitleClick(int position) {
-        startActivity(new Intent(getApplicationContext(), subTitles.get(position).getClassId()));
+        startActivity(new Intent(getApplicationContext(), subtitles.get(position).getClassId()));
     }
 }

@@ -8,8 +8,8 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import com.mjr.twaire.app.alleasy.R;
 import com.mjr.twaire.app.alleasy.activity.BaseActivity;
-import com.mjr.twaire.app.alleasy.adapter.SubTitlesAdapter;
-import com.mjr.twaire.app.alleasy.adapter.SubTitlesAdapter.OnSubtitleClickListener;
+import com.mjr.twaire.app.alleasy.adapter.SubtitlesAdapter;
+import com.mjr.twaire.app.alleasy.adapter.SubtitlesAdapter.OnSubtitleClickListener;
 import com.mjr.twaire.app.alleasy.model.Subtitle;
 import java.util.ArrayList;
 import java.util.List;
@@ -17,7 +17,7 @@ import java.util.List;
 public class CombinatorialAnalysisActivityMain extends BaseActivity implements OnSubtitleClickListener {
     private Toolbar toolbar;
     private RecyclerView subTitleRecycler;
-    private SubTitlesAdapter subtitlesAdapter;
+    private SubtitlesAdapter subtitlesAdapter;
     private List<Subtitle> subTitles;
     
 	@Override
@@ -40,7 +40,7 @@ public class CombinatorialAnalysisActivityMain extends BaseActivity implements O
     protected void initializeAttributes() {
         setToolBar(toolbar);
         subTitles = new ArrayList<>();
-        subtitlesAdapter = new SubTitlesAdapter(getApplicationContext(), subTitles, this);
+        subtitlesAdapter = new SubtitlesAdapter(getApplicationContext(), subTitles, this);
         buildRecyclerView();
     }
     
