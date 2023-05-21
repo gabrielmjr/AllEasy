@@ -19,7 +19,7 @@ public class MUV_Time5 extends PhysicCalculationsBaseActivity {
 
     @Override
     protected void initializeActivity() {
-        setContentView(R.layout.activity_physic_calculations);
+        setContentView(R.layout.template_physic_calculation);
     }
 
 	@Override
