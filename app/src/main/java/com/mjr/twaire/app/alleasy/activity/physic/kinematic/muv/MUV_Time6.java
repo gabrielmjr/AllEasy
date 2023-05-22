@@ -40,7 +40,7 @@ public class MUV_Time6 extends PhysicCalculationsBaseActivity {
         datas.add(new Data("ti = ", "s"));
         datas.add(new Data("vi = ", "m/s"));
         datas.add(new Data("v = ", "m/s"));
-        datas.add(new Data("a = ", "m/s²"))
+        datas.add(new Data("a = ", "m/s²"));
         getDataContainer().setAdapter(adapter);
     }
 }
