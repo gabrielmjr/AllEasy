@@ -18,23 +18,23 @@ public class Time1 extends PhysicCalculationsBaseActivity {
     }
 
     @Override
-    protected void initializeAttributes() {
+    protected void initializeActivity() {
         setContentView(R.layout.template_physic_calculation);
-    }
-    
-    @Override
+	}
+
+	@Override
     protected void getViews() {
         super.getViews();
-        setToolBar((Toolbar) findViewById(R.id.toolbar));
-    }
+		setToolBar((Toolbar) findViewById(R.id.toolbar));
+	}
 
     @Override
-    protected void initializeActivity() {
+    protected void initializeAttributes() {
         datas = new ArrayList<>();
         adapter = new PhysicCalculationsTemplateAdapter(getApplicationContext(), datas);
         super.initializeAttributes();
     }
-    
+
     @Override
     protected void setTemplateAttributes() {
         datas.add(new Data("V = ", "m³"));
