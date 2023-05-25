@@ -16,11 +16,6 @@ public abstract class PhysicCalculationsBaseActivity extends BaseActivity {
     private RecyclerView dataContainer;
     
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-    }
-    
-    @Override
     protected void initializeActivity() {
         setContentView(R.layout.template_physic_calculation);
     }
