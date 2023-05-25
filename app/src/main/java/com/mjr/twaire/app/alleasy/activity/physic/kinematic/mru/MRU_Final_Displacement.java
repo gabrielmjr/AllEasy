@@ -9,36 +9,9 @@ import com.mjr.twaire.app.alleasy.model.Data;
 import java.util.ArrayList;
 
 public class MRU_Final_Displacement extends PhysicCalculationsBaseActivity {
-    private ArrayList<Data> datas;
-    private PhysicCalculationsTemplateAdapter adapter;
-    
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-    }
-
-    @Override
-    protected void initializeActivity() {
-        setContentView(R.layout.template_physic_calculation);
-    }
-
-    @Override
-    protected void getViews() {
-        super.getViews();
-        setToolBar((Toolbar) findViewById(R.id.toolbar));
-    }
-
-    @Override
-    protected void initializeAttributes() {
-        datas = new ArrayList<>();
-        adapter = new PhysicCalculationsTemplateAdapter(getApplicationContext(), datas);
-        super.initializeAttributes();
-    }
-
     @Override
     protected void setTemplateAttributes() {
-        datas.add(new Data("Si = ", "m"));
-        datas.add(new Data("∆S = ", "m"));
-        getDataContainer().setAdapter(adapter);
+        getDatas().add(new Data("Si = ", "m"));
+        getDatas().add(new Data("∆S = ", "m"));
     }
 }

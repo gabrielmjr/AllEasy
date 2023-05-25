@@ -13,7 +13,7 @@ public class MUV_Acceleration4 extends BaseActivity {
 
     @Override
     protected void initializeActivity() {
-        setContentView(R.layout.activity_physic_calculations);
+        setContentView(R.layout.template_physic_calculation);
 	}
 
 	@Override

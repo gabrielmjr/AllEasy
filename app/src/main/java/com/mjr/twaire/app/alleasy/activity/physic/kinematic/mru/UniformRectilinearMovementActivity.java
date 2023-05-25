@@ -11,13 +11,12 @@ import com.mjr.twaire.app.alleasy.adapter.SubtitlesAdapter;
 import com.mjr.twaire.app.alleasy.adapter.SubtitlesAdapter.OnSubtitleClickListener;
 import com.mjr.twaire.app.alleasy.model.Subtitle;
 import java.util.ArrayList;
-import java.util.List;
 
 public class UniformRectilinearMovementActivity extends BaseActivity implements OnSubtitleClickListener {
     private Toolbar toolbar;
     private RecyclerView subTitlesRecycler;
     private SubtitlesAdapter subTitlesAdapter;
-    private List<Subtitle> subTitles;
+    private ArrayList<Subtitle> subTitles;
     
     @Override
     protected void onCreate(Bundle savedInstanceState) {
