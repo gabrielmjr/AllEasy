@@ -1,27 +1,14 @@
 package com.mjr.twaire.app.alleasy.activity.physic.kinematic.muv;
 
-import android.os.Bundle;
-import androidx.appcompat.widget.Toolbar;
-import com.mjr.twaire.app.alleasy.R;
-import com.mjr.twaire.app.alleasy.activity.BaseActivity;
+import com.mjr.twaire.app.alleasy.activity.physic.PhysicCalculationsBaseActivity;
+import com.mjr.twaire.app.alleasy.model.Data;
 
-public class MUV_Acceleration4 extends BaseActivity {
+public class MUV_Acceleration4 extends PhysicCalculationsBaseActivity {
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-    }
-
-    @Override
-    protected void initializeActivity() {
-        setContentView(R.layout.template_physic_calculation);
-	}
-
-	@Override
-    protected void getViews() {
-		setToolBar((Toolbar) findViewById(R.id.toolbar));
-	}
-
-    @Override
-    protected void initializeAttributes() {
+    protected void setTemplateAttributes() {
+        getDatas().add(new Data("vi = ", "m/s"));
+        getDatas().add(new Data("v = ", "m/s"));
+        getDatas().add(new Data("ti =", "s"));
+        getDatas().add(new Data("t = ", "s"));
     }
 }
