@@ -14,7 +14,6 @@ import java.util.ArrayList;
 public class MRU_Displacement1 extends PhysicCalculationsBaseActivity {
     @Override
     protected void setTemplateAttributes() {
-        getDatas().add(new Data("Si = ", "m"));
-        getDatas().add(new Data("S = ", "m"));
+        
     }
 }

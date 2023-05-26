@@ -8,33 +8,33 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import com.mjr.twaire.app.alleasy.R;
 import com.mjr.twaire.app.alleasy.BaseFragment;
-import com.mjr.twaire.app.alleasy.adapter.MainAdapter;
+import com.mjr.twaire.app.alleasy.adapter.SubtitlesAdapter;
 import com.mjr.twaire.app.alleasy.model.Subtitle;
 import java.util.ArrayList;
 
-public abstract class SubtitlesFragment extends BaseFragment {
+public abstract class SubtitlesFragment extends BaseFragment implements SubtitlesAdapter.OnSubtitleClickListener {
     private RecyclerView recyclerView;
-    private MainAdapter mainAdapter;
+    private SubtitlesAdapter adapter;
     private ArrayList<Subtitle> optionsItems;
     
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.fragment_home, container, false);
+        return inflater.inflate(R.layout.fragment_subtitles, container, false);
     }
     
     @Override
     protected void getViews() {
-        recyclerView = getViewContainer().findViewById(R.id.main_recycler_view);
+        recyclerView = getViewContainer().findViewById(R.id.subtitles_recycler_view);
     }
 
     @Override
     protected void initializeAttributes() {
         optionsItems = new ArrayList<>();
-        mainAdapter = new MainAdapter(getActivity().getApplicationContext(), optionsItems, this);
-        recyclerView.setAdapter(mainAdapter);
+        adapter = new SubtitlesAdapter(getActivity().getApplicationContext(), optionsItems, this);
+        recyclerView.setAdapter(adapter);
         recyclerView.setLayoutManager(new LinearLayoutManager(getActivity().getApplicationContext()));
         initializeSubtitles();
-    }
+    } 
 
     protected abstract void initializeSubtitles();
     
@@ -42,8 +42,8 @@ public abstract class SubtitlesFragment extends BaseFragment {
         return recyclerView;
     }
     
-    protected MainAdapter getMainAdapter() {
-        return mainAdapter;
+    protected SubtitlesAdapter getAdapter() {
+        return adapter;
     }
     
     protected ArrayList<Subtitle> getSubtitles() {
@@ -51,7 +51,7 @@ public abstract class SubtitlesFragment extends BaseFragment {
     }
     
     @Override
-    public void onOptionsClick(int position) {
+    public void onSubtitleClick(int position) {
         replaceFragment(optionsItems.get(position));
     }
 }

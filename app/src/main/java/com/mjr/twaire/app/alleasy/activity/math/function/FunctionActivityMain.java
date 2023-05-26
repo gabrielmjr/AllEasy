@@ -49,7 +49,7 @@ public class FunctionActivityMain extends BaseActivity implements OnSubtitleClic
     }
 
     @Override
-    public void onSubTitleClick(int position) {
+    public void onSubtitleClick(int position) {
       // startActivity(new Intent(getApplicationContext(), subTitles.get(position).getClassId()));
     }
 }

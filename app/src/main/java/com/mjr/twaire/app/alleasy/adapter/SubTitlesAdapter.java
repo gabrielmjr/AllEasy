@@ -14,14 +14,14 @@ import java.util.List;
 public class SubtitlesAdapter extends RecyclerView.Adapter<SubtitlesAdapter.ViewHolder> {
 	private Context context;
 	private List<Subtitle> subTitles;
-	private OnSubtitleClickListener subTitleClickListener;
+	private OnSubtitleClickListener subtitleClickListener;
 	
 	public SubtitlesAdapter(Context context,
 							List<Subtitle> subTitles,
-							OnSubtitleClickListener subTitleClickListener) {
+							OnSubtitleClickListener subtitleClickListener) {
 		this.context = context;
 		this.subTitles = subTitles;
-		this.subTitleClickListener = subTitleClickListener;
+		this.subtitleClickListener = subtitleClickListener;
 	}
 
 	@Override
@@ -60,11 +60,11 @@ public class SubtitlesAdapter extends RecyclerView.Adapter<SubtitlesAdapter.View
 		public void onClick(View view) {
 			if (getAdapterPosition() == RecyclerView.NO_POSITION) 
 				return;
-			subTitleClickListener.onSubTitleClick((getAdapterPosition()));
+			subtitleClickListener.onSubtitleClick((getAdapterPosition()));
 		}
 	}
 	
-	public static interface OnSubtitleClickListener {
-		public void onSubTitleClick(int position);
+	public interface OnSubtitleClickListener {
+		public void onSubtitleClick(int position);
 	}
 }

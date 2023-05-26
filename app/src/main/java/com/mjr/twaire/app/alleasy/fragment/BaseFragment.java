@@ -4,10 +4,10 @@ import android.os.Bundle;
 import android.view.View;
 import androidx.annotation.MainThread;
 import androidx.fragment.app.Fragment;
-import com.mjr.twaire.app.alleasy.adapter.MainAdapter.OnOptionsClickListener;
+import com.mjr.twaire.app.alleasy.adapter.SubtitlesAdapter;
 import com.mjr.twaire.app.alleasy.model.Subtitle;
 
-public abstract class BaseFragment extends Fragment implements OnOptionsClickListener {
+public abstract class BaseFragment extends Fragment implements SubtitlesAdapter.OnSubtitleClickListener {
     private View viewContainer;
     
     @Override

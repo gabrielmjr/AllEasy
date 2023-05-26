@@ -53,7 +53,7 @@ public class CombinatorialAnalysisActivityMain extends BaseActivity implements O
     }
 
     @Override
-    public void onSubTitleClick(int position) {
+    public void onSubtitleClick(int position) {
         //startActivity(new Intent(getApplicationContext(), subTitles.get(position).getClassId()));
     }
 }

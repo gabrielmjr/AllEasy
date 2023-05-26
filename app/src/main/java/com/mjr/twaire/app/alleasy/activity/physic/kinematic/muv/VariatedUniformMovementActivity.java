@@ -1,10 +1,10 @@
 package com.mjr.twaire.app.alleasy.activity.physic.kinematic.muv;
 
-import com.mjr.twaire.app.alleasy.R;
-import com.mjr.twaire.app.alleasy.activity.SubtitleBaseActivity;
-import com.mjr.twaire.app.alleasy.model.Subtitle;
+import com.mjr.twaire.app.alleasy.fragment.SubtitlesFragment;
 
-public class VariatedUniformMovementActivity extends SubtitleBaseActivity {
+public class VariatedUniformMovementActivity extends SubtitlesFragment {
+    private static final String TAG = ".fragment.physic.kinematic.uvm.VariatedUniformMovementActivity";
+    
     @Override
     protected void initializeSubtitles() {
         /*getSubtitles().add(new Subtitle(getText(R.string.kinematic_muv_acceleration1), MUV_Acceleration1.class));
@@ -25,5 +25,9 @@ public class VariatedUniformMovementActivity extends SubtitleBaseActivity {
         getSubtitles().add(new Subtitle(getText(R.string.kinematic_muv_time4), MUV_Time4.class));
         getSubtitles().add(new Subtitle(getText(R.string.kinematic_muv_time5), MUV_Time5.class));
         getSubtitles().add(new Subtitle(getText(R.string.kinematic_muv_time6), MUV_Time6.class));*/
+    }
+    
+    public static String getFragmentTag() {
+        return TAG;
     }
 }

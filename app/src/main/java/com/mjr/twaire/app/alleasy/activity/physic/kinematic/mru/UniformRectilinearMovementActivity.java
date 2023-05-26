@@ -2,9 +2,12 @@ package com.mjr.twaire.app.alleasy.activity.physic.kinematic.urm;
 
 import com.mjr.twaire.app.alleasy.R;
 import com.mjr.twaire.app.alleasy.activity.SubtitleBaseActivity;
+import com.mjr.twaire.app.alleasy.fragment.SubtitlesFragment;
 import com.mjr.twaire.app.alleasy.model.Subtitle;
 
-public class UniformRectilinearMovementActivity extends SubtitleBaseActivity {
+public class UniformRectilinearMovementActivity extends SubtitlesFragment {
+    private static final String TAG = ".fragment.physic.kinematic.urm.UniformRectilinearMovementActivity";
+    
     @Override
     protected void initializeSubtitles() {
         /*getSubtitles().add(new Subtitle(getText(R.string.kinematic_urm_displacement1), MRU_Displacement1.class));
@@ -20,5 +23,9 @@ public class UniformRectilinearMovementActivity extends SubtitleBaseActivity {
         getSubtitles().add(new Subtitle(getText(R.string.kinematic_urm_time3), MRU_Time3.class));
         getSubtitles().add(new Subtitle(getText(R.string.kinematic_urm_initial_time), MRU_Initial_Time.class));
         getSubtitles().add(new Subtitle(getText(R.string.kinematic_urm_final_time), MRU_Final_Time.class));*/
+    }
+    
+    public static String getFragmentTag() {
+        return TAG;
     }
 }
