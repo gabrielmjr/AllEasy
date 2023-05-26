@@ -2,7 +2,7 @@ package com.mjr.twaire.app.alleasy.activity.physic.kinematic;
 
 import com.mjr.twaire.app.alleasy.R;
 import com.mjr.twaire.app.alleasy.activity.SubtitleBaseActivity;
-import com.mjr.twaire.app.alleasy.activity.physic.kinematic.mru.UniformRectilinearMovementActivity;
+import com.mjr.twaire.app.alleasy.activity.physic.kinematic.urm.UniformRectilinearMovementActivity;
 import com.mjr.twaire.app.alleasy.activity.physic.kinematic.muv.VariatedUniformMovementActivity;
 import com.mjr.twaire.app.alleasy.model.Subtitle;
 

@@ -219,7 +219,7 @@
         </activity>
         
         <activity
-            android:name=".activity.physic.kinematic.mru.UniformRectilinearMovementActivity"
+            android:name=".activity.physic.kinematic.urm.UniformRectilinearMovementActivity"
             android:label="URM"
             android:exported="false">
             <intent-filter>
@@ -229,7 +229,7 @@
         </activity>
 
         <activity
-            android:name=".activity.physic.kinematic.mru.MRU_Displacement1"
+            android:name=".activity.physic.kinematic.urm.MRU_Displacement1"
             android:label="@string/displacement"
             android:exported="false">
             <intent-filter>
@@ -239,7 +239,7 @@
         </activity>
 
         <activity
-            android:name=".activity.physic.kinematic.mru.MRU_Displacement2"
+            android:name=".activity.physic.kinematic.urm.MRU_Displacement2"
             android:label="@string/displacement"
             android:exported="false">
             <intent-filter>
@@ -249,7 +249,7 @@
         </activity>
 
         <activity
-            android:name=".activity.physic.kinematic.mru.MRU_Displacement3"
+            android:name=".activity.physic.kinematic.urm.MRU_Displacement3"
             android:label="@string/displacement"
             android:exported="false">
             <intent-filter>
@@ -259,7 +259,7 @@
         </activity>
 
         <activity
-            android:name=".activity.physic.kinematic.mru.MRU_Initial_Displacement"
+            android:name=".activity.physic.kinematic.urm.MRU_Initial_Displacement"
             android:label="@string/displacement"
             android:exported="false">
             <intent-filter>
@@ -269,7 +269,7 @@
         </activity>
 
         <activity
-            android:name=".activity.physic.kinematic.mru.MRU_Final_Displacement"
+            android:name=".activity.physic.kinematic.urm.MRU_Final_Displacement"
             android:label="@string/displacement"
             android:exported="false">
             <intent-filter>
@@ -279,7 +279,7 @@
         </activity>
 
         <activity
-            android:name=".activity.physic.kinematic.mru.MRU_Displacement_Law"
+            android:name=".activity.physic.kinematic.urm.MRU_Displacement_Law"
             android:label="@string/displacement"
             android:exported="false">
             <intent-filter>
@@ -289,7 +289,7 @@
         </activity>
 
         <activity
-            android:name=".activity.physic.kinematic.mru.MRU_Speed1"
+            android:name=".activity.physic.kinematic.urm.MRU_Speed1"
             android:label="@string/velocity"
             android:exported="false">
             <intent-filter>
@@ -299,7 +299,7 @@
         </activity>
 
         <activity
-            android:name=".activity.physic.kinematic.mru.MRU_Speed2"
+            android:name=".activity.physic.kinematic.urm.MRU_Speed2"
             android:label="@string/velocity"
             android:exported="false">
             <intent-filter>
@@ -309,7 +309,7 @@
         </activity>
 
         <activity
-            android:name=".activity.physic.kinematic.mru.MRU_Time1"
+            android:name=".activity.physic.kinematic.urm.MRU_Time1"
             android:label="@string/time"
             android:exported="false">
             <intent-filter>
@@ -319,7 +319,7 @@
         </activity>
 
         <activity
-            android:name=".activity.physic.kinematic.mru.MRU_Time2"
+            android:name=".activity.physic.kinematic.urm.MRU_Time2"
             android:label="@string/time"
             android:exported="false">
             <intent-filter>
@@ -329,7 +329,7 @@
         </activity>
 
         <activity
-            android:name=".activity.physic.kinematic.mru.MRU_Time3"
+            android:name=".activity.physic.kinematic.urm.MRU_Time3"
             android:label="@string/time"
             android:exported="false">
             <intent-filter>
@@ -339,7 +339,7 @@
         </activity>
 
         <activity
-            android:name=".activity.physic.kinematic.mru.MRU_Initial_Time"
+            android:name=".activity.physic.kinematic.urm.MRU_Initial_Time"
             android:label="@string/time"
             android:exported="false">
             <intent-filter>
@@ -349,7 +349,7 @@
         </activity>
 
         <activity
-            android:name=".activity.physic.kinematic.mru.MRU_Final_Time"
+            android:name=".activity.physic.kinematic.urm.MRU_Final_Time"
             android:label="@string/time"
             android:exported="false">
             <intent-filter>

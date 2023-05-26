@@ -1,4 +1,4 @@
-package com.mjr.twaire.app.alleasy.activity.physic.kinematic.mru;
+package com.mjr.twaire.app.alleasy.activity.physic.kinematic.urm;
 
 import android.os.Bundle;
 import androidx.appcompat.widget.Toolbar;

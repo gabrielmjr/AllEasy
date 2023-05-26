@@ -22,19 +22,19 @@
     <string name="fluid_flow_ray">Calcular usando:\n r = √[Q / (π × v)]</string>
 
     <!--Cinemática MRU-->
-    <string name="kinematic_mru_displacement1">Calcular usando:\n ∆S = Sf - Si</string>
-    <string name="kinematic_mru_displacement2">Calcular usando:\n ∆S = ∆t × vm</string>
-    <string name="kinematic_mru_displacement3">Calcular usando:\n ∆S = (tf - ti) × vm</string>
-    <string name="kinematic_mru_initial_displacement">Calcular usando:\n Si = Sf - ∆S</string>
-    <string name="kinematic_mru_final_displacement">Calcular usando:\n Sf = Si + ∆S</string>
-    <string name="kinematic_mru_displacement_law">Calcular usando:\n S = Si + v × ∆t</string>
-    <string name="kinematic_mru_speed1">Calcular usando:\n v = ∆S / ∆t</string>
-    <string name="kinematic_mru_speed2">Calcular usando:\n v = (sf - si) × (tf - ti)</string>
-    <string name="kinematic_mru_time1">Calcular usando:\n ∆t = tf - ti</string>
-    <string name="kinematic_mru_time2">Calcular usando:\n ∆t = ∆S / v</string>
-    <string name="kinematic_mru_time3">Calcular usando:\n ∆t = (Sf - Si) / v</string>
-    <string name="kinematic_mru_initial_time">Calcular usando:\n ti = tf - ∆t</string>
-    <string name="kinematic_mru_final_time">Calcular usando:\n tf = ti + ∆t</string>
+    <string name="kinematic_urm_displacement1">Calcular usando:\n ∆S = Sf - Si</string>
+    <string name="kinematic_urm_displacement2">Calcular usando:\n ∆S = ∆t × vm</string>
+    <string name="kinematic_urm_displacement3">Calcular usando:\n ∆S = (tf - ti) × vm</string>
+    <string name="kinematic_urm_initial_displacement">Calcular usando:\n Si = Sf - ∆S</string>
+    <string name="kinematic_urm_final_displacement">Calcular usando:\n Sf = Si + ∆S</string>
+    <string name="kinematic_urm_displacement_law">Calcular usando:\n S = Si + v × ∆t</string>
+    <string name="kinematic_urm_speed1">Calcular usando:\n v = ∆S / ∆t</string>
+    <string name="kinematic_urm_speed2">Calcular usando:\n v = (sf - si) × (tf - ti)</string>
+    <string name="kinematic_urm_time1">Calcular usando:\n ∆t = tf - ti</string>
+    <string name="kinematic_urm_time2">Calcular usando:\n ∆t = ∆S / v</string>
+    <string name="kinematic_urm_time3">Calcular usando:\n ∆t = (Sf - Si) / v</string>
+    <string name="kinematic_urm_initial_time">Calcular usando:\n ti = tf - ∆t</string>
+    <string name="kinematic_urm_final_time">Calcular usando:\n tf = ti + ∆t</string>
 
     <!--Cinemática MUV-->
     <string name="kinematic_muv_acceleration1">Calcular usando:\n a = ∆v / ∆t</string>

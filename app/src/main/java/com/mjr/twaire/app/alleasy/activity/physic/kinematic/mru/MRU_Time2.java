@@ -1,4 +1,4 @@
-package com.mjr.twaire.app.alleasy.activity.physic.kinematic.mru;
+package com.mjr.twaire.app.alleasy.activity.physic.kinematic.urm;
 
 import com.mjr.twaire.app.alleasy.activity.physic.PhysicCalculationsBaseActivity;
 import com.mjr.twaire.app.alleasy.model.Data;
