@@ -7,7 +7,7 @@ import com.mjr.twaire.app.alleasy.model.Subtitle;
 public class UniformRectilinearMovementActivity extends SubtitleBaseActivity {
     @Override
     protected void initializeSubtitles() {
-        getSubtitles().add(new Subtitle(getText(R.string.kinematic_urm_displacement1), MRU_Displacement1.class));
+        /*getSubtitles().add(new Subtitle(getText(R.string.kinematic_urm_displacement1), MRU_Displacement1.class));
         getSubtitles().add(new Subtitle(getText(R.string.kinematic_urm_displacement2), MRU_Displacement2.class));
         getSubtitles().add(new Subtitle(getText(R.string.kinematic_urm_displacement3), MRU_Displacement3.class));
         getSubtitles().add(new Subtitle(getText(R.string.kinematic_urm_displacement_law), MRU_Displacement_Law.class));
@@ -19,6 +19,6 @@ public class UniformRectilinearMovementActivity extends SubtitleBaseActivity {
         getSubtitles().add(new Subtitle(getText(R.string.kinematic_urm_time2), MRU_Time2.class));
         getSubtitles().add(new Subtitle(getText(R.string.kinematic_urm_time3), MRU_Time3.class));
         getSubtitles().add(new Subtitle(getText(R.string.kinematic_urm_initial_time), MRU_Initial_Time.class));
-        getSubtitles().add(new Subtitle(getText(R.string.kinematic_urm_final_time), MRU_Final_Time.class));
+        getSubtitles().add(new Subtitle(getText(R.string.kinematic_urm_final_time), MRU_Final_Time.class));*/
     }
 }

@@ -5,12 +5,10 @@ import android.view.View;
 import androidx.annotation.MainThread;
 import androidx.fragment.app.Fragment;
 import com.mjr.twaire.app.alleasy.adapter.MainAdapter.OnOptionsClickListener;
+import com.mjr.twaire.app.alleasy.model.Subtitle;
 
 public abstract class BaseFragment extends Fragment implements OnOptionsClickListener {
     private View viewContainer;
-    
-    @Override
-    public void onOptionsClick(int position) {}
     
     @Override
     @MainThread
@@ -24,6 +22,13 @@ public abstract class BaseFragment extends Fragment implements OnOptionsClickLis
     protected abstract void getViews();
     
     protected abstract void initializeAttributes();
+    
+    protected void replaceFragment(Subtitle subtitle) {
+        getActivity().getSupportFragmentManager()
+            .beginTransaction()
+            .replace(R.id.view_container, subtitle.getClassId(), subtitle.getTag())
+            .commit();
+    }
     
     protected View getViewContainer() {
         return viewContainer;

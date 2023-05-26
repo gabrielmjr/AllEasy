@@ -45,15 +45,15 @@ public class CombinatorialAnalysisActivityMain extends BaseActivity implements O
     }
     
     private void buildRecyclerView() {
-        subTitles.add(new Subtitle(getText(R.string.arranjments), Arranjos.class));
+        /*subTitles.add(new Subtitle(getText(R.string.arranjments), Arranjos.class));
         subTitles.add(new Subtitle(getText(R.string.combinatorial_analysis), Combination.class));
-        subTitles.add(new Subtitle(getText(R.string.factorial), Fatorial.class));
+        subTitles.add(new Subtitle(getText(R.string.factorial), Fatorial.class));*/
         subTitleRecycler.setLayoutManager(new LinearLayoutManager(getApplicationContext()));
         subTitleRecycler.setAdapter(subtitlesAdapter);
     }
 
     @Override
     public void onSubTitleClick(int position) {
-        startActivity(new Intent(getApplicationContext(), subTitles.get(position).getClassId()));
+        //startActivity(new Intent(getApplicationContext(), subTitles.get(position).getClassId()));
     }
 }

@@ -39,7 +39,6 @@ public abstract class SubtitleBaseActivity extends BaseActivity implements OnSub
     
     @Override
     public void onSubTitleClick(int position) {
-        startActivity(new Intent(getApplicationContext(), subtitles.get(position).getClassId()));
     }
     
     protected ArrayList<Subtitle> getSubtitles() {

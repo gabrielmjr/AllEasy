@@ -1,27 +1,48 @@
 package com.mjr.twaire.app.alleasy.model;
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.fragment.app.Fragment;
 
 public class Subtitle {
     private CharSequence label;
-	private Class<?> activity;
+    private Fragment activity;
+    private String tag;
 
-	public Subtitle(CharSequence label, Class<?> activity) {
-		this.label = label;
-		this.activity = activity;
-	}
+    public Subtitle(@NonNull CharSequence label, @NonNull Fragment activity, @NonNull String tag) {
+        this.label = label;
+        this.activity = activity;
+        this.tag = tag;
+    }
 
-	public void setLabel(CharSequence label) {
-		this.label = label;
-	}
+    public Subtitle(@NonNull CharSequence label, @NonNull Fragment activity) {
+        this.label = label;
+        this.activity = activity;
+    }
 
-	public CharSequence getLabel() {
-		return label;
-	}
+    public void setLabel(@NonNull CharSequence label) {
+        this.label = label;
+    }
 
-	public void setClassId(Class<?> activity) {
-		this.activity = activity;
-	}
+    @NonNull
+    public CharSequence getLabel() {
+        return label;
+    }
 
-	public Class<?> getClassId() {
-		return activity;
-	}
+    public void setClassId(@NonNull Fragment activity) {
+        this.activity = activity;
+    }
+
+    @NonNull
+    public Fragment getClassId() {
+        return activity;
+    }
+
+    @Nullable
+    public String getTag() {
+        return this.tag;
+    }
+
+    public void setTag(@NonNull String tag) {
+        this.tag = tag;
+    }
 }

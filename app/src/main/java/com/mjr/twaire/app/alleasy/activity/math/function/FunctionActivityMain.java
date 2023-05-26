@@ -43,13 +43,13 @@ public class FunctionActivityMain extends BaseActivity implements OnSubtitleClic
     }
 
     private void buildRecyclerView() {
-        subTitles.add(new Subtitle(getText(R.string.second_degree_function), FSG.class));
+       // subTitles.add(new Subtitle(getText(R.string.second_degree_function), FSG.class));
         subTitleRecycler.setLayoutManager(new LinearLayoutManager(getApplicationContext()));
         subTitleRecycler.setAdapter(subtitlesAdapter);
     }
 
     @Override
     public void onSubTitleClick(int position) {
-        startActivity(new Intent(getApplicationContext(), subTitles.get(position).getClassId()));
+      // startActivity(new Intent(getApplicationContext(), subTitles.get(position).getClassId()));
     }
 }
