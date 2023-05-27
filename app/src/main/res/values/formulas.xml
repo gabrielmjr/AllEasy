@@ -24,18 +24,18 @@
     <string name="kinematic_urm_initial_time_formula">ti = tf - ∆t</string>
     <string name="kinematic_urm_final_time_formula">tf = ti + ∆t</string>
 
-    <string name="kinematic_muv_acceleration1_formula">a = ∆v ÷ ∆t</string>
-    <string name="kinematic_muv_acceleration2_formula">a = (∆v) ÷ (tf - ti)</string>
-    <string name="kinematic_muv_acceleration3_formula">a = (vf - vi) ÷ (∆t)</string>
-    <string name="kinematic_muv_acceleration4_formula">a = (vf - vi) ÷ (tf - ti)</string>
-    <string name="kinematic_muv_speed1_formula">∆v = ∆t × a</string>
-    <string name="kinematic_muv_speed2_formula">∆v = (tf - ti) × a</string>
-    <string name="kinematic_muv_speed3_formula">vi = vf - ∆t × a</string>
-    <string name="kinematic_muv_speed4_formula">vf = ∆t × a + vi</string>
-    <string name="kinematic_muv_time1_formula">∆t = ∆v ÷ a</string>
-    <string name="kinematic_muv_time2_formula">∆t = (vf - vi) ÷ a</string>
-    <string name="kinematic_muv_time3_formula">ti = tf - ∆v ÷ a</string>
-    <string name="kinematic_muv_time4_formula">ti = tf - (vf - vi) ÷ a</string>
-    <string name="kinematic_muv_time5_formula">tf = ti + ∆v ÷ a</string>
-    <string name="kinematic_muv_time6_formula">tf = ti + (vf - vi) ÷ a</string>
+    <string name="kinematic_vum_acceleration1_formula">a = ∆v ÷ ∆t</string>
+    <string name="kinematic_vum_acceleration2_formula">a = (∆v) ÷ (tf - ti)</string>
+    <string name="kinematic_vum_acceleration3_formula">a = (vf - vi) ÷ (∆t)</string>
+    <string name="kinematic_vum_acceleration4_formula">a = (vf - vi) ÷ (tf - ti)</string>
+    <string name="kinematic_vum_speed1_formula">∆v = ∆t × a</string>
+    <string name="kinematic_vum_speed2_formula">∆v = (tf - ti) × a</string>
+    <string name="kinematic_vum_speed3_formula">vi = vf - ∆t × a</string>
+    <string name="kinematic_vum_speed4_formula">vf = ∆t × a + vi</string>
+    <string name="kinematic_vum_time1_formula">∆t = ∆v ÷ a</string>
+    <string name="kinematic_vum_time2_formula">∆t = (vf - vi) ÷ a</string>
+    <string name="kinematic_vum_time3_formula">ti = tf - ∆v ÷ a</string>
+    <string name="kinematic_vum_time4_formula">ti = tf - (vf - vi) ÷ a</string>
+    <string name="kinematic_vum_time5_formula">tf = ti + ∆v ÷ a</string>
+    <string name="kinematic_vum_time6_formula">tf = ti + (vf - vi) ÷ a</string>
 </resources>

@@ -1,22 +1,18 @@
 package com.mjr.twaire.app.alleasy.model;
+
 import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import com.mjr.twaire.app.alleasy.BaseFragment;
 
 public class Subtitle {
     private CharSequence label;
-    private Fragment activity;
+    private BaseFragment fragment;
     private String tag;
 
-    public Subtitle(@NonNull CharSequence label, @NonNull Fragment activity, @NonNull String tag) {
+    public Subtitle(@NonNull CharSequence label, @NonNull BaseFragment fragment) {
         this.label = label;
-        this.activity = activity;
-        this.tag = tag;
-    }
-
-    public Subtitle(@NonNull CharSequence label, @NonNull Fragment activity) {
-        this.label = label;
-        this.activity = activity;
+        this.fragment = fragment;
+        this.tag = fragment.getFragmentTag();
     }
 
     public void setLabel(@NonNull CharSequence label) {
@@ -28,16 +24,16 @@ public class Subtitle {
         return label;
     }
 
-    public void setClassId(@NonNull Fragment activity) {
-        this.activity = activity;
+    public void setClassId(@NonNull BaseFragment fragment) {
+        this.fragment = fragment;
     }
 
     @NonNull
     public Fragment getClassId() {
-        return activity;
+        return fragment;
     }
 
-    @Nullable
+    @NonNull
     public String getTag() {
         return this.tag;
     }

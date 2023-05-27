@@ -288,7 +288,7 @@ public class SettingsActivity extends BaseActivity {
 
     public void setLang(String langCode, Context context) {
         locale = new Locale(langCode);
-        locale.setDefault(locale);
+        Locale.setDefault(locale);
 
         resources = getResources();
         config = resources.getConfiguration();

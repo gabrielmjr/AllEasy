@@ -4,10 +4,9 @@ import android.os.Bundle;
 import android.view.View;
 import androidx.annotation.MainThread;
 import androidx.fragment.app.Fragment;
-import com.mjr.twaire.app.alleasy.adapter.SubtitlesAdapter;
 import com.mjr.twaire.app.alleasy.model.Subtitle;
 
-public abstract class BaseFragment extends Fragment implements SubtitlesAdapter.OnSubtitleClickListener {
+public abstract class BaseFragment extends Fragment {
     private View viewContainer;
     
     @Override
@@ -33,4 +32,6 @@ public abstract class BaseFragment extends Fragment implements SubtitlesAdapter.
     protected View getViewContainer() {
         return viewContainer;
     }
+    
+    public abstract String getFragmentTag();
 }

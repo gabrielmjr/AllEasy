@@ -37,20 +37,20 @@
     <string name="kinematic_urm_final_time">Calcular usando:\n tf = ti + ∆t</string>
 
     <!--Cinemática MUV-->
-    <string name="kinematic_muv_acceleration1">Calcular usando:\n a = ∆v / ∆t</string>
-    <string name="kinematic_muv_acceleration2">Calcular usando:\n a = (∆v) / (tf - ti)</string>
-    <string name="kinematic_muv_acceleration3">Calcular usando:\n a = (vf - vi) / ∆t</string>
-    <string name="kinematic_muv_acceleration4">Calcular usando:\n a = (vf - vi) / (tf - ti)</string>
-    <string name="kinematic_muv_speed1">Calcular usando:\n ∆v = ∆t × a</string>
-    <string name="kinematic_muv_speed2">Calcular usando:\n ∆v = (tf - ti) × a</string>
-    <string name="kinematic_muv_speed3">Calcular usando:\n vi = vf - ∆t × a</string>
-    <string name="kinematic_muv_speed4">Calcular usando:\n vf = vi + ∆t × a</string>
-    <string name="kinematic_muv_time1">Calcular usando:\n ∆t = ∆v ÷ a</string>
-    <string name="kinematic_muv_time2">Calcular usando:\n ∆t = (vf - vi) ÷ a</string>
-    <string name="kinematic_muv_time3">Calcular usando:\n ti = tf - ∆v ÷ a</string>
-    <string name="kinematic_muv_time4">Calcular usando:\n ti = tf - (vf - vi) ÷ a</string>
-    <string name="kinematic_muv_time5">Calcular usando:\n tf = ti + ∆v ÷ a</string>
-    <string name="kinematic_muv_time6">Calcular usando:\n tf = ti + (vf - vi) ÷ a</string>
+    <string name="kinematic_vum_acceleration1">Calcular usando:\n a = ∆v / ∆t</string>
+    <string name="kinematic_vum_acceleration2">Calcular usando:\n a = (∆v) / (tf - ti)</string>
+    <string name="kinematic_vum_acceleration3">Calcular usando:\n a = (vf - vi) / ∆t</string>
+    <string name="kinematic_vum_acceleration4">Calcular usando:\n a = (vf - vi) / (tf - ti)</string>
+    <string name="kinematic_vum_speed1">Calcular usando:\n ∆v = ∆t × a</string>
+    <string name="kinematic_vum_speed2">Calcular usando:\n ∆v = (tf - ti) × a</string>
+    <string name="kinematic_vum_speed3">Calcular usando:\n vi = vf - ∆t × a</string>
+    <string name="kinematic_vum_speed4">Calcular usando:\n vf = vi + ∆t × a</string>
+    <string name="kinematic_vum_time1">Calcular usando:\n ∆t = ∆v ÷ a</string>
+    <string name="kinematic_vum_time2">Calcular usando:\n ∆t = (vf - vi) ÷ a</string>
+    <string name="kinematic_vum_time3">Calcular usando:\n ti = tf - ∆v ÷ a</string>
+    <string name="kinematic_vum_time4">Calcular usando:\n ti = tf - (vf - vi) ÷ a</string>
+    <string name="kinematic_vum_time5">Calcular usando:\n tf = ti + ∆v ÷ a</string>
+    <string name="kinematic_vum_time6">Calcular usando:\n tf = ti + (vf - vi) ÷ a</string>
     
 
     <string name="dd">Dados</string>

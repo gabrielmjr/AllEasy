@@ -7,6 +7,8 @@ import com.mjr.twaire.app.alleasy.activity.BaseActivity;
 import com.mjr.twaire.app.alleasy.fragment.HomeFragment;
 
 public class MainActivity extends BaseActivity {
+    private HomeFragment homeFragment;
+    
     @Override
     protected void initializeActivity() {
         setContentView(R.layout.activity_main);
@@ -20,8 +22,9 @@ public class MainActivity extends BaseActivity {
     @Override
     protected void initializeAttributes() {
         super.initializeAttributes();
+        homeFragment = new HomeFragment();
             getSupportFragmentManager().beginTransaction()
-            .replace(R.id.view_container, new HomeFragment(), HomeFragment.getFragmentTag())
+            .replace(R.id.view_container, homeFragment, homeFragment.getFragmentTag())
             .commitNow();
     }
 }
