@@ -26,7 +26,7 @@ public class FunctionActivityMain extends BaseActivity implements OnSubtitleClic
 
     @Override
     protected void initializeActivity () {
-        setContentView(R.layout.activity_subtitles);
+       // setContentView(R.layout.activity_subtitles);
     }
 
     @Override

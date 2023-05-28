@@ -27,7 +27,7 @@ public class CombinatorialAnalysisActivityMain extends BaseActivity implements O
 	
 	@Override
     protected void initializeActivity () {
-		setContentView(R.layout.activity_subtitles);
+		//setContentView(R.layout.activity_subtitles);
 	}
     
     @Override
