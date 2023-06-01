@@ -293,14 +293,14 @@ public class SettingsActivity extends BaseActivity {
         resources = getResources();
         config = resources.getConfiguration();
 
-        config.setLocale(locale);
+        //config.setLocale(locale);
 
-        resources.updateConfiguration(config, resources.getDisplayMetrics());
+        //resources.updateConfiguration(config, resources.getDisplayMetrics());
     }
 
     public void restartApp(Context context) {
         Process.killProcess(Process.myPid());
-        finishAndRemoveTask();
+       // finishAndRemoveTask();
         startActivity(getIntent());
     }
 

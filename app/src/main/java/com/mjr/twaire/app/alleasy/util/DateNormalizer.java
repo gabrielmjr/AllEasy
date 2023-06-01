@@ -2,17 +2,18 @@ package com.mjr.twaire.app.alleasy.util;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.Locale;
 
 public class DateNormalizer {
     
 	// Data
 	private static final Date date = new Date();
-	private static final SimpleDateFormat sdfy = new SimpleDateFormat("yyyy");
-	private static final SimpleDateFormat sdfdy = new SimpleDateFormat("DD");
-	private static final SimpleDateFormat sdfm = new SimpleDateFormat("MM");
-	private static final SimpleDateFormat sdfd = new SimpleDateFormat("dd");
-	private static final SimpleDateFormat sdfM = new SimpleDateFormat("mm");
-	private static final SimpleDateFormat sdfs = new SimpleDateFormat("ss");
+	private static final SimpleDateFormat sdfy = new SimpleDateFormat("yyyy", Locale.US);
+	private static final SimpleDateFormat sdfdy = new SimpleDateFormat("DD", Locale.US);
+	private static final SimpleDateFormat sdfm = new SimpleDateFormat("MM", Locale.US);
+	private static final SimpleDateFormat sdfd = new SimpleDateFormat("dd", Locale.US);
+	private static final SimpleDateFormat sdfM = new SimpleDateFormat("mm", Locale.US);
+	private static final SimpleDateFormat sdfs = new SimpleDateFormat("ss", Locale.US);
 	private static int[] normalizeDate = new int[7];
     
 	private static int[] normalizedDate() {
