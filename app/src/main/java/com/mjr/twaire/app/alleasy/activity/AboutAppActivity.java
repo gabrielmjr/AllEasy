@@ -139,7 +139,7 @@ ResponseIF, OnClickListener {
 
     private void setCopyright() {
         int actualYear = DateNormalizer.getYear();
-        int createdYear = Integer.valueOf(getText(R.integer.creation_year).toString());
+        int createdYear = getResources().getInteger(R.integer.creation_year);
         String finalYear;
         String copyright;
         if (actualYear == createdYear)
