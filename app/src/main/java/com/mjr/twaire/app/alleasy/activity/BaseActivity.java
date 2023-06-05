@@ -6,6 +6,7 @@ import android.os.Looper;
 import android.view.MenuItem;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
+import com.mjr.twaire.app.alleasy.model.Subtitle;
 
 public abstract class BaseActivity extends AppCompatActivity implements Runnable {
     protected Handler handler;
@@ -26,7 +27,9 @@ public abstract class BaseActivity extends AppCompatActivity implements Runnable
     
     protected abstract void getViews();
     
-    protected void initializeAttributes() {}
+    protected void initializeAttributes() {
+        Subtitle.setContext(getApplicationContext());
+    }
     
     @Override
     public void run() {

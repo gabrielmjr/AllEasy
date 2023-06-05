@@ -34,7 +34,7 @@ public abstract class SubtitlesFragment extends BaseFragment implements Subtitle
         recyclerView.setAdapter(adapter);
         recyclerView.setLayoutManager(new LinearLayoutManager(getActivity().getApplicationContext()));
         initializeSubtitles();
-    } 
+    }
 
     protected abstract void initializeSubtitles();
     

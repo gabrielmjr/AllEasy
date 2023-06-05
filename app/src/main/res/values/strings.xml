@@ -4,6 +4,8 @@
     <string name="owner">Gabriel MJr</string>
     <string name="welcome">Welcome!</string>
     
+    <string name="calculate_using">Calculate using</string>
+    
     <string name="n">n</string>
 	<string name="ax">x²</string>
 	<string name="bx">x</string>
