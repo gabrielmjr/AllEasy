@@ -14,71 +14,17 @@
 	<!--Titles-->
 	<string name="combinatorial_analysis">Combinatorial Analisys</string>
 	<string name="functions">Functions</string>
-	<string name="hydrodynamics">Hydrodynamics</string>
-    
-    <string name="kinematic_urm_displacement1">Calculate using:\n ∆S = Sf - Si</string>
-    <string name="kinematic_urm_displacement2">Calculate using:\n ∆S = ∆t × vm</string>
-    <string name="kinematic_urm_displacement3">Calculate using:\n ∆S = (tf - ti) × vm</string>
-    <string name="kinematic_urm_displacement4">Calculate using:\n Si = Sf - ∆S</string>
-    <string name="kinematic_urm_displacement5">Calculate using:\n Sf = Si + ∆S</string>
-    <string name="kinematic_urm_displacement6">Calculate using:\n S = Si + v × ∆t</string>
-    <string name="kinematic_urm_speed1">Calculate using:\n v = ∆S / ∆t</string>
-    <string name="kinematic_urm_speed2">Calculate using:\n v = (sf - si) × (tf - ti)</string>
-    <string name="kinematic_urm_time1">Calculate using:\n ∆t = tf - ti</string>
-    <string name="kinematic_urm_time2">Calculate using:\n ∆t = ∆S / v</string>
-    <string name="kinematic_urm_time3">Calculate using:\n ∆t = (Sf - Si) / v</string>
-    <string name="kinematic_urm_time4">Calculate using:\n ti = tf - ∆t</string>
-    <string name="kinematic_urm_time5">Calculate using:\n tf = ti + ∆t</string>
-    <string name="kinematic_vum_acceleration1">Calculate using:\n a = ∆v / ∆t</string>
-    <string name="kinematic_vum_acceleration2">Calculate using:\n a = (∆v) / (tf - ti)</string>
-    <string name="kinematic_vum_acceleration3">Calculate using:\n a = (vf - vi) / ∆t</string>
-    <string name="kinematic_vum_acceleration4">Calculate using:\n a = (vf - vi) / (tf - ti)</string>
-    <string name="kinematic_vum_speed1">Calculate using:\n ∆v = ∆t × a</string>
-    <string name="kinematic_vum_speed2">Calculate using:\n ∆v = (tf - ti) × a</string>
-    <string name="kinematic_vum_speed3">Calculate using:\n vi = vf - ∆t × a</string>
-    <string name="kinematic_vum_speed4">Calculate using:\n vf = vi + ∆t × a</string>
-    <string name="kinematic_vum_time1">Calculate using:\n ∆t = ∆v ÷ a</string>
-    <string name="kinematic_vum_time2">Calculate using:\n ∆t = (vf - vi) ÷ a</string>
-    <string name="kinematic_vum_time3">Calculate using:\n ti = tf - ∆v ÷ a</string>
-    <string name="kinematic_vum_time4">Calculate using:\n ti = tf - (vf - vi) ÷ a</string>
-    <string name="kinematic_vum_time5">Calculate using:\n tf = ti + ∆v ÷ a</string>
-    <string name="kinematic_vum_time6">Calculate using:\n tf = ti + (vf - vi) ÷ a</string>
 
     <string name="data">Data</string>
     <string name="fm">Formula</string>
     <string name="res">Resolution</string>
     
     <!--Lessons-->
-    <string name="displacement">Displacement</string>
-    <string name="kinematics">Kinematics</string>>
-    <string name="variated_uniform_movement">Variated Uniform Movement</string>
-    <string name="arranjments">Arrangments</string>
+    <string name="arranjments">Arrangements</string>
     <string name="factorial">Factorial</string>
     <string name="combination">Combination</string>
     <string name="second_degree_function">Second-Degree Function</string>
     <string name="determine">Determine</string>
-    <string name="fluid_flow">Fluid Flow</string>
-    <string name="flow_rate">Flow rate</string>
-    <string name="volume">Volume</string>
-    <string name="velocity">Velocity</string>
-	<string name="speed">Speed</string>
-    <string name="ray">Ray</string>
-    <string name="area">Area</string>
-    <string name="acceleration">Acceleration</string>     
-    <string name="time">Time</string>     
-    
-    <!---->
-    <string name="null_field">This field can`t be empty!</string>
-    <string name="p_big_than_n">It`s not possible to determine with «p» greater than 《n》!</string>
-    <string name="big_value">Very high value!</string>
-    <string name="big_values">Very high values!</string>
-    <string name="invalid_value">Enter the value correctly!</string>
-    <string name="ooig_fsg">Ordered in origin = </string>
-    <string name="dot_value">This field can`t be a dot!</string>
-    <string name="cont">Continue</string>
-    <string name="close">Close</string>    
-    <string name="resultp">Result = </string>
-    <string name="uniform_rectilinear_movement">Uniform Rectilinear Movement</string>
    
     <string name="name">Name: </string>
     <string name="version">Version: </string>

@@ -1,8 +1,8 @@
 pluginManagement {
     repositories {
-        gradlePluginPortal()
         google()
         mavenCentral()
+        gradlePluginPortal()
     }
 }
 dependencyResolutionManagement {
@@ -13,5 +13,8 @@ dependencyResolutionManagement {
         maven { url 'https://jitpack.io' }
     }
 }
+
 rootProject.name = "AllEasy"
 include ':app'
+include ':app:physicals'
+include ':app:core'
