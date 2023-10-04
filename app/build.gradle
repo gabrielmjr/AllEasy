@@ -6,10 +6,10 @@ plugins {
 android {
     signingConfigs {
         debug {
-            storeFile file('/home/gabrielmjr/JKSs/publish.keystore')
-            storePassword 'yes'
-            keyAlias 'androidpublichkey'
-            keyPassword 'yes'
+            storeFile file(rootDir.toString() + '/mjrdebug.keystore')
+            keyAlias 'debug'
+            storePassword 'admin123'
+            keyPassword 'admin123'
         }
     }
     namespace 'com.mjr.app.alleasy'
