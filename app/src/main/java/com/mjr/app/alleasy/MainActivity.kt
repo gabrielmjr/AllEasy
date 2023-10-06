@@ -8,19 +8,22 @@ import com.mjr.app.alleasy.fragment.HomeFragment
 class MainActivity : BaseActivity() {
     private var homeFragment: HomeFragment? = null
 
-    override fun initializeActivity() {
-        if (isAppInitialized) {
-            setContentView(R.layout.activity_main)
-        } else {
-            setContentView(R.layout.splash_screen)
-            handler.postDelayed(this, 4500)
-        }
-    }
 
     override fun run() {
-        setContentView(R.layout.activity_main)
-        super.run()
-        isAppInitialized = true
+        if (isAppInitialized) {
+            setContentView(R.layout.activity_main)
+            getViews()
+            initializeAttributes()
+            setListeners()
+        } else {
+            setContentView(R.layout.splash_screen)
+            handler.postDelayed(
+                {
+                    isAppInitialized = true
+                    run()
+                }, 3000
+            )
+        }
     }
 
     override fun getViews() {
@@ -33,7 +36,7 @@ class MainActivity : BaseActivity() {
         try {
             supportFragmentManager.beginTransaction()
                     .replace(com.mjr.app.alleasy.core.R.id.view_container, homeFragment!!, homeFragment!!.tag)
-                    .commitNow()
+                    .commit()
         } catch (e: IllegalStateException) {
             throw e
         }

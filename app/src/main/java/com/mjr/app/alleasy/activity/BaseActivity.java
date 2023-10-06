@@ -27,7 +27,7 @@ public abstract class BaseActivity extends AppCompatActivity implements Runnable
         handler = new Handler(getMainLooper());
     }
     
-    protected abstract void initializeActivity();
+    protected /*abstract*/ void initializeActivity() {}
     
     protected abstract void getViews();
     
@@ -35,6 +35,7 @@ public abstract class BaseActivity extends AppCompatActivity implements Runnable
     
     @Override
     public void run() {
+        initializeActivity();
         getViews();
         initializeAttributes();
         setListeners();
