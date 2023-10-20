@@ -10,7 +10,7 @@ public class DialogAlertData {
     
     private Context context;
     
-    // Construtor
+    // Constructor
     public DialogAlertData(Context context) {
         setContext(context);
     }

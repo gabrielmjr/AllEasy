@@ -15,7 +15,7 @@
     <color name="red">#FFFF0000</color>
     <color name="yellow">#F0FFE600</color>
     <color name="orange">#FFFFAA00</color>
-    <color name="midGreen1">#FF18F404</color>
+    <color name="physic_calculation_bg">#FF18F404</color>
     <color name="midGreen2">#FF00FFFB</color>
     <color name="midBlue1">#FF2A6BFA</color>
     <color name="buttonsBlue">#FF4C90D3</color>
@@ -24,5 +24,6 @@
     <color name="hint">#FF7F7F7F</color>
     <color name="transparent">#00000000</color>
     <color name="text_color">#FF70777C</color>
+    <color name="icon">@color/black</color>
 </resources>
 

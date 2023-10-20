@@ -1,4 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <color name="text_color">#FF74757F</color>
+    <color name="physic_calculation_bg">@color/black</color>
+    <color name="accent">@color/black</color>
+    <color name="icon">@color/white</color>
 </resources>
