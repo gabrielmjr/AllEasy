@@ -7,8 +7,8 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.mjr.app.alleasy.activity.BaseActivity;
-import com.mjr.app.alleasy.core.adapter.SubtitlesAdapter;
-import com.mjr.app.alleasy.core.model.Subtitle;
+import com.mjr.app.alleasy.adapter.SubtitlesAdapter;
+import com.mjr.app.alleasy.model.Subtitle;
 import com.mjr.app.alleasy.R;
 
 import java.util.ArrayList;

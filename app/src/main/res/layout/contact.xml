@@ -47,7 +47,7 @@
 				android:layout_alignStart="@id/tv1_send_mail"
 				android:layout_alignEnd="@id/tv1_send_mail"
 				android:hint="@string/send_mail_hint_note"
-				android:background="@drawable/ic_send_mail_field"
+				android:background="@drawable/bg_send_mail_field"
 				android:gravity="center"/>
 
 			<Button

@@ -2,13 +2,9 @@ package com.mjr.app.alleasy.activity;
 
 import android.os.Bundle;
 import android.os.Handler;
-import android.view.MenuItem;
 
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
-
-import com.mjr.app.alleasy.core.model.Subtitle;
 
 import java.util.Objects;
 
@@ -29,7 +25,7 @@ public abstract class BaseActivity extends AppCompatActivity implements Runnable
     
     protected /*abstract*/ void initializeActivity() {}
     
-    protected abstract void getViews();
+    protected /*abstract*/ void getViews() {}
     
     protected abstract void initializeAttributes();
     
@@ -49,12 +45,6 @@ public abstract class BaseActivity extends AppCompatActivity implements Runnable
 	}
     
     protected void setListeners() {}
-    
-    @Override
-    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
-        onBackPressed();
-        return true;
-    }
     
 	protected Toolbar setToolBar(Toolbar toolbar) {
 		return setNavigationOnToolbar(toolbar);

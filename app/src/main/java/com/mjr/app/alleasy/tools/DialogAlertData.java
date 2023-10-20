@@ -22,7 +22,7 @@ public class DialogAlertData {
             .setMessage(message)
             .setIcon(icon)
             .setCancelable(false)
-            .setPositiveButton(com.mjr.app.alleasy.core.R.string.close, new AlertDialog.OnClickListener() {
+            .setPositiveButton(R.string.close, new AlertDialog.OnClickListener() {
                 @Override
                 public void onClick(DialogInterface dia, int which) {
                     try {

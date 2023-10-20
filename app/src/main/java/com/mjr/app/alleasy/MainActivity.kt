@@ -1,9 +1,13 @@
 package com.mjr.app.alleasy
 
+import android.content.Intent
 import android.view.Menu
+import android.view.MenuItem
 import com.mjr.app.alleasy.activity.BaseActivity
-import com.mjr.app.alleasy.core.model.Subtitle
+import com.mjr.app.alleasy.activity.SettingsActivity
+import com.mjr.app.alleasy.model.Subtitle
 import com.mjr.app.alleasy.fragment.HomeFragment
+import com.mjr.app.alleasy.util.SettingsPreferences
 
 class MainActivity : BaseActivity() {
     private var homeFragment: HomeFragment? = null
@@ -12,6 +16,7 @@ class MainActivity : BaseActivity() {
     override fun run() {
         if (isAppInitialized) {
             setContentView(R.layout.activity_main)
+            SettingsPreferences(applicationContext)
             getViews()
             initializeAttributes()
             setListeners()
@@ -35,7 +40,7 @@ class MainActivity : BaseActivity() {
         Subtitle.context = applicationContext
         try {
             supportFragmentManager.beginTransaction()
-                    .replace(com.mjr.app.alleasy.core.R.id.view_container, homeFragment!!, homeFragment!!.tag)
+                    .replace(R.id.view_container, homeFragment!!, homeFragment!!.tag)
                     .commit()
         } catch (e: IllegalStateException) {
             throw e
@@ -45,6 +50,17 @@ class MainActivity : BaseActivity() {
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
         menuInflater.inflate(R.menu.main_menu, menu)
         return true
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        return when (item.itemId) {
+            R.id.settings -> {
+                Intent(applicationContext, SettingsActivity::class.java).apply {
+                    startActivity(this)
+                }
+                true
+            } else -> false
+        }
     }
 
     companion object {

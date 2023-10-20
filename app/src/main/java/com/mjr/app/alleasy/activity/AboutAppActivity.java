@@ -106,12 +106,12 @@ ResponseIF, OnClickListener {
     public void onResponse(@NonNull HashMap api_info) {
         versionCode = (Integer)api_info.get(Constants.TAG);
         if (versionCode > appInfo.getVersionCode()) {
-            updaterStatus.setBackgroundResource(R.drawable.ic_edge_button_blue);
+            updaterStatus.setBackgroundResource(R.drawable.bg_edge_button_blue);
             updaterStatus.setText(R.string.update_available);
             downloadButton.setVisibility(View.VISIBLE);
             appDownloadName.setText(updateChecker.getReleaseName());
         } else if (versionCode == appInfo.getVersionCode()) {
-            updaterStatus.setBackgroundResource(R.drawable.ic_edge_button_green);
+            updaterStatus.setBackgroundResource(R.drawable.bg_edge_button_green);
             updaterStatus.setText(R.string.updated);
             downloadButton.setVisibility(View.GONE);
         }
@@ -119,7 +119,7 @@ ResponseIF, OnClickListener {
 
     @Override
     public void onErrorResponse() {
-        updaterStatus.setBackgroundResource(R.drawable.ic_edge_button_red);
+        updaterStatus.setBackgroundResource(R.drawable.bg_edge_button_red);
         updaterStatus.setText(R.string.unable_to_check_update);
         downloadButton.setVisibility(View.GONE);
     }

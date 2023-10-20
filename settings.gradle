@@ -16,5 +16,3 @@ dependencyResolutionManagement {
 
 rootProject.name = "AllEasy"
 include ':app'
-include ':app:physics'
-include ':app:core'
